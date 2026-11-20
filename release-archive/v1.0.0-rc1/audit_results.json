@@ -1,0 +1,152 @@
+{
+  "buildId": "8iwZOJS3uDI5rLgSQuRKs",
+  "staticFilesScanned": 41,
+  "bundleSecurityScan": {
+    "wholesaleCost": 0,
+    "originalWholesaleCost": 0,
+    "profitPerUnit": 0,
+    "marginPercent": 0,
+    "blankaUrl": 0,
+    "appBlankaDomain": 0,
+    "skuPrefix73904": 368,
+    "cdnImages73904": 368
+  },
+  "totalProducts": 110,
+  "manufacturerVerifiedFullInciCount": 56,
+  "truncatedReconstructedInciCount": 45,
+  "missingReconstructedInciCount": 9,
+  "healthCanadaHotlistFlaggedCount": 16,
+  "healthCanadaHotlistFlags": [
+    {
+      "sku": "PP-PC-03-04-CR-AEC",
+      "slug": "active-eye-cream",
+      "title": "Active Eye Cream",
+      "flags": [
+        "Health Canada Hotlist / Hydroquinone Precursor Watch: Arbutin / Alpha-Arbutin (Requires hydroquinone impurity & stability documentation)"
+      ]
+    },
+    {
+      "sku": "PP-MB-01-02-BC-FB105",
+      "slug": "bb-cream",
+      "title": "BB Cream",
+      "flags": [
+        "Health Canada Hotlist / Hydroquinone Precursor Watch: Arbutin / Alpha-Arbutin (Requires hydroquinone impurity & stability documentation)",
+        "Health Canada NHP / DIN Sunscreen Boundary: Contains UV filter (Octinoxate/Octisalate/Zinc Oxide) — if marketed with any sun protection/SPF representation in Canada, requires a Drug Identification Number (DIN) or Natural Product Number (NPN)"
+      ]
+    },
+    {
+      "sku": "PP-MB-01-02-BL-KBL31",
+      "slug": "blush-palette",
+      "title": "Blush Palette",
+      "flags": [
+        "Health Canada Talc Screening Assessment: Loose/pressed powder talc requires asbestos-free Certificate of Analysis (USP/FCC method) & inhalation precaution assessment"
+      ]
+    },
+    {
+      "sku": "PP-BT-06-09-CDT-COCDT",
+      "slug": "coconut-moisture-conditioner",
+      "title": "Coconut Moisture Conditioner",
+      "flags": [
+        "Health Canada Hotlist Restricted: MCI/MI (Permitted ONLY in rinse-off products <= 0.0015% / 15 ppm; prohibited in leave-on cosmetics)"
+      ]
+    },
+    {
+      "sku": "PP-GF-03-02-CRS",
+      "slug": "collagen-and-retinol-serum",
+      "title": "Collagen and Retinol Serum",
+      "flags": [
+        "Health Canada Hotlist Restricted: Retinol & Esters (Max concentration limits & CNF declaration required)"
+      ]
+    },
+    {
+      "sku": "PP-MB-01-02-WD-WD145",
+      "slug": "dual-blend-powder-foundation",
+      "title": "Dual Blend Powder Foundation",
+      "flags": [
+        "Health Canada Talc Screening Assessment: Loose/pressed powder talc requires asbestos-free Certificate of Analysis (USP/FCC method) & inhalation precaution assessment"
+      ]
+    },
+    {
+      "sku": "PP-LB-01-04-YP-EP05",
+      "slug": "eye-lip-primer",
+      "title": "Eye & Lip Primer",
+      "flags": [
+        "Health Canada Talc Screening Assessment: Loose/pressed powder talc requires asbestos-free Certificate of Analysis (USP/FCC method) & inhalation precaution assessment"
+      ]
+    },
+    {
+      "sku": "PP-MB-01-04-SP-ETM105",
+      "slug": "eyeshadow-palette",
+      "title": "Eyeshadow Palette",
+      "flags": [
+        "Health Canada Talc Screening Assessment: Loose/pressed powder talc requires asbestos-free Certificate of Analysis (USP/FCC method) & inhalation precaution assessment"
+      ]
+    },
+    {
+      "sku": "PP-GF-03-02-GLYS",
+      "slug": "glycolic-acid-serum",
+      "title": "Glycolic Acid Serum",
+      "flags": [
+        "Health Canada Hotlist Restricted: Alpha-Hydroxy Acid (Glycolic Acid <= 10% consumer use, pH >= 3.5, mandatory bilingual cautionary warnings)"
+      ]
+    },
+    {
+      "sku": "PP-CA-03-02-PP-RNEW",
+      "slug": "night-renewal-creme",
+      "title": "Night Renewal Creme",
+      "flags": [
+        "Health Canada Hotlist Restricted: Retinol & Esters (Max concentration limits & CNF declaration required)",
+        "Health Canada Hotlist Restricted: Alpha-Hydroxy Acid (Glycolic Acid <= 10% consumer use, pH >= 3.5, mandatory bilingual cautionary warnings)",
+        "Health Canada NHP / DIN Sunscreen Boundary: Contains UV filter (Octinoxate/Octisalate/Zinc Oxide) — if marketed with any sun protection/SPF representation in Canada, requires a Drug Identification Number (DIN) or Natural Product Number (NPN)"
+      ]
+    },
+    {
+      "sku": "PP-PC-03-05-CR-NHC",
+      "slug": "nourish-hand-cream",
+      "title": "Nourish Hand Cream",
+      "flags": [
+        "Health Canada Hotlist Restricted/Prohibited Watch: Symphytum Officinale (Comfrey) — medicinal species S. asperum / S. x uplandicum prohibited; S. officinale requires pyrrolizidine alkaloid-free documentation"
+      ]
+    },
+    {
+      "sku": "PP-CA-03-02-PP-DMOZ",
+      "slug": "oil-free-daily-moisturizer",
+      "title": "Oil-Free Daily Moisturizer",
+      "flags": [
+        "Health Canada NHP / DIN Sunscreen Boundary: Contains UV filter (Octinoxate/Octisalate/Zinc Oxide) — if marketed with any sun protection/SPF representation in Canada, requires a Drug Identification Number (DIN) or Natural Product Number (NPN)"
+      ]
+    },
+    {
+      "sku": "PP-LB-01-04-YP-EP10",
+      "slug": "pearl-eye-primer",
+      "title": "Pearl Eye Primer",
+      "flags": [
+        "Health Canada Talc Screening Assessment: Loose/pressed powder talc requires asbestos-free Certificate of Analysis (USP/FCC method) & inhalation precaution assessment"
+      ]
+    },
+    {
+      "sku": "PP-MB-01-02-CP-PCP51",
+      "slug": "pro-cheek-palette",
+      "title": "Pro Cheek Palette",
+      "flags": [
+        "Health Canada NHP / DIN Sunscreen Boundary: Contains UV filter (Octinoxate/Octisalate/Zinc Oxide) — if marketed with any sun protection/SPF representation in Canada, requires a Drug Identification Number (DIN) or Natural Product Number (NPN)"
+      ]
+    },
+    {
+      "sku": "PP-FE-05-07-CG-CG2",
+      "slug": "solid-fragrance",
+      "title": "Solid Fragrance",
+      "flags": [
+        "Health Canada Hotlist Restricted (Updated): Tea Tree Oil (Melaleuca Alternifolia) — concentration limits & oxidation/peroxide value limits apply"
+      ]
+    },
+    {
+      "sku": "PP-LB-03-02-TMS02",
+      "slug": "tanning-mousse",
+      "title": "Tanning Mousse",
+      "flags": [
+        "Health Canada Hotlist Restricted: Retinol & Esters (Max concentration limits & CNF declaration required)"
+      ]
+    }
+  ]
+}
