@@ -5,11 +5,11 @@ import {
   ArrowLeft,
   BadgeCheck,
   Check,
+  Lock,
   Rotate3d,
   ShieldAlert,
   ShieldCheck,
   ShoppingBag,
-  Sparkles,
   Star,
   Truck,
 } from 'lucide-react';
@@ -65,10 +65,14 @@ export function ProductPresentationSheet({
     useState<boolean>(false);
   const [showBoxMockup, setShowBoxMockup] = useState<boolean>(false);
 
-  const isAvailable = product.inStock && selectedShade.inStock;
+  const isPurchasable =
+    product.manufacturerVerified &&
+    product.canPurchase &&
+    product.inStock &&
+    selectedShade.inStock;
 
   const handleAdd = () => {
-    if (!isAvailable) return;
+    if (!isPurchasable) return;
     onAddToBag(product, selectedShade, quantity);
     setAddedFeedback(true);
     setTimeout(() => setAddedFeedback(false), 1800);
@@ -76,12 +80,6 @@ export function ProductPresentationSheet({
 
   const activeMockupImage =
     showBoxMockup && product.boxImage ? product.boxImage : product.primaryImage;
-
-  const claimPills = [
-    'Cruelty-Free',
-    product.isParabenFree ? 'Paraben-Free' : null,
-    product.isVegan ? 'Vegan' : null,
-  ].filter(Boolean);
 
   return (
     <div
@@ -138,7 +136,24 @@ export function ProductPresentationSheet({
 
         {/* Scrollable Content Body */}
         <div className="overflow-y-auto px-5 pt-2 pb-4 md:px-6 md:pt-5">
-          {/* Official Pretty Piggie Branded Product & Box Photography Banner */}
+          {/* Mandatory Regulatory Hold Banner When Manufacturer INCI Is Unverified */}
+          {!product.manufacturerVerified && (
+            <div className="mb-3 flex items-start gap-2.5 rounded-2xl border border-amber-300 bg-amber-50 p-3 text-[11px] leading-snug text-amber-950">
+              <Lock className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" />
+              <div>
+                <strong className="block font-bold uppercase tracking-wider text-amber-900">
+                  UNVERIFIED — Purchase Disabled Pending Manufacturer INCI Sheet
+                </strong>
+                <span className="mt-0.5 block text-amber-800">
+                  Available for 3D virtual preview only. Commercial checkout is
+                  locked until the complete, untruncated manufacturer INCI
+                  declaration (`{product.inciStatus}`) is verified on file.
+                </span>
+              </div>
+            </div>
+          )}
+
+          {/* First-Party Proxied Pretty Piggie Product & Box Photography Banner */}
           {activeMockupImage && (
             <div className="relative mb-3.5 flex items-center gap-3.5 rounded-2xl border border-piggie-100 bg-gradient-to-r from-piggie-50 via-white to-piggie-50 p-2.5 shadow-sm">
               <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border border-piggie-100 bg-white">
@@ -150,10 +165,15 @@ export function ProductPresentationSheet({
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-1.5">
-                  {isAvailable ? (
+                  {!product.manufacturerVerified ? (
+                    <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-900 ring-1 ring-amber-300">
+                      <Lock className="h-3 w-3" />
+                      UNVERIFIED • Hold
+                    </span>
+                  ) : isPurchasable ? (
                     <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 ring-1 ring-emerald-200">
                       <BadgeCheck className="h-3 w-3" />
-                      In Stock • Ready to Ship
+                      VERIFIED INCI • Ready to Ship
                     </span>
                   ) : (
                     <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-bold text-rose-700">
@@ -164,8 +184,8 @@ export function ProductPresentationSheet({
                     {product.originLabel}
                   </span>
                 </div>
-                <p className="mt-1 text-[11px] font-medium text-piggie-700">
-                  {claimPills.join(' • ')}
+                <p className="mt-1 font-mono text-[10px] text-piggie-700">
+                  SKU: {selectedShade.sku || product.sku} • U.S. Shipping Only
                 </p>
                 {product.boxImage && (
                   <div className="mt-1.5 flex gap-1.5">
@@ -212,7 +232,13 @@ export function ProductPresentationSheet({
                 {product.category}
               </span>
               {product.badge && (
-                <span className="rounded-full bg-gradient-to-r from-piggie-600 to-piggie-500 px-2.5 py-0.5 text-[10px] font-semibold text-white">
+                <span
+                  className={`rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${
+                    !product.manufacturerVerified
+                      ? 'bg-amber-100 text-amber-900'
+                      : 'bg-gradient-to-r from-piggie-600 to-piggie-500 text-white'
+                  }`}
+                >
                   {product.badge}
                 </span>
               )}
@@ -240,7 +266,9 @@ export function ProductPresentationSheet({
                 ${product.price.toFixed(2)}
               </div>
               <div className="text-[10px] font-semibold uppercase tracking-wider text-piggie-600">
-                {product.isVegan ? 'Vegan Formula' : 'Cruelty-Free'}
+                {product.manufacturerVerified
+                  ? 'Verified INCI'
+                  : 'Preview Only'}
               </div>
             </div>
           </div>
@@ -307,7 +335,7 @@ export function ProductPresentationSheet({
             {(
               [
                 { id: 'overview', label: 'Details & Benefits' },
-                { id: 'ingredients', label: 'INCI & Safety' },
+                { id: 'ingredients', label: 'INCI & Safety (EN/FR)' },
                 { id: 'reviews', label: 'Curator Note' },
               ] as const
             ).map((tab) => (
@@ -354,26 +382,31 @@ export function ProductPresentationSheet({
               <div className="space-y-2.5">
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-piggie-700">
-                    Full INCI Ingredient Declaration ({product.originLabel})
+                    Manufacturer INCI Record ({product.inciStatus} •{' '}
+                    {product.originLabel})
                   </span>
                   <p className="mt-1 rounded-xl bg-piggie-50 p-3 font-mono text-[11px] leading-relaxed text-piggie-900">
                     {product.ingredients}
                   </p>
                 </div>
 
-                {/* Context-Sensitive FDA / MoCRA / CPSC Safety Advisory */}
-                <div className="flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50/75 p-2.5 text-[11px] text-amber-950">
-                  <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" />
-                  <div>
-                    <strong className="font-bold">Safety & Usage Advisory: </strong>
-                    <span>{product.safetyAdvisory}</span>
-                    <button
-                      type="button"
-                      onClick={() => onOpenLegal('safety')}
-                      className="ml-1 font-bold text-piggie-700 underline hover:text-piggie-950"
-                    >
-                      MoCRA Safety Policy
-                    </button>
+                {/* Bilingual English & French FDA / MoCRA / Health Canada Safety Advisory */}
+                <div className="space-y-1.5 rounded-xl border border-amber-200 bg-amber-50/75 p-2.5 text-[11px] text-amber-950">
+                  <div className="flex items-start gap-2">
+                    <ShieldAlert className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" />
+                    <div>
+                      <p>{product.safetyAdvisory}</p>
+                      <p className="mt-1 border-t border-amber-200/80 pt-1 italic text-amber-900">
+                        {product.safetyAdvisoryFr}
+                      </p>
+                      <button
+                        type="button"
+                        onClick={() => onOpenLegal('safety')}
+                        className="mt-1 inline-block font-bold text-piggie-700 underline hover:text-piggie-950"
+                      >
+                        View Full FDA / MoCRA & Health Canada Safety Policy
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -416,7 +449,7 @@ export function ProductPresentationSheet({
               className="flex items-center gap-1.5 hover:text-piggie-950 hover:underline"
             >
               <Truck className="h-3.5 w-3.5 text-piggie-600" />
-              <span>Free Shipping $65+ • 30-Day Free Returns</span>
+              <span>U.S. Shipping ($65+ Free) • 30-Day Returns</span>
             </button>
             <button
               type="button"
@@ -436,7 +469,7 @@ export function ProductPresentationSheet({
             <div className="flex items-center rounded-full border border-piggie-200 bg-piggie-50 px-1.5 py-1">
               <button
                 type="button"
-                disabled={!isAvailable}
+                disabled={!isPurchasable}
                 onClick={() => setQuantity((q) => Math.max(1, q - 1))}
                 aria-label="Decrease quantity"
                 className="flex h-7 w-7 items-center justify-center rounded-full text-sm font-bold text-piggie-800 hover:bg-white disabled:opacity-40"
@@ -448,7 +481,7 @@ export function ProductPresentationSheet({
               </span>
               <button
                 type="button"
-                disabled={!isAvailable}
+                disabled={!isPurchasable}
                 onClick={() => setQuantity((q) => q + 1)}
                 aria-label="Increase quantity"
                 className="flex h-7 w-7 items-center justify-center rounded-full text-sm font-bold text-piggie-800 hover:bg-white disabled:opacity-40"
@@ -457,20 +490,27 @@ export function ProductPresentationSheet({
               </button>
             </div>
 
-            {/* Primary Add to Bag Button */}
+            {/* Primary Add to Bag Button (Strictly Locked if !product.manufacturerVerified) */}
             <button
               type="button"
-              disabled={!isAvailable}
+              disabled={!isPurchasable}
               onClick={handleAdd}
               className={`flex flex-1 items-center justify-center gap-2 rounded-full px-4 py-3.5 text-xs font-bold text-white shadow-lg transition sm:text-sm active:scale-98 ${
-                !isAvailable
+                !product.manufacturerVerified
+                  ? 'cursor-not-allowed bg-amber-800/80'
+                  : !isPurchasable
                   ? 'cursor-not-allowed bg-neutral-400'
                   : addedFeedback
                   ? 'bg-emerald-600'
                   : 'bg-gradient-to-r from-piggie-950 via-piggie-800 to-piggie-950 hover:from-piggie-900 hover:to-piggie-800'
               }`}
             >
-              {!isAvailable ? (
+              {!product.manufacturerVerified ? (
+                <>
+                  <Lock className="h-3.5 w-3.5 shrink-0" />
+                  <span>UNVERIFIED — Purchase Locked</span>
+                </>
+              ) : !isPurchasable ? (
                 <span>Temporarily Sold Out</span>
               ) : addedFeedback ? (
                 <>

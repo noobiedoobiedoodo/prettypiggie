@@ -44,6 +44,7 @@ export function ShoppingBagDrawer({
   const [completedSession, setCompletedSession] =
     useState<CheckoutSessionResult | null>(null);
   const [guestEmail, setGuestEmail] = useState('');
+  const [caslMarketingOptIn, setCaslMarketingOptIn] = useState(false);
 
   if (!isOpen) return null;
 
@@ -147,6 +148,10 @@ export function ShoppingBagDrawer({
               style={{ width: `${shippingProgress}%` }}
             />
           </div>
+          <p className="mt-1.5 text-[10px] font-semibold text-piggie-700">
+            U.S. Domestic Shipping Only (50 States & D.C.) • Canadian Shipping
+            Disabled Pending Regulatory Gate
+          </p>
         </div>
 
         {/* Completed Order Preview Receipt or Cart Line Items */}
@@ -356,16 +361,30 @@ export function ShoppingBagDrawer({
                 className="mt-1.5 w-full rounded-xl border border-piggie-200 bg-piggie-50/40 px-3 py-2 text-base text-piggie-950 placeholder:text-piggie-600/60 focus:border-piggie-600 focus:outline-none sm:text-xs"
               />
               <p className="mt-1.5 text-[10px] leading-snug text-piggie-600">
-                Used solely for order receipt and carrier tracking under our{' '}
+                Transactional only: used solely for order receipt and carrier
+                tracking under our{' '}
                 <button
                   type="button"
                   onClick={() => onOpenLegal('privacy')}
                   className="font-bold text-piggie-800 underline hover:text-piggie-950"
                 >
-                  Privacy Policy
+                  Privacy Policy (CCPA / PIPEDA / GDPR)
                 </button>
                 .
               </p>
+              <label className="mt-2 flex cursor-pointer items-start gap-2 border-t border-piggie-100 pt-2 text-[10px] leading-snug text-piggie-700">
+                <input
+                  type="checkbox"
+                  checked={caslMarketingOptIn}
+                  onChange={(e) => setCaslMarketingOptIn(e.target.checked)}
+                  className="mt-0.5 h-3.5 w-3.5 rounded border-piggie-300 text-piggie-800 focus:ring-piggie-600"
+                />
+                <span>
+                  Optional (CASL / CAN-SPAM Express Consent): Send me occasional
+                  Pretty Piggie Makeup collection updates. You may unsubscribe at
+                  any time.
+                </span>
+              </label>
             </div>
           </div>
         )}

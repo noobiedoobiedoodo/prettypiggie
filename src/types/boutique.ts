@@ -21,6 +21,11 @@ export type FinishType =
   | 'Luminous Silk'
   | 'Rose Shimmer';
 
+export type InciVerificationStatus =
+  | 'VERIFIED_COMPLETE'
+  | 'UNVERIFIED_TRUNCATED_SPEC'
+  | 'UNVERIFIED_MISSING_SPEC';
+
 export interface CameraWaypoint {
   position: [number, number, number];
   target: [number, number, number];
@@ -90,9 +95,15 @@ export interface BoutiqueProduct {
   /** Retail selling price */
   price: number;
   inStock: boolean;
-  /** Real Pretty Piggie Makeup Branded Product Render URL */
+  /** Whether a complete, untruncated manufacturer INCI declaration is on file */
+  manufacturerVerified: boolean;
+  /** Manufacturer INCI documentation status */
+  inciStatus: InciVerificationStatus;
+  /** True ONLY when manufacturerVerified && inStock */
+  canPurchase: boolean;
+  /** First-party proxied Pretty Piggie Makeup Product Render URL */
   primaryImage?: string | null;
-  /** Real Pretty Piggie Makeup Branded Packaging Box Render URL */
+  /** First-party proxied Pretty Piggie Makeup Packaging Box Render URL */
   boxImage?: string | null;
   compareAtPrice?: number;
   rating: number;
@@ -100,14 +111,16 @@ export interface BoutiqueProduct {
   badge?: string;
   isBestseller?: boolean;
   isNewArrival?: boolean;
-  /** Verified from INCI declaration */
+  /** Suppressed (false) until signed manufacturer vegan attestation is on file */
   isVegan: boolean;
-  /** Verified from INCI declaration */
+  /** Suppressed (false) until signed manufacturer paraben-free CoA is on file */
   isParabenFree: boolean;
   /** Verified Country of Origin label */
   originLabel: string;
-  /** Context-sensitive FDA / MoCRA / CPSC safety & external-use advisory */
+  /** English FDA / MoCRA / CPSC safety & external-use advisory */
   safetyAdvisory: string;
+  /** French bilingual Health Canada / Cosmetic Regulations s. 18 & 24 cautionary advisory */
+  safetyAdvisoryFr: string;
   description: string;
   highlights: string[];
   ingredients: string;

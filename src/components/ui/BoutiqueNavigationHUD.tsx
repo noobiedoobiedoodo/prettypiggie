@@ -39,6 +39,7 @@ interface BoutiqueNavigationHUDProps {
 
 const CATEGORIES = [
   'All',
+  'Verified Only',
   'Lipstick',
   'Lip Gloss',
   'Blush & Glow',
@@ -83,11 +84,33 @@ export function BoutiqueNavigationHUD({
 
   const zoneHeroProducts =
     activeZone === 'rotunda'
-      ? showroomProducts.slice(0, 5)
-      : showroomProducts.filter((p) => p.zoneId === activeZone);
+      ? [
+          ...showroomProducts.filter((p) => p.canPurchase),
+          ...products
+            .filter((p) => p.canPurchase && !p.isShowroomFloorHero)
+            .slice(0, 2),
+          ...showroomProducts.filter((p) => !p.canPurchase).slice(0, 2),
+        ]
+      : [
+          ...showroomProducts.filter((p) => p.zoneId === activeZone),
+          ...products
+            .filter(
+              (p) =>
+                p.zoneId === activeZone &&
+                p.canPurchase &&
+                !p.isShowroomFloorHero
+            )
+            .slice(0, 2),
+        ];
 
   const searchResults = products.filter((p) => {
-    if (selectedCategory !== 'All' && p.category !== selectedCategory) {
+    if (selectedCategory === 'Verified Only' && !p.canPurchase) {
+      return false;
+    } else if (
+      selectedCategory !== 'All' &&
+      selectedCategory !== 'Verified Only' &&
+      p.category !== selectedCategory
+    ) {
       return false;
     }
     const q = searchQuery.trim().toLowerCase();
@@ -468,9 +491,13 @@ export function BoutiqueNavigationHUD({
                           <span className="rounded-full bg-piggie-100 px-2 py-0.5 text-[10px] font-semibold text-piggie-700">
                             {prod.category}
                           </span>
-                          {prod.isVegan && (
-                            <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-800">
-                              Vegan
+                          {prod.manufacturerVerified ? (
+                            <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-800 ring-1 ring-emerald-200">
+                              Verified INCI
+                            </span>
+                          ) : (
+                            <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-900">
+                              UNVERIFIED • Hold
                             </span>
                           )}
                           {!prod.inStock && (

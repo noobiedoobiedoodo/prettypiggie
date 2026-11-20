@@ -136,7 +136,15 @@ export function PrettyPiggieBoutiqueApp() {
             const matchedProduct = PRETTYPIGGIE_PRODUCTS.find(
               (p) => p.id === raw.productId || p.handle === raw.productHandle
             );
-            if (!matchedProduct || !matchedProduct.inStock) continue;
+            // Evict any product that is out of stock OR lacks verified manufacturer INCI documentation
+            if (
+              !matchedProduct ||
+              !matchedProduct.inStock ||
+              !matchedProduct.manufacturerVerified ||
+              !matchedProduct.canPurchase
+            ) {
+              continue;
+            }
             const matchedShade =
               matchedProduct.shades.find((s) => s.id === raw.shadeId) ??
               matchedProduct.shades[0];
@@ -206,6 +214,15 @@ export function PrettyPiggieBoutiqueApp() {
 
   const handleAddToBag = useCallback(
     (product: BoutiqueProduct, shade: ProductShade, quantity = 1) => {
+      // Hard programmatic guard: Never allow unverified or out-of-stock products to be added to the bag
+      if (
+        !product.manufacturerVerified ||
+        !product.canPurchase ||
+        !product.inStock ||
+        !shade.inStock
+      ) {
+        return;
+      }
       const key = `${product.id}::${shade.id}`;
       setCartItems((prev) => {
         const existing = prev.find((item) => item.key === key);

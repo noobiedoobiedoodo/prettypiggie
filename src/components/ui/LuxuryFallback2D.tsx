@@ -152,14 +152,18 @@ export function LuxuryFallback2D({
                       </span>
                       <span
                         className={`rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${
-                          !product.inStock
+                          !product.manufacturerVerified
+                            ? 'bg-amber-100 text-amber-950 ring-1 ring-amber-300'
+                            : !product.inStock
                             ? 'bg-rose-600 text-white'
                             : 'bg-piggie-950 text-white'
                         }`}
                       >
-                        {!product.inStock
+                        {!product.manufacturerVerified
+                          ? 'UNVERIFIED • Hold'
+                          : !product.inStock
                           ? 'Sold Out'
-                          : product.badge || 'Boutique Pick'}
+                          : product.badge || 'Verified INCI'}
                       </span>
                     </div>
 
@@ -282,21 +286,26 @@ export function LuxuryFallback2D({
                 <div className="mt-4 flex items-center gap-2">
                   <button
                     type="button"
-                    disabled={!product.inStock}
+                    disabled={!product.canPurchase}
                     onClick={() => {
+                      if (!product.canPurchase) return;
                       onQuickAddToBag(product, activeShade);
                       setJustAddedId(product.id);
                       setTimeout(() => setJustAddedId(null), 1500);
                     }}
                     className={`flex flex-1 items-center justify-center gap-1.5 rounded-full py-2.5 text-xs font-bold text-white shadow transition ${
-                      !product.inStock
+                      !product.manufacturerVerified
+                        ? 'cursor-not-allowed bg-amber-800/80'
+                        : !product.canPurchase
                         ? 'cursor-not-allowed bg-neutral-400'
                         : isAdded
                         ? 'bg-emerald-600'
                         : 'bg-piggie-950 hover:bg-piggie-800'
                     }`}
                   >
-                    {!product.inStock ? (
+                    {!product.manufacturerVerified ? (
+                      <span>UNVERIFIED — Hold</span>
+                    ) : !product.inStock ? (
                       <span>Sold Out</span>
                     ) : isAdded ? (
                       <>

@@ -24,9 +24,9 @@ const TABS: Array<{
   label: string;
   icon: React.ComponentType<{ className?: string }>;
 }> = [
-  { id: 'shipping', label: 'Shipping & Returns', icon: Truck },
-  { id: 'safety', label: 'FDA / MoCRA Safety', icon: ShieldAlert },
-  { id: 'privacy', label: 'Privacy (CCPA/GDPR)', icon: Lock },
+  { id: 'shipping', label: 'Shipping & Market Scope', icon: Truck },
+  { id: 'safety', label: 'FDA / MoCRA & Health Canada', icon: ShieldAlert },
+  { id: 'privacy', label: 'Privacy (CCPA / PIPEDA)', icon: Lock },
   { id: 'terms', label: 'Terms of Sale', icon: FileText },
   { id: 'accessibility', label: 'Accessibility (ADA)', icon: Eye },
 ];
@@ -60,11 +60,12 @@ export function LegalComplianceModal({
                 id="legal-modal-title"
                 className="font-serif text-lg font-bold text-piggie-950 md:text-xl"
               >
-                Pretty Piggie Makeup — Customer Care, Safety & Legal Policies
+                Pretty Piggie Makeup — Regulatory, Privacy & Customer Care
+                Center
               </h2>
               <p className="text-[11px] text-piggie-600">
-                FDA / MoCRA Cosmetic Safety • FTC Consumer Protection • CCPA /
-                GDPR Privacy • WCAG 2.1 AA
+                US FDA / MoCRA • Health Canada Cosmetic Regulations • CCPA /
+                PIPEDA / CASL • WCAG 2.1 AA
               </p>
             </div>
           </div>
@@ -113,31 +114,37 @@ export function LegalComplianceModal({
           {activeTab === 'shipping' && (
             <div className="space-y-3">
               <h3 className="font-serif text-base font-bold text-piggie-950">
-                Shipping & 30-Day Shade Guarantee Policy
+                U.S. Domestic Shipping Scope & 30-Day Shade Guarantee
               </h3>
+              <div className="rounded-2xl border border-amber-200 bg-amber-50 p-3 text-amber-950">
+                <strong>Initial Launch Market Scope (U.S. Only):</strong>{' '}
+                Checkout and carrier delivery are currently restricted to
+                addresses within the <strong>50 United States and D.C.</strong>{' '}
+                (enforced via <code>buyerIdentity.countryCode = &apos;US&apos;</code>).
+                Canadian and international shipping are disabled until Canadian
+                bilingual packaging, Hotlist concentration certificates, and
+                post-sale CNF workflows are cleared for activation.
+              </div>
               <p>
                 <strong>Free Express Boutique Shipping ($65+ USD):</strong>{' '}
                 Orders totaling $65.00 USD or more before tax qualify
                 automatically for complimentary tracked shipping within the
-                United States and Canada. Orders under $65.00 ship at a flat
-                rate of $7.00 USD.
+                United States. Orders under $65.00 ship at a flat rate of $7.00
+                USD.
               </p>
               <p>
-                <strong>Fulfillment & Delivery Timeline (FTC 16 CFR Part 435):</strong>{' '}
-                In-stock items are processed within 1–2 business days and
-                typically arrive within 3–7 business days via tracked carrier.
-                If an unexpected delay occurs, we will notify you promptly with
-                the option to consent to the new timeline or receive an
-                immediate full refund.
+                <strong>Fulfillment Timeline (FTC 16 CFR Part 435):</strong>{' '}
+                Verified in-stock items are processed within 1–2 business days
+                and typically arrive within 3–7 business days via tracked
+                carrier. If an unexpected delay occurs, we will notify you
+                promptly with the option to consent to the revised timeline or
+                receive an immediate full refund.
               </p>
               <p>
-                <strong>30-Day Shade Guarantee & Easy Returns:</strong> We want
-                you to love your Pretty Piggie Makeup shade. If a product or
-                shade is not your match, you may request a free exchange or full
-                refund to your original payment method within 30 days of
-                delivery. Gently swatched items qualify under our 30-Day Shade
-                Guarantee; returned cosmetics are never restocked and are
-                responsibly recycled.
+                <strong>30-Day Shade Guarantee & Easy Returns:</strong> If a
+                verified product or shade is not your match, you may request a
+                free exchange or full refund to your original payment method
+                within 30 days of delivery.
               </p>
             </div>
           )}
@@ -145,40 +152,42 @@ export function LegalComplianceModal({
           {activeTab === 'safety' && (
             <div className="space-y-3">
               <h3 className="font-serif text-base font-bold text-piggie-950">
-                FDA / MoCRA Cosmetic Safety, INCI Labeling & Adverse Event
-                Reporting
+                US FDA / MoCRA & Health Canada Cosmetic Regulatory Controls
               </h3>
               <p>
-                <strong>Complete INCI Ingredient Transparency (21 CFR § 701.3):</strong>{' '}
-                Every product in the Pretty Piggie Makeup Virtual Boutique
-                includes a full International Nomenclature of Cosmetic
-                Ingredients (INCI) declaration and `[+/- May Contain]` color
-                additive disclosure under the <strong>Ingredients</strong> tab
-                on its product presentation sheet.
+                <strong>Strict Manufacturer INCI Verification Policy (21 CFR § 701.3):</strong>{' '}
+                PrettyPiggie.com prohibits synthetic, reconstructed, or inferred
+                ingredient declarations. Only products with a complete,
+                untruncated manufacturer INCI declaration on file (
+                <code>VERIFIED_COMPLETE</code> — 56 products) are enabled for
+                commercial checkout. Products whose manufacturer INCI record is
+                pending full specification verification (54 products) are marked{' '}
+                <strong>UNVERIFIED</strong> and are programmatically locked from
+                purchase.
               </p>
               <p>
-                <strong>Patch Test & External Use Advisory:</strong> All
-                cosmetics and skincare products are for external use only. Avoid
-                direct contact with the inner eye. We recommend performing a
-                24-hour skin patch test on the inner forearm prior to first use.
-                Discontinue use immediately and consult a physician if
-                redness, rash, or irritation develops.
+                <strong>
+                  Bilingual English & French Cautionary Warnings (
+                  <em>Cosmetic Regulations</em> s. 18 & 24):
+                </strong>{' '}
+                All product presentation sheets display bilingual English (
+                <code>WARNING</code>) and French (<code>MISE EN GARDE</code>)
+                cautionary disclosures, including AHA/Retinoid Sunburn Alerts,
+                21 CFR § 740.19 Sunless Tanner Warnings, CPSC Candle Fire-Safety
+                Warnings, and External Use / Patch-Test Advisories.
               </p>
               <p>
-                <strong>AHA / Retinoid Sunburn Alert:</strong> Products
-                containing Alpha-Hydroxy Acids (such as Glycolic Acid) or
-                Retinoids may increase your skin’s sensitivity to the sun. Use a
-                broad-spectrum sunscreen, wear protective clothing, and limit
-                sun exposure while using these products and for one week
-                afterwards.
-              </p>
-              <p>
-                <strong>Sunless Tanner Warning (21 CFR § 740.19):</strong>{' '}
-                Self-tanning drops and mousses do not contain a sunscreen and do
-                not protect against sunburn. Repeated exposure of unprotected
-                skin while tanning may increase the risk of skin aging, skin
-                cancer, and other harmful effects to the skin even if you do not
-                burn.
+                <strong>
+                  Health Canada Cosmetic Notification Form (CNF) Workflow (
+                  <em>Cosmetic Regulations</em> s. 30):
+                </strong>{' '}
+                Under section 30 of Canada&apos;s <em>Cosmetic Regulations</em>,
+                manufacturers and importers must submit a Cosmetic Notification
+                Form (CNF) to Health Canada <strong>within 10 days after first
+                sale in Canada</strong>. PrettyPiggie maintains a pre-sale
+                Health Canada Hotlist and CNF preparation register; Canadian
+                checkout remains disabled until all Hotlist concentration CoAs
+                and Quebec Bill 96 requirements are finalized.
               </p>
               <div className="rounded-2xl border border-piggie-200 bg-piggie-50 p-3.5">
                 <strong className="block text-piggie-950">
@@ -186,11 +195,12 @@ export function LegalComplianceModal({
                   364e):
                 </strong>
                 <span className="mt-1 block text-piggie-700">
-                  Pretty Piggie Makeup Consumer Safety Desk • Email:{' '}
-                  <strong>safety@prettypiggie.com</strong> • Customer Care:{' '}
-                  <strong>support@prettypiggie.com</strong>. Please report any
-                  unexpected product reaction or quality concern with the
-                  product SKU and batch code.
+                  Pretty Piggie Makeup Consumer Safety Desk • Electronic Adverse
+                  Event Intake: <strong>safety@prettypiggie.com</strong> •
+                  Customer Care: <strong>support@prettypiggie.com</strong> (U.S.
+                  physical street address and domestic telephone number to be
+                  populated by the Brand Owner prior to General Availability
+                  sign-off).
                 </span>
               </div>
             </div>
@@ -199,28 +209,45 @@ export function LegalComplianceModal({
           {activeTab === 'privacy' && (
             <div className="space-y-3">
               <h3 className="font-serif text-base font-bold text-piggie-950">
-                Privacy Policy & Notice at Collection (CCPA / CPRA / GDPR)
+                Privacy Policy & Notice at Collection (CCPA / CPRA • Canadian
+                PIPEDA • CASL • GDPR)
               </h3>
               <p>
-                <strong>Information We Collect:</strong> PrettyPiggie.com stores
-                your active Shopping Bag locally in your browser (
-                <code>localStorage</code>) so your selected shades persist
-                during your visit. If you enter an optional email address for
-                Guest Checkout tracking or complete a purchase via Shopify
-                Checkout, we collect only the contact, shipping, and payment
-                details required to fulfill your order.
+                <strong>1. Information Collected & Purpose:</strong>{' '}
+                PrettyPiggie.com stores your active Shopping Bag locally in your
+                browser (<code>localStorage</code>) containing only public
+                product identifiers, shade selections, and retail prices. If you
+                provide an optional email address in the Shopping Bag Drawer, it
+                is transmitted to Shopify Checkout solely for transactional
+                order confirmation and carrier tracking updates.
               </p>
               <p>
-                <strong>How We Use Your Information:</strong> Your information
-                is used strictly for order processing, delivery updates, and
-                customer support. We <strong>do not sell or share</strong> your
-                personal information for cross-context behavioral advertising
-                under the California Consumer Privacy Act (CCPA/CPRA).
+                <strong>2. Canadian PIPEDA Fair Information Principles:</strong>{' '}
+                In accordance with Canada&apos;s{' '}
+                <em>
+                  Personal Information Protection and Electronic Documents Act
+                  (PIPEDA)
+                </em>{' '}
+                and provincial privacy statutes (including Quebec Law 25), we
+                collect, use, and disclose personal information only with your
+                knowledge and consent, limit collection to what is strictly
+                necessary for order fulfillment, and safeguard data via TLS
+                encryption and Shopify&apos;s PCI-DSS Level 1 infrastructure.
+                Data may be processed in the United States and Canada.
               </p>
               <p>
-                <strong>Your Privacy Rights:</strong> You have the right to
-                request access to, correction of, or deletion of your personal
-                data at any time by contacting{' '}
+                <strong>3. CASL (Canadian Anti-Spam Legislation) & Marketing Consent:</strong>{' '}
+                We never send commercial electronic messages (CEMs) without your
+                separate, unchecked-by-default <strong>Express Consent</strong>.
+                Transactional order receipts and shipping alerts are exempt
+                under CASL s. 6(6). You may withdraw marketing consent at any
+                time.
+              </p>
+              <p>
+                <strong>4. CCPA / CPRA Rights:</strong> We do not sell or share
+                personal information for cross-context behavioral advertising.
+                To exercise access, correction, or deletion rights under PIPEDA,
+                CCPA, or GDPR, contact our Privacy Officer at{' '}
                 <strong>privacy@prettypiggie.com</strong>.
               </p>
             </div>
@@ -232,26 +259,18 @@ export function LegalComplianceModal({
                 Terms of Service & Conditions of Sale
               </h3>
               <p>
-                <strong>Pricing & Currency:</strong> All prices displayed inside
-                the Pretty Piggie Makeup 3D Virtual Boutique and 2D Catalog are
-                listed in United States Dollars (USD). Applicable sales tax and
-                shipping charges (if under the $65.00 free shipping threshold)
-                are calculated transparently at checkout prior to payment.
+                <strong>Pricing & Availability:</strong> All prices are listed
+                in United States Dollars (USD). Products designated{' '}
+                <code>UNVERIFIED</code> are displayed strictly for 3D virtual
+                showroom preview and do not constitute an offer for sale until
+                manufacturer documentation verification is complete.
               </p>
               <p>
-                <strong>Color & 3D Shade Representation:</strong> Our 3D PBR
-                shaders and RGB shade swatches are calibrated directly against
-                physical product formulations; however, subtle variations may
-                occur across different screen calibrations and lighting
-                environments. All purchases are covered by our 30-Day Shade
-                Guarantee.
-              </p>
-              <p>
-                <strong>Cosmetic Appearance Claims:</strong> Product
-                descriptions refer strictly to cosmetic appearance benefits
-                (such as moisturizing, smoothing, or brightening the look of
-                skin) and are not intended to diagnose, treat, cure, or prevent
-                any medical condition.
+                <strong>Cosmetic Appearance Representations:</strong> All
+                product descriptions refer strictly to cosmetic cleansing,
+                beautifying, or appearance-enhancing benefits and are not
+                intended to diagnose, treat, cure, or prevent any disease or
+                alter physiological structure.
               </p>
             </div>
           )}
@@ -261,37 +280,24 @@ export function LegalComplianceModal({
               <h3 className="font-serif text-base font-bold text-piggie-950">
                 ADA & WCAG 2.1 AA Digital Accessibility Statement
               </h3>
-              <p>
-                <strong>Accessible by Design:</strong> PrettyPiggie.com is
-                engineered so every customer can explore and shop our collection
-                effortlessly, regardless of device capability, assistive
-                technology, or motion sensitivity.
-              </p>
               <ul className="list-disc space-y-1.5 pl-5">
                 <li>
-                  <strong>Instant 2D Catalog Mode:</strong> Customers using
-                  screen readers, keyboard-only navigation, or low-GPU devices
-                  can switch to our full <strong>2D Catalog Mode</strong> at any
-                  time via the top navigation bar.
+                  <strong>Instant 2D Catalog Mode:</strong> Switch between the
+                  3D Virtual Showroom and the full 2D Catalog at any time via
+                  the top header or <code>/?mode=2d</code>.
                 </li>
                 <li>
-                  <strong>Reduced Motion Support:</strong> Our 3D showroom
-                  automatically detects <code>prefers-reduced-motion</code> to
-                  disable particle effects, auto-rotation, and long camera
-                  flights.
+                  <strong>Reduced Motion & Context Recovery:</strong> Respects{' '}
+                  <code>prefers-reduced-motion</code> and automatically
+                  transitions to 2D Mode if a mobile browser reclaims the WebGL
+                  context.
                 </li>
                 <li>
-                  <strong>Keyboard & Zoom Support:</strong> Supports browser
-                  pinch-to-zoom up to 500%, full keyboard navigation (
-                  <code>Tab</code>, <code>ArrowLeft</code>,{' '}
-                  <code>ArrowRight</code>, <code>Escape</code>), and high
-                  contrast text controls.
+                  <strong>Zoom & Keyboard Navigation:</strong> Supports 500%
+                  pinch-to-zoom, semantic buttons, ARIA dialogs/tabs, and full
+                  keyboard navigation.
                 </li>
               </ul>
-              <p>
-                Need assistance placing an order? Contact{' '}
-                <strong>accessibility@prettypiggie.com</strong>.
-              </p>
             </div>
           )}
         </div>

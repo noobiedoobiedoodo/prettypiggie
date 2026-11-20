@@ -4,6 +4,7 @@ import {
   BoutiqueZone,
   BoutiqueZoneId,
   FinishType,
+  InciVerificationStatus,
   ProductModelType,
   ProductShade,
 } from '@/types/boutique';
@@ -181,67 +182,67 @@ const SHOWROOM_HERO_PLACEMENTS: Record<
     zoneId: 'makeup-wall',
     position3D: [-2.6, 2.55, -6.68],
     modelType: 'lipstick',
-    badge: '14 Shades • Bestseller',
+    badge: '14 Shades • Preview',
   },
   'lip-gloss': {
     zoneId: 'makeup-wall',
     position3D: [0.0, 2.55, -6.68],
     modelType: 'lipgloss',
-    badge: '15 Shades • Bestseller',
+    badge: '15 Shades • Preview',
   },
   'eyeshadow-palette': {
     zoneId: 'makeup-wall',
     position3D: [2.6, 2.55, -6.56],
     modelType: 'palette',
-    badge: '5 Palettes • Bestseller',
+    badge: '5 Palettes • Preview',
   },
   foundation: {
     zoneId: 'beauty-counter',
     position3D: [-1.4, 1.38, -3.5],
     modelType: 'foundation',
-    badge: '17 Shades • Complexion',
+    badge: '17 Shades • Preview',
   },
   'blush-palette': {
     zoneId: 'beauty-counter',
     position3D: [1.4, 1.38, -3.5],
     modelType: 'compact',
-    badge: '3 Palettes • Cheek Bar',
+    badge: '3 Palettes • Preview',
   },
   'luxury-cream-lipstick': {
     zoneId: 'collection',
     position3D: [-1.45, 1.32, 1.2],
     modelType: 'lipstick',
-    badge: 'Luxury Edition',
+    badge: 'Luxury Preview',
   },
   'luminizing-powder': {
     zoneId: 'collection',
     position3D: [1.45, 1.32, 2.2],
     modelType: 'compact',
-    badge: 'Signature Glow',
+    badge: 'Verified • Signature Glow',
   },
   'matte-lip-stain': {
     zoneId: 'bestsellers',
     position3D: [-5.8, 1.55, -0.9],
     modelType: 'lipgloss',
-    badge: '12 Shades • Top Bestseller',
+    badge: '12 Shades • Preview',
   },
   'liquid-blush': {
     zoneId: 'bestsellers',
     position3D: [-5.8, 1.55, 1.3],
     modelType: 'foundation',
-    badge: '5 Shades • Bestseller',
+    badge: '5 Shades • Preview',
   },
   'stipple-blend-foundation-brush': {
     zoneId: 'discovery-room',
     position3D: [5.8, 1.48, -0.9],
     modelType: 'brushset',
-    badge: 'Pro Artistry Brush',
+    badge: 'Verified • Artistry Brush',
   },
   'pro-cheek-palette': {
     zoneId: 'discovery-room',
     position3D: [5.8, 1.48, 1.3],
     modelType: 'palette',
-    badge: '3-in-1 Sculpt & Flush',
+    badge: '3-in-1 Preview',
   },
 };
 
@@ -390,12 +391,14 @@ function analyzeRegulatoryProfile(
   title: string,
   description: string,
   ingredients: string,
-  category: BoutiqueProduct['category']
+  category: BoutiqueProduct['category'],
+  manufacturerVerified: boolean
 ): {
   isVegan: boolean;
   isParabenFree: boolean;
   originLabel: string;
   safetyAdvisory: string;
+  safetyAdvisoryFr: string;
   highlights: string[];
   howToApply: string;
 } {
@@ -403,127 +406,121 @@ function analyzeRegulatoryProfile(
   const descLower = description.toLowerCase();
   const titleLower = title.toLowerCase();
 
-  // Check paraben presence in INCI
-  const hasParabens = /paraben\b/i.test(ingLower);
-  const isParabenFree = !hasParabens;
+  // Per Owner Directive (P0-REG-01): Do not introduce unverified product claims.
+  // Vegan & Paraben-Free badges remain suppressed (false) until signed manufacturer CoAs are uploaded.
+  const isVegan = false;
+  const isParabenFree = false;
 
-  // Check animal-derived ingredients in INCI ( excluding "synthetic beeswax" )
-  const ingWithoutSyntheticBeeswax = ingLower.replace(
-    /synthetic\s+beeswax/g,
-    ''
-  );
-  const hasAnimalDerived =
-    /\b(beeswax|cera alba|lanolin|goat milk|carmine|ci 75470|honey|hydrolyzed silk|silk|collagen|keratin)\b/i.test(
-      ingWithoutSyntheticBeeswax
-    );
-  const isVegan = !hasAnimalDerived;
-
-  // Check country of origin from product description
   const originLabel = descLower.includes('made in china')
-    ? 'Imported • Quality Tested'
+    ? 'Imported'
     : descLower.includes('made in canada')
     ? 'Made in Canada'
     : 'Made in North America';
 
-  // Build context-sensitive FDA / MoCRA / CPSC safety advisory
+  // Bilingual English & French Cautionary Warnings (US FDA / MoCRA & Health Canada Cosmetic Regulations s. 18 & 24)
   let safetyAdvisory =
-    'For external use only. Avoid direct contact with inner eyes. Perform a patch test prior to first use; discontinue use if irritation or rash occurs. Keep out of reach of children.';
+    'WARNING: For external use only. Avoid direct contact with inner eyes. Perform a patch test prior to first use; discontinue use if irritation or rash occurs. Keep out of reach of children.';
+  let safetyAdvisoryFr =
+    'MISE EN GARDE : Pour usage externe seulement. Éviter tout contact direct avec les yeux. Effectuer un test cutané avant la première utilisation ; cesser l’emploi en cas d’irritation ou d’éruption cutanée. Garder hors de la portée des enfants.';
 
   if (slug === 'scented-candle') {
     safetyAdvisory =
-      'CPSC Fire Safety Warning: Burn within sight on a heat-resistant surface. Keep away from flammable objects, drafts, children, and pets. Trim wick to 1/4 inch before each lighting and do not burn for more than 4 hours at a time.';
+      'CPSC FIRE SAFETY WARNING: Burn within sight on a heat-resistant surface. Keep away from flammable objects, drafts, children, and pets. Trim wick to 1/4 inch before each lighting and do not burn for more than 4 hours at a time.';
+    safetyAdvisoryFr =
+      'MISE EN GARDE CONTRE LES INCENDIES : Faire brûler sous surveillance sur une surface résistante à la chaleur. Tenir loin des objets inflammables, des courants d’air, des enfants et des animaux. Couper la mèche à 6 mm avant chaque allumage et ne pas faire brûler plus de 4 heures consécutives.';
   } else if (
     slug === 'tanning-drops' ||
     slug === 'tanning-mousse' ||
     ingLower.includes('dihydroxyacetone')
   ) {
     safetyAdvisory =
-      '21 CFR § 740.19 Sunless Tanner Warning: This product does not contain a sunscreen and does not protect against sunburn. Repeated exposure of unprotected skin while tanning may increase the risk of skin aging, skin cancer, and other harmful effects to the skin even if you do not burn. For external use only; wash hands thoroughly after application.';
+      '21 CFR § 740.19 SUNLESS TANNER WARNING: This product does not contain a sunscreen and does not protect against sunburn. Repeated exposure of unprotected skin while tanning may increase the risk of skin aging, skin cancer, and other harmful effects to the skin even if you do not burn. For external use only.';
+    safetyAdvisoryFr =
+      'MISE EN GARDE POUR AUTOBRONZANT : Ce produit ne contient pas d’écran solaire et ne protège pas contre les coups de soleil. L’exposition répétée de la peau non protégée pendant le bronzage peut augmenter le risque de vieillissement cutané, de cancer de la peau et d’autres effets nocifs, même en l’absence de coup de soleil. Pour usage externe seulement.';
   } else if (
     ingLower.includes('glycolic acid') ||
     ingLower.includes('retinol') ||
     ingLower.includes('retinyl palmitate')
   ) {
     safetyAdvisory =
-      'FDA AHA / Retinoid Sunburn Alert: This product contains an alpha-hydroxy acid (AHA) and/or retinoid that may increase your skin’s sensitivity to the sun and particularly the possibility of sunburn. Use a broad-spectrum sunscreen, wear protective clothing, and limit sun exposure while using this product and for a week afterwards. For external use only.';
+      'FDA / HEALTH CANADA AHA & RETINOID SUNBURN ALERT: This product contains an alpha-hydroxy acid (AHA) and/or retinoid that may increase your skin’s sensitivity to the sun and particularly the possibility of sunburn. Use a broad-spectrum sunscreen, wear protective clothing, and limit sun exposure while using this product and for a week afterwards.';
+    safetyAdvisoryFr =
+      'ALERTE AUX COUPS DE SOLEIL (AHA / RÉTINOÏDES) : Ce produit contient un acide alpha-hydroxylé (AHA) et/ou un rétinoïde pouvant accroître la sensibilité de votre peau au soleil et particulièrement le risque de coup de soleil. Utiliser un écran solaire à large spectre, porter des vêtements protecteurs et limiter l’exposition au soleil pendant l’utilisation de ce produit et durant la semaine suivante.';
   } else if (category === 'Artistry Brushes') {
     safetyAdvisory =
-      'Cleanse tool regularly with mild brush cleanser or gentle soap and lukewarm water. Reshape and lay flat to air dry completely before storage.';
+      'CARE ADVISORY: Cleanse tool regularly with mild brush cleanser or gentle soap and lukewarm water. Reshape and lay flat to air dry completely before storage.';
+    safetyAdvisoryFr =
+      'CONSEIL D’ENTRETIEN : Nettoyer régulièrement l’accessoire avec un nettoyant doux pour pinceaux et de l’eau tiède. Remodeler et laisser sécher à plat à l’air libre avant le rangement.';
   }
 
-  // Build accurate, category-specific highlights and usage directions
-  const claimsLine = [
-    '100% Cruelty-Free',
-    isParabenFree ? 'Paraben-Free' : null,
-    isVegan ? 'Vegan Formula' : null,
-  ]
-    .filter(Boolean)
-    .join(' • ');
+  const verificationLine = manufacturerVerified
+    ? 'Complete Manufacturer INCI Specification On File'
+    : 'UNVERIFIED — Purchase Locked Pending Full Manufacturer INCI Sheet';
 
   let highlights: string[] = [];
   let howToApply = '';
 
   if (slug === 'scented-candle') {
     highlights = [
-      'Hand-poured coconut and soy wax blend for an even, clean burn',
-      'Infused with aromatic essential oil fragrance profiles',
-      claimsLine,
+      'Hand-poured coconut and soy wax blend for an even burn',
+      'Infused with aromatic fragrance profiles',
+      verificationLine,
       `${originLabel} • Signature Pretty Piggie vessel`,
     ];
     howToApply =
-      'Trim cotton wick to 1/4 inch before lighting. Allow the wax pool to reach the vessel edges on first burn for an even melt.';
+      'Trim cotton wick to 1/4 inch before lighting. Allow the wax pool to reach the vessel edges on first burn.';
   } else if (category === 'Artistry Brushes') {
     highlights = [
-      'Ergonomically balanced for effortless artistry and precision control',
-      '100% Cruelty-Free synthetic materials designed for seamless blending',
-      'Durable, easy-to-clean construction for daily beauty routines',
+      'Ergonomically balanced for artistry and precision control',
+      'Synthetic materials designed for seamless application',
+      verificationLine,
       `${originLabel} • Signature Pretty Piggie Makeup collection`,
     ];
     howToApply = titleLower.includes('bag')
-      ? 'Store your favorite Pretty Piggie Makeup essentials upright or wipe interior lining clean with a damp cloth.'
+      ? 'Store your Pretty Piggie Makeup essentials upright or wipe interior lining clean with a damp cloth.'
       : titleLower.includes('tweezer')
-      ? 'Grip individual stray hairs at the root in the direction of growth for clean, precise brow shaping.'
+      ? 'Grip individual stray hairs at the root in the direction of growth for precise brow shaping.'
       : titleLower.includes('blotting')
-      ? 'Gently press a single sheet onto the T-zone, chin, or cheeks to absorb excess surface shine without disturbing makeup.'
+      ? 'Gently press a single sheet onto the T-zone, chin, or cheeks to absorb excess surface shine.'
       : titleLower.includes('sponge') || titleLower.includes('blender')
       ? 'Dampen with water and squeeze out excess moisture before bouncing cream, liquid, or cleanser across the face.'
-      : 'Use gentle sweeping or stippling motions to apply, buff, and blend liquid, cream, or powder formulas seamlessly.';
+      : 'Use gentle sweeping or stippling motions to apply, buff, and blend liquid, cream, or powder formulas.';
   } else if (category === 'Skincare & Body') {
     highlights = [
       'Formulated with skin-conditioning botanical extracts and humectants',
-      'Lightweight, fast-absorbing texture layers smoothly into daily routines',
-      claimsLine,
+      'Lightweight texture layers smoothly into daily skincare routines',
+      verificationLine,
       `${originLabel} • Signature Pretty Piggie Makeup skincare`,
     ];
     howToApply =
       'Apply to clean skin using gentle upward motions. Follow with broad-spectrum sun protection during daytime use.';
   } else if (category === 'Lipstick' || category === 'Lip Gloss') {
     highlights = [
-      'Rich, buildable color payoff with comfortable all-day wear',
-      'Infused with conditioning botanical oils and waxes for smooth glide',
-      claimsLine,
-      `${originLabel} • Signature Pretty Piggie Makeup lip couture`,
+      'Buildable color payoff with comfortable wear',
+      'Conditioning base designed for smooth application',
+      verificationLine,
+      `${originLabel} • Signature Pretty Piggie Makeup lip collection`,
     ];
     howToApply =
-      'Glide evenly across clean lips starting from the center of the Cupid’s bow outward. Layer with a Pretty Piggie lip liner or gloss for added dimension.';
+      'Glide evenly across clean lips starting from the center of the Cupid’s bow outward.';
   } else if (category === 'Eye Couture') {
     highlights = [
-      'High-definition pigment designed for smooth, crease-resistant wear',
-      'Blends effortlessly for subtle daytime definition or evening drama',
-      claimsLine,
+      'High-definition pigment designed for smooth wear',
+      'Blends for daytime definition or evening drama',
+      verificationLine,
       `${originLabel} • Signature Pretty Piggie Makeup eye collection`,
     ];
     howToApply =
       'Apply gently along the lash line, brow, or eyelid using a precision Pretty Piggie artistry brush or applicator.';
   } else {
     highlights = [
-      'Buildable, second-skin finish that blends seamlessly without caking',
-      'Formulated to flatter and illuminate natural facial contours',
-      claimsLine,
+      'Buildable finish that blends smoothly across skin',
+      'Formulated to flatter natural facial contours',
+      verificationLine,
       `${originLabel} • Signature Pretty Piggie Makeup complexion bar`,
     ];
     howToApply =
-      'Apply evenly to clean, moisturized skin from the center of the face outward using a Pretty Piggie foundation brush, blender, or fingertips.';
+      'Apply evenly to clean, moisturized skin from the center of the face outward using a brush, blender, or fingertips.';
   }
 
   return {
@@ -531,6 +528,7 @@ function analyzeRegulatoryProfile(
     isParabenFree,
     originLabel,
     safetyAdvisory,
+    safetyAdvisoryFr,
     highlights,
     howToApply,
   };
@@ -546,6 +544,9 @@ interface SanitizedCatalogItem {
   ingredients: string;
   price: number;
   inStock: boolean;
+  manufacturerVerified: boolean;
+  inciStatus: InciVerificationStatus;
+  canPurchase: boolean;
   categoriesText: string;
   imageUrls: string[];
   primaryImage: string | null;
@@ -573,12 +574,16 @@ export const PRETTYPIGGIE_PRODUCTS: BoutiqueProduct[] = rawItems.map((item) => {
     .includes('bestseller');
   const isNewArrival = item.categoriesText.toLowerCase().includes('new');
 
+  const manufacturerVerified = Boolean(item.manufacturerVerified);
+  const canPurchase = Boolean(manufacturerVerified && item.inStock);
+
   const regProfile = analyzeRegulatoryProfile(
     item.slug,
     item.title,
     item.description,
     item.ingredients,
-    inferred.category
+    inferred.category,
+    manufacturerVerified
   );
 
   const shades: ProductShade[] = item.shades.map((s) => ({
@@ -588,7 +593,7 @@ export const PRETTYPIGGIE_PRODUCTS: BoutiqueProduct[] = rawItems.map((item) => {
     secondaryHex: '#FCE4EC',
     finish: inferred.finish,
     sku: s.sku,
-    inStock: item.inStock,
+    inStock: canPurchase,
     shopifyVariantId: `gid://shopify/ProductVariant/${s.sku}`,
   }));
 
@@ -605,31 +610,35 @@ export const PRETTYPIGGIE_PRODUCTS: BoutiqueProduct[] = rawItems.map((item) => {
     position3D: heroPlacement?.position3D ?? [0, 1.5, 0],
     price: item.price,
     inStock: item.inStock,
+    manufacturerVerified,
+    inciStatus: item.inciStatus || 'UNVERIFIED_MISSING_SPEC',
+    canPurchase,
     primaryImage: item.primaryImage,
     boxImage: item.boxImage,
     rating: 4.9,
     reviewCount: 1,
-    badge:
-      heroPlacement?.badge ||
-      (!item.inStock
-        ? 'Sold Out'
-        : isBestseller
-        ? 'Bestseller'
-        : isNewArrival
-        ? 'New Arrival'
-        : 'Boutique Collection'),
+    badge: !manufacturerVerified
+      ? 'UNVERIFIED • Hold'
+      : !item.inStock
+      ? 'Sold Out'
+      : heroPlacement?.badge ||
+        (isBestseller
+          ? 'Verified • Bestseller'
+          : isNewArrival
+          ? 'Verified • New'
+          : 'Verified INCI'),
     isBestseller,
     isNewArrival,
     isVegan: regProfile.isVegan,
     isParabenFree: regProfile.isParabenFree,
     originLabel: regProfile.originLabel,
     safetyAdvisory: regProfile.safetyAdvisory,
+    safetyAdvisoryFr: regProfile.safetyAdvisoryFr,
     description: item.description,
     highlights: regProfile.highlights,
     ingredients: item.ingredients,
     howToApply: regProfile.howToApply,
     shades,
-    // FTC 16 CFR Part 465 Compliant Editorial Note (never falsely labeled as a Verified Buyer review)
     reviews: [
       {
         id: `editorial-${item.slug}-1`,

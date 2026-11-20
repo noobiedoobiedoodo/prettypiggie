@@ -6,16 +6,16 @@
     "title": "Active Eye Cream",
     "subtitle": "A firming, fatigue-fighting formula designed to smooth and energize the delicate eye area.",
     "description": "Powered by alpha arbutin and hyaluronic acid, this fast-absorbing cream helps brighten the look of dark circles while hydrating and softening the appearance of fine lines around the eyes. The formula helps improve the look of skin firmness and elasticity, reducing visible signs of fatigue. Lightweight and silky in texture, it layers seamlessly under makeup or as part of an evening routine. Made in North America.",
-    "ingredients": "Aqua (Water), Stearic Acid, Helianthus Annuus (Sunflower) Seed Oil, Cetearyl Olivate, Sorbitan Olivate, Cetyl Alcohol, Propanediol, Glyceryl Stearate, Olea Europaea (Olive) Fruit Oil, Coco-Caprylate, Persea Gratissima (Avocado) Oil, Alpha-Arbutin, Sodium Hyaluronate, Vitis Vinifera (Grape) Seed Oil, Cucumis Sativus (Cucumber) Seed Extract, Prunus Amygdalus Dulcis (Sweet Almond) Oil, 3-O-Ethyl Ascorbic Acid, Mangifera Indica (Mango) Seed Butter, Niacinamide, Tocopherol, Phenoxyethanol, Ethylhexylglycerin.",
+    "ingredients": "Aqua (Water), Stearic Acid, Helianthus Annuus (Sunflower) Seed Oil, Cetearyl Olivate, Sorbitan Olivate, Cetyl Alcohol, Propanediol, Glyceryl Stearate, Olea Europaea (Olive) Fruit Oil, Coco-Caprylate, Persea Gratissima (Avocado) Oil, Alpha-Arbutin, Sodium Hyaluronate, Vitis Vinifera (Grape) Seed Oil, Cucumis Sativus (Cucumber) Seed Extract, Prunus Amygdalus Dulcis (Sweet Almond) Oil, 3-O-Ethyl Ascorbic Acid, Mangifera Indica (Mango) Seed Butter, N [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 47.1,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-PC-03-04-CR-AEC.webp?v=250371",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-04-CR-AEC-BOX.webp?v=823728"
+      "/api/product-image/active-eye-cream/primary",
+      "/api/product-image/active-eye-cream/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-PC-03-04-CR-AEC.webp?v=250371",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-04-CR-AEC-BOX.webp?v=823728",
+    "primaryImage": "/api/product-image/active-eye-cream/primary",
+    "boxImage": "/api/product-image/active-eye-cream/box",
     "shades": [
       {
         "id": "active-eye-cream-default",
@@ -25,7 +25,10 @@
         "sku": "PP-PC-03-04-CR-AEC-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-age-defying-serum",
@@ -34,16 +37,16 @@
     "title": "Age Defying Serum",
     "subtitle": "Hydrate, firm, and refresh skin-because aging gracefully should have radiance every day.",
     "description": "A potent blend of squalane and glycerin delivers lasting hydration, while hydrolyzed soy protein supports skin’s elasticity and smooths fine lines. This serum targets firmness and radiance, leaving skin feeling renewed and visibly revitalized—no fuss, just results. Made in North America.",
-    "ingredients": "Water (Aqua), Glycerin, Isopropyl Palmitate, Dimethicone, Squalane, Hydroxyethyl Acrylate/Sodium Acryloyldimethyl Taurate Copolymer, Dipalmitoyl Hydroxyproline, Aloe Barbadensis Leaf Juice, Polysorbate 60, Isohexadecane, Hydrolyzed Soy Protein, Phenoxyethanol, Tocopheryl Acetate, Caprylyl Glycol, Ethylhexylglycerin, Hexylene Glycol, Lavandula Angustifolia (Lavender) Oil, Caffeine, Propylene Glycol, Tetrahexyldecyl Ascorbate, Sodium Hyaluronate, Sorbitan Isostearate.",
+    "ingredients": "Water (Aqua), Glycerin, Isopropyl Palmitate, Dimethicone, Squalane, Hydroxyethylacrylate/sodium acryloyldimethyl taurate copolymer, Dipalmitoyl Hydroxyproline, Aloe Barbadensis Leaf Juice, Polysorbate 60, Isohexadecane, Hydrolyzed Soy Protein, Phenoxyethanol, Tocopheryl Acetate, Caprylyl Glycol, Ethylhexylglycerin, Hexylene Glycol, Lavandula Angustifolia (Lavender) Oil, Caffeine, Propylene Glycol, Tetrahexyldecyl Ascorbate, Sodium Hyaluronate, So [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 56.7,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Skincare)",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-SE-ADEF.webp?v=565480",
-      "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-SE-ADEF-BOX.webp?v=207417"
+      "/api/product-image/age-defying-serum/primary",
+      "/api/product-image/age-defying-serum/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-SE-ADEF.webp?v=565480",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-SE-ADEF-BOX.webp?v=207417",
+    "primaryImage": "/api/product-image/age-defying-serum/primary",
+    "boxImage": "/api/product-image/age-defying-serum/box",
     "shades": [
       {
         "id": "age-defying-serum-default",
@@ -53,7 +56,10 @@
         "sku": "PP-CA-03-02-SE-ADEF-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-all-in-one-body-wash",
@@ -62,14 +68,14 @@
     "title": "All-In-One Body Wash",
     "subtitle": "Cleanse and hydrate in one simple step.",
     "description": "A sulfate-free, gentle body wash that cleans deeply without stripping moisture. Enriched with squalane and nutrient-rich ingredients, it leaves skin feeling smooth, refreshed, and balanced—your go-to for a streamlined shower routine. Made in North America.",
-    "ingredients": "Aqua, Cocos Nucifera (Coconut) Oil, Sodium Methyl 2-Sulfolaurate, Disodium 2-Sulfolaurate, Cocamidopropyl Betaine, Glycerin, Sodium Cocoyl Isethionate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Guar Hydroxypropyltrimonium Chloride, Squalane, Prunus Armeniaca (Apricot) Fruit Extract, Rosa Centifolia Flower Extract, Rosmarinus Officinalis (Rosemary) Leaf Extract, Aesculus Hippocastanum (Horse Chestnut) Seed Extract, Phenoxyethanol, Ethylhexylglycerin.",
+    "ingredients": "Aqua, Cocos Nucifera (Coconut) Oil, Sodium Methyl 2-Sulfolaurate, Disodium 2-Sulfolaurate, Cocamidopropyl Betaine, Glycerin, Sodium Cocoyl Isethionate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Guar Hydroxypropyltrimonium Chloride, **Squalane, *CO Glycerin, *CO Prunus Armeniaca (Apricot) Fruit Extract, *CO Rosa Centifolia Flower Extract, *CO Rosmarinus Officinalis (Rosemary) Leaf Extract, *CO Aesculus Hippocastanum (Horse Chestnut) Seed Extra [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 50.2,
     "inStock": false,
     "categoriesText": "Hair & Body, Men's",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-SS-05-06-BWSH.webp?v=400645"
+      "/api/product-image/all-in-one-body-wash/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-SS-05-06-BWSH.webp?v=400645",
+    "primaryImage": "/api/product-image/all-in-one-body-wash/primary",
     "boxImage": null,
     "shades": [
       {
@@ -80,7 +86,10 @@
         "sku": "PP-SS-05-06-BWSH-01",
         "inStock": false
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-angled-liner-brush",
@@ -94,9 +103,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-AGL-EB56.webp?v=422745"
+      "/api/product-image/angled-liner-brush/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-AGL-EB56.webp?v=422745",
+    "primaryImage": "/api/product-image/angled-liner-brush/primary",
     "boxImage": null,
     "shades": [
       {
@@ -107,7 +116,10 @@
         "sku": "PP-CS-01-03-AGL-EB56-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-anti-aging-rose-gold-oil",
@@ -121,11 +133,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-EZ-03-02-RGS.webp?v=445318",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-RGS-BOX.webp?v=912469"
+      "/api/product-image/anti-aging-rose-gold-oil/primary",
+      "/api/product-image/anti-aging-rose-gold-oil/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-EZ-03-02-RGS.webp?v=445318",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-RGS-BOX.webp?v=912469",
+    "primaryImage": "/api/product-image/anti-aging-rose-gold-oil/primary",
+    "boxImage": "/api/product-image/anti-aging-rose-gold-oil/box",
     "shades": [
       {
         "id": "anti-aging-rose-gold-oil-default",
@@ -135,7 +147,10 @@
         "sku": "PP-EZ-03-02-RGS-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-automatic-eyebrow-pencil",
@@ -149,11 +164,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-BP-AB6.webp?v=981532",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BP-AB-BOX.webp?v=511452"
+      "/api/product-image/automatic-eyebrow-pencil/primary",
+      "/api/product-image/automatic-eyebrow-pencil/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-BP-AB6.webp?v=981532",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BP-AB-BOX.webp?v=511452",
+    "primaryImage": "/api/product-image/automatic-eyebrow-pencil/primary",
+    "boxImage": "/api/product-image/automatic-eyebrow-pencil/box",
     "shades": [
       {
         "id": "automatic-eyebrow-pencil-1",
@@ -195,7 +210,10 @@
         "sku": "PP-MB-01-02-BP-AB6-05",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-automatic-lip-liner",
@@ -204,16 +222,16 @@
     "title": "Automatic Lip Liner",
     "subtitle": "Retractable, transfer-resistant precision lip liner that sculpts, defines, and prevents feathering.",
     "description": "Luxury North American formula by Pretty Piggie Makeup.",
-    "ingredients": "Cyclopentasiloxane, Synthetic Wax, Isododecane, Polybutene, Hydrogenated Cottonseed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Ceresin, Ozokerite, Microcrystalline Wax (Cera Microcristallina), Tocopherol, Ascorbyl Palmitate. [+/- May Contain: Mica (CI 77019), Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 7 Lake (CI 15850), Red 28 Lake (CI 45410)].",
+    "ingredients": "UNVERIFIED — Manufacturer INCI specification was not published on the supplier catalog page. Purchase is disabled until official manufacturer PIF / CoA documentation is received and verified.",
     "price": 25.9,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-01-01-RL-ALL01.webp?v=999069",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-RL-ALL-BOX1.webp?v=429171"
+      "/api/product-image/automatic-lip-liner/primary",
+      "/api/product-image/automatic-lip-liner/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-01-01-RL-ALL01.webp?v=999069",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-RL-ALL-BOX1.webp?v=429171",
+    "primaryImage": "/api/product-image/automatic-lip-liner/primary",
+    "boxImage": "/api/product-image/automatic-lip-liner/box",
     "shades": [
       {
         "id": "automatic-lip-liner-1",
@@ -239,7 +257,10 @@
         "sku": "PP-LB-01-01-RL-ALL01-03",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_MISSING_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-bb-cream",
@@ -248,16 +269,16 @@
     "title": "BB Cream",
     "subtitle": "Lightweight coverage meets skincare in one multitasking formula.",
     "description": "A breathable BB Cream that blends lightweight daily hydration with medium, buildable coverage to visibly even skin tone, blur imperfections, and leave a fresh, natural-looking finish. Made in North America.",
-    "ingredients": "Aqua, Cyclopentasiloxane, Ethylhexyl Methoxycinnamate, Ethylhexyl Salicylate, Zinc Oxide, Glycerin, Caprylic/Capric Triglyceride, PEG-10 Dimethicone, Polymethylsilsesquioxane, Cetyl PEG/PPG-10/1 Dimethicone, Dimethicone, Arbutin, Sodium Chloride, Stearalkonium Hectorite, Hydrolyzed Collagen, Phenoxyethanol, Methicone, Polyglyceryl-4 Isostearate, Disteardimonium Hectorite, Sodium Hyaluronate, Tocopheryl Acetate. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499)].",
+    "ingredients": "Aqua, Cyclopentasiloxane, Glycerin, Dicaprylyl Carbonate, Isopropyl Myristate, Isotridecyl Isononanoate, Butylene Glycol, Dimethicone, Hexyl Laurate, Ethylhexyl Methoxycinnamate, Cetyl Peg/ppg-10/1 Dimethicone, Polymethyl Methacrylate, Sodium Chloride, Magnesium Sulfate, Magnesium Stearate, Hydroxyacetophenone, 1,2-hexanediol, Peg-10 Dimethicone, Disodium Stearoyl Glutamate, Aluminum Hydroxide, Polyglyceryl-4 Isostearate, Disteardimonium Hectorit [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 31.7,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-BC-FB105.webp?v=775632",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BC-FB-BOX.webp?v=957567"
+      "/api/product-image/bb-cream/primary",
+      "/api/product-image/bb-cream/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-BC-FB105.webp?v=775632",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BC-FB-BOX.webp?v=957567",
+    "primaryImage": "/api/product-image/bb-cream/primary",
+    "boxImage": "/api/product-image/bb-cream/box",
     "shades": [
       {
         "id": "bb-cream-1",
@@ -331,7 +352,10 @@
         "sku": "PP-MB-01-02-BC-FB105-09",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-beard-butter",
@@ -345,9 +369,9 @@
     "inStock": true,
     "categoriesText": "Men's, Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-FE-05-07-BTT.webp?v=213556"
+      "/api/product-image/beard-butter/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-FE-05-07-BTT.webp?v=213556",
+    "primaryImage": "/api/product-image/beard-butter/primary",
     "boxImage": null,
     "shades": [
       {
@@ -358,7 +382,10 @@
         "sku": "PP-FE-05-07-BTT-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-beard-oil",
@@ -367,16 +394,16 @@
     "title": "Beard Oil",
     "subtitle": "A lightweight conditioning oil formulated with plant-based carrier oils and 100% essential oils to hydrate, soften, and tame facial hair without feeling greasy. This blend supports healthy beard growth while moisturizing the skin underneath, helping to prevent itchiness and flaking. A few drops is all it takes—dispensed easily with the dropper—for a well-groomed beard and a fresh, subtle scent that lasts all day.",
     "description": "A lightweight botanical beard oil blend that deeply conditions facial hair and moisturizes the skin underneath, promoting the appearance of a fuller, softer, healthier-looking beard. Made in North America.",
-    "ingredients": "Carthamus Tinctorius (Safflower) Seed Oil, Prunus Armygdalus Dulcis (Sweet Almond) Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Argania Spinosa (Argan) Kernel Oil, Cocos Nucifera (Coconut) Oil, Vitis Vinifera (Grape) Seed Oil, Cannabis Sativa (Hemp) Seed Oil, Prunus Armeniaca (Apricot) Kernel Oil, Persea Gratissima (Avocado) Oil, Sesamum Indicum (Sesame) Seed Oil, Ricinus Communis (Castor) Seed Oil, d-Alpha Tocopherol, Rosmarinus Officinalis (Rosemary) Leaf Extract, Fragrance (Parfum).",
+    "ingredients": "Ingredients (scented): Vitis Vinifera (Grape) Seed Oil, Cocos Nucifera (Coconut) Oil, Argania Spinosa (Argan) Kernal Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Fragrance, d-Alpha Tocopherol, Rosmarinus Officinalis (Rosemary) Leaf Extract Ingredients (unscented): Vitis Vinifera (Grape) Seed Oil, Cocos Nucifera (Coconut) Oil, Argania Spinosa (Argan) Kernal Oil, Simmondsia Chinensis (Jojoba) Seed Oil, d-Alpha Tocopherol, Rosmarinus Officinalis (Ro [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 29.9,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Men's",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-FE-05-07-BL-BIO1.webp?v=772700",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-05-07-BL-BIO-BOX.webp?v=485774"
+      "/api/product-image/beard-oil/primary",
+      "/api/product-image/beard-oil/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-FE-05-07-BL-BIO1.webp?v=772700",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-05-07-BL-BIO-BOX.webp?v=485774",
+    "primaryImage": "/api/product-image/beard-oil/primary",
+    "boxImage": "/api/product-image/beard-oil/box",
     "shades": [
       {
         "id": "beard-oil-1",
@@ -402,7 +429,10 @@
         "sku": "PP-FE-05-07-BL-BIO1-03",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-blush-palette",
@@ -411,16 +441,16 @@
     "title": "Blush Palette",
     "subtitle": "A versatile three-shade pressed blush wardrobe designed to flatter every complexion.",
     "description": "This three-shade palette blends easily for a smooth, natural finish. Wear each shade on its own or combine to add depth and dimension to your look. The silky powder lets you start subtle and build up to the color you want—no streaks, no caking. With rich pigments that suit a wide range of skin tones, it’s an easy everyday staple for a fresh, healthy-looking complexion. Made in North America.",
-    "ingredients": "Talc, Mica, Magnesium Stearate, Dimethicone, Ethylhexyl Palmitate, Polyisobutene, Synthetic Wax, Phenoxyethanol, Paraffinum Liquidum, Tin Oxide, Ethylhexylglycerin. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 Barium Lake (CI 15850), Red 7 Calcium Lake (CI 15850), Red 27 Aluminum Lake (CI 45410)].",
+    "ingredients": "Synthetic Fluorphlogopite, Mica, Silica, Phenyl Trimethicone, Simmondsia Chinensis (Jojoba) Seed Oil, Bis-diglyceryl Polyacyladipate-2, Caprylic/capric Triglyceride, Bismuth Oxychloride, Boron Nitride, Magnesium Myristate, Dimethicone, Methicone, Phenoxyethanol, Ethylhexylglycerin, Triethoxycaprylylsilane, Tocopherol. May Contain: Tocopheryl Acetate,titanium Dioxide (Ci 77891), Fd&c Yellow 5 Al Lake (Ci 19140), D&c Red 6 Ba Lake (Ci 15850), D&c R [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 26.1,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-BL-KBL31.webp?v=929472",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BL-KBL-BOX.webp?v=954299"
+      "/api/product-image/blush-palette/primary",
+      "/api/product-image/blush-palette/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-BL-KBL31.webp?v=929472",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BL-KBL-BOX.webp?v=954299",
+    "primaryImage": "/api/product-image/blush-palette/primary",
+    "boxImage": "/api/product-image/blush-palette/box",
     "shades": [
       {
         "id": "blush-palette-1",
@@ -446,7 +476,10 @@
         "sku": "PP-MB-01-02-BL-KBL31-03",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-bounce-boost-mousse",
@@ -460,9 +493,9 @@
     "inStock": true,
     "categoriesText": "Hair & Body",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-EV-06-12-HMO-BBM.webp?v=23397"
+      "/api/product-image/bounce-boost-mousse/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-EV-06-12-HMO-BBM.webp?v=23397",
+    "primaryImage": "/api/product-image/bounce-boost-mousse/primary",
     "boxImage": null,
     "shades": [
       {
@@ -473,7 +506,10 @@
         "sku": "PP-EV-06-12-HMO-BBM-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-bronzer",
@@ -487,11 +523,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-BR-BRZ01.webp?v=495471",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BR-BRZ-BOX.webp?v=956552"
+      "/api/product-image/bronzer/primary",
+      "/api/product-image/bronzer/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-BR-BRZ01.webp?v=495471",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BR-BRZ-BOX.webp?v=956552",
+    "primaryImage": "/api/product-image/bronzer/primary",
+    "boxImage": "/api/product-image/bronzer/box",
     "shades": [
       {
         "id": "bronzer-1",
@@ -525,7 +561,10 @@
         "sku": "PP-MB-01-02-BR-BRZ01-04",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-bronzing-moisturizer",
@@ -534,16 +573,16 @@
     "title": "Bronzing Moisturizer",
     "subtitle": "Sun in a bottle. This hydrating bronzing moisturizer blends seamlessly into skin for a dewy, sun-kissed finish.",
     "description": "Achieve a radiant, sun-kissed glow with our luxurious Bronzing Moisturizer. Formulated with skin-loving ingredients, this lightweight moisturizer combines hydration with a natural-looking bronzed finish for a luminous complexion. Made in North America.",
-    "ingredients": "Aqua (Water), Cocos Nucifera (Coconut) Oil, Glycerin, Simmondsia Chinensis (Jojoba) Seed Oil, Ricinus Communis (Castor) Seed Oil, Cetearyl Alcohol, Stearic Acid,Polysorbate 60, Limnanthes Alba (Meadowfoam) Seed Oil, Persea Gratissima (Avocado) Oil, Hamamelis Virginiana (Witch Hazel) Extract, Tocopherol, Helianthus Annuus (Sunflower) Seed Oil, Aloe Barbadensis Leaf Extract, Hydroxyacetophenone, Phenoxyethanol, Ethylhexylglycerin. [+/- May Contain: Mica (CI 77019), Iron Oxides (CI 77491, CI 77492, CI 77499), Titanium Dioxide (CI 77891)].",
+    "ingredients": "Aqua, Butylene Glycol, Cyclopentasilox-ane, Glycerin, Niacinamide, Cyclohexasiloxane, Panthenol, 1,2-hexanediol, Sodium Acrylate/sodium Acryloyldimethyl Taurate Copolymer, Dimethicone/vinyl Dimethicone Crosspolymer, Isohexadecane, Polysorbate 80, Allantoin, Betaine, Ethylhexylglycerin, Aluminum Hydroxide, Sorbitan Oleate, Triethoxycaprylylsilane, Hyaluronic Acid, Propylene Glycol, Punica Granatum Fruit Extract, Aloe Barbadensis Extract, Hydroxyac [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 30.9,
     "inStock": true,
     "categoriesText": "Beauty & Skincare",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-TM-BMZ03.webp?v=934520",
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-TM-BMZ-BOX.webp?v=637762"
+      "/api/product-image/bronzing-moisturizer/primary",
+      "/api/product-image/bronzing-moisturizer/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-TM-BMZ03.webp?v=934520",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-TM-BMZ-BOX.webp?v=637762",
+    "primaryImage": "/api/product-image/bronzing-moisturizer/primary",
+    "boxImage": "/api/product-image/bronzing-moisturizer/box",
     "shades": [
       {
         "id": "bronzing-moisturizer-1",
@@ -569,7 +608,10 @@
         "sku": "PP-MB-01-02-TM-BMZ03-03",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-brow-soap",
@@ -583,9 +625,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-EZ-01-02-BWS.webp?v=894149"
+      "/api/product-image/brow-soap/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-EZ-01-02-BWS.webp?v=894149",
+    "primaryImage": "/api/product-image/brow-soap/primary",
     "boxImage": null,
     "shades": [
       {
@@ -596,7 +638,10 @@
         "sku": "PP-EZ-01-02-BWS-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-cheek-fan-brush",
@@ -610,9 +655,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-BH-EB180.webp?v=450764"
+      "/api/product-image/cheek-fan-brush/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-BH-EB180.webp?v=450764",
+    "primaryImage": "/api/product-image/cheek-fan-brush/primary",
     "boxImage": null,
     "shades": [
       {
@@ -623,7 +668,10 @@
         "sku": "PP-CS-01-03-BH-EB180-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-classic-blender",
@@ -637,9 +685,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Accessories), Accessories, Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-AB-04-02-MS1.webp?v=867047"
+      "/api/product-image/classic-blender/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-AB-04-02-MS1.webp?v=867047",
+    "primaryImage": "/api/product-image/classic-blender/primary",
     "boxImage": null,
     "shades": [
       {
@@ -650,7 +698,10 @@
         "sku": "PP-AB-04-02-MS1-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-cleansing-oil",
@@ -659,16 +710,16 @@
     "title": "Cleansing Oil",
     "subtitle": "Melts away makeup, sunscreen, and impurities for a soft, radiant finish.",
     "description": "This luxurious cleansing oil effortlessly melts away makeup, sunscreen, and impurities while replenishing skin, leaving it soft, balanced, and radiant. Made in North America.",
-    "ingredients": "Caprylic/Capric Triglyceride, Helianthus Annuus (Sunflower) Seed Oil, PEG-20 Glyceryl Triisostearate, Prunus Amygdalus Dulcis (Sweet Almond) Oil, Vitis Vinifera (Grape) Seed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Olea Europaea (Olive) Fruit Oil, Rosa Canina (Rosehip) Fruit Oil, Tocopheryl Acetate, Lavandula Angustifolia (Lavender) Oil, Oryza Sativa (Rice) Bran Oil, Camellia Sinensis Leaf Extract.",
+    "ingredients": "Ricinus Communis (Castor) Seed Oil, Glycine Soj (Soybean) Oil, Cannabis Sativa Seed Oil, Sorbeth-30 Tetraoleate, Isoamyl Laurate, Vitis Vinifera (Grape) Seed Oil, Olea Europea (Olive) Fruit Oil, Argania Spinosa Kernel Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Helianthus Annuus (Sunflower) Seed Oil, Caprylic/Capric Triglyceride, Squalane, Polysorbate 20, Citrus Aurantium Dulcis (Orange) Peel Oil, Lavandula Angustifolia (Lavender) Oil, Oryza Sat [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 37,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-03-02-CL-CO.webp?v=196768",
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-03-02-CL-CO-BOX.webp?v=190474"
+      "/api/product-image/cleansing-oil/primary",
+      "/api/product-image/cleansing-oil/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-03-02-CL-CO.webp?v=196768",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-03-02-CL-CO-BOX.webp?v=190474",
+    "primaryImage": "/api/product-image/cleansing-oil/primary",
+    "boxImage": "/api/product-image/cleansing-oil/box",
     "shades": [
       {
         "id": "cleansing-oil-default",
@@ -678,7 +729,10 @@
         "sku": "PP-LB-03-02-CL-CO-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-coconut-moisture-conditioner",
@@ -687,14 +741,14 @@
     "title": "Coconut Moisture Conditioner",
     "subtitle": "A nourishing coconut conditioner that hydrates, smooths, and softens hair while improving shine and manageability.",
     "description": "Infused with coconut oil, shea butter, and pro-vitamin B5, this rich daily conditioner detangles, replenishes moisture, and leaves hair feeling silky, smooth, and manageable after every wash. Made in North America.",
-    "ingredients": "Water (Aqua), Cetearyl Alcohol, Behentrimonium Chloride, Cetyl Esters, Amodimethicone, Cetrimonium Chloride, Trideceth-12, Panthenol (Pro-Vitamin B5), Cocos Nucifera (Coconut) Oil, Butyrospermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Fragrance (Parfum), Citric Acid, Disodium EDTA, Methylchloroisothiazolinone, Methylisothiazolinone, Propylene Glycol, Magnesium Chloride, Magnesium Nitrate.",
+    "ingredients": "Water, Stearyl Alcohol, Cetyl Alcohol, Cyclopentasiloxane, Steartrimonium Chloride, Amodimethicone, Dimethicone, Aminoethylaminopropyl Dimethicone, Alcohol, Fragrance, Behentrimonium Methosulfate, Hydroxyethylcellulose, Cetyl Palmitate, Dioleoylethyl, Hydroxyethylmonium Methosulfate, Lactic Acid, Sunflower Seed Oil Glycerides, Dimethiconol, Butylene Glycol, C12-14 Pareth-5, Phenoxyethanol, Cetrimonium Chloride, Propylene Glycol, Magnesium Chlorid [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 25.8,
     "inStock": true,
     "categoriesText": "Hair & Body, New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-BT-06-09-CDT-COCDT.webp?v=950176"
+      "/api/product-image/coconut-moisture-conditioner/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-BT-06-09-CDT-COCDT.webp?v=950176",
+    "primaryImage": "/api/product-image/coconut-moisture-conditioner/primary",
     "boxImage": null,
     "shades": [
       {
@@ -705,7 +759,10 @@
         "sku": "PP-BT-06-09-CDT-COCDT-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-coconut-moisture-shampoo",
@@ -714,14 +771,14 @@
     "title": "Coconut Moisture Shampoo",
     "subtitle": "A nourishing coconut shampoo that gently cleanses while helping hydrate, smooth, and soften hair.",
     "description": "Refresh and cleanse hair with this nourishing coconut and avocado shampoo designed to gently remove buildup while helping maintain moisture and softness. The rich lather cleanses effectively without stripping hair, leaving it feeling fresh, smooth, and revitalized.",
-    "ingredients": "Water (Aqua), Sodium C14-16 Olefin Sulfonate, Cocamidopropyl Betaine, Cocamide MIPA, Glycol Distearate, Panthenol (Pro-Vitamin B5), Cocos Nucifera (Coconut) Oil, Hydrolyzed Wheat Protein, Polyquaternium-10, PEG-150 Distearate, Citric Acid, Fragrance (Parfum), Sodium Chloride, Disodium EDTA, Phenoxyethanol, Ethylhexylglycerin.",
+    "ingredients": "Water, Sodium Laureth Sulfate, Ammonium Laureth Sulfate, Cocamide Methyl MEA, Dimethiconol, Fragrance, Cocamide MEA, Cocamidopropyl PG-Dimonium Chloride Phosphate, Decyl Glucoside, Sodium Lauroamphoacetate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Climbazole, Sodium Salicylate, Dimethicone Silylate, Guar Hydroxypropyltrimonium Chloride, Sodium Benzoate, Benzyl Alcohol, Glycerin, Amodimethicone, Citric Acid, Dimethicone, Disodium EDTA, TEA-Do [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 25.8,
     "inStock": true,
     "categoriesText": "Hair & Body, New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-BT-06-09-SMP-COSMP.webp?v=833590"
+      "/api/product-image/coconut-moisture-shampoo/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-BT-06-09-SMP-COSMP.webp?v=833590",
+    "primaryImage": "/api/product-image/coconut-moisture-shampoo/primary",
     "boxImage": null,
     "shades": [
       {
@@ -732,7 +789,10 @@
         "sku": "PP-BT-06-09-SMP-COSMP-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-collagen-and-retinol-serum",
@@ -746,11 +806,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-GF-03-02-CRS.webp?v=733675",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-CRS-BOX.webp?v=674369"
+      "/api/product-image/collagen-and-retinol-serum/primary",
+      "/api/product-image/collagen-and-retinol-serum/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-GF-03-02-CRS.webp?v=733675",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-CRS-BOX.webp?v=674369",
+    "primaryImage": "/api/product-image/collagen-and-retinol-serum/primary",
+    "boxImage": "/api/product-image/collagen-and-retinol-serum/box",
     "shades": [
       {
         "id": "collagen-and-retinol-serum-default",
@@ -760,7 +820,10 @@
         "sku": "PP-GF-03-02-CRS-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-color-rich-pro-line",
@@ -769,16 +832,16 @@
     "title": "Color Rich Pro Line",
     "subtitle": "A highly pigmented gel eyeliner designed for precision and all-day wear.",
     "description": "The creamy, blendable formula glides on smoothly to create defined lines, bold wings, or soft, diffused edges—no skipping or dragging. Built with a precision tip for controlled application, it resists smudging and fading for long-lasting impact. A versatile staple to complete any eye look with ease. Made in North America.",
-    "ingredients": "Isododecane, Polyethylene, Cyclopentasiloxane, Trimethylsiloxysilicate, Disteardimonium Hectorite, Cyclohexasiloxane, Quaternium-90 Bentonite, VP/VA Copolymer, Pentylene Glycol, Polyisobutene, Sorbitan Sesquioleate, Synthetic Beeswax, Propylene Carbonate, Caprylyl Glycol, Propylparaben, Methylparaben. [+/- May Contain: Iron Oxides (CI 77491, CI 77492, CI 77499), Titanium Dioxide (CI 77891), Ultramarines (CI 77007), Chromium Oxide Greens (CI 77288), FD&C Red 40 (CI 16035)].",
+    "ingredients": "Cyclomethicone, Trimethylsiloxysilicate, Cyclopentasiloxane, Butyl Acrylate/hydroxypropyl Dimethicone Acrylate Copolymer, Candelilla Cera, Ozokerite, Tridecyl Trimellitate, Hydrogenated Coco-glycerides (Coconut oil), Microcrystalline Wax, Propylparaben, Methylparaben, Bht. May Contain [mica, Titanium Dioxide (ci 77891), Black Iron Oxide (ci 77499), Red Iron Oxide (ci 77491), Yellow Iron Oxide (ci 77492), Chromium Oxide Green (ci 77288), Fd&c Red [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 33.2,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-04-GE-CPL109.webp?v=678062",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-GE-CPL-BOX.webp?v=903234"
+      "/api/product-image/color-rich-pro-line/primary",
+      "/api/product-image/color-rich-pro-line/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-04-GE-CPL109.webp?v=678062",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-GE-CPL-BOX.webp?v=903234",
+    "primaryImage": "/api/product-image/color-rich-pro-line/primary",
+    "boxImage": "/api/product-image/color-rich-pro-line/box",
     "shades": [
       {
         "id": "color-rich-pro-line-default",
@@ -788,7 +851,10 @@
         "sku": "PP-MB-01-04-GE-CPL109-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-concealing-cream",
@@ -797,16 +863,16 @@
     "title": "Concealing Cream",
     "subtitle": "A creamy, full-coverage concealer designed to brighten, correct, and even out the complexion.",
     "description": "This multitasking full coverage formula blends seamlessly into the skin to cover dark spots, redness, and uneven tone—without feeling heavy or cakey. The creamy, blendable texture layers well over foundation or bare skin, delivering a smooth, natural finish that stays put. Designed with a doe-foot applicator for easy, targeted coverage wherever it’s needed. Made in North America.",
-    "ingredients": "Aqua, Cyclopentasiloxane, Beeswax, Stearyl Dimethicone, Isododecane, Cetyl Ethylhexanoate, Microcrystalline Wax, Cetyl PEG/PPG-10/1 Dimethicone, Glyceryl Laurate, Polyglyceryl-4 Oleate, Mica, Disteardimonium Hectorite, Phenoxyethanol, Methylparaben, Ethylhexylglycerin, Propylparaben, Tocopheryl Acetate, Ascorbyl Palmitate, Propylene Glycol, Chamomilla Recutita Flower Extract, Sodium Hyaluronate, Triethoxycaprylylsilane. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499)].",
+    "ingredients": "Aqua, Cyclopentasiloxane, Butylene Glycol, Ethylhexyl Methoxycinnamate, Dimethicone, Trimethylsiloxysilicate, Sodium Chloride, Polymethyl Methacrylate, Tribehenin, Silica, Magnesium Stearate, Dimethicone/vinyl Dimethicone Crosspolymer, Peg-10 Dimethicone, Sorbitan Sesquioleate, Lauryl Peg-9 Polydimethylsiloxyethyl Dimethicone, Lauryl Peg/ppg-18/18 Methicone, Phenoxyethanol, Hydroxyacetophenone, Triethoxycaprylylsilane, Disteardimonium Hectorite, [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 25.9,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-CC-HC129T.webp?v=72992",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-CC-HC-BOX.webp?v=381551"
+      "/api/product-image/concealing-cream/primary",
+      "/api/product-image/concealing-cream/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-CC-HC129T.webp?v=72992",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-CC-HC-BOX.webp?v=381551",
+    "primaryImage": "/api/product-image/concealing-cream/primary",
+    "boxImage": "/api/product-image/concealing-cream/box",
     "shades": [
       {
         "id": "concealing-cream-1",
@@ -888,7 +954,10 @@
         "sku": "PP-MB-01-02-CC-HC129T-10",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-creme-concealer-stick",
@@ -897,16 +966,16 @@
     "title": "Creme Concealer Stick",
     "subtitle": "A creamy, on-the-go concealer stick for targeted coverage, contour, or highlight.",
     "description": "This multi-use formula delivers medium to full coverage with a smooth, matte finish. The Creme Concealer Stick glides on easily to conceal blemishes, dark spots, and uneven tone—or choose a deeper or lighter shade to sculpt and brighten. Compact and blendable for quick touch-ups, anytime. Made in North America.",
-    "ingredients": "Caprylic/Capric Triglyceride, Isotridecyl Isononanoate, Ozokerite, Silica, Synthetic Wax, Cera Alba (Beeswax), Microcrystalline Wax, Ethylhexyl Palmitate, Bis-Diglyceryl Polyacyladipate-2, Phenoxyethanol, Tocopheryl Acetate, Caprylyl Glycol. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499)].",
+    "ingredients": "Ethylhexyl Palmitate, Caprylic/Capric Triglyceride, Cetyl Dimethicone, Silica, Beeswax (Cera Alba), Ethylhexyl Methoxycinnamate, Nylon-12, Euphorbia Cerifera (Candelilla) Wax, Ethylhexyl Salicylate, Octyldodecanol, Ozokerite, Benzophenone-3, Butyrospermum Parkii (Shea) Butter Fruit (Butyrospermum Parkii Butter), Tocopheryl Acetate, Ascorbyl Palmitate, Retinyl Palmitate, Tocopherol Oil, Water (Aqua), [+/- (May Contain): Titanium Dioxide (CI 77891) [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 32.7,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-01-02-CS-LC3.webp?v=411158",
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-01-02-CS-BOX.webp?v=966426"
+      "/api/product-image/creme-concealer-stick/primary",
+      "/api/product-image/creme-concealer-stick/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-01-02-CS-LC3.webp?v=411158",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-01-02-CS-BOX.webp?v=966426",
+    "primaryImage": "/api/product-image/creme-concealer-stick/primary",
+    "boxImage": "/api/product-image/creme-concealer-stick/box",
     "shades": [
       {
         "id": "creme-concealer-stick-1",
@@ -980,7 +1049,10 @@
         "sku": "PP-LB-01-02-CS-LC3-09",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-daily-curl-conditioner",
@@ -994,9 +1066,9 @@
     "inStock": true,
     "categoriesText": "Hair & Body",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-EV-06-09-CDT-CCDT.webp?v=371040"
+      "/api/product-image/daily-curl-conditioner/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-EV-06-09-CDT-CCDT.webp?v=371040",
+    "primaryImage": "/api/product-image/daily-curl-conditioner/primary",
     "boxImage": null,
     "shades": [
       {
@@ -1007,7 +1079,10 @@
         "sku": "PP-EV-06-09-CDT-CCDT-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-daily-repair-conditioner",
@@ -1016,14 +1091,14 @@
     "title": "Daily Repair Conditioner",
     "subtitle": "Nourish, repair, and bounce back—your hair’s daily reset.",
     "description": "A rich blend of botanical butters and oils designed to feed your hair and scalp the nutrients they crave. This conditioner works deep to repair damage, leaving strands shiny, resilient, and full of life. Lightweight enough for everyday use and perfect for all hair types needing a serious moisture boost. Made in North America.",
-    "ingredients": "Aqua (Water), Cetearyl Alcohol, Behentrimonium Chloride, Glycerin, Cocos Nucifera (Coconut) Oil, Argania Spinosa (Argan) Kernel Oil, Butyrospermum Parkii (Shea) Butter, Panthenol, Hydrolyzed Quinoa, Simmondsia Chinensis (Jojoba) Seed Oil, Persea Gratissima (Avocado) Oil, Tocopherol, Rosmarinus Officinalis (Rosemary) Leaf Oil, Lavandula Angustifolia (Lavender) Oil, Citrus Aurantium (Neroli) Oil, Phenoxyethanol, Ethylhexylglycerin.",
+    "ingredients": "Aqua (Distilled Water), Cetyl Alcohol, Cetrimonium Bromide, Stearyl Alcohol, Aloe Barbadensis (Aloe Vera) Juice, Vegetable Glycerin, Hydrolyzed Wheat Protein, Argania Spinosa (Argan) Oil, Persea Americana (Avocado) Oil, Rosa Rubiginosa (Rosehip Seed) Oil, Santalum Spicatum (Sandalwood) Oil, Cymbopogon Flexuosus (Lemongrass) Oil, Citrus Paradisi (Grapefruit) Oil, Rosemarinus Officinalis (Rosemary) Oil, Citrus Aurantium (Neroli) Oil, Phenoxyethanol [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 36.2,
     "inStock": true,
     "categoriesText": "Hair & Body",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-EV-06-09-CDT-RCDT.webp?v=959535"
+      "/api/product-image/daily-repair-conditioner/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-EV-06-09-CDT-RCDT.webp?v=959535",
+    "primaryImage": "/api/product-image/daily-repair-conditioner/primary",
     "boxImage": null,
     "shades": [
       {
@@ -1034,7 +1109,10 @@
         "sku": "PP-EV-06-09-CDT-RCDT-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-daily-repair-shampoo",
@@ -1048,9 +1126,9 @@
     "inStock": true,
     "categoriesText": "Hair & Body",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-EV-06-09-SMP-RSMP.webp?v=556169"
+      "/api/product-image/daily-repair-shampoo/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-EV-06-09-SMP-RSMP.webp?v=556169",
+    "primaryImage": "/api/product-image/daily-repair-shampoo/primary",
     "boxImage": null,
     "shades": [
       {
@@ -1061,7 +1139,10 @@
         "sku": "PP-EV-06-09-SMP-RSMP-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-define-hold-curl-cream",
@@ -1075,9 +1156,9 @@
     "inStock": true,
     "categoriesText": "Hair & Body, New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-BT-06-12-CRM-CURL.webp?v=655325"
+      "/api/product-image/define-hold-curl-cream/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-BT-06-12-CRM-CURL.webp?v=655325",
+    "primaryImage": "/api/product-image/define-hold-curl-cream/primary",
     "boxImage": null,
     "shades": [
       {
@@ -1088,7 +1169,10 @@
         "sku": "PP-BT-06-12-CRM-CURL-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-dual-blend-powder-foundation",
@@ -1097,16 +1181,16 @@
     "title": "Dual Blend Powder Foundation",
     "subtitle": "A versatile powder foundation that can take you from day to night.",
     "description": "This weightless formula blends seamlessly, offering customizable coverage from light to full without caking or settling. Designed to even tone and smooth texture, it leaves skin with a natural, polished look. Apply dry as a powder or wet as a foundation with a matte, sleek finish. Packaged in a sleek compact for easy, on-the-go touch-ups. Suitable for all skin types. Made in North America.",
-    "ingredients": "Mica, Talc, Zinc Stearate, Octyldodecyl Stearoyl Stearate, Isostearyl Neopentanoate, Tocopheryl Acetate, Caprylyl Glycol, Phenoxyethanol, Hexylene Glycol. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Ultramarines (CI 77007), Chromium Oxide Greens (CI 77288), FD&C Red 40 Aluminum Lake (CI 16035)].",
+    "ingredients": "Mica, Titanium Dioxide (Ci 77891), Nylon-12, Silica, Dimethicone, Phenyl Trimethicone, Aluminum Starch Octenylsuccinate, Zinc Oxide, Boron Nitride, Dimethicone/methicone Copolymer, Simmondsia Chinensis (Jojoba) Seed Oil, Bis-diglyceryl Polyacyladipate-2, Caprylic/capric Triglyceride, Phenoxyethanol/ethylhexylglycerin. May Contain: Yellow Iron Oxide (Ci 77492), Red Iron Oxide (Ci 77491), Black Iron Oxide (Ci 77499), Fd&c Red 40 Al Lake (Ci 16035), [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 31.7,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-WD-WD145.webp?v=802334",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-WD-BOX.webp?v=793192"
+      "/api/product-image/dual-blend-powder-foundation/primary",
+      "/api/product-image/dual-blend-powder-foundation/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-WD-WD145.webp?v=802334",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-WD-BOX.webp?v=793192",
+    "primaryImage": "/api/product-image/dual-blend-powder-foundation/primary",
+    "boxImage": "/api/product-image/dual-blend-powder-foundation/box",
     "shades": [
       {
         "id": "dual-blend-powder-foundation-1",
@@ -1212,7 +1296,10 @@
         "sku": "PP-MB-01-02-WD-WD145-13",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-dual-tip-eye-definer-pen",
@@ -1226,11 +1313,11 @@
     "inStock": false,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-04-ED-EDT01.webp?v=893566",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-ED-EDT-BOX.webp?v=199846"
+      "/api/product-image/dual-tip-eye-definer-pen/primary",
+      "/api/product-image/dual-tip-eye-definer-pen/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-04-ED-EDT01.webp?v=893566",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-ED-EDT-BOX.webp?v=199846",
+    "primaryImage": "/api/product-image/dual-tip-eye-definer-pen/primary",
+    "boxImage": "/api/product-image/dual-tip-eye-definer-pen/box",
     "shades": [
       {
         "id": "dual-tip-eye-definer-pen-default",
@@ -1240,7 +1327,10 @@
         "sku": "PP-MB-01-04-ED-EDT01-01",
         "inStock": false
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": false
   },
   {
     "id": "pp-embrace-collagen-moisturizer",
@@ -1254,11 +1344,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-PC-03-04-CR-AAC.webp?v=741978",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-04-CR-AAC-BOX.webp?v=736778"
+      "/api/product-image/embrace-collagen-moisturizer/primary",
+      "/api/product-image/embrace-collagen-moisturizer/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-PC-03-04-CR-AAC.webp?v=741978",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-04-CR-AAC-BOX.webp?v=736778",
+    "primaryImage": "/api/product-image/embrace-collagen-moisturizer/primary",
+    "boxImage": "/api/product-image/embrace-collagen-moisturizer/box",
     "shades": [
       {
         "id": "embrace-collagen-moisturizer-default",
@@ -1268,7 +1358,10 @@
         "sku": "PP-PC-03-04-CR-AAC-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-extreme-moisture-blend",
@@ -1277,16 +1370,16 @@
     "title": "Extreme Moisture Blend",
     "subtitle": "An ultra-hydrating cream blend designed to replenish and soften dry skin.",
     "description": "Formulated with soothing chamomile extract and balancing witch hazel, this rich cream helps reduce the appearance of dullness while supporting long-lasting moisture. Skin feels smoother, looks visibly brighter, and stays comfortably hydrated—day or night. Ideal for dry or dehydrated skin in need of a nourishing reset. Made in North America.",
-    "ingredients": "Aqua, Glycerin, Cyclopentasiloxane, Dimethicone, Caprylic/Capric Triglyceride, Cetearyl Alcohol, Glyceryl Stearate, PEG-100 Stearate, Butyrospermum Parkii (Shea) Butter, Squalane, Sodium Hyaluronate, Panthenol, Tocopheryl Acetate, Aloe Barbadensis Leaf Juice, Allantoin, Carbomer, Triethanolamine, Disodium EDTA, Phenoxyethanol, Ethylhexylglycerin.",
+    "ingredients": "Aqua, Glycerin, Olea Europaea (Olive) Fruit Oil, Dimethicone, Peg-100 Stearate, Glyceryl Stearate, Petrolatum, Isopropyl Myristate, Hydrogenated Polyisobutene, Dipropylene Glycol, Polysorbate 60, Cetearyl Alcohol, Sorbitan Stearate, Aqua, Glycerin, Glyceryl Acrylate/acrylic Acid Copolymer, Pvm/ma Copolymer, Propylene Glycol, 1,2-hexanediol, Polyacrylamide, C13-14 Isoparaffin, Laureth-7, Water, Hydroxyacetophenone, Phenoxyethanol, Ethylhexylglycer [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 27.7,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-HM-SM3D.webp?v=752661",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-HM-SM3D-BOX.webp?v=599445"
+      "/api/product-image/extreme-moisture-blend/primary",
+      "/api/product-image/extreme-moisture-blend/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-HM-SM3D.webp?v=752661",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-HM-SM3D-BOX.webp?v=599445",
+    "primaryImage": "/api/product-image/extreme-moisture-blend/primary",
+    "boxImage": "/api/product-image/extreme-moisture-blend/box",
     "shades": [
       {
         "id": "extreme-moisture-blend-default",
@@ -1296,7 +1389,10 @@
         "sku": "PP-MB-03-02-HM-SM3D-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-eye-lip-primer",
@@ -1305,16 +1401,16 @@
     "title": "Eye & Lip Primer",
     "subtitle": "A smoothing primer that preps lids and lips for longer-lasting color and crease-free wear.",
     "description": "The sheer, creamy formula helps even out tone, blur imperfections, and create a smooth canvas for eyeshadows, liners, lipsticks, and glosses. Designed to lock in pigment, prevent creasing, and extend wear—so color stays fresh, vibrant, and exactly where it should be. Weightless, blendable, and made for seamless application. Made in North America.",
-    "ingredients": "Isododecane, Talc, Cyclopentasiloxane, Disteardimonium Hectorite, Trimethylsiloxysilicate, Polyethylene, Trihydroxystearin, Sorbitan Sesquioleate, Synthetic Beeswax, VP/Eicosene Copolymer, Propylene Carbonate, Dimethicone, PEG-40 Stearate, Phenoxyethanol, Tocopheryl Acetate, Caprylyl Glycol. [+/- May Contain: Mica (CI 77019), Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499)].",
+    "ingredients": "Isododecane, Polyethylene, Cyclopentasiloxane, Trimethylsiloxysilicate, Disteardimonium Hectorite, Phenyl Trimethicone, Dimethicone, Hydrogenated Polyisobutene, Propylene Carbonate, Lecithin, Trihydroxystearin, Tocopheryl Acetate, BHT, [+/- (May Contain): Mica (CI 77019), Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492) [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 29.5,
     "inStock": false,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-01-04-YP-EP05.webp?v=110807",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-YP-EP05-BOX.webp?v=973641"
+      "/api/product-image/eye-lip-primer/primary",
+      "/api/product-image/eye-lip-primer/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-01-04-YP-EP05.webp?v=110807",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-YP-EP05-BOX.webp?v=973641",
+    "primaryImage": "/api/product-image/eye-lip-primer/primary",
+    "boxImage": "/api/product-image/eye-lip-primer/box",
     "shades": [
       {
         "id": "eye-lip-primer-default",
@@ -1324,7 +1420,10 @@
         "sku": "PP-LB-01-04-YP-EP05-01",
         "inStock": false
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-eyebrow-gel",
@@ -1338,11 +1437,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-BG-BG1.webp?v=361869",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BG-BG1-BOX.webp?v=685338"
+      "/api/product-image/eyebrow-gel/primary",
+      "/api/product-image/eyebrow-gel/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-BG-BG1.webp?v=361869",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BG-BG1-BOX.webp?v=685338",
+    "primaryImage": "/api/product-image/eyebrow-gel/primary",
+    "boxImage": "/api/product-image/eyebrow-gel/box",
     "shades": [
       {
         "id": "eyebrow-gel-default",
@@ -1352,7 +1451,10 @@
         "sku": "PP-MB-01-02-BG-BG1-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-eyeshadow-palette",
@@ -1361,16 +1463,16 @@
     "title": "Eyeshadow Palette",
     "subtitle": "Six shades, endless looks, just blend, build, and add shine with effortless ease.",
     "description": "A curated multi-finish eyeshadow palette pairing velvety-soft mattes with luminous shimmers. Triple-milled for effortless blending and rich, crease-resistant color payoff from day to night. Made in North America.",
-    "ingredients": "Matte Finish: Mica, Talc, Silica, Polymethyl Methacrylate, Boron Nitride, Hydrogenated Polyisobutene, Dimethicone, Nylon-12, Polyethylene, Pentaerythrityl Tetraisostearate, Phenoxyethanol, PTFE, Lauroyl Lysine, Caprylyl Glycol, Triethoxycaprylylsilane, Tocopheryl Acetate. Shimmer Finish: Mica, Synthetic Fluorphlogopite, Calcium Sodium Borosilicate, Dimethicone, Octyldodecyl Stearoyl Stearate, Zinc Stearate, Tin Oxide, Caprylyl Glycol, Phenoxyethanol. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499)].",
+    "ingredients": "Matte Finish/Fini Mat: Synthetic Fluorphlogopite, Mica, Silica, Titanium Dioxide, Phenyl Trimethicone, Simmondsia Chinensis (Jojoba) Seed Oil, Bis-diglyceryl Polyacyladipate-2, Caprylic/capric Triglyceride, Magnesium Myristate, Dimethicone, Methicone, Phenoxyethanol, Ethylhexylglycerin, Bht. May Contain: Red 40 Lake, Ci 77499, Ci 77492, Yellow 5 Lake, Ci77491, D&c Black 2 (Ci 77266), Fd&c Blue 1 Al Lake (Ci 42090). Shimmer Finish/Miroitement Fini [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 27.4,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-04-SP-ETM105.webp?v=846356",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-SP-ETM-BOX.webp?v=618142"
+      "/api/product-image/eyeshadow-palette/primary",
+      "/api/product-image/eyeshadow-palette/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-04-SP-ETM105.webp?v=846356",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-SP-ETM-BOX.webp?v=618142",
+    "primaryImage": "/api/product-image/eyeshadow-palette/primary",
+    "boxImage": "/api/product-image/eyeshadow-palette/box",
     "shades": [
       {
         "id": "eyeshadow-palette-1",
@@ -1412,7 +1514,10 @@
         "sku": "PP-MB-01-04-SP-ETM105-05",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-finishing-powder",
@@ -1426,11 +1531,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face)",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-01-02-STP-STP.webp?v=588453",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-STP-STP-BOX.webp?v=362984"
+      "/api/product-image/finishing-powder/primary",
+      "/api/product-image/finishing-powder/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-01-02-STP-STP.webp?v=588453",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-STP-STP-BOX.webp?v=362984",
+    "primaryImage": "/api/product-image/finishing-powder/primary",
+    "boxImage": "/api/product-image/finishing-powder/box",
     "shades": [
       {
         "id": "finishing-powder-default",
@@ -1440,7 +1545,10 @@
         "sku": "PP-LB-01-02-STP-STP-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-firm-serum",
@@ -1454,11 +1562,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-PC-03-04-SER-FSR.webp?v=271765",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-04-SER-FSR-BOX.webp?v=198966"
+      "/api/product-image/firm-serum/primary",
+      "/api/product-image/firm-serum/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-PC-03-04-SER-FSR.webp?v=271765",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-04-SER-FSR-BOX.webp?v=198966",
+    "primaryImage": "/api/product-image/firm-serum/primary",
+    "boxImage": "/api/product-image/firm-serum/box",
     "shades": [
       {
         "id": "firm-serum-default",
@@ -1468,7 +1576,10 @@
         "sku": "PP-PC-03-04-SER-FSR-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-foaming-beard-wash",
@@ -1482,9 +1593,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Men's",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-FE-05-07-WSH.webp?v=609040"
+      "/api/product-image/foaming-beard-wash/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-FE-05-07-WSH.webp?v=609040",
+    "primaryImage": "/api/product-image/foaming-beard-wash/primary",
     "boxImage": null,
     "shades": [
       {
@@ -1495,7 +1606,10 @@
         "sku": "PP-FE-05-07-WSH-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-foundation",
@@ -1504,16 +1618,16 @@
     "title": "Foundation",
     "subtitle": "A breathable liquid foundation with buildable coverage and a natural, dewy finish.",
     "description": "Designed to even tone while enhancing the skin’s natural radiance, this formula delivers medium to full coverage without masking your complexion. The lightweight texture blends seamlessly, leaving skin looking fresh, healthy, and softly luminous. Sweat-proof and ideal for daily wear and glow-forward routines. Made in North America.",
-    "ingredients": "Aqua, Cyclopentasiloxane, Isododecane, Glycerin, Cetyl PEG/PPG-10/1 Dimethicone, Polyglyceryl-4 Isostearate, Hexyl Laurate, Dimethicone, Polymethylsilsesquioxane, Sodium Chloride, Disteardimonium Hectorite, Phenoxyethanol, Magnesium Sulfate, Propylene Carbonate, Triethoxycaprylylsilane, Tocopheryl Acetate, Ethylhexylglycerin, Disodium EDTA, Sodium Hyaluronate. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499)].",
+    "ingredients": "Aqua, Cyclopentasiloxane, Disteardimonium Hectorite, Propylene Carbonate, Butylene Glycol, Dimethicone, Dimethicone/vinyl Dimethicone Crosspolymer, Trimethylsiloxysilicate, Ethylhexyl Methoxycinnamate, Peg-10 Dimethicone, Sodium Chloride, Silica, Methicone, Polymethyl Methacrylate, Magnesium Stearate, Magnesium Palmitate, Sorbitan Sesquioleate, Lauryl Peg/ppg-18/18 Methicone, Lauryl Peg-9 Polydimethylsiloxyethyl Dimethicone, Disodium Edta, Sodium [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 37.5,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-FN-FK115.webp?v=814866",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-FN-FK-BOX.webp?v=184158"
+      "/api/product-image/foundation/primary",
+      "/api/product-image/foundation/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-FN-FK115.webp?v=814866",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-FN-FK-BOX.webp?v=184158",
+    "primaryImage": "/api/product-image/foundation/primary",
+    "boxImage": "/api/product-image/foundation/box",
     "shades": [
       {
         "id": "foundation-1",
@@ -1651,7 +1765,10 @@
         "sku": "PP-MB-01-02-FN-FK115-17",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-foundation-primer",
@@ -1665,11 +1782,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-PC-01-02-MF-CRP.webp?v=653878",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-MF-CRP-BOX.webp?v=571195"
+      "/api/product-image/foundation-primer/primary",
+      "/api/product-image/foundation-primer/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-PC-01-02-MF-CRP.webp?v=653878",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-MF-CRP-BOX.webp?v=571195",
+    "primaryImage": "/api/product-image/foundation-primer/primary",
+    "boxImage": "/api/product-image/foundation-primer/box",
     "shades": [
       {
         "id": "foundation-primer-default",
@@ -1679,7 +1796,10 @@
         "sku": "PP-PC-01-02-MF-CRP-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-full-cover-foundation",
@@ -1688,16 +1808,16 @@
     "title": "Full Cover Foundation",
     "subtitle": "A weightless, full coverage foundation with a soft matte finish.",
     "description": "This long-wearing formula evens tone, blurs the look of pores, and covers dark spots with ease—no heaviness, no caking. The Full Cover Foundaion blends smoothly onto skin for a perfected, velvety finish that stays put. Designed for high-impact coverage with a breathable feel. Made in North America.",
-    "ingredients": "Aqua, Cyclopentasiloxane, Isododecane, Hydrogenated Polydecene, Glycerin, Cetyl PEG/PPG-10/1 Dimethicone, Trimethylsiloxysilicate, Polyglyceryl-4 Isostearate, Disteardimonium Hectorite, Sodium Chloride, Polymethylsilsesquioxane, Phenoxyethanol, Sorbitan Sesquioleate, Propylene Carbonate, Triethoxycaprylylsilane, Tocopheryl Acetate, Magnesium Stearate, Magnesium Palmitate, Ethylhexylglycerin. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499)].",
+    "ingredients": "Aqua, Isododecane, Cyclopentasiloxane, Butylene Glycol, Propylene Glycol, Glycerin, Dicaprylyl Carbonate, Cyclopentasiloxane,disteardimonium Hectorite, Propylene Carbonate, Cetyl Peg/ppg-10/1 Dimethicone, Peg-10 Dimethicone, Polyglyceryl-4 Isostearate, Silica, Methicone, Dimethicone, Dimethicone/vinyl Dimethicone Crosspolymer, 1,2-hexanediol, Hydroxyacetophenone, Sodium Chloride, Magnesium Sulfate, Disodium Edta, Magnesium Stearate, Magnesium Pal [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 34.6,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-FH-FH100.webp?v=896841",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-FH-FH-BOX.webp?v=899778"
+      "/api/product-image/full-cover-foundation/primary",
+      "/api/product-image/full-cover-foundation/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-FH-FH100.webp?v=896841",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-FH-FH-BOX.webp?v=899778",
+    "primaryImage": "/api/product-image/full-cover-foundation/primary",
+    "boxImage": "/api/product-image/full-cover-foundation/box",
     "shades": [
       {
         "id": "full-cover-foundation-1",
@@ -1827,7 +1947,10 @@
         "sku": "PP-MB-01-02-FH-FH100-16",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-gel-eyeliner",
@@ -1841,11 +1964,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes)",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-GE-EG1002.webp?v=41364",
-      "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-GE-EG-BOX.webp?v=387056"
+      "/api/product-image/gel-eyeliner/primary",
+      "/api/product-image/gel-eyeliner/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-GE-EG1002.webp?v=41364",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-GE-EG-BOX.webp?v=387056",
+    "primaryImage": "/api/product-image/gel-eyeliner/primary",
+    "boxImage": "/api/product-image/gel-eyeliner/box",
     "shades": [
       {
         "id": "gel-eyeliner-1",
@@ -1871,7 +1994,10 @@
         "sku": "PP-JE-01-04-GE-EG1002-03",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-glitter-dust",
@@ -1885,11 +2011,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes)",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-ES-GLT-GLT01.webp?v=149054",
-      "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-ES-GLT-GLT-BOX.webp?v=193955"
+      "/api/product-image/glitter-dust/primary",
+      "/api/product-image/glitter-dust/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-ES-GLT-GLT01.webp?v=149054",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-ES-GLT-GLT-BOX.webp?v=193955",
+    "primaryImage": "/api/product-image/glitter-dust/primary",
+    "boxImage": "/api/product-image/glitter-dust/box",
     "shades": [
       {
         "id": "glitter-dust-1",
@@ -1923,7 +2049,10 @@
         "sku": "PP-JE-01-04-ES-GLT-GLT01-04",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-glycolic-acid-serum",
@@ -1937,11 +2066,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-GF-03-02-GLYS.webp?v=261196",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-GLYS-BOX.webp?v=301468"
+      "/api/product-image/glycolic-acid-serum/primary",
+      "/api/product-image/glycolic-acid-serum/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-GF-03-02-GLYS.webp?v=261196",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-GLYS-BOX.webp?v=301468",
+    "primaryImage": "/api/product-image/glycolic-acid-serum/primary",
+    "boxImage": "/api/product-image/glycolic-acid-serum/box",
     "shades": [
       {
         "id": "glycolic-acid-serum-default",
@@ -1951,7 +2080,10 @@
         "sku": "PP-GF-03-02-GLYS-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-hair-scalp-renewal-serum",
@@ -1965,11 +2097,11 @@
     "inStock": true,
     "categoriesText": "Hair & Body, New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-BT-06-11-HOL-HSS.webp?v=144841",
-      "https://images.blankabrand.com/73904/73904-BLNK-BT-06-11-HOL-HSS-BOX.webp?v=45842"
+      "/api/product-image/hair-scalp-renewal-serum/primary",
+      "/api/product-image/hair-scalp-renewal-serum/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-BT-06-11-HOL-HSS.webp?v=144841",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BT-06-11-HOL-HSS-BOX.webp?v=45842",
+    "primaryImage": "/api/product-image/hair-scalp-renewal-serum/primary",
+    "boxImage": "/api/product-image/hair-scalp-renewal-serum/box",
     "shades": [
       {
         "id": "hair-scalp-renewal-serum-default",
@@ -1979,7 +2111,10 @@
         "sku": "PP-BT-06-11-HOL-HSS-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-heat-protective-spray",
@@ -1993,9 +2128,9 @@
     "inStock": true,
     "categoriesText": "Hair & Body, New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-BT-06-09-HSP-HPSPR.webp?v=179916"
+      "/api/product-image/heat-protective-spray/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-BT-06-09-HSP-HPSPR.webp?v=179916",
+    "primaryImage": "/api/product-image/heat-protective-spray/primary",
     "boxImage": null,
     "shades": [
       {
@@ -2006,7 +2141,10 @@
         "sku": "PP-BT-06-09-HSP-HPSPR-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-hemp-infused-beard-growth-oil",
@@ -2020,11 +2158,11 @@
     "inStock": true,
     "categoriesText": "Men's",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-FE-05-07-BGO-BGO1.webp?v=403551",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-05-07-BGO-BGO1-BOX.webp?v=287916"
+      "/api/product-image/hemp-infused-beard-growth-oil/primary",
+      "/api/product-image/hemp-infused-beard-growth-oil/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-FE-05-07-BGO-BGO1.webp?v=403551",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-05-07-BGO-BGO1-BOX.webp?v=287916",
+    "primaryImage": "/api/product-image/hemp-infused-beard-growth-oil/primary",
+    "boxImage": "/api/product-image/hemp-infused-beard-growth-oil/box",
     "shades": [
       {
         "id": "hemp-infused-beard-growth-oil-default",
@@ -2034,7 +2172,10 @@
         "sku": "PP-FE-05-07-BGO-BGO1-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-highlighter-stick",
@@ -2043,16 +2184,16 @@
     "title": "Highlighter Stick",
     "subtitle": "Radiance in a single swipe. This vitamin-infused highlighter stick glides on smooth for an instant, lit-from-within glow.",
     "description": "Infused with vitamins C, A, and E, this formula nourishes while brightening skin with a natural-looking shimmer. The creamy, buildable formula melts into skin for a dewy finish that catches the light just right. Swipe it on and watch your features (and mood) lift instantly. Made in North America.",
-    "ingredients": "Ethylhexyl Palmitate, Caprylic/Capric Triglyceride, Synthetic Fluorphlogopite, Mica, Polyisobutene, Polyethylene, Ozokerite, Bis-Diglyceryl Polyacyladipate-2, Dimethicone, Microcrystalline Wax, Tocopheryl Acetate, Phenoxyethanol, Tin Oxide, Caprylyl Glycol. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Bismuth Oxychloride (CI 77163)].",
+    "ingredients": "Ethylhexyl Palmitate, Caprylic/Capric Triglyceride, Polyethylene, Cetyl Dimethicone, Microcrystalline Wax (Cera Microcristallina), Ozokerite, Hydrogenated Polyisobutene, Tocopheryl Acetate, Ascorbyl Palmitate, Retinyl Palmitate, BHT, Tocopherol Oil, [+/- (May Contain): Calcium Sodium Borosilicate, Calcium Aluminum Borosilicate, Aluminum Calcium Sodium Silicate, Silica, Tin Oxide, Palmitic Acid, Mica (CI 77019), Bismuth Oxychloride (CI 77163), Tit [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 34.2,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-01-02-HS-HST104.webp?v=618491",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-HS-HS-BOX.webp?v=151513"
+      "/api/product-image/highlighter-stick/primary",
+      "/api/product-image/highlighter-stick/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-01-02-HS-HST104.webp?v=618491",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-HS-HS-BOX.webp?v=151513",
+    "primaryImage": "/api/product-image/highlighter-stick/primary",
+    "boxImage": "/api/product-image/highlighter-stick/box",
     "shades": [
       {
         "id": "highlighter-stick-1",
@@ -2086,7 +2227,10 @@
         "sku": "PP-LB-01-02-HS-HST104-04",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-hyaluronic-acid-serum",
@@ -2100,11 +2244,11 @@
     "inStock": false,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-GF-03-02-HAS.webp?v=279348",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-HAS-BOX.webp?v=335904"
+      "/api/product-image/hyaluronic-acid-serum/primary",
+      "/api/product-image/hyaluronic-acid-serum/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-GF-03-02-HAS.webp?v=279348",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-HAS-BOX.webp?v=335904",
+    "primaryImage": "/api/product-image/hyaluronic-acid-serum/primary",
+    "boxImage": "/api/product-image/hyaluronic-acid-serum/box",
     "shades": [
       {
         "id": "hyaluronic-acid-serum-default",
@@ -2114,7 +2258,10 @@
         "sku": "PP-GF-03-02-HAS-01",
         "inStock": false
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": false
   },
   {
     "id": "pp-hyaluronic-moisturizer",
@@ -2123,16 +2270,16 @@
     "title": "Hyaluronic Moisturizer",
     "subtitle": "A rich, cushiony cream that delivers deep hydration and visible plumpness overnight.",
     "description": "Formulated with hyaluronic acid and tamarind seed polysaccharides, this moisture-intense cream locks in hydration while helping to smooth and soften the skin’s surface. Tamarindus indica seed gum, a plant-based hydration booster, complements the plumping effect of hyaluronic acid—leaving skin looking replenished, calm, and dewy by morning. Ideal for nighttime use or whenever skin needs extra comfort. Made in North America.",
-    "ingredients": "Aqua (Water), Helianthus Annuus (Sunflower) Seed Oil, Cetearyl Alcohol, Glyceryl Stearate, Glycerin, Vitis Vinifera (Grape) Seed Oil, Caprylic/Capric Triglyceride, Sodium Hyaluronate, Butyrospermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Persea Gratissima (Avocado) Oil, Aloe Barbadensis Leaf Juice, Sucrose Stearate, Sodium Stearoyl Glutamate, Coco-Glucoside, Coconut Alcohol, Tocopherol, Dehydroacetic Acid, Benzyl Alcohol, Sodium Gluconate, Xanthan Gum.",
+    "ingredients": "Aqua (Water), Helianthus Annuus (Sunflower) Seed Oil, Glycerin, Butyrospermum Parkii (Shea) Butter, Caprylic/Capric Triglyceride, Cetearyl Alcohol, Ceteareth-20, Stearic Acid, Squalane, Coco-Caprylate, Glyceryl Stearate, Sodium Hyaluronate, Mixed Tocopherols, Oleyl Alcohol, Dioscorea Villosa (Wild Yam) Root Extract, Glycine Soja (Soybean) Sterols, Tamarindus Indica Seed Gum, Potassium Sorbate, Sodium Benzoate, Parfum, Sodium Gluconate, Xanthan Gu [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 64.3,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-PC-03-04-CR-HMZ.webp?v=627183",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-04-CR-HMZ-BOX.webp?v=37267"
+      "/api/product-image/hyaluronic-moisturizer/primary",
+      "/api/product-image/hyaluronic-moisturizer/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-PC-03-04-CR-HMZ.webp?v=627183",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-04-CR-HMZ-BOX.webp?v=37267",
+    "primaryImage": "/api/product-image/hyaluronic-moisturizer/primary",
+    "boxImage": "/api/product-image/hyaluronic-moisturizer/box",
     "shades": [
       {
         "id": "hyaluronic-moisturizer-default",
@@ -2142,7 +2289,10 @@
         "sku": "PP-PC-03-04-CR-HMZ-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-hydrating-facial-cleanser",
@@ -2156,11 +2306,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-CL-HFC.webp?v=503671",
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-CL-HFC-BOX.webp?v=670272"
+      "/api/product-image/hydrating-facial-cleanser/primary",
+      "/api/product-image/hydrating-facial-cleanser/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-CL-HFC.webp?v=503671",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-CL-HFC-BOX.webp?v=670272",
+    "primaryImage": "/api/product-image/hydrating-facial-cleanser/primary",
+    "boxImage": "/api/product-image/hydrating-facial-cleanser/box",
     "shades": [
       {
         "id": "hydrating-facial-cleanser-default",
@@ -2170,7 +2320,10 @@
         "sku": "PP-MB-03-02-CL-HFC-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-hydrating-lip-oil",
@@ -2179,16 +2332,16 @@
     "title": "Hydrating Lip Oil",
     "subtitle": "Cushion-soft botanical lip oil infused with jojoba, sweet cherry, and rosehip oils for glass-like shine.",
     "description": "Luxury North American formula by Pretty Piggie Makeup.",
-    "ingredients": "Hydrogenated Polyisobutene, Polybutene, Diisostearyl Malate, Caprylic/Capric Triglyceride, Simmondsia Chinensis (Jojoba) Seed Oil, Prunus Avium (Sweet Cherry) Seed Oil, Rosa Canina (Rosehip) Fruit Oil, Tocopheryl Acetate, Silica Dimethyl Silylate, Phenoxyethanol, Caprylyl Glycol, Fragrance (Parfum). [+/- May Contain: Titanium Dioxide (CI 77891), Red 6 Lake (CI 15850), Red 7 Lake (CI 15850), Red 28 Lake (CI 45410), Iron Oxides (CI 77491, CI 77492, CI 77499)].",
+    "ingredients": "UNVERIFIED — Manufacturer INCI specification was not published on the supplier catalog page. Purchase is disabled until official manufacturer PIF / CoA documentation is received and verified.",
     "price": 28.4,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips), New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-01-01-LO-LO05.webp?v=743294",
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-01-01-LO-LO-BOX.webp?v=585406"
+      "/api/product-image/hydrating-lip-oil/primary",
+      "/api/product-image/hydrating-lip-oil/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-01-01-LO-LO05.webp?v=743294",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-01-01-LO-LO-BOX.webp?v=585406",
+    "primaryImage": "/api/product-image/hydrating-lip-oil/primary",
+    "boxImage": "/api/product-image/hydrating-lip-oil/box",
     "shades": [
       {
         "id": "hydrating-lip-oil-1",
@@ -2238,7 +2391,10 @@
         "sku": "PP-LB-01-01-LO-LO05-06",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_MISSING_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-hydration-serum",
@@ -2252,11 +2408,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare)",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-EC-03-02-HDS.webp?v=152462",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-HDS-BOX.webp?v=984278"
+      "/api/product-image/hydration-serum/primary",
+      "/api/product-image/hydration-serum/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-EC-03-02-HDS.webp?v=152462",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-HDS-BOX.webp?v=984278",
+    "primaryImage": "/api/product-image/hydration-serum/primary",
+    "boxImage": "/api/product-image/hydration-serum/box",
     "shades": [
       {
         "id": "hydration-serum-default",
@@ -2266,7 +2422,10 @@
         "sku": "PP-EC-03-02-HDS-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-kale-face-cleanser",
@@ -2280,9 +2439,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Men's",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-PV-03-02-KCL.webp?v=985140"
+      "/api/product-image/kale-face-cleanser/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-PV-03-02-KCL.webp?v=985140",
+    "primaryImage": "/api/product-image/kale-face-cleanser/primary",
     "boxImage": null,
     "shades": [
       {
@@ -2293,7 +2452,10 @@
         "sku": "PP-PV-03-02-KCL-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-keratin-smoothing-conditioner",
@@ -2307,9 +2469,9 @@
     "inStock": true,
     "categoriesText": "Hair & Body, New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-BT-06-09-CDT-KCDT.webp?v=128352"
+      "/api/product-image/keratin-smoothing-conditioner/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-BT-06-09-CDT-KCDT.webp?v=128352",
+    "primaryImage": "/api/product-image/keratin-smoothing-conditioner/primary",
     "boxImage": null,
     "shades": [
       {
@@ -2320,7 +2482,10 @@
         "sku": "PP-BT-06-09-CDT-KCDT-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-keratin-smoothing-shampoo",
@@ -2329,14 +2494,14 @@
     "title": "Keratin Smoothing Shampoo",
     "subtitle": "A smoothing keratin shampoo that gently cleanses while helping reduce frizz and improve softness and shine.",
     "description": "Cleanse and smooth hair with this keratin shampoo formulated to help reduce frizz while improving softness and shine. The rich cleansing formula removes impurities without leaving hair feeling stripped or dry. Infused with hydrolyzed keratin and conditioning ingredients, it helps support smoother, more manageable hair with a sleek, healthy-looking finish.",
-    "ingredients": "Water (Aqua), Sodium C14-16 Olefin Sulfonate, Cocamidopropyl Betaine, Cocamide MIPA, Glycol Distearate, Hydrolyzed Keratin, Panthenol (Pro-Vitamin B5), Argania Spinosa (Argan) Kernel Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Polyquaternium-10, PEG-150 Distearate, Citric Acid, Fragrance (Parfum), Sodium Chloride, Disodium EDTA, Phenoxyethanol, Ethylhexylglycerin.",
+    "ingredients": "Water, Sodium Laureth Sulfate, Ammonium Laureth Sulfate, Cocamide Methyl MEA, Dimethiconol, Fragrance, Cocamide MEA, Cocamidopropyl PG-Dimonium Chloride Phosphate, Decyl Glucoside, Sodium Lauroamphoacetate, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Climbazole, Sodium Salicylate, Dimethicone Silylate, Guar Hydroxypropyltrimonium Chloride, Sodium Benzoate, Benzyl Alcohol, Glycerin, Amodimethicone, Citric Acid, Dimethicone, Disodium EDTA, TEA-Do [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 25.8,
     "inStock": true,
     "categoriesText": "Hair & Body, New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-BT-06-09-SMP-KSMP.webp?v=586475"
+      "/api/product-image/keratin-smoothing-shampoo/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-BT-06-09-SMP-KSMP.webp?v=586475",
+    "primaryImage": "/api/product-image/keratin-smoothing-shampoo/primary",
     "boxImage": null,
     "shades": [
       {
@@ -2347,7 +2512,10 @@
         "sku": "PP-BT-06-09-SMP-KSMP-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-khol-eyeliner",
@@ -2356,16 +2524,16 @@
     "title": "Khol Eyeliner",
     "subtitle": "A richly pigmented kohl pencil designed for definition, smudging, and soft-focus drama.",
     "description": "Whether you're after a precise line or a smoky blend, this eyeliner adapts with ease. The creamy formula offers smooth application without tugging, making it ideal for the lash line, waterline, or layered with shadow. Long-wearing, comfortable, and versatile enough for everyday use or a more defined, after-dark look. Made in North America.",
-    "ingredients": "Ricinus Communis (Castor) Seed Oil, Microcrystalline Wax (Cera Microcristallina), Paraffin, Liquid Paraffin, 2-Ethylhexyl Palmitate, Carnauba Wax (Copernicia Cerifera), Beeswax (Cera Alba), Lanolin, BHT, Caprylyl Glycol, Phenoxyethanol. [+/- May Contain: Iron Oxides (CI 77491, CI 77492, CI 77499), Titanium Dioxide (CI 77891), Black 2 (CI 77266), Ultramarines (CI 77007), Ferric Ferrocyanide (CI 77510), FD&C Red 40 Aluminum Lake (CI 16035), FD&C Blue 1 Aluminum Lake (CI 42090)].",
+    "ingredients": "Ricinus Communis (Castor) Seed Oil, Microcrystalline Wax, Paraffin, Petrolatum, Octyl Palmitate, Carnauba, Cera Alba, Lanolin, Bht, Caprylyl Glycol, Phenoxyethanol. [may Contain (+/-): Mica (Ci 77019), Titanium Dioxide (Ci 77891), Iron Oxides (Ci 77491, Ci 77492, Ci 77499), Ultramarine Blue (Ci 77007), Iron Blue (Ci 77510), Chromium Oxide Green (Ci 77288), Fd&c Yellow #5 Aluminum Lake (Ci19140), Fd&c Red 40 Aluminum Lake (Ci 16035), Fd&c Blue #1 [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 24.1,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CO-01-04-KOL-K36.webp?v=916943",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-KOL-BOX.webp?v=21951"
+      "/api/product-image/khol-eyeliner/primary",
+      "/api/product-image/khol-eyeliner/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CO-01-04-KOL-K36.webp?v=916943",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-KOL-BOX.webp?v=21951",
+    "primaryImage": "/api/product-image/khol-eyeliner/primary",
+    "boxImage": "/api/product-image/khol-eyeliner/box",
     "shades": [
       {
         "id": "khol-eyeliner-1",
@@ -2407,7 +2575,10 @@
         "sku": "PP-CO-01-04-KOL-K36-05",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-large-blurrer-brush",
@@ -2421,9 +2592,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-BU-EB88.webp?v=338333"
+      "/api/product-image/large-blurrer-brush/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-BU-EB88.webp?v=338333",
+    "primaryImage": "/api/product-image/large-blurrer-brush/primary",
     "boxImage": null,
     "shades": [
       {
@@ -2434,7 +2605,10 @@
         "sku": "PP-CS-01-03-BU-EB88-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-lash-rejuvenator",
@@ -2448,11 +2622,11 @@
     "inStock": false,
     "categoriesText": "Beauty & Skincare (Eyes, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-EZ-01-02-BLR.webp?v=754649",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BLR-BOX.webp?v=162026"
+      "/api/product-image/lash-rejuvenator/primary",
+      "/api/product-image/lash-rejuvenator/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-EZ-01-02-BLR.webp?v=754649",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-BLR-BOX.webp?v=162026",
+    "primaryImage": "/api/product-image/lash-rejuvenator/primary",
+    "boxImage": "/api/product-image/lash-rejuvenator/box",
     "shades": [
       {
         "id": "lash-rejuvenator-default",
@@ -2462,7 +2636,10 @@
         "sku": "PP-EZ-01-02-BLR-01",
         "inStock": false
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": false
   },
   {
     "id": "pp-leave-in-hair-mask",
@@ -2476,9 +2653,9 @@
     "inStock": true,
     "categoriesText": "Hair & Body, New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-BT-06-11-HMK-HMSK.webp?v=605966"
+      "/api/product-image/leave-in-hair-mask/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-BT-06-11-HMK-HMSK.webp?v=605966",
+    "primaryImage": "/api/product-image/leave-in-hair-mask/primary",
     "boxImage": null,
     "shades": [
       {
@@ -2489,7 +2666,10 @@
         "sku": "PP-BT-06-11-HMK-HMSK-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-lip-butter",
@@ -2498,16 +2678,16 @@
     "title": "Lip Butter",
     "subtitle": "Whipped shea, mango, and cocoa seed butter balm that melts on contact to cocoon dry lips.",
     "description": "Luxury North American formula by Pretty Piggie Makeup.",
-    "ingredients": "Butyrospermum Parkii (Shea) Butter, Mangifera Indica (Mango) Seed Butter, Theobroma Cacao (Cocoa) Seed Butter, Cocos Nucifera (Coconut) Oil, Ricinus Communis (Castor) Seed Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Euphorbia Cerifera (Candelilla) Wax, Copernicia Cerifera (Carnauba) Wax, Tocopherol (Vitamin E), Vanilla Planifolia Fruit Extract.",
+    "ingredients": "UNVERIFIED — Manufacturer INCI specification was not published on the supplier catalog page. Purchase is disabled until official manufacturer PIF / CoA documentation is received and verified.",
     "price": 25.6,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips, Skincare), New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-03-01-PP-LB01.webp?v=777447",
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-03-01-PP-LB-BOX.webp?v=965395"
+      "/api/product-image/lip-butter/primary",
+      "/api/product-image/lip-butter/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-03-01-PP-LB01.webp?v=777447",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-03-01-PP-LB-BOX.webp?v=965395",
+    "primaryImage": "/api/product-image/lip-butter/primary",
+    "boxImage": "/api/product-image/lip-butter/box",
     "shades": [
       {
         "id": "lip-butter-default",
@@ -2517,7 +2697,10 @@
         "sku": "PP-LB-03-01-PP-LB01-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_MISSING_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-lip-gloss",
@@ -2526,16 +2709,16 @@
     "title": "Lip Gloss",
     "subtitle": "High-refraction, non-sticky mirror-shine lip gloss enriched with conditioning jojoba oil and vitamin E.",
     "description": "Luxury North American formula by Pretty Piggie Makeup.",
-    "ingredients": "Polybutene, Octyldodecanol, Hydrogenated Polyisobutene, Silica Dimethyl Silylate, Octyldodecyl Stearoyl Stearate, Trimethylolpropane Triisostearate, Isocetyl Stearate, Synthetic Fluorphlogopite, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Phenoxyethanol, Caprylyl Glycol, Vanillin. [+/- May Contain: Mica (CI 77019), Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 (CI 15850), Red 7 Lake (CI 15850), Red 28 Lake (CI 45410), Yellow 5 Lake (CI 19140)].",
+    "ingredients": "UNVERIFIED — Manufacturer INCI specification was not published on the supplier catalog page. Purchase is disabled until official manufacturer PIF / CoA documentation is received and verified.",
     "price": 25.9,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips), Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-01-LG-LG27.webp?v=230566",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-LG-BOX.webp?v=713439"
+      "/api/product-image/lip-gloss/primary",
+      "/api/product-image/lip-gloss/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-01-LG-LG27.webp?v=230566",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-LG-BOX.webp?v=713439",
+    "primaryImage": "/api/product-image/lip-gloss/primary",
+    "boxImage": "/api/product-image/lip-gloss/box",
     "shades": [
       {
         "id": "lip-gloss-1",
@@ -2657,7 +2840,10 @@
         "sku": "PP-MB-01-01-LG-LG27-15",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_MISSING_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-lip-liner",
@@ -2666,16 +2852,16 @@
     "title": "Lip Liner",
     "subtitle": "Velvety-smooth conditioning lip pencil that contours and locks lip color in place all day.",
     "description": "Luxury North American formula by Pretty Piggie Makeup.",
-    "ingredients": "Ricinus Communis (Castor) Seed Oil, Microcrystalline Wax (Cera Microcristallina), Paraffin, Ethylhexyl Palmitate, Copernicia Cerifera (Carnauba) Wax, Euphorbia Cerifera (Candelilla) Wax, Ceresin, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Phenoxyethanol, Caprylyl Glycol. [+/- May Contain: Mica (CI 77019), Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 (CI 15850), Red 7 Lake (CI 15850), Red 27 Lake (CI 45410)].",
+    "ingredients": "UNVERIFIED — Manufacturer INCI specification was not published on the supplier catalog page. Purchase is disabled until official manufacturer PIF / CoA documentation is received and verified.",
     "price": 24.3,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips), Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CO-01-01-LP-LP48.webp?v=773494",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-LP-BOX.webp?v=262100"
+      "/api/product-image/lip-liner/primary",
+      "/api/product-image/lip-liner/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CO-01-01-LP-LP48.webp?v=773494",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-LP-BOX.webp?v=262100",
+    "primaryImage": "/api/product-image/lip-liner/primary",
+    "boxImage": "/api/product-image/lip-liner/box",
     "shades": [
       {
         "id": "lip-liner-1",
@@ -2781,7 +2967,10 @@
         "sku": "PP-CO-01-01-LP-LP48-13",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_MISSING_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-lip-plumper",
@@ -2790,16 +2979,16 @@
     "title": "Lip Plumper",
     "subtitle": "Peptide and cooling botanical lip plumper that visibly enhances lip fullness with a glossy glaze.",
     "description": "Luxury North American formula by Pretty Piggie Makeup.",
-    "ingredients": "Hydrogenated Polyisobutene, Polybutene, Dicaprylyl Carbonate, Octyldodecanol, Silica Dimethyl Silylate, Ethylene/Propylene/Styrene Copolymer, Butylene/Ethylene/Styrene Copolymer, Menthol, Menthyl Lactate, Capsicum Frutescens Resin, Palmitoyl Tripeptide-1, Ethylhexyl Palmitate, Tribehenin, Sorbitan Isostearate, Tocopheryl Acetate, Phenoxyethanol, Fragrance (Parfum).",
+    "ingredients": "UNVERIFIED — Manufacturer INCI specification was not published on the supplier catalog page. Purchase is disabled until official manufacturer PIF / CoA documentation is received and verified.",
     "price": 26.4,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips), New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-AM-01-01-LG-PLG02.webp?v=514471",
-      "https://images.blankabrand.com/73904/73904-BLNK-AM-01-01-LG-PLG02-BOX.webp?v=919407"
+      "/api/product-image/lip-plumper/primary",
+      "/api/product-image/lip-plumper/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-AM-01-01-LG-PLG02.webp?v=514471",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-AM-01-01-LG-PLG02-BOX.webp?v=919407",
+    "primaryImage": "/api/product-image/lip-plumper/primary",
+    "boxImage": "/api/product-image/lip-plumper/box",
     "shades": [
       {
         "id": "lip-plumper-default",
@@ -2809,7 +2998,10 @@
         "sku": "PP-AM-01-01-LG-PLG02-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_MISSING_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-lipstick",
@@ -2818,16 +3010,16 @@
     "title": "Lipstick",
     "subtitle": "Rich, one-stroke satin-creme couture lipstick infused with shea butter and jojoba seed oil.",
     "description": "Luxury North American formula by Pretty Piggie Makeup.",
-    "ingredients": "Ricinus Communis (Castor) Seed Oil, Octyldodecanol, Caprylic/Capric Triglyceride, Euphorbia Cerifera (Candelilla) Wax, Bis-Diglyceryl Polyacyladipate-2, Cetyl Alcohol, Copernicia Cerifera (Carnauba) Wax, Synthetic Wax, Simmondsia Chinensis (Jojoba) Seed Oil, Butyrospermum Parkii (Shea) Butter, Tocopheryl Acetate, Ascorbyl Palmitate, Vanillin, Phenoxyethanol. [+/- May Contain: Mica (CI 77019), Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 (CI 15850), Red 7 Lake (CI 15850), Red 28 Lake (CI 45410), Yellow 5 Lake (CI 19140), Blue 1 Lake (CI 42090)].",
+    "ingredients": "UNVERIFIED — Manufacturer INCI specification was not published on the supplier catalog page. Purchase is disabled until official manufacturer PIF / CoA documentation is received and verified.",
     "price": 28,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips), Travel Friendly, New, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CA-01-01-LS-P023-236P.webp?v=102711",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-LS-P-BOX.webp?v=387035"
+      "/api/product-image/lipstick/primary",
+      "/api/product-image/lipstick/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CA-01-01-LS-P023-236P.webp?v=102711",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-LS-P-BOX.webp?v=387035",
+    "primaryImage": "/api/product-image/lipstick/primary",
+    "boxImage": "/api/product-image/lipstick/box",
     "shades": [
       {
         "id": "lipstick-1",
@@ -2941,7 +3133,10 @@
         "sku": "PP-CA-01-01-LS-P023-236P-14",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_MISSING_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-liquid-blush",
@@ -2950,16 +3145,16 @@
     "title": "Liquid Blush",
     "subtitle": "A dewy liquid blush that melts into skin for a fresh, flushed glow.",
     "description": "The weightless formula blends seamlessly for a natural tint that feels as good as it looks. Whether worn alone or layered, each shade is buildable, blendable, and easy to customize. The Liquid Blush leaves a dewy, radiant finish that brings life to your cheeks—no streaks, no fuss, just effortless glow. Made in North America.",
-    "ingredients": "Aqua, Cyclopentasiloxane, Isododecane, Dimethicone, Glycerin, PEG-10 Dimethicone, Trimethylsiloxysilicate, Polymethylsilsesquioxane, Disteardimonium Hectorite, Sodium Chloride, Silica, Phenoxyethanol, Propylene Carbonate, Tocopheryl Acetate, Sodium Hyaluronate, Ethylhexylglycerin, Fragrance, Stearic Acid, Aluminum Hydroxide. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 (CI 15850), Red 7 Lake (CI 15850)].",
+    "ingredients": "Aqua, Isododecane, Cyclopentasiloxane, Butylene Glycol, Dicaprylyl Carbonate, Lauryl Peg-10 Tris (Trimethylsiloxy) Silylethyl Dimethicone, Cetyl Ethylhexanoate, Glycerin, Methyl Methacrylate Crosspolymer, Trimethylsiloxysilicate, Titanium Dioxide, Silica, 1,2-hexanediol, Phenyl Trimethicone, Sodium Chloride, Magnesium Stearate, Dimethicone/vinyl Dimethicone Crosspolymer, Trihydroxystearin, Aluminum Hydroxide, Ethylhexylglycerin, Fragrance, Steari [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 26.7,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-QBL02.webp?v=637533",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-QBL-BOX.webp?v=341252"
+      "/api/product-image/liquid-blush/primary",
+      "/api/product-image/liquid-blush/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-QBL02.webp?v=637533",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-QBL-BOX.webp?v=341252",
+    "primaryImage": "/api/product-image/liquid-blush/primary",
+    "boxImage": "/api/product-image/liquid-blush/box",
     "shades": [
       {
         "id": "liquid-blush-1",
@@ -3001,7 +3196,10 @@
         "sku": "PP-MB-01-02-QBL02-05",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-liquid-shimmer",
@@ -3010,16 +3208,16 @@
     "title": "Liquid Shimmer",
     "subtitle": "Weightless prismatic liquid highlighter and eye topper for multidimensional rose-gold radiance.",
     "description": "Luxury North American formula by Pretty Piggie Makeup.",
-    "ingredients": "Aqua (Water), Mica, Glycerin, Synthetic Fluorphlogopite, Butylene Glycol, Calcium Sodium Borosilicate, Carbomer, Aminomethyl Propanol, Sodium Hyaluronate, Panthenol, Phenoxyethanol, Caprylyl Glycol, Ethylhexylglycerin, Tin Oxide. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499)].",
+    "ingredients": "UNVERIFIED — Manufacturer INCI specification was not published on the supplier catalog page. Purchase is disabled until official manufacturer PIF / CoA documentation is received and verified.",
     "price": 26.4,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips, Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-04-SH-SHM02.webp?v=404830",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-SH-SHM-BOX.webp?v=890686"
+      "/api/product-image/liquid-shimmer/primary",
+      "/api/product-image/liquid-shimmer/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-04-SH-SHM02.webp?v=404830",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-SH-SHM-BOX.webp?v=890686",
+    "primaryImage": "/api/product-image/liquid-shimmer/primary",
+    "boxImage": "/api/product-image/liquid-shimmer/box",
     "shades": [
       {
         "id": "liquid-shimmer-default",
@@ -3029,7 +3227,10 @@
         "sku": "PP-MB-01-04-SH-SHM02-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_MISSING_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-liquid-to-matte-lipstick",
@@ -3038,16 +3239,16 @@
     "title": "Liquid to Matte Lipstick",
     "subtitle": "A pigment-rich liquid lipstick with a soft matte finish that wears comfortably from day to night.",
     "description": "This long-wearing formula glides on smoothly with a precise slanted applicator, setting to a velvety matte that won't dry out lips. Lightweight yet full-impact, each swipe delivers bold color in a single pass—no smudging, no flaking. Lightly scented with a hint of orange sugar, it's the matte you'll actually look forward to reapplying. Made in North America.",
-    "ingredients": "Isododecane, Trimethylsiloxysilicate, Cyclopentasiloxane, Dimethicone, Kaolin, Disteardimonium Hectorite, Synthetic Beeswax, Silica Dimethyl Silylate, Hydrogenated Polyisobutene, Propylene Carbonate, Octyldodecanol, Tocopheryl Acetate, Phenoxyethanol, Caprylyl Glycol, Ethylhexylglycerin, Vanillin. [+/- May Contain: Mica (CI 77019), Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 (CI 15850), Red 7 Lake (CI 15850), Red 27 Lake (CI 45410), Red 28 Lake (CI 45410), Blue 1 Lake (CI 42090)].",
+    "ingredients": "Isododecane, Cyclopentasiloxane, Trimethylsiloxysilicate, Dimethicone, Polybutene, Kaolin, Synthetic Beeswax, Disteardimonium Hectorite, Petrolatum, Silica Silylate, C18-36 Acid Triglyceride, Propylene Carbonate, Octyldodecanol, Phenoxyethanol, Stearalkonium Hectorite, Flavor, Propylene Carbonate, Ethylhexylglycerin, Tocopheryl Acetate, May Contain (+/- ): Titanium Dioxide (CI 77891), Iron Oxides (CI 77499, CI 77491, CI 77492), D&C Red 27 Lake (C [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 31.7,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-01-LML-LML02.webp?v=693944",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-LML-BOX.webp?v=961527"
+      "/api/product-image/liquid-to-matte-lipstick/primary",
+      "/api/product-image/liquid-to-matte-lipstick/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-01-LML-LML02.webp?v=693944",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-LML-BOX.webp?v=961527",
+    "primaryImage": "/api/product-image/liquid-to-matte-lipstick/primary",
+    "boxImage": "/api/product-image/liquid-to-matte-lipstick/box",
     "shades": [
       {
         "id": "liquid-to-matte-lipstick-1",
@@ -3113,7 +3314,10 @@
         "sku": "PP-MB-01-01-LML-LML02-08",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-luminizing-powder",
@@ -3127,11 +3331,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-LZ-LMZ01.webp?v=167184",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-LZ-LMZ-BOX.webp?v=358043"
+      "/api/product-image/luminizing-powder/primary",
+      "/api/product-image/luminizing-powder/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-LZ-LMZ01.webp?v=167184",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-LZ-LMZ-BOX.webp?v=358043",
+    "primaryImage": "/api/product-image/luminizing-powder/primary",
+    "boxImage": "/api/product-image/luminizing-powder/box",
     "shades": [
       {
         "id": "luminizing-powder-1",
@@ -3149,7 +3353,10 @@
         "sku": "PP-MB-01-02-LZ-LMZ01-02",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-luxe-leave-in-conditioner",
@@ -3163,9 +3370,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Bath & Body), Hair & Body",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-EV-06-11-LCDT-LUXE.webp?v=576900"
+      "/api/product-image/luxe-leave-in-conditioner/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-EV-06-11-LCDT-LUXE.webp?v=576900",
+    "primaryImage": "/api/product-image/luxe-leave-in-conditioner/primary",
     "boxImage": null,
     "shades": [
       {
@@ -3176,7 +3383,10 @@
         "sku": "PP-EV-06-11-LCDT-LUXE-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-luxury-cream-lipstick",
@@ -3185,16 +3395,16 @@
     "title": "Luxury Cream Lipstick",
     "subtitle": "A nourishing cream lipstick that delivers rich color with a smooth, satin finish.",
     "description": "Infused with a blend of argan, olive, grape seed, and macadamia oils, this formula hydrates and softens lips while offering long-lasting, vibrant color. The creamy texture glides on effortlessly for a full, moisturized feel without feathering or dryness. Designed to suit any mood or moment—easy to swipe on for day, night, or anything in between. Made in North America.",
-    "ingredients": "Octyldodecanol, Ricinus Communis (Castor) Seed Oil, Caprylic/Capric Triglyceride, Bis-Diglyceryl Polyacyladipate-2, Euphorbia Cerifera (Candelilla) Wax, Cetyl Alcohol, Copernicia Cerifera (Carnauba) Wax, Synthetic Wax, Butyrospermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Persea Gratissima (Avocado) Oil, Olea Europaea (Olive) Fruit Oil, Olea Europaea (Olive) Unsaponifiables, Tocopheryl Acetate, Phenoxyethanol. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 7 Lake (CI 15850), Red 28 Lake (CI 45410)].",
+    "ingredients": "Hydrogenated Polyisobutene, Phytosteryl/Isostearyl/Cetyl/Stearyl/Behenyl Dimer Dilinoleate, Polyethylene, Octyldodecanol, Bis-Diglyceryl Polyacyladipate-2, Mica, Cera Microcristallina/Microcrystalline Wax/Cire microcristalline, Caprylic/Capric Triglyceride, Hydrated Silica, Phenyl Trimethicone, Triisostearin, Polyglyceryl-3 Diisostearate, Pentaerythrityl Tetraisostearate, Hydrogenated Olive Oil, Olea Europaea (Olive) Fruit Oil, Olea Europaea (Oli [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 26.4,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips), Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MN-01-01-LS-CP29-DE3.webp?v=296155",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-LS-CP-BOX.webp?v=344033"
+      "/api/product-image/luxury-cream-lipstick/primary",
+      "/api/product-image/luxury-cream-lipstick/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MN-01-01-LS-CP29-DE3.webp?v=296155",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-LS-CP-BOX.webp?v=344033",
+    "primaryImage": "/api/product-image/luxury-cream-lipstick/primary",
+    "boxImage": "/api/product-image/luxury-cream-lipstick/box",
     "shades": [
       {
         "id": "luxury-cream-lipstick-1",
@@ -3220,7 +3430,10 @@
         "sku": "PP-MN-01-01-LS-CP29-DE3-03",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-luxury-matte-lipstick",
@@ -3229,16 +3442,16 @@
     "title": "Luxury Matte Lipstick",
     "subtitle": "A modern matte that moves with you—comfortable, pigmented, and low-maintenance.",
     "description": "This long-wear lipstick delivers rich color in a soft-matte finish that stays smooth, never drying. The cushiony formula glides on effortlessly and wears comfortably from day to night—no cracking, caking, or constant reapplying. Find the perfect shade to suit every mood, moment, and makeup bag. Made in North America.",
-    "ingredients": "Isononyl Isononanoate, Silica, Octyldodecanol, Polyethylene, Caprylic/Capric Triglyceride, Kaolin, Euphorbia Cerifera (Candelilla) Wax, Synthetic Wax, Bis-Diglyceryl Polyacyladipate-2, Microcrystalline Wax, Simmondsia Chinensis (Jojoba) Seed Oil, Butyrospermum Parkii (Shea) Butter, Disteardimonium Hectorite, Sodium Hyaluronate, Tocopheryl Acetate, Phenoxyethanol. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 (CI 15850), Red 7 Lake (CI 15850), Red 28 Lake (CI 45410)].",
+    "ingredients": "Hydrogenated Polyisobutene, Polybutene, Polyethylene, Aluminum Starch Octenylsuccinate, Octyldodecanol, Cera Microcristallina/Microcrystalline Wax/Cire microcristalline, Mica, Kaolin, Aqua/Water/Eau, Hydrogenated Castor Oil, Candelilla Cera/ Euphorbia Cerifera (Candelilla) Wax/ Cire de candelilla, Tocopherol, Tocopheryl Acetate, Ascorbyl Palmitate, Squalane, Helianthus Annuus (Sunflower) Seed Oil Unsaponifiables, Disteardimonium Hectorite, Sodium [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 26.4,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MN-01-01-ML-M20-BX3.webp?v=148520",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-ML-BOX1.webp?v=99922"
+      "/api/product-image/luxury-matte-lipstick/primary",
+      "/api/product-image/luxury-matte-lipstick/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MN-01-01-ML-M20-BX3.webp?v=148520",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-ML-BOX1.webp?v=99922",
+    "primaryImage": "/api/product-image/luxury-matte-lipstick/primary",
+    "boxImage": "/api/product-image/luxury-matte-lipstick/box",
     "shades": [
       {
         "id": "luxury-matte-lipstick-1",
@@ -3264,7 +3477,10 @@
         "sku": "PP-MN-01-01-ML-M20-BX3-03",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-makeup-bag",
@@ -3273,14 +3489,14 @@
     "title": "Makeup Bag",
     "subtitle": "A chic, padded makeup pouch designed to keep beauty essentials organized, protected, and easy to grab—at home or on the go.",
     "description": "Luxury North American formula by Pretty Piggie Makeup.",
-    "ingredients": "100% Vegan Textured Saffiano Polyurethane (PU) Leather Exterior, Wipe-Clean Water-Resistant Nylon Interior Lining, Brushed Rose-Gold Alloy Zipper Hardware.",
+    "ingredients": "UNVERIFIED — Manufacturer INCI specification was not published on the supplier catalog page. Purchase is disabled until official manufacturer PIF / CoA documentation is received and verified.",
     "price": 14.9,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Accessories), Accessories, New",
     "imageUrls": [
-      "https://images.blankabrand.com/unbranded/BLNK-AB-04-04-MB01.webp?v=410008"
+      "/api/product-image/makeup-bag/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/unbranded/BLNK-AB-04-04-MB01.webp?v=410008",
+    "primaryImage": "/api/product-image/makeup-bag/primary",
     "boxImage": null,
     "shades": [
       {
@@ -3299,7 +3515,10 @@
         "sku": "PP-AB-04-04-MB01-02",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_MISSING_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-makeup-remover-solution",
@@ -3313,11 +3532,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-MR-MR2.webp?v=643118",
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-MR-MR2-BOX.webp?v=949851"
+      "/api/product-image/makeup-remover-solution/primary",
+      "/api/product-image/makeup-remover-solution/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-MR-MR2.webp?v=643118",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-MR-MR2-BOX.webp?v=949851",
+    "primaryImage": "/api/product-image/makeup-remover-solution/primary",
+    "boxImage": "/api/product-image/makeup-remover-solution/box",
     "shades": [
       {
         "id": "makeup-remover-solution-default",
@@ -3327,7 +3546,10 @@
         "sku": "PP-MB-03-02-MR-MR2-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-mascara",
@@ -3336,16 +3558,16 @@
     "title": "Mascara",
     "subtitle": "A smooth, water-resistant mascara that lengthens and defines lashes for soft, long-lasting wear.",
     "description": "A lengthening and volumizing jet-black mascara formulated with panthenol and conditioning waxes that wraps every lash in rich, clump-free definition for added lift and drama. Made in North America.",
-    "ingredients": "Aqua (Water), Acrylates Copolymer, Copernicia Cerifera (Carnauba) Wax, Cera Alba (Beeswax), Stearic Acid, Glyceryl Stearate, Butylene Glycol, Polybutene, Paraffin, VP/Eicosene Copolymer, Triethanolamine, Cetyl Alcohol, Phenoxyethanol, Hydroxyethylcellulose, Caprylyl Glycol, Panthenol, Disodium EDTA, Tocopheryl Acetate. [+/- May Contain: Iron Oxides (CI 77499), Black 2 (CI 77266)].",
+    "ingredients": "Water/ Aqua/ Eau, Acrylates Copolymer, Cera Alba (Beeswax), Polyamide-1, Polybutene, PVP, Copernicia Cerifera (Carnauba) Wax, Propylene Glycol, Glyceryl Stearate, Oleic Acid, Stearic Acid, Magnesium Aluminum Silicate, Glycerin, Triethanolamine, Styrene/Acrylates/Ammonium Methacrylate Copolymer, PVP/Eicosene Copolymer, Dicetyl Phosphate, Dehydroacetic Acid, Sodium Benzoate, Pheonoxyethanol, Cellulose Gum, Xanthan Gum, EDTA, Tocopheryl Acetate. [Ma [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 22.8,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-MC03.webp?v=684413",
-      "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-MC03-BOX.webp?v=627619"
+      "/api/product-image/mascara/primary",
+      "/api/product-image/mascara/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-MC03.webp?v=684413",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-JE-01-04-MC03-BOX.webp?v=627619",
+    "primaryImage": "/api/product-image/mascara/primary",
+    "boxImage": "/api/product-image/mascara/box",
     "shades": [
       {
         "id": "mascara-default",
@@ -3355,7 +3577,10 @@
         "sku": "PP-JE-01-04-MC03-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-matte-lip-stain",
@@ -3364,16 +3589,16 @@
     "title": "Matte Lip Stain",
     "subtitle": "A weightless matte stain that stays put without drying you out.",
     "description": "This long-wearing lip stain delivers rich pigment with a soft, velvety finish. The featherlight formula glides on effortlessly and sets to a comfortable matte that moves with your lips- and never cracks or cakes. Infused with conditioning ingredients, it gives bold color payoff without compromising on hydration. One swipe for all-day wear, no mirror touch-ups required. Made in North America.",
-    "ingredients": "Isododecane, Dimethicone, Trimethylsiloxysilicate, Polybutene, Petrolatum, Cyclohexasiloxane, Kaolin, Disteardimonium Hectorite, Cera Alba (Beeswax), Silica Dimethyl Silylate, Propylene Carbonate, Glyceryl Behenate/Eicosadioate, Persea Gratissima (Avocado) Oil, Tocopherol, Cyclopentasiloxane, Aroma. [+/- May Contain: Mica (CI 77019), Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 (CI 15850), Red 7 Calcium Lake (CI 15850), Red 28 Lake (CI 45410), Blue 1 Lake (CI 42090)].",
+    "ingredients": "Cyclopentasiloxane, Trimethylsiloxysilicate, Isododecane, Silica, Acrylates/Dimethicone Copolymer, Disteardimonium Hectorite, Propylene Carbonate, Isononyl Isononanoate, Hydrogenated Polycyclopentadiene, Ozokerite, Aluminum Starch Octenylsuccinate, Glyceryl Caprylate, Tocopherol, Euphorbia Cerifera (Candelilla) Wax. May Contain: Iron Oxides (CI 77491, CI 77492, CI 77499), D&C Red 6 Ba Lake (CI 15850), D&C Red 7 Ca Lake (CI 15850), Titanium Dioxid [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 28.4,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips), Travel Friendly, Bestsellers",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-01-MT-LSP44.webp?v=759080",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-MT-LSP-BOX.webp?v=167652"
+      "/api/product-image/matte-lip-stain/primary",
+      "/api/product-image/matte-lip-stain/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-01-MT-LSP44.webp?v=759080",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-01-MT-LSP-BOX.webp?v=167652",
+    "primaryImage": "/api/product-image/matte-lip-stain/primary",
+    "boxImage": "/api/product-image/matte-lip-stain/box",
     "shades": [
       {
         "id": "matte-lip-stain-1",
@@ -3471,7 +3696,10 @@
         "sku": "PP-MB-01-01-MT-LSP44-12",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-matte-lipstick",
@@ -3480,16 +3708,16 @@
     "title": "Matte Lipstick",
     "subtitle": "Velvety matte color that glides on smoothly and wears comfortably—richly pigmented, soft on the lips, and easy to wear all day.",
     "description": "A modern matte lipstick that delivers rich, full-coverage color with a smooth, velvety finish. Infused with nourishing oils and waxes like castor seed oil, jojoba esters, and beeswax, this formula glides on effortlessly while helping maintain softness and comfort throughout the day. Lightweight yet long-wearing, it sets to a soft-matte look that resists cracking, caking, or dryness—so lips feel as good as they look. Made in North America.",
-    "ingredients": "Octyldodecanol, Isononyl Isononanoate, Silica, Ricinus Communis (Castor) Seed Oil, Tricaprylin, Ozokerite, Cera Alba (Beeswax), Copernicia Cerifera (Carnauba) Wax, Euphorbia Cerifera (Candelilla) Wax, Microcrystalline Wax, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate, Ascorbyl Palmitate, Vanillin, Phenoxyethanol. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 Lake (CI 15850), Red 7 Lake (CI 15850), Red 27 Lake (CI 45410), Red 28 Lake (CI 45410)].",
+    "ingredients": "Ricinus Communis (Castor) Seed Oil, Kaolin, Diisostearyl Malate, Euphorbia Cerifera (Candelilla) Wax, Copernicia Cerifera (Carnauba) Wax, Cera Alba (Beeswax), Magnesium Carbonate, Caprylic/Capric Triglyceride, Ethylhexyl Palmitate, Titanium Dioxide (CI 77891), Mica (CI 77019), C18-38 Alkyl Hydroxystearoyl Stearate, Tridecyl Trimellitate, Octyldodecyl Stearoyl Stearate, Jojoba Esters. May Contain (+/-): D&C Red 27 Lake (CI 45410), Red 6 Lake (CI 1 [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 28,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Lips), New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CA-01-01-LS-MM2.webp?v=741272",
-      "https://images.blankabrand.com/73904/73904-BLNK-CA-01-01-LS-MM-BOX.webp?v=68505"
+      "/api/product-image/matte-lipstick/primary",
+      "/api/product-image/matte-lipstick/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CA-01-01-LS-MM2.webp?v=741272",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-CA-01-01-LS-MM-BOX.webp?v=68505",
+    "primaryImage": "/api/product-image/matte-lipstick/primary",
+    "boxImage": "/api/product-image/matte-lipstick/box",
     "shades": [
       {
         "id": "matte-lipstick-1",
@@ -3547,7 +3775,10 @@
         "sku": "PP-CA-01-01-LS-MM2-07",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-mattifying-face-primer",
@@ -3561,11 +3792,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-MF-SP484.webp?v=581316",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-MF-SP484-BOX.webp?v=738770"
+      "/api/product-image/mattifying-face-primer/primary",
+      "/api/product-image/mattifying-face-primer/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-MF-SP484.webp?v=581316",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-MF-SP484-BOX.webp?v=738770",
+    "primaryImage": "/api/product-image/mattifying-face-primer/primary",
+    "boxImage": "/api/product-image/mattifying-face-primer/box",
     "shades": [
       {
         "id": "mattifying-face-primer-default",
@@ -3575,7 +3806,10 @@
         "sku": "PP-MB-01-02-MF-SP484-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-men-s-face-moisturizer",
@@ -3584,14 +3818,14 @@
     "title": "Men's Face Moisturizer",
     "subtitle": "Hydrate and restore with clean, no-fuss care.",
     "description": "A lightweight, non-greasy formula designed to deliver lasting hydration while smoothing fine lines and evening skin tone overnight. Perfect for restoring balance and softness without heaviness—ideal as the final step in any nighttime routine. Made in North America.",
-    "ingredients": "Aqua, Caprylic/Capric Triglyceride, Glyceryl Stearate SE, Sorbitol, Stearic Acid, Carthamus Tinctorius (Safflower) Seed Oil, Cetyl Alcohol, Cyclopentasiloxane, Dimethicone, PEG-100 Stearate, Glyceryl Stearate, Carbomer, Glycerin, Titanium Dioxide, Olea Europaea (Olive) Fruit Oil, Argania Spinosa Kernel Oil, Aloe Barbadensis Leaf Extract, Squalane, Olea Europaea (Olive) Leaf Extract, Humulus Lupulus (Hops) Extract, Lavandula Angustifolia (Lavender) Extract, Tocopheryl Acetate, Phenoxyethanol, Ethylhexylglycerin.",
+    "ingredients": "Aqua, Caprylic/Capric Triglyceride, Glyceryl Stearate SE, Sorbitol, Stearic Acid, Carthamus  Tinctorius (Safflower) Seed Oil, Cetyl Alcohol, Cyclopentasiloxane, Dimethicone, PEG-100  Stearate, Glyceryl Stearate, Carbomer, *CO Glycerin, Glycerin, Titanium Dioxide, Olea Europaea  (Olive) Fruit Oil, Argania Spinosa Kernel Oil, Aloe Barbadensis Leaf Extract, **Squalane, *CO  Olea Europaea (Olive) Leaf Extract, *CO Humulus Lupulus (Hops) Extract, *CO [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 50.2,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Men's",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-SS-05-02-MST.webp?v=701075"
+      "/api/product-image/men-s-face-moisturizer/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-SS-05-02-MST.webp?v=701075",
+    "primaryImage": "/api/product-image/men-s-face-moisturizer/primary",
     "boxImage": null,
     "shades": [
       {
@@ -3602,7 +3836,10 @@
         "sku": "PP-SS-05-02-MST-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-men-s-shampoo",
@@ -3611,14 +3848,14 @@
     "title": "Men's Shampoo",
     "subtitle": "Cleanse, refresh, and strengthen.",
     "description": "A refreshing daily shampoo powered by organic botanical extracts that invigorates the scalp, cleanses deeply without stripping moisture, and leaves hair looking full, strong, and energized. Made in North America.",
-    "ingredients": "Aqua, Sodium Methyl 2-Sulfolaurate, Disodium 2-Sulfolaurate, Cetyl Betaine, Glycerin, Sodium Lauryl Sulfoacetate, Guar Hydroxypropyltrimonium Chloride, Humulus Lupulus (Hops) Extract, Lavandula Angustifolia (Lavender) Flower/Leaf/Stem Extract, Calendula Officinalis Flower Extract, Chamomilla Recutita (Matricaria) Flower Extract, Citrus Limon (Lemon) Peel Extract, Cucumis Sativus (Cucumber) Seed Extract, Camellia Sinensis (Green Tea) Leaf Extract, Panthenol, Phenoxyethanol, Ethylhexylglycerin.",
+    "ingredients": "Aqua, Sodium Methyl 2-Sulfolaurate, Disodium 2-Sulfolaurate, Cetyl Betaine, Glycerin, Sodium Lauryl Sulfoacetate, Guar Hydroxypropyltrimonium Chloride, *CO Glycerin, *CO Humulus Lupulus (Hops) Extract, *CO Lavandula Angustifolia (Lavender) Flower/Leaf/Stem Extract, *CO Calendula Officinalis Flower Extract, *CO Chamomilla Recutita (Matricaria) Flower Extract, *CO Citrus Limon (Lemon) Peel Extract, *CO Cucumis Sativus (Cucumber) Seed Extract, *CO C [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 42.6,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Bath & Body), Hair & Body, Men's",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-SS-05-07-SMP.webp?v=983065"
+      "/api/product-image/men-s-shampoo/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-SS-05-07-SMP.webp?v=983065",
+    "primaryImage": "/api/product-image/men-s-shampoo/primary",
     "boxImage": null,
     "shades": [
       {
@@ -3629,7 +3866,10 @@
         "sku": "PP-SS-05-07-SMP-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-men-s-under-eye-cream",
@@ -3638,14 +3878,14 @@
     "title": "Men's Under Eye Cream",
     "subtitle": "A fast-absorbing, anti-aging eye cream that lifts, repairs, and visibly reduces dark circles and fine lines.",
     "description": "Formulated specifically for men, this multi-action under eye cream targets puffiness, dark circles, and signs of aging. Powered by potent ingredients that brighten and smooth skin overnight, it delivers a refreshed, well-rested appearance by morning. Lightweight and quick-absorbing, it revitalizes the delicate eye area without heaviness or residue—perfect for daily use and a sharp, energized look. Made in North America.",
-    "ingredients": "Aqua, Caprylic/Capric Triglyceride, Glycerin, Glyceryl Stearate, PEG-100 Stearate, Stearic Acid, Carthamus Tinctorius (Safflower) Seed Oil, Cetyl Alcohol, Dimethicone, Helianthus Annuus (Sunflower) Seed Oil, Carbomer, Sodium PCA, Sodium Hydroxide, Aloe Barbadensis Leaf Juice, Disodium EDTA, Titanium Dioxide, Hydrolyzed Wheat Protein, Malus Domestica Fruit Cell Culture Extract, Ascorbic Acid (Vitamin C), Xanthan Gum, Tocopheryl Acetate (Vitamin E), Phenoxyethanol, Ethylhexylglycerin.",
+    "ingredients": "Aqua, Caprylic/Capric Triglyceride, Glycerin, Glyceryl Stearate, PEG-100 Stearate, Stearic Acid, Carthamus Tinctorius (Safflower) Seed Oil, Cetyl Alcohol, Dimethicone, Helianthus Annuus (Sunflower) Seed Oil, Carbomer, Sodium PCA, Sodium Hydroxide, *CO Aloe Barbadensis Leaf Juice, Disodium EDTA, Titanium Dioxide, Hydrolyzed Wheat Protein, Malus Domestica Fruit Cell Culture Extract, Ascorbic Acid (Vitamin C), Xanthan Gum, Tocopheryl Acetate (Vitami [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 53.1,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Men's",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-SS-05-04-UEC.webp?v=360643"
+      "/api/product-image/men-s-under-eye-cream/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-SS-05-04-UEC.webp?v=360643",
+    "primaryImage": "/api/product-image/men-s-under-eye-cream/primary",
     "boxImage": null,
     "shades": [
       {
@@ -3656,7 +3896,10 @@
         "sku": "PP-SS-05-04-UEC-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-mild-toning-elixir",
@@ -3670,11 +3913,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-TO-ELX.webp?v=440640",
-      "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-TO-ELX-BOX.webp?v=903655"
+      "/api/product-image/mild-toning-elixir/primary",
+      "/api/product-image/mild-toning-elixir/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-TO-ELX.webp?v=440640",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-TO-ELX-BOX.webp?v=903655",
+    "primaryImage": "/api/product-image/mild-toning-elixir/primary",
+    "boxImage": "/api/product-image/mild-toning-elixir/box",
     "shades": [
       {
         "id": "mild-toning-elixir-default",
@@ -3684,7 +3927,10 @@
         "sku": "PP-CA-03-02-TO-ELX-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-mini-crease-brush",
@@ -3698,9 +3944,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-MB-EB76.webp?v=673395"
+      "/api/product-image/mini-crease-brush/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-MB-EB76.webp?v=673395",
+    "primaryImage": "/api/product-image/mini-crease-brush/primary",
     "boxImage": null,
     "shades": [
       {
@@ -3711,7 +3957,10 @@
         "sku": "PP-CS-01-03-MB-EB76-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-mint-exfoliating-facial-polish",
@@ -3720,16 +3969,16 @@
     "title": "Mint Exfoliating Facial Polish",
     "subtitle": "Polish your skin to perfection! This minty exfoliator buffs away dry patches, leaving your complexion soft, glowing, and refreshed-like a spa day in a jar.",
     "description": "An invigorating facial scrub combining finely milled walnut shell and bamboo powder with cooling peppermint and spearmint oils for a gentle polish that leaves skin feeling baby-soft and refreshed. Made in North America.",
-    "ingredients": "Aqua (Water), Juglans Regia (Walnut) Shell Powder, Bambusa Arundinacea (Bamboo) Stem Extract, Glycerin, Cetearyl Alcohol, Helianthus Annuus (Sunflower) Seed Oil, Caprylic/Capric Triglyceride, Glyceryl Stearate, Vitis Vinifera (Grape) Seed Oil, Mentha Piperita (Peppermint) Oil, Mentha Viridis (Spearmint) Leaf Oil, Butyrospermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Aloe Barbadensis Leaf Juice, Tocopheryl Acetate, Triethanolamine, Carbomer, Phenoxyethanol, Ethylhexylglycerin.",
+    "ingredients": "Aqua (Water), Cellulose, Ethylhexyl Isononanoate, Caprylic/Capric Triglyceride, Decyl Glucoside, Glycerin, Cocamidopropyl Betaine, Cetearyl Alcohol, Squalane, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Aloe Barbadensis Leaf Extract, Butylene Glycol, Camellia Sinensis Leaf Extract, Caprylyl Glycol, Carthamus Tinctorius (Safflower) Seed Oil, Cetearyl Glucoside, Disodium EDTA, Ethylhexylglycerin, Menthol, Tocopherol, Tocopheryl Acetate, Triethano [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 55.2,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare)",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-PC-03-04-EXFL-MEF.webp?v=775408",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-04-EXFL-MEF-BOX.webp?v=312266"
+      "/api/product-image/mint-exfoliating-facial-polish/primary",
+      "/api/product-image/mint-exfoliating-facial-polish/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-PC-03-04-EXFL-MEF.webp?v=775408",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-04-EXFL-MEF-BOX.webp?v=312266",
+    "primaryImage": "/api/product-image/mint-exfoliating-facial-polish/primary",
+    "boxImage": "/api/product-image/mint-exfoliating-facial-polish/box",
     "shades": [
       {
         "id": "mint-exfoliating-facial-polish-default",
@@ -3739,7 +3988,10 @@
         "sku": "PP-PC-03-04-EXFL-MEF-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-natural-konjac-sponge",
@@ -3753,9 +4005,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare, Accessories), Accessories, Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-AB-04-02-KJS.webp?v=961084"
+      "/api/product-image/natural-konjac-sponge/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-AB-04-02-KJS.webp?v=961084",
+    "primaryImage": "/api/product-image/natural-konjac-sponge/primary",
     "boxImage": null,
     "shades": [
       {
@@ -3766,7 +4018,10 @@
         "sku": "PP-AB-04-02-KJS-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-natural-soap",
@@ -3780,9 +4035,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare, Bath & Body), Hair & Body, Men's",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-JE-07-06-NS13.webp?v=89371"
+      "/api/product-image/natural-soap/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-JE-07-06-NS13.webp?v=89371",
+    "primaryImage": "/api/product-image/natural-soap/primary",
     "boxImage": null,
     "shades": [
       {
@@ -3889,7 +4144,10 @@
         "sku": "PP-JE-07-06-NS13-13",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-niacinamide-vitamin-boost-serum",
@@ -3903,11 +4161,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-GF-03-02-VBS.webp?v=237404",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-VBS-BOX.webp?v=388702"
+      "/api/product-image/niacinamide-vitamin-boost-serum/primary",
+      "/api/product-image/niacinamide-vitamin-boost-serum/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-GF-03-02-VBS.webp?v=237404",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-VBS-BOX.webp?v=388702",
+    "primaryImage": "/api/product-image/niacinamide-vitamin-boost-serum/primary",
+    "boxImage": "/api/product-image/niacinamide-vitamin-boost-serum/box",
     "shades": [
       {
         "id": "niacinamide-vitamin-boost-serum-default",
@@ -3917,7 +4175,10 @@
         "sku": "PP-GF-03-02-VBS-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-night-renewal-creme",
@@ -3926,16 +4187,16 @@
     "title": "Night Renewal Creme",
     "subtitle": "Nighttime renewal that smooths, hydrates, and brightens while you sleep.",
     "description": "A rich overnight cream combining glycolic acid for gentle surface exfoliation with retinyl palmitate and squalane to visibly smooth skin texture, soften the appearance of fine lines, and reveal a rested, radiant glow by morning. Made in North America.",
-    "ingredients": "Water (Aqua), Glyceryl Stearate, Glycolic Acid, C12-20 Acid PEG-8 Ester, Dimethicone, Hexyl Laurate, Ethylhexyl Methoxycinnamate (Octinoxate), Squalane, Propylene Glycol, Glycerin, Sorbitol, PEG-100 Stearate, Cetyl Alcohol, Sodium Cetearyl Sulfate, Sorbitan Stearate, Panthenol, Phenoxyethanol, Caprylic/Capric Triglyceride, Ammonium Hydroxide, Tocopheryl Linoleate, Retinyl Palmitate, Tocopheryl Acetate, Phospholipids, Hydroxyethylcellulose, Magnesium Aluminum Silicate, Disodium EDTA, Ethylhexylglycerin.",
+    "ingredients": "Water (Aqua), Glyceryl Stearate, Glycolic Acid, C12-20 Acid PEG-8 Ester, Dimethicone, Hexyl Laurate, Ethylhexyl Methoxycinnamate (Octinoxate), Squalane, Propylene Glycol, Glycerin, Sorbitol, PEG-100 Stearate, Cetyl Alcohol, Sodium, Cetearyl Sulfate, Sorbitan Stearate, Panthenol, Phenoxyethanol, Caprylic/Capric Triglyceride, Ammonium Hydroxide, Tocopheryl Linoleate, Retinyl Palmitate, Tocopheryl Acetate, Phospholipids, Hydroxyethylcellulose, Magne [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 56.7,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Skincare)",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-PP-RNEW.webp?v=519196",
-      "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-PP-RNEW-BOX.webp?v=735595"
+      "/api/product-image/night-renewal-creme/primary",
+      "/api/product-image/night-renewal-creme/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-PP-RNEW.webp?v=519196",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-PP-RNEW-BOX.webp?v=735595",
+    "primaryImage": "/api/product-image/night-renewal-creme/primary",
+    "boxImage": "/api/product-image/night-renewal-creme/box",
     "shades": [
       {
         "id": "night-renewal-creme-default",
@@ -3945,7 +4206,10 @@
         "sku": "PP-CA-03-02-PP-RNEW-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-nourish-hand-cream",
@@ -3954,16 +4218,16 @@
     "title": "Nourish Hand Cream",
     "subtitle": "Treat your hands to a dose of hydration and luxury! This non-greasy cream absorbs quickly, delivering botanical goodness and vitamins to keep your hands soft, smooth, and youthful-looking.",
     "description": "Treat your hands to lasting hydration with our non-greasy botanical hand cream. Enriched with sunflower, avocado, and jojoba oils plus shea butter and vitamin E to deeply condition dry skin and soften the appearance of fine lines. Made in North America.",
-    "ingredients": "Aqua (Water), Stearic Acid, Cetearyl Alcohol, Helianthus Annuus (Sunflower) Seed Oil, Caprylic/Capric Triglyceride, Vitis Vinifera (Grape) Seed Oil, Cetyl Alcohol, Glycerin, Polysorbate 60, Persea Gratissima (Avocado) Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Glyceryl Stearate, Coco-Caprylate, Glyceryl Caprylate, Sodium Levulinate, Parfum, Tocopherol, Butyrospermum Parkii (Shea) Butter, Aloe Barbadensis Leaf Juice, Symphytum Officinale (Comfrey) Leaf Extract, Xanthan Gum.",
+    "ingredients": "Aqua (Water), Stearic Acid, Cetearyl Alcohol, Helianthus Annuus (Sunflower) Seed Oil, Caprylic/Capric Triglyceride, Vitis Vinifera (Grape) Seed Oil, Cetyl Alcohol, Glycerin, Polysorbate 60, Persea Gratissima (Avocado) Oil, Simmondsia Chinensis (Jojoba) Seed Oil, Glyceryl Stearate, Coco-Caprylate, Glyceryl Caprylate, Sodium Levulinate, Parfum, Tocopherol, Butyrospermum Parkii (Shea) Butter, Aloe Barbadensis Leaf Juice, Symphytum Officinale (Comfre [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 38,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Skincare), Hair & Body",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-PC-03-05-CR-NHC.webp?v=509549",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-05-CR-NHC-BOX.webp?v=236010"
+      "/api/product-image/nourish-hand-cream/primary",
+      "/api/product-image/nourish-hand-cream/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-PC-03-05-CR-NHC.webp?v=509549",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-05-CR-NHC-BOX.webp?v=236010",
+    "primaryImage": "/api/product-image/nourish-hand-cream/primary",
+    "boxImage": "/api/product-image/nourish-hand-cream/box",
     "shades": [
       {
         "id": "nourish-hand-cream-default",
@@ -3973,7 +4237,10 @@
         "sku": "PP-PC-03-05-CR-NHC-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-oil-control-hydrator",
@@ -3987,11 +4254,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-OM-SM5O.webp?v=473326",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-OM-SM5O-BOX.webp?v=787478"
+      "/api/product-image/oil-control-hydrator/primary",
+      "/api/product-image/oil-control-hydrator/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-OM-SM5O.webp?v=473326",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-OM-SM5O-BOX.webp?v=787478",
+    "primaryImage": "/api/product-image/oil-control-hydrator/primary",
+    "boxImage": "/api/product-image/oil-control-hydrator/box",
     "shades": [
       {
         "id": "oil-control-hydrator-default",
@@ -4001,7 +4268,10 @@
         "sku": "PP-MB-03-02-OM-SM5O-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-oil-control-setting-spray",
@@ -4015,11 +4285,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-OC-SS12.webp?v=532174",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-OC-SS12-BOX.webp?v=646608"
+      "/api/product-image/oil-control-setting-spray/primary",
+      "/api/product-image/oil-control-setting-spray/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-OC-SS12.webp?v=532174",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-OC-SS12-BOX.webp?v=646608",
+    "primaryImage": "/api/product-image/oil-control-setting-spray/primary",
+    "boxImage": "/api/product-image/oil-control-setting-spray/box",
     "shades": [
       {
         "id": "oil-control-setting-spray-default",
@@ -4029,7 +4299,10 @@
         "sku": "PP-MB-01-02-OC-SS12-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-oil-free-daily-moisturizer",
@@ -4038,16 +4311,16 @@
     "title": "Oil-Free Daily Moisturizer",
     "subtitle": "Hydration that won’t weigh you down.",
     "description": "Lightweight and powerful, this oil-free moisturizer delivers lasting hydration without the shine. Crafted for all skin types—especially sensitive and oily—its blend of nourishing fatty acids supports a breathable barrier that locks in moisture and smooths texture. Wear it alone or under makeup for a fresh, balanced complexion that stays comfortable all day long. Made in North America.",
-    "ingredients": "Water (Aqua), Ethylhexyl Methoxycinnamate (Octinoxate), Butylene Glycol, Polysorbate 60, Glycerin, Caprylic/Capric Triglyceride, Hexyl Laurate, Sorbitan Stearate, Cetearyl Alcohol, Palmitic Acid, Stearyl Alcohol, Squalane, Sodium PCA, Panthenol, Dimethicone, Phenoxyethanol, Tocopheryl Linoleate, Caprylyl Glycol, Hydroxypropyl Methylcellulose, Hexylene Glycol, Sodium Dehydroacetate, Ethylhexylglycerin, Alanine, Glutamic Acid, Glucose, Fructose, Dextrin, Sucrose, Urea.",
+    "ingredients": "Water (Aqua), Ethylhexyl Methoxycinnamate (Octinoxate), Butylene Glycol, Polysorbate 60, Glycerin, Caprylic/Capric Triglyceride, Hexyl Laurate, Sorbitan Stearate, Cetearyl Alcohol, Palmitic Acid, Stearyl Alcohol, Squalane, Sodium PCA, Panthenol, Dimethicone, Phenoxyethanol, Tocopheryl Linoleate, Caprylyl Glycol, Hydroxypropyl Methylcellulose, Hexylene Glycol, Sodium Dehydroacetate, Ethylhexylglycerin, Alanine, Glutamic Acid, Glucose, Fructose, De [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 46.4,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Skincare)",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-PP-DMOZ.webp?v=571192",
-      "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-PP-DMOZ-BOX.webp?v=302663"
+      "/api/product-image/oil-free-daily-moisturizer/primary",
+      "/api/product-image/oil-free-daily-moisturizer/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-PP-DMOZ.webp?v=571192",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-CA-03-02-PP-DMOZ-BOX.webp?v=302663",
+    "primaryImage": "/api/product-image/oil-free-daily-moisturizer/primary",
+    "boxImage": "/api/product-image/oil-free-daily-moisturizer/box",
     "shades": [
       {
         "id": "oil-free-daily-moisturizer-default",
@@ -4057,7 +4330,10 @@
         "sku": "PP-CA-03-02-PP-DMOZ-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-packing-eye-brush",
@@ -4071,9 +4347,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-PS-EB62.webp?v=354313"
+      "/api/product-image/packing-eye-brush/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-PS-EB62.webp?v=354313",
+    "primaryImage": "/api/product-image/packing-eye-brush/primary",
     "boxImage": null,
     "shades": [
       {
@@ -4084,7 +4360,10 @@
         "sku": "PP-CS-01-03-PS-EB62-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-pearl-eye-primer",
@@ -4093,16 +4372,16 @@
     "title": "Pearl Eye Primer",
     "subtitle": "A brightening primer that creates a smooth, even canvas for any eyeshadow look.",
     "description": "This sheer, lightweight formula helps neutralize discoloration and blurs texture for a more radiant base. Designed to enhance pigment payoff and extend eyeshadow wear while preventing creasing throughout the day. The Pearl Eye Primer glides on effortlessly for seamless application—perfect for bold color or barely-there looks. Made in North America.",
-    "ingredients": "Isododecane, Mica, Talc, Cyclopentasiloxane, Disteardimonium Hectorite, Trimethylsiloxysilicate, Polyethylene, Trihydroxystearin, Sorbitan Sesquioleate, Synthetic Beeswax, VP/Eicosene Copolymer, Propylene Carbonate, Dimethicone, Phenoxyethanol, Tocopheryl Acetate, Caprylyl Glycol. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499), Bismuth Oxychloride (CI 77163), Carmine (CI 75470), Chromium Hydroxide Green (CI 77289), Ferric Ferrocyanide (CI 77510)].",
+    "ingredients": "Isododecane, Cyclopentasiloxane, Trimethylsiloxysilicate, Polyethylene, Disteardimonium Hectorite, Phenyl Trimethicone, Dimethicone, Hydrogenated Polyisobutene, Propylene Carbonate, Lecithin, Trihydroxystearin, Tocopheryl Acetate, BHT, [+/- (May Contain): Mica (77019), Titanium Dioxide (77891), Iron Oxides (77491, 77492, 77499), Carmine (75470), Ultramarines (77007), Chromium Oxide Greens (77288), Chromium Hydroxide Green (77289), Ferric Ferrocya [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 30.4,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-01-04-YP-EP10.webp?v=352652",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-YP-EP10-BOX.webp?v=325311"
+      "/api/product-image/pearl-eye-primer/primary",
+      "/api/product-image/pearl-eye-primer/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-01-04-YP-EP10.webp?v=352652",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-YP-EP10-BOX.webp?v=325311",
+    "primaryImage": "/api/product-image/pearl-eye-primer/primary",
+    "boxImage": "/api/product-image/pearl-eye-primer/box",
     "shades": [
       {
         "id": "pearl-eye-primer-default",
@@ -4112,7 +4391,10 @@
         "sku": "PP-LB-01-04-YP-EP10-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-precision-tweezers",
@@ -4126,9 +4408,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes, Face, Accessories), Accessories, Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-AB-04-04-TZ.webp?v=323412"
+      "/api/product-image/precision-tweezers/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-AB-04-04-TZ.webp?v=323412",
+    "primaryImage": "/api/product-image/precision-tweezers/primary",
     "boxImage": null,
     "shades": [
       {
@@ -4139,7 +4421,10 @@
         "sku": "PP-AB-04-04-TZ-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-pro-cheek-palette",
@@ -4148,16 +4433,16 @@
     "title": "Pro Cheek Palette",
     "subtitle": "A three-in-one pressed powder palette to sculpt, flush, and highlight with ease.",
     "description": "This easy-to-use trio does the most with just a few swipes. A soft matte contour adds natural shape, the blush brings instant warmth, and the subtle highlighter gives skin that fresh, lit-from-within finish. Build it up or keep it soft—your look, your way. Made in North America.",
-    "ingredients": "Synthetic Fluorphlogopite, Mica, Titanium Dioxide, Pentaerythrityl Tetraisostearate, Magnesium Stearate, Simmondsia Chinensis (Jojoba) Seed Oil, Bismuth Oxychloride, Silica, Phenyl Trimethicone, Bis-Diglyceryl Polyacyladipate-2, Nylon-12, Diisostearyl Malate, Dimethicone, Caprylic/Capric Triglyceride, Boron Nitride, Triethoxycaprylylsilane, Aluminum Starch Octenylsuccinate, Magnesium Myristate, Zinc Oxide, Phenoxyethanol, Ethylhexylglycerin. [+/- May Contain: Iron Oxides (CI 77491, CI 77492, CI 77499), Red 6 (CI 15850), Red 7 Lake (CI 15850)].",
+    "ingredients": "Synthetic Fluorphlogopite, Mica, Titanium Dioxide, Pentaerythrityl Tetraisostearate, Magnesium Stearate, Simmondsia Chinensis (Jojoba) Seed Oil, Bismuth Oxychloride, Silica, Phenyl Trimethicone, Bis-diglyceryl Polyacyladipate-2, Nylon-12, Diisostearyl Malate, Dimethicone, Caprylic/capric Triglyceride, Boron Nitride, Triethoxycaprylylsilane, Aluminum Starch Octenylsuccinate, Magnesium Myristate, Zinc Oxide, Phenoxyethanol/ethylhexylglycerin, Pheno [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 26.1,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-CP-PCP51.webp?v=518996",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-CP-PCP-BOX.webp?v=238613"
+      "/api/product-image/pro-cheek-palette/primary",
+      "/api/product-image/pro-cheek-palette/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-CP-PCP51.webp?v=518996",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-CP-PCP-BOX.webp?v=238613",
+    "primaryImage": "/api/product-image/pro-cheek-palette/primary",
+    "boxImage": "/api/product-image/pro-cheek-palette/box",
     "shades": [
       {
         "id": "pro-cheek-palette-1",
@@ -4183,7 +4468,10 @@
         "sku": "PP-MB-01-02-CP-PCP51-03",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-scented-candle",
@@ -4197,11 +4485,11 @@
     "inStock": true,
     "categoriesText": "Aromatherapy",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LO-09-22-CA-HPC03.webp?v=530814",
-      "https://images.blankabrand.com/73904/73904-BLNK-LO-09-22-CA-HPC01-BOX.webp?v=909520"
+      "/api/product-image/scented-candle/primary",
+      "/api/product-image/scented-candle/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LO-09-22-CA-HPC03.webp?v=530814",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-LO-09-22-CA-HPC01-BOX.webp?v=909520",
+    "primaryImage": "/api/product-image/scented-candle/primary",
+    "boxImage": "/api/product-image/scented-candle/box",
     "shades": [
       {
         "id": "scented-candle-1",
@@ -4227,7 +4515,10 @@
         "sku": "PP-LO-09-22-CA-HPC03-03",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-setting-spray",
@@ -4241,11 +4532,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-SS-SS11A.webp?v=203867",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-SS-SS11A-BOX.webp?v=674222"
+      "/api/product-image/setting-spray/primary",
+      "/api/product-image/setting-spray/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-SS-SS11A.webp?v=203867",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-SS-SS11A-BOX.webp?v=674222",
+    "primaryImage": "/api/product-image/setting-spray/primary",
+    "boxImage": "/api/product-image/setting-spray/box",
     "shades": [
       {
         "id": "setting-spray-default",
@@ -4255,7 +4546,10 @@
         "sku": "PP-MB-01-02-SS-SS11A-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-shea-body-butter",
@@ -4269,11 +4563,11 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Skincare), Hair & Body, Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-PC-03-06-CR-SBB.webp?v=255848",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-06-CR-SBB-BOX.webp?v=642222"
+      "/api/product-image/shea-body-butter/primary",
+      "/api/product-image/shea-body-butter/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-PC-03-06-CR-SBB.webp?v=255848",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-06-CR-SBB-BOX.webp?v=642222",
+    "primaryImage": "/api/product-image/shea-body-butter/primary",
+    "boxImage": "/api/product-image/shea-body-butter/box",
     "shades": [
       {
         "id": "shea-body-butter-default",
@@ -4283,7 +4577,10 @@
         "sku": "PP-PC-03-06-CR-SBB-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-single-pan-blush",
@@ -4292,16 +4589,16 @@
     "title": "Single Pan Blush",
     "subtitle": "The perfect flush for that fresh, natural glow.",
     "description": "This silky, talc-free pressed blush delivers a soft wash of color that melts into skin for a natural, just-pinched glow. Triple-milled for smooth, seamless application, it blends effortlessly and layers like a dream—no streaks, no caking. Designed to pop into your everyday kit, each pan makes it easy to swipe on radiance and go. Made in North America.",
-    "ingredients": "Sericite (Mica), Octyldodecyl Stearoyl Stearate, Octyldodecyl Stearate, Zinc Stearate, Caprylyl Glycol, Phenoxyethanol, Isopropylparaben, Isobutylparaben, Butylparaben. [+/- May Contain: Mica (CI 77019), Tin Oxide (CI 77861), Iron Oxides (CI 77491, CI 77492, CI 77499), Bismuth Oxychloride (CI 77163), Titanium Dioxide (CI 77891), Carmine (CI 75470), Red 6 Barium Lake (CI 15850), Red 7 Calcium Lake (CI 15850:1), Red 27 Aluminum Lake (CI 45410:1), Yellow 5 Lake (CI 19140:1), Manganese Violet (CI 77742)].",
+    "ingredients": "Sericite Phn (Mica), Octyldodecyl Stearoyl Stearate, Octydodecyl Stearate Phenoxyethanol, Isopropylparaben, Isobutylparaben, Butylparaben, May Contain: Mica 77019, Tin Oxide 77861, Iron Oxides 77491,2,9, Bismuth Oxychloride 77163, Titanium Oxide 77891, Carmine 75470, D & C Red #6 Barium Lake 15850, D & C Red #7 Calcium Lake 15850:1, D & C Red #27 Aluminum Lake 45410:1, Fd & C Yellow #6 Aluminium Lake 159585, D & C Yellow #5 19140:1, Manganese Vio [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 27.2,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CO-01-02-SP-SPB1.webp?v=364451",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-SP-SPB-BOX.webp?v=870056"
+      "/api/product-image/single-pan-blush/primary",
+      "/api/product-image/single-pan-blush/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CO-01-02-SP-SPB1.webp?v=364451",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-SP-SPB-BOX.webp?v=870056",
+    "primaryImage": "/api/product-image/single-pan-blush/primary",
+    "boxImage": "/api/product-image/single-pan-blush/box",
     "shades": [
       {
         "id": "single-pan-blush-1",
@@ -4335,7 +4632,10 @@
         "sku": "PP-CO-01-02-SP-SPB1-04",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-single-pan-eyeshadow",
@@ -4344,16 +4644,16 @@
     "title": "Single Pan Eyeshadow",
     "subtitle": "The one-shadow wonder you’ll reach for again and again.",
     "description": "This ultra-blendable, talc-free eyeshadow gives you smooth, buildable color in just one swipe. Whether you’re going for a soft wash or layered depth, the pigment stays put and plays well with others. Each pan is designed to slip seamlessly into your daily routine—wear it solo, mix and match, or press it on with fingertips for an undone finish. Think of it as your daily shortcut to low-effort, high-impact eyes. Made in North America.",
-    "ingredients": "Sericite Phn (Mica), Zinc Stearate, Octyldodecyl Stearoyl Stearate, Octydodecyl, Stearate, Phenoxyethanol, Isopropylparaben,isobutylparaben, Butylparaben May Contain: Mica 77020, Chromium Oxide Green 77288, Chromium Hydroxide Green 77289, Iron Oxides 77491,2,9, Manganese Violet 77742 Bismuth Oxychloride 77163, Ultramarines 77007, Titanium Dioxide 77891, Carmine 75470",
+    "ingredients": "Sericite Phn (Mica), Zinc Stearate, Octyldodecyl Stearoyl Stearate, Octydodecyl, Stearate, Phenoxyethanol, Isopropylparaben,isobutylparaben, Butylparaben May Contain:  Mica 77020, Chromium Oxide Green 77288, Chromium Hydroxide Green 77289, Iron Oxides 77491,2,9, Manganese Violet 77742 Bismuth Oxychloride 77163, Ultramarines 77007, Titanium Dioxide 77891, Carmine 75470",
     "price": 20.3,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Eyes), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CO-01-04-SP-SPE178.webp?v=401687",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-SP-SPE-BOX.webp?v=857425"
+      "/api/product-image/single-pan-eyeshadow/primary",
+      "/api/product-image/single-pan-eyeshadow/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CO-01-04-SP-SPE178.webp?v=401687",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-04-SP-SPE-BOX.webp?v=857425",
+    "primaryImage": "/api/product-image/single-pan-eyeshadow/primary",
+    "boxImage": "/api/product-image/single-pan-eyeshadow/box",
     "shades": [
       {
         "id": "single-pan-eyeshadow-1",
@@ -4411,7 +4711,10 @@
         "sku": "PP-CO-01-04-SP-SPE178-07",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-solid-fragrance",
@@ -4420,14 +4723,14 @@
     "title": "Solid Fragrance",
     "subtitle": "Long-lasting scent, made to move with you.",
     "description": "A pocket-friendly balm designed for subtle, all-day wear. This solid fragrance melts into skin and delivers a clean, concentrated scent that’s never overpowering. Blended with skin-friendly oils and waxes, it glides on effortlessly and is ideal for touch-ups on the go. Made in North America.",
-    "ingredients": "Hydrogenated Soybean Oil, Vitis Vinifera (Grape) Seed Oil, Parfum (Fragrance), Butyrospermum Parkii (Shea) Butter, Euphorbia Cerifera (Candelilla) Wax, Caprylic/Capric Triglyceride, Cocos Nucifera (Coconut) Oil, Limnanthes Alba (Meadowfoam) Seed Oil, Cetyl Alcohol, Simmondsia Chinensis (Jojoba) Seed Oil, Juniperus Virginiana Oil, Lavandula Officinalis Flower Oil, Melaleuca Alternifolia Leaf Oil, Rosmarinus Officinalis Leaf Oil, Citrus Aurantifolia Peel Oil, Tocopherol, Rosmarinus Officinalis Leaf Extract, Benzyl Benzoate, Limonene, Linalool.",
+    "ingredients": "Hydrogenated Soybean Oil, Vitis Vinifera Seed Oil, Parfum, Butyrospermum Parkii Butter, Euphorbia Cerifera Wax, Caprylic/Capric Triglyceride, Cocos Nucifera Oil, Limnanthes Alba Seed Oil, Cetyl Alcohol, Simmondsia Chinensis Seed Oil, Juniperus Virginiana Oil, Lavandula Officinalis Flower Oil, Melaleuca Alternifolia Leaf Oil, Rosmarinus Officinalis Leaf Oil, Citrus Aurantifolia Peel Oil, Tocopherol, Rosmarinus Officinalis Leaf Extract, Benzyl Benz [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 38.7,
     "inStock": true,
     "categoriesText": "Men's, Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-FE-05-07-CG-CG2.webp?v=349319"
+      "/api/product-image/solid-fragrance/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-FE-05-07-CG-CG2.webp?v=349319",
+    "primaryImage": "/api/product-image/solid-fragrance/primary",
     "boxImage": null,
     "shades": [
       {
@@ -4462,7 +4765,10 @@
         "sku": "PP-FE-05-07-CG-CG2-04",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-soothing-emulsion",
@@ -4471,16 +4777,16 @@
     "title": "Soothing Emulsion",
     "subtitle": "A fast-absorbing emulsion moisturizer that delivers deep hydration while improving skin smoothness and elasticity.",
     "description": "A fast-absorbing milky emulsion formulated with shea butter extract and rice ferment filtrate to replenish moisture, comfort dry-feeling skin, and promote a soft, supple, balanced-looking complexion. Made in North America.",
-    "ingredients": "Aqua, Dipropylene Glycol, Butyrospermum Parkii (Shea) Butter Extract, Glycerin, Saccharomyces/Rice Ferment Filtrate, Propylene Glycol, Saccharomyces Ferment Filtrate, Betaine, Dimethicone, Glycereth-26, Hydrogenated Polyisobutene, Perilla Ocymoides Leaf Extract, Glyceryl Stearate, PEG-100 Stearate, 1,2-Hexanediol, Hydroxyacetophenone, Palmitic Acid, Stearyl Alcohol, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Arginine, Acetyl Glucosamine, Stearic Acid, Sodium Hyaluronate, Disodium EDTA.",
+    "ingredients": "Aqua, Dipropylene Glycol, Butyrospermum Parkii (Shea) Butter Extract, Glycerin, Saccharomyces/Rice Ferment Filtrate, Propylene Glycol, Saccharomyces Ferment Filtrate, Betaine, Dimethicone, Glycereth-26, Hydrogenated Polyisobutene, Perilla Ocymoides Leaf Extract, Glyceryl Stearate, Peg-100 Stearate, 1,2-Hexanediol, Hydroxyacetophenone, Palmitic Acid, Stearyl Alcohol, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Arginine, Acetyl Glucosamine, Stear [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 26.6,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare), New",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-PP-SE.webp?v=955042",
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-PP-SE-BOX.webp?v=834325"
+      "/api/product-image/soothing-emulsion/primary",
+      "/api/product-image/soothing-emulsion/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-PP-SE.webp?v=955042",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-03-02-PP-SE-BOX.webp?v=834325",
+    "primaryImage": "/api/product-image/soothing-emulsion/primary",
+    "boxImage": "/api/product-image/soothing-emulsion/box",
     "shades": [
       {
         "id": "soothing-emulsion-default",
@@ -4490,7 +4796,10 @@
         "sku": "PP-MB-03-02-PP-SE-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-stipple-blend-foundation-brush",
@@ -4504,9 +4813,9 @@
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-SB-EB250.webp?v=954889"
+      "/api/product-image/stipple-blend-foundation-brush/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-CS-01-03-SB-EB250.webp?v=954889",
+    "primaryImage": "/api/product-image/stipple-blend-foundation-brush/primary",
     "boxImage": null,
     "shades": [
       {
@@ -4517,7 +4826,10 @@
         "sku": "PP-CS-01-03-SB-EB250-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-tanning-drops",
@@ -4526,16 +4838,16 @@
     "title": "Tanning Drops",
     "subtitle": "A glow-boosting formula that lets you build your tan, your way.",
     "description": "These self-tanning drops blend effortlessly with your go-to moisturizer, serum, or body lotion to create a gradual, summer-kissed tan. Infused with coconut and grapefruit peel oils for soft, nourished skin, the vegan formula gives you control over your glow—whether you're after a hint of warmth or a deeper bronze. Designed for all skin types, no streaks, no stress—just your ideal radiance, drop by drop. Made in North America.",
-    "ingredients": "Water (Aqua), Dihydroxyacetone, Polysorbate 80, Erythrulose, Glycerin, Propylene Glycol, Sodium Metabisulfite, Phenoxyethanol, Persea Gratissima (Avocado) Oil, Xanthan Gum, Citrus Grandis (Grapefruit) Peel Oil, Cocos Nucifera (Coconut) Oil, Tocopheryl Acetate, Ethylhexylglycerin, Magnesium Stearate, Aloe Barbadensis Leaf Juice, Ascorbic Acid, Potassium Sorbate, Sodium Benzoate, Citric Acid, Limonene",
+    "ingredients": "",
     "price": 43.4,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare)",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-03-02-TDR.webp?v=535715",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-TDR-BOX.webp?v=62230"
+      "/api/product-image/tanning-drops/primary",
+      "/api/product-image/tanning-drops/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-03-02-TDR.webp?v=535715",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-02-TDR-BOX.webp?v=62230",
+    "primaryImage": "/api/product-image/tanning-drops/primary",
+    "boxImage": "/api/product-image/tanning-drops/box",
     "shades": [
       {
         "id": "tanning-drops-default",
@@ -4545,7 +4857,10 @@
         "sku": "PP-LB-03-02-TDR-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-tanning-mousse",
@@ -4554,14 +4869,14 @@
     "title": "Tanning Mousse",
     "subtitle": "Golden hour, anytime. This fast-drying, streak-free tanning mousse delivers a natural-looking bronze that lasts for days.",
     "description": "Achieve a flawless, sun-kissed glow with our Tanning Mousse. This lightweight, fast-drying mousse is expertly formulated by experts to provide a streak-free, natural-looking tan that lasts for days. Packed with skin-nourishing ingredients, it’s more than just a tan – it’s your secret to radiant, healthy-looking skin. Made in North America.",
-    "ingredients": "Tan & Dark Formulas: Water (Aqua), Dihydroxyacetone (DHA), Propylene Glycol, Glycerin, Cocamidopropyl Betaine, Caprylyl/Capryl Glucoside, Phenoxyethanol, Biosaccharide Gum-1, Xanthan Gum, Tocopherol (Vitamin E), Retinyl Palmitate, Aloe Barbadensis Leaf Juice Powder, Citric Acid, Ethylhexylglycerin, Sodium Metabisulfite, Parfum (Fragrance), Caramel. [+/- May Contain: FD&C Red 40 (CI 16035), FD&C Yellow 5 (CI 19140), FD&C Blue 1 (CI 42090)].",
+    "ingredients": " [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 46.4,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Bath & Body), Hair & Body",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-LB-03-02-TMS02.webp?v=379023"
+      "/api/product-image/tanning-mousse/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-LB-03-02-TMS02.webp?v=379023",
+    "primaryImage": "/api/product-image/tanning-mousse/primary",
     "boxImage": null,
     "shades": [
       {
@@ -4580,7 +4895,10 @@
         "sku": "PP-LB-03-02-TMS02-02",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-tinted-moisturizer",
@@ -4589,16 +4907,16 @@
     "title": "Tinted Moisturizer",
     "subtitle": "Barely there coverage, fully there glow.",
     "description": "A lightweight tinted moisturizer that evens skin tone while hydrating deeply. Packed with nourishing ingredients, it enhances natural radiance and keeps skin soft, smooth, and comfortable all day. The perfect everyday formula that blends skincare with effortless coverage—ideal for every skin type, even sensitive. Made in North America.",
-    "ingredients": "Aqua (Water), Cyclopentasiloxane, Propylene Glycol, Octyldodecanol, Caprylic/Capric Triglyceride, Glycerin, Cetyl PEG/PPG-10/1 Dimethicone, Dimethicone, Polyglyceryl-4 Isostearate, Magnesium Sulfate, Disteardimonium Hectorite, Phenoxyethanol, Simmondsia Chinensis (Jojoba) Seed Oil, Persea Gratissima (Avocado) Oil, Tocopheryl Acetate, Sodium Hyaluronate, Ethylhexylglycerin, Disodium EDTA. [+/- May Contain: Titanium Dioxide (CI 77891), Iron Oxides (CI 77491, CI 77492, CI 77499)].",
+    "ingredients": " [UNVERIFIED: CAPTURED MANUFACTURER RECORD TRUNCATED AT 450 CHARS — FULL MANUFACTURER INCI SHEET REQUIRED BEFORE SALE]",
     "price": 31.6,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face)",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-TM-TM-TM100.webp?v=475854",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-TM-TM-BOX.webp?v=404421"
+      "/api/product-image/tinted-moisturizer/primary",
+      "/api/product-image/tinted-moisturizer/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-MB-01-02-TM-TM-TM100.webp?v=475854",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-01-02-TM-TM-BOX.webp?v=404421",
+    "primaryImage": "/api/product-image/tinted-moisturizer/primary",
+    "boxImage": "/api/product-image/tinted-moisturizer/box",
     "shades": [
       {
         "id": "tinted-moisturizer-1",
@@ -4664,7 +4982,10 @@
         "sku": "PP-MB-01-02-TM-TM-TM100-08",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": false,
+    "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
+    "canPurchase": false
   },
   {
     "id": "pp-touch-up-blotting-papers",
@@ -4673,14 +4994,14 @@
     "title": "Touch-up Blotting Papers",
     "subtitle": "Oil-absorbing sheets that refresh skin without messing up makeup.",
     "description": "These ultra-thin blotting papers are the secret weapon for a shine-free face anytime, anywhere. Designed to absorb excess oil without disturbing your carefully applied makeup, they offer an instant refresh without the need to wash or powder. Free from dyes and fragrances, they're gentle on all skin types—even the most sensitive. 100 pieces. Made in China.",
-    "ingredients": "Kraft Wood Pulp, Calcium Carbonate, Hemp Pulp, Bamboo Charcoal",
+    "ingredients": "",
     "price": 15.5,
     "inStock": true,
     "categoriesText": "Beauty & Skincare (Face, Skincare, Accessories), Accessories, Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-JE-04-02-BT.webp?v=235009"
+      "/api/product-image/touch-up-blotting-papers/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-JE-04-02-BT.webp?v=235009",
+    "primaryImage": "/api/product-image/touch-up-blotting-papers/primary",
     "boxImage": null,
     "shades": [
       {
@@ -4691,7 +5012,10 @@
         "sku": "PP-JE-04-02-BT-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   },
   {
     "id": "pp-vegan-lip-balm",
@@ -4705,11 +5029,11 @@
     "inStock": false,
     "categoriesText": "Beauty & Skincare (Lips, Skincare), Travel Friendly",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-FE-03-01-VLB-VLB1.webp?v=281106",
-      "https://images.blankabrand.com/73904/73904-BLNK-BL-03-01-VLB-VLB1-BOX.webp?v=714923"
+      "/api/product-image/vegan-lip-balm/primary",
+      "/api/product-image/vegan-lip-balm/box"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-FE-03-01-VLB-VLB1.webp?v=281106",
-    "boxImage": "https://images.blankabrand.com/73904/73904-BLNK-BL-03-01-VLB-VLB1-BOX.webp?v=714923",
+    "primaryImage": "/api/product-image/vegan-lip-balm/primary",
+    "boxImage": "/api/product-image/vegan-lip-balm/box",
     "shades": [
       {
         "id": "vegan-lip-balm-default",
@@ -4719,7 +5043,10 @@
         "sku": "PP-FE-03-01-VLB-VLB1-01",
         "inStock": false
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": false
   },
   {
     "id": "pp-volumizing-hair-spray",
@@ -4728,14 +5055,14 @@
     "title": "Volumizing Hair Spray",
     "subtitle": "Volumizing Hair Spray that gives your hair texture, lift, and hold—no residue, just gorgeous, bouncy hair that lasts all day.",
     "description": "A lightweight volumizing spray that adds natural body and texture without the crunch. Non-aerosol and enriched with nourishing ingredients, it supports healthy hair while giving your style a soft, lasting lift. Perfect for everyday use—volume that feels effortless and looks like you. Made in North America.",
-    "ingredients": "Aqua (Water), Ethanol, Isopropyl Alcohol, Dimethicone Copolyol, Cetrimonium Chloride, Panthenol (ProVitamin B5), PVP/VA Copolymer, Glycerine, Rosa Canina (Rosehip) Fruit Oil, Hamamelis Virginiana (Witch Hazel) Extract, Parfum (Fragrance), Benzyl Alcohol, Salicylic Acid, Sorbic Acid",
+    "ingredients": "",
     "price": 44.9,
     "inStock": true,
     "categoriesText": "Hair & Body (uncategorized under top pill)",
     "imageUrls": [
-      "https://images.blankabrand.com/73904/73904-BLNK-PV-06-09-HSP-VOL.webp?v=317175"
+      "/api/product-image/volumizing-hair-spray/primary"
     ],
-    "primaryImage": "https://images.blankabrand.com/73904/73904-BLNK-PV-06-09-HSP-VOL.webp?v=317175",
+    "primaryImage": "/api/product-image/volumizing-hair-spray/primary",
     "boxImage": null,
     "shades": [
       {
@@ -4746,6 +5073,9 @@
         "sku": "PP-PV-06-09-HSP-VOL-01",
         "inStock": true
       }
-    ]
+    ],
+    "manufacturerVerified": true,
+    "inciStatus": "VERIFIED_COMPLETE",
+    "canPurchase": true
   }
 ]

@@ -122,17 +122,21 @@ export async function initiateShopifyCheckout(
 
     const cartInput: Record<string, unknown> = {
       lines,
+      buyerIdentity: {
+        countryCode: 'US',
+        ...(cleanEmail ? { email: cleanEmail } : {}),
+      },
       attributes: [
         {
           key: 'Storefront Experience',
           value: 'PrettyPiggie 3D Mobile-First Virtual Boutique',
         },
+        {
+          key: 'Shipping Market Control',
+          value: 'US_ONLY_INITIAL_LAUNCH (CA Disabled Pending Gate)',
+        },
       ],
     };
-
-    if (cleanEmail) {
-      cartInput.buyerIdentity = { email: cleanEmail };
-    }
 
     const data = await shopifyStorefrontFetch<CartCreateData>(
       CART_CREATE_MUTATION,
