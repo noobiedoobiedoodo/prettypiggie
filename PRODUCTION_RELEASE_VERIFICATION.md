@@ -1,94 +1,180 @@
-# PrettyPiggie.com — Controlled Remediation Execution Report & Production Release Certificate
+# PrettyPiggie.com — RC2 Acceptance Review Verification Report & 6-Domain Release Certificate
+
+> [!CAUTION]
+> **Release Status: `NO-GO` — Controlled Remediation Continues (`remediation/v1.0.0-rc2`)**  
+> **No General Availability approval is granted by this report.** Engineering remediation items requested in the RC2 Acceptance Review (product register reconciliation `52 / 4 / 54 = 110`, server-side checkout API purchase locks across all 54 unverified and 4 verified-OOS SKUs, MoCRA statutory wording correction and placeholder removal, and accurate U.S.-only storefront/API disclosures) have been implemented, built, and verified locally. General Availability remains **`NO-GO`** pending external business, supplier, Shopify, Vercel staging, regulatory, and physical-device verification gates.
+
+---
+
+## 1. Release Candidate Metadata & Traceability
+
+| Field | Recorded Value | Status |
+|---|---|---|
+| **GitHub Repository** | https://github.com/noobiedoobiedoodo/prettypiggie.git | **Synced** |
+| **Frozen Baseline Branch & Tag (`v1.0.0-rc1`)** | `main` — `18592fc7190cd840b4589f6cfce4840fdf41bc83` (Archived Build ID: `8iwZOJS3uDI5rLgSQuRKs`) | **Frozen / Preserved** |
+| **Active Remediation Branch** | `remediation/v1.0.0-rc2` | **Active** |
+| **RC2 Code Remediation Commit SHA** | `eb380e109cb37c131d92f274e9bd0babd87eb3d0` | **Built & Verified Locally** |
+| **Production Build Result (`next build`)** | `PASS` — Build ID `k0O_JhkFSYGCF79h5Odh-` (`npx tsc --noEmit`: `0` errors) | **PASS (Local)** |
+| **Vercel Staging URL** | `PENDING VERCEL STAGING DEPLOYMENT` | **PENDING (Gate 6)** |
+| **Vercel Deployment ID** | `PENDING VERCEL STAGING DEPLOYMENT` | **PENDING (Gate 6)** |
+| **Environment Configuration** | `.env.local` not configured (`SHOPIFY_LIVE = false`; sandbox preview active) | **PENDING LIVE CREDENTIALS (Gate 5)** |
+
+---
+
+## 2. RC2 Acceptance Review Gate-by-Gate Verification
+
+### Gate 1 — Reconcile the Product Register (`52` / `4` / `54` = `110`) — **ENGINEERING PASS**
+
+All five required surfaces now enforce and display the exact same 3-state product breakdown using deterministic `AvailabilityState` classification (`VERIFIED_IN_STOCK` | `VERIFIED_OUT_OF_STOCK` | `UNVERIFIED_PURCHASE_LOCKED`):
+
+| Reconciled Availability State | Count | INCI Status | Stock Status | Checkout Eligibility |
+|---|---:|---|---|---|
+| **Verified and in stock (`VERIFIED_IN_STOCK`)** | **52** | `VERIFIED_COMPLETE` | In Stock | **Eligible** *(subject to all external GA gates)* |
+| **Verified but out of stock (`VERIFIED_OUT_OF_STOCK`)** | **4** | `VERIFIED_COMPLETE` | Out of Stock | **Purchase Disabled (Sold Out)** |
+| **Unverified and purchase-locked (`UNVERIFIED_PURCHASE_LOCKED`)** | **54** | `45` `UNVERIFIED_TRUNCATED_SPEC` + `9` `UNVERIFIED_MISSING_SPEC` | `52` In Stock / `2` Out of Stock* | **Programmatically Purchase-Locked** |
+| **Total Catalog** | **110** | **`56` Verified Complete / `54` Unverified** | **`104` In Stock / `6` Out of Stock** | **`52` Eligible / `58` Non-Purchasable** |
+
+> *Note:* Two of the 54 unverified products (`PP-SS-05-06-BWSH` **All-In-One Body Wash** and `PP-LB-01-04-YP-EP05` **Eye & Lip Primer**) are also out of stock and remain classified strictly under **`UNVERIFIED_PURCHASE_LOCKED`**.
+
+**Explicit Reconciliation of the 4 Verified-but-Out-of-Stock Products:**
+
+| # | SKU | Handle | Product Title | Retail Price | INCI Status | Availability State |
+|---|---|---|---|---:|---|---|
+| 1 | `PP-MB-01-04-ED-EDT01` | `dual-tip-eye-definer-pen` | **Dual Tip Eye Definer Pen** | \$25.40 | `VERIFIED_COMPLETE` | `VERIFIED_OUT_OF_STOCK` |
+| 2 | `PP-GF-03-02-HAS` | `hyaluronic-acid-serum` | **Hyaluronic Acid Serum** | \$35.00 | `VERIFIED_COMPLETE` | `VERIFIED_OUT_OF_STOCK` |
+| 3 | `PP-EZ-01-02-BLR` | `lash-rejuvenator` | **Lash Rejuvenator** | \$33.30 | `VERIFIED_COMPLETE` | `VERIFIED_OUT_OF_STOCK` |
+| 4 | `PP-FE-03-01-VLB-VLB1` | `vegan-lip-balm` | **Vegan Lip Balm** | \$16.60 | `VERIFIED_COMPLETE` | `VERIFIED_OUT_OF_STOCK` |
+
+**Cross-Surface Reconciliation Evidence:**
+- [MANUFACTURER_DOCUMENTATION_REGISTER.md](file:///c:/Users/ssabe/Downloads/prettypiggie/MANUFACTURER_DOCUMENTATION_REGISTER.md): `52` `VERIFIED_IN_STOCK (Purchase Eligible)` rows, `4` `VERIFIED_OUT_OF_STOCK (Verified • Sold Out)` rows, `54` `UNVERIFIED_PURCHASE_LOCKED (Locked)` rows.
+- [manufacturerDocumentationRegister.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/manufacturerDocumentationRegister.json): top-level `reconciliation` object (`52 / 4 / 54 = 110`) + `verifiedOutOfStockProducts` array (`4` entries) + `110` product records.
+- [blankaCatalog.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/blankaCatalog.json): `52 / 4 / 54 = 110`, `78` distinct retail prices (\$13.20–\$64.30), `0` unverified products with `canPurchase: true`.
+- Logic & APIs: [boutiqueData.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/boutiqueData.ts), [purchaseGuard.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/lib/purchaseGuard.ts), and `GET /api/blanka/products` ([route.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/app/api/blanka/products/route.ts)) return `reconciliation: { totalProducts: 110, verifiedComplete: 56, verifiedInStock: 52, verifiedOutOfStock: 4, unverifiedPurchaseLocked: 54 }` and support `?availabilityState=` filtering (`52`, `4`, `54`).
+- Storefront Displays: Verified in live browser on [BoutiqueNavigationHUD.tsx](file:///c:/Users/ssabe/Downloads/prettypiggie/src/components/ui/BoutiqueNavigationHUD.tsx), [ProductPresentationSheet.tsx](file:///c:/Users/ssabe/Downloads/prettypiggie/src/components/ui/ProductPresentationSheet.tsx), [LuxuryFallback2D.tsx](file:///c:/Users/ssabe/Downloads/prettypiggie/src/components/ui/LuxuryFallback2D.tsx), and [LegalComplianceModal.tsx](file:///c:/Users/ssabe/Downloads/prettypiggie/src/components/ui/LegalComplianceModal.tsx).
+- **Unlock Governance:** No product was unlocked. Unlocking any of the 54 locked products requires official manufacturer documentation and documented regulatory review.
+
+---
+
+### Gate 2 — Prove U.S.-Only Checkout Enforcement — **NOT VERIFIED / PENDING LIVE SHOPIFY ADMIN CONFIG & CHECKOUT TEST**
+
+| Verification Requirement | Current Status | Evidence / Blocker |
+|---|---|---|
+| Storefront messaging accurately communicates U.S.-only scope | **PASS (Engineering)** | Verified in [LegalComplianceModal.tsx](file:///c:/Users/ssabe/Downloads/prettypiggie/src/components/ui/LegalComplianceModal.tsx) and [ShoppingBagDrawer.tsx](file:///c:/Users/ssabe/Downloads/prettypiggie/src/components/ui/ShoppingBagDrawer.tsx); explicitly notes `buyerIdentity.countryCode = 'US'` alone is insufficient. |
+| Server-side checkout API guard rejects non-U.S. country payloads | **PASS (Engineering)** | `POST /api/checkout` with `shippingCountry: "CA"` returned **`HTTP 403`** (`code: "US_ONLY_SHIPPING_SCOPE"`). |
+| Shopify Admin Shipping & Delivery settings permit ONLY the United States | **PENDING / NOT VERIFIED** | Requires live Shopify Admin configuration screenshot/export showing United States as sole active shipping zone (Canada & Rest of World disabled). |
+| Canadian shipping address cannot obtain a shipping rate or complete checkout | **PENDING / NOT VERIFIED** | Requires live Shopify Checkout test with a Canadian destination address. |
+| Restriction persists if customer changes shipping address mid-checkout | **PENDING / NOT VERIFIED** | Requires live Shopify Checkout test starting with a U.S. address and switching to Canada inside hosted Shopify Checkout. |
+
+---
+
+### Gate 3 — Correct the MoCRA Responsible Person Requirement — **WORDING & PLACEHOLDER REMEDIATION PASS; OWNER CONFIRMATION PENDING**
+
+- **Statutory Correction Applied:** Updated [LegalComplianceModal.tsx](file:///c:/Users/ssabe/Downloads/prettypiggie/src/components/ui/LegalComplianceModal.tsx), [MANUFACTURER_DOCUMENTATION_REGISTER.md](file:///c:/Users/ssabe/Downloads/prettypiggie/MANUFACTURER_DOCUMENTATION_REGISTER.md), and [manufacturerDocumentationRegister.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/manufacturerDocumentationRegister.json) to state accurately under **FD&C Act § 609(a) / 21 U.S.C. § 364e** that cosmetic labels must bear a **domestic address, domestic phone number, OR electronic contact information** through which the Responsible Person can receive adverse-event reports (both a street address and phone number are not mandatory in every case).
+- **Zero Placeholders & Unverified Claims Removed:** Removed placeholder emails (`safety@prettypiggie.com`, `support@prettypiggie.com`, `privacy@prettypiggie.com`) and removed unverified `"100% Cruelty-Free"` badges from UI components. Compiled bundle scan across all 19 `.next/static/**/*.js` files confirmed **`0` occurrences** of all placeholder emails and unverified claims.
+- **Outstanding Owner Confirmation Checklist (Required Before GA):**
+  1. Confirm who legally qualifies as the **Responsible Person** (21 U.S.C. § 364(4)) for each applicable product.
+  2. Confirm whose legal entity name appears on the physical product label.
+  3. Confirm which statutory contact method will be used on labels and storefront (domestic address, domestic phone number, **or** electronic contact information).
+  4. Confirm that the selected contact channel is actively monitored and operationally capable of receiving and reporting adverse events (21 U.S.C. § 364a).
+
+---
+
+### Gate 4 — Keep the 54 Unverified Products Locked Across All 6 Surfaces — **ENGINEERING PASS**
+
+| Surface | Enforcement Mechanism | Empirical Verification Evidence | Status |
+|---|---|---|---|
+| **1. 3D Showroom** | Clicking any 3D hero opens preview sheet; no direct 3D add-to-bag bypass exists. | Code audit + browser check on `http://localhost:3000`. | **PASS** |
+| **2. 2D Catalogue** | `LuxuryFallback2D.tsx` disables quick-add CTA for all `54` locked & `4` OOS items. | Browser verification on `http://localhost:3000/?mode=2d` (screenshot below). | **PASS** |
+| **3. Product Detail Sheets** | `ProductPresentationSheet.tsx` checks `isProductPurchasable()` and locks CTA/stepper. | Browser verification confirmed disabled CTAs for locked & OOS states. | **PASS** |
+| **4. Direct Product URLs** | `/?product=lipstick` renders `UNVERIFIED — Purchase Locked`; `/?product=dual-tip-eye-definer-pen` renders `Verified INCI • Out of Stock`. | Live browser verification (`HTTP 200`, disabled CTA confirmed for both). | **PASS** |
+| **5. `localStorage` & Restored Carts** | `PrettyPiggieBoutiqueApp.tsx` calls `sanitizePersistedCart()` on mount and rewrites cleaned storage immediately. | Direct unit execution of compiled [purchaseGuard.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/lib/purchaseGuard.ts) on poisoned 3-item cart (`pp-lipstick` + `pp-dual-tip-eye-definer-pen` + price-tampered `pp-luminizing-powder` with `wholesaleCost`/`blankaUrl`) evicted `2/2` locked/OOS items, stripped all confidential keys, and reset price to canonical `\$33.50`. *(Note: Automated webview browser sandbox prohibits `page.evaluate()`/`localStorage` injection; interactive DevTools verification recommended on staging).* | **PASS (Logic Verified; Staging DevTools Re-Check Recommended)** |
+| **6. Cart API & Checkout Creation** | [route.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/app/api/checkout/route.ts) (`POST /api/checkout`) validates every submitted SKU server-side against `PRETTYPIGGIE_PRODUCTS`. | Exhaustive automated HTTP test against live `next start`: **54/54** `UNVERIFIED_PURCHASE_LOCKED` items rejected with **`HTTP 422 (PURCHASE_LOCK_ENFORCED)`** even with forged `canPurchase: true`; **4/4** `VERIFIED_OUT_OF_STOCK` items rejected with **`HTTP 422`**; mixed cart smuggling (`luminizing-powder` + `lipstick`) rejected with **`HTTP 422`**; tampered client price (`\$0.01`) on `luminizing-powder` overridden to canonical **`\$33.50 + \$7.00 = \$40.50 USD`**. | **PASS** |
+
+---
+
+### Gate 5 — Live Shopify Commerce Verification — **BLOCKED / PENDING CREDENTIALS**
+
+- Live Shopify Storefront API credentials (`NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN`, `NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN`) have not yet been supplied; `.env.local` is not present.
+- **No Simulated Order Misrepresentation Verified:** Live browser & API testing of `POST /api/checkout` confirmed `isSimulatedPreview: true` and unambiguous UI banners: **`Simulated Sandbox Preview • Not a Live Order`** and **`Sandbox Checkout Preview Only — No real payment, order, or shipment was created`**.
+- **Server-Only Credential Rule Enforced:** [.env.example](file:///c:/Users/ssabe/Downloads/prettypiggie/.env.example) documents that any future private Shopify Admin API token (`SHOPIFY_ADMIN_ACCESS_TOKEN`) must remain strictly server-only without `NEXT_PUBLIC_` prefix. Compiled `.next/static/` scan confirmed `0` occurrences of `SHOPIFY_ADMIN_ACCESS_TOKEN`, `wholesaleCost`, `profitPerUnit`, `marginPercent`, `blankaUrl`, `73904-BLNK-`, or `images.blankabrand.com`.
+- **Pending Live Shopify Checklist (Once Credentials Supplied):**
+  - [ ] Connect production Shopify store (`prettypiggie.myshopify.com` or designated store domain)
+  - [ ] Verify all 52 `VERIFIED_IN_STOCK` product & shade variant GID mappings in Shopify Admin
+  - [ ] Verify live prices, inventory quantities, U.S.-only shipping rates, and applicable U.S. sales tax
+  - [ ] Complete genuine low-value test transaction (capture Payment ID, Order #, Shopify Admin visibility)
+  - [ ] Complete cancellation & full refund verification (capture Refund ID & status)
+
+---
+
+### Gate 6 — Vercel Staging Deployment — **PENDING EXTERNAL DEPLOYMENT**
+
+- `vercel` CLI is not installed/authenticated in this local workspace environment; staging deployment requires connecting the GitHub repository in the Vercel dashboard (or authenticating `vercel` CLI).
+- **Exact Deployment Target (Do Not Deploy Uncommitted Tree or Different Branch):**
+  - **Repository:** `noobiedoobiedoodo/prettypiggie`
+  - **Branch:** `remediation/v1.0.0-rc2`
+  - **Code Commit SHA:** `eb380e109cb37c131d92f274e9bd0babd87eb3d0` (plus docs commit on `remediation/v1.0.0-rc2` HEAD)
+  - **Local Production Build Check:** `PASS` (Next.js `14.2.25`, Build ID `k0O_JhkFSYGCF79h5Odh-`, `0` TypeScript/lint errors)
+- **Staging Evidence Record (To Be Completed Immediately Upon Deployment):**
+  - **Staging URL:** `PENDING`
+  - **Deployment ID:** `PENDING`
+  - **Deployed Commit SHA:** `PENDING`
+  - **Build Result:** `PENDING`
+  - **Environment Configuration:** `PENDING`
+  - **Runtime Smoke-Test Results:** `PENDING`
+
+---
+
+### Gate 7 — Physical-Device Verification — **PENDING STAGING URL**
+
+| Physical Device / Browser | OS / App Version | Landing & 3D | 2D Fallback | Deep Links | Shade Select | Purchase Locks | Sticky Bag | Cart Updates | Checkout Handoff | Return Nav | Evidence / Screenshots | Status |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| **Physical iPhone — Safari** | `PENDING` | — | — | — | — | — | — | — | — | — | `PENDING` | **NOT VERIFIED** |
+| **Physical Android — Chrome** | `PENDING` | — | — | — | — | — | — | — | — | — | `PENDING` | **NOT VERIFIED** |
+| **TikTok In-App Browser (iOS/Android)** | `PENDING` | — | — | — | — | — | — | — | — | — | `PENDING` | **NOT VERIFIED** |
+| **Instagram In-App Browser (iOS/Android)** | `PENDING` | — | — | — | — | — | — | — | — | — | `PENDING` | **NOT VERIFIED** |
+
+---
+
+## 3. RC2 Runtime Verification Evidence (Local Production Build)
+
+![RC2 2D Catalog Reconciled Counts (52 Verified In Stock / 4 Verified Out of Stock / 54 Unverified Locked) & Purchase Lock Badges](C:/Users/ssabe/.gemini/antigravity/brain/e6dd772a-6093-46ea-97ea-6643953fe12e/browser_evidence/8f291189-0c8f-4aa0-96d9-477d073d6cb3/final_step_16.png)
+
+- **Compiled Bundle Security Scan (19 JS chunks in `.next/static/`):** `0` hits across `wholesaleCost`, `profitPerUnit`, `marginPercent`, `blankaUrl`, `73904-BLNK-`, `images.blankabrand.com`, `SHOPIFY_ADMIN_ACCESS_TOKEN`, `safety@prettypiggie.com`, `support@prettypiggie.com`, `privacy@prettypiggie.com`, `100% Cruelty-Free`.
+- **Exhaustive Checkout API Proof (`verify_rc2_gates.js` against `next start`):** `54/54` unverified SKUs → `HTTP 422`; `4/4` verified OOS SKUs → `HTTP 422`; mixed smuggling → `HTTP 422`; `shippingCountry: "CA"` → `HTTP 403`; tampered price (`\$0.01`) on `luminizing-powder` → `HTTP 200` with canonical `\$33.50 + \$7.00 = \$40.50 USD` and `isSimulatedPreview: true`.
+- **Browser Runtime Verification (`http://localhost:3000`, host-verified origin):** `0` console/runtime errors; `/?product=lipstick` (`UNVERIFIED — Purchase Locked`), `/?product=dual-tip-eye-definer-pen` (`VERIFIED INCI — Temporarily Out of Stock`), `POST /api/checkout` sandbox preview banner (`Sandbox Checkout Preview Only`), Shop All modal (`52 / 4 / 54`), Legal modal (MoCRA & U.S.-only wording), and `/?mode=2d` verified.
+
+---
+
+## 4. Six-Domain Release Certificate (Pre-GA Status — `NO-GO`)
 
 > [!IMPORTANT]
-> **Current Release Status: `NO-GO` (Controlled Remediation Phase Active on `remediation/v1.0.0-rc2`)**  
-> All software-controllable engineering gates (`P2-SEC-01`, `P2-UI-01`, local & GitHub version control for `P1-DEP-01`, technical purchase-locks for `P0-REG-01`, and U.S.-only market controls, bilingual EN/FR warnings, Health Canada 10-day post-sale CNF workflow, and PIPEDA/CASL disclosures for `P0-CAN-01`) have been implemented, verified at runtime, and pushed to https://github.com/noobiedoobiedoodo/prettypiggie.git.  
-> General Availability remains **`NO-GO`** pending external business/supplier dependencies: (1) official manufacturer INCI sheets for the 54 locked products & signed CoAs for vegan/paraben-free claims, (2) live Shopify Storefront API credentials & live test transaction, (3) Vercel staging/production deployment, and (4) physical iPhone/Android hardware verification.
-
----
-
-## 1. Release Candidate Freeze & Git / GitHub Verification (Sections 1 & 5)
-
-| Release Artifact | Verified Identifier / Location | Status |
-|---|---|---|
-| **Frozen Baseline Branch & Tag** | `main` — Tag `v1.0.0-rc1` (`commit 18592fc7190cd840b4589f6cfce4840fdf41bc83`) | **PASS (Pushed to GitHub)** |
-| **Archived Baseline Build ID** | `8iwZOJS3uDI5rLgSQuRKs` ([BUILD_ID.txt](file:///c:/Users/ssabe/Downloads/prettypiggie/release-archive/v1.0.0-rc1/BUILD_ID.txt)) | **PASS (Archived)** |
-| **Archived Baseline Audit & Snapshot** | [audit_results.json](file:///c:/Users/ssabe/Downloads/prettypiggie/release-archive/v1.0.0-rc1/audit_results.json) & [blankaCatalog.v1.0.0-rc1.snapshot.json](file:///c:/Users/ssabe/Downloads/prettypiggie/release-archive/v1.0.0-rc1/blankaCatalog.v1.0.0-rc1.snapshot.json) | **PASS (Archived)** |
-| **Active Remediation Branch** | `remediation/v1.0.0-rc2` (`commit 5907e41703ff4c3f7ede69abeb594d77ad0e7165`) | **PASS (Pushed to GitHub)** |
-| **Remote Repository URL** | https://github.com/noobiedoobiedoodo/prettypiggie.git | **PASS (Synced)** |
-
----
-
-## 2. Daily Remediation Execution Report (Section 8 Required Deliverable)
-
-| Finding ID | Current Status | Work Completed | Evidence Produced | Outstanding Dependencies | Assigned Owner | Next Action |
-|---|---|---|---|---|---|---|
-| **`[P0-REG-01]`** <br>*Manufacturer INCI & Claims Documentation* | **IN PROGRESS** <br>*(Technical Lock: **PASS**; External Docs: **PENDING**)* | 1. Stripped 100% of synthetically reconstructed/inferred INCI text from [blankaCatalog.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/blankaCatalog.json).<br>2. Created the 110-product register in [MANUFACTURER_DOCUMENTATION_REGISTER.md](file:///c:/Users/ssabe/Downloads/prettypiggie/MANUFACTURER_DOCUMENTATION_REGISTER.md) and [manufacturerDocumentationRegister.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/manufacturerDocumentationRegister.json).<br>3. Marked all 54 incomplete-INCI products (`45` truncated + `9` missing) as `UNVERIFIED` and programmatically locked them from purchase across the 3D Stage, 2D Catalog, and `localStorage` cart.<br>4. Suppressed unverified `"Vegan"` and `"Paraben-Free"` badges until signed CoAs are logged. | Runtime test on `/?product=lipstick` verified amber lock banner, disabled `UNVERIFIED — Purchase Locked` button, and verbatim unverified notice ([final_step_110.png](file:///C:/Users/ssabe/.gemini/antigravity/brain/e6dd772a-6093-46ea-97ea-6643953fe12e/browser_evidence/1166e421-f1c1-4c9a-abfb-d8fcd2e0cad3/final_step_110.png)). Runtime test on `/?product=luminizing-powder` (`VERIFIED_COMPLETE`) verified purchase works for the 52 verified in-stock items. | 1. Obtain official Blanka manufacturer INCI sheets for the 9 missing-INCI and 45 truncated-INCI products.<br>2. Obtain signed CoAs for vegan/paraben-free claims.<br>3. Insert verified U.S. physical street address & phone number for MoCRA Responsible Person. | **Brand Owner / Supplier Liaison** | Request full PIF/INCI sheets from Blanka Support for the 54 locked SKUs and provide U.S. MoCRA street address/phone. |
-| **`[P0-CAN-01]`** <br>*Canadian Market Controls, Hotlist, Bilingual & PIPEDA/CASL* | **IN PROGRESS** <br>*(U.S.-Only Lock & Storefront Controls: **PASS**; Canadian CoAs: **PENDING**)* | 1. Completed 110-product Canadian review & CNF register in [CANADIAN_REGULATORY_REVIEW.md](file:///c:/Users/ssabe/Downloads/prettypiggie/CANADIAN_REGULATORY_REVIEW.md) and [canadianRegulatoryRegister.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/canadianRegulatoryRegister.json).<br>2. Enforced **U.S.-Only Initial Launch** (`buyerIdentity.countryCode = 'US'` in [shopify.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/lib/shopify.ts) + explicit U.S.-Only shipping banner in bag drawer & policies).<br>3. Implemented bilingual English/French (`WARNING / MISE EN GARDE`) advisories on all 110 product sheets.<br>4. Added PIPEDA Fair Information Principles, CASL unchecked-by-default express marketing consent checkbox, and the statutory 10-day post-first-sale CNF workflow (*Cosmetic Regulations* s. 30). | Runtime verification confirmed bilingual EN/FR warnings on product sheets, U.S.-Only shipping banner, unchecked-by-default CASL checkbox (`checked: false`), PIPEDA section, and 10-day post-first-sale CNF disclosure ([final_step_110.png](file:///C:/Users/ssabe/.gemini/antigravity/brain/e6dd772a-6093-46ea-97ea-6643953fe12e/browser_evidence/1166e421-f1c1-4c9a-abfb-d8fcd2e0cad3/final_step_110.png)). | Before enabling Canadian shipping in Shopify Admin:<br>1. Obtain manufacturer concentration CoAs for the 16 Hotlist-flagged products.<br>2. Complete French UI localization for Quebec Bill 96.<br>3. File CNFs within 10 days of first Canadian sale. | **Regulatory Specialist / Brand Owner** | Confirm U.S.-Only shipping zone restriction in Shopify Admin for initial launch. |
-| **`[P0-COM-01]`** <br>*Live Shopify Commerce* | **BLOCKED / PENDING CREDENTIALS** | Hardened [shopify.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/lib/shopify.ts) with domain sanitization, `buyerIdentity: { countryCode: 'US', email }`, `userErrors` logging, and explicit `SANDBOX PREVIEW • NO LIVE CHARGE` labeling until live credentials are set. | Sandbox checkout verified end-to-end (`#PP-259094` and `$33.50 + $7.00 = $40.50` verified cart calculation). | Live `NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN` and `NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN` + live Shopify product/variant sync and low-value test transaction. | **Store Owner / Commerce Lead** | Connect Shopify Storefront API credentials in `.env.local` & Vercel, then run live test order & refund check. |
-| **`[P1-DEP-01]`** <br>*Version Control & Deployment* | **IN PROGRESS** <br>*(Git & GitHub: **PASS**; Vercel Deploy: **PENDING**)* | Initialized Git repository, committed & tagged frozen baseline `v1.0.0-rc1` (`18592fc`), pushed `main` and `v1.0.0-rc1` to GitHub, created `remediation/v1.0.0-rc2`, committed remediation work (`5907e41`), and pushed `remediation/v1.0.0-rc2` to GitHub. | GitHub push logs for `main`, `v1.0.0-rc1`, and `remediation/v1.0.0-rc2` at https://github.com/noobiedoobiedoodo/prettypiggie.git. | Connect GitHub repository to Vercel, configure staging environment variables, deploy staging preview, and attach `prettypiggie.com`. | **Lead Developer / Owner** | Import `noobiedoobiedoodo/prettypiggie` in Vercel Dashboard and deploy `remediation/v1.0.0-rc2` to staging URL. |
-| **`[P1-MOB-01]`** <br>*Physical Device Testing* | **PENDING STAGING DEPLOY** | Verified mobile portrait (`390x844`) deep-links, 3D stage, shade selection, sticky `Bag (1)` drawer trigger, and checkout flow in headless browser emulation. | Browser runtime verification logs & screenshots ([final_step_96.png](file:///C:/Users/ssabe/.gemini/antigravity/brain/e6dd772a-6093-46ea-97ea-6643953fe12e/browser_evidence/1166e421-f1c1-4c9a-abfb-d8fcd2e0cad3/final_step_96.png), [final_step_110.png](file:///C:/Users/ssabe/.gemini/antigravity/brain/e6dd772a-6093-46ea-97ea-6643953fe12e/browser_evidence/1166e421-f1c1-4c9a-abfb-d8fcd2e0cad3/final_step_110.png)). | Requires public HTTPS staging URL from Vercel (`P1-DEP-01`) to test on physical iPhone Safari, Android Chrome, and native TikTok/Instagram in-app browsers. | **QA / Mobile Lead** | Execute physical device test matrix immediately after Vercel staging deployment is live. |
-| **`[P2-SEC-01]`** <br>*First-Party Image Proxy* | **PASS** | Created server-only [serverImageMap.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/lib/serverImageMap.json) and first-party image proxy route [route.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/app/api/product-image/%5Bslug%5D/%5Bvariant%5D/route.ts) (`/api/product-image/[slug]/[variant]`). Replaced all 368 `images.blankabrand.com/73904` URLs in [blankaCatalog.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/blankaCatalog.json) with first-party paths. | Runtime verification of `GET /api/blanka/products` confirmed **`0` occurrences** of `blankabrand.com` or `73904` across all 110 products; `GET /api/product-image/luminizing-powder/primary` returned `HTTP 200` (`image/webp`). | Confirm commercial image archival rights with Blanka if migrating from live proxy to permanent static CDN storage. | **Lead Developer** | Complete (**PASS**). |
-| **`[P2-UI-01]`** <br>*Sticky Bag Button & 78 Distinct Prices* | **PASS** | Added `e.stopPropagation()` to sticky footer `Bag (1)` button in [ProductPresentationSheet.tsx](file:///c:/Users/ssabe/Downloads/prettypiggie/src/components/ui/ProductPresentationSheet.tsx#L533-L548) and verified all 78 distinct retail MSRP price points across the 110 products. | Runtime test at `390x844` on `/?product=luminizing-powder` confirmed clicking sticky `Bag (1)` opens `Pretty Piggie Makeup Bag` (`bagOpenedByStickyBtn: true`) and `/api/blanka/products` has `78` distinct price points (`\$13.20–\$64.30`). | None. | **Lead Developer** | Complete (**PASS**). |
-
----
-
-## 3. Runtime Visual Verification Evidence (`remediation/v1.0.0-rc2`)
-
-````carousel
-![Verified Product Purchase, Sticky Bag (1) Drawer Open, U.S.-Only Shipping Notice & CASL/PIPEDA Policy Center](C:/Users/ssabe/.gemini/antigravity/brain/e6dd772a-6093-46ea-97ea-6643953fe12e/browser_evidence/1166e421-f1c1-4c9a-abfb-d8fcd2e0cad3/final_step_110.png)
-<!-- slide -->
-![Mobile Portrait (390x844) Sandbox Checkout Confirmation Receipt](C:/Users/ssabe/.gemini/antigravity/brain/e6dd772a-6093-46ea-97ea-6643953fe12e/browser_evidence/1166e421-f1c1-4c9a-abfb-d8fcd2e0cad3/final_step_96.png)
-<!-- slide -->
-![3D Product Presentation Stage — Multi-Shade Lipstick & Elevated Podium Seal](C:/Users/ssabe/.gemini/antigravity/brain/e6dd772a-6093-46ea-97ea-6643953fe12e/browser_evidence/1166e421-f1c1-4c9a-abfb-d8fcd2e0cad3/final_step_59.png)
-````
-
----
-
-## 4. Updated Production Release Certificate (Section 9.F)
-
-**PRETTYPIGGIE.COM — PRODUCTION RELEASE CERTIFICATE**
+> **Governance Disclaimer:** Automated tests and AI-generated audit reports are **not substitutes** for official supplier documentation, qualified regulatory/legal review, live Shopify transaction proof, physical hardware testing, or business-owner sign-off. A final GA Release Certificate may be issued **only** after all six independent domains below achieve verified **`PASS`** / **`APPROVED`** status.
 
 - **Project:** PrettyPiggie.com — Immersive 3D Virtual Makeup Boutique
-- **Release version:** `v1.0.0-rc2` (Controlled Remediation Branch `remediation/v1.0.0-rc2`)
-- **Frozen Baseline Commit SHA (`v1.0.0-rc1`):** `18592fc7190cd840b4589f6cfce4840fdf41bc83` (Build ID: `8iwZOJS3uDI5rLgSQuRKs`)
-- **Remediation Commit SHA (`remediation/v1.0.0-rc2`):** `5907e41703ff4c3f7ede69abeb594d77ad0e7165`
-- **GitHub Repository URL:** https://github.com/noobiedoobiedoodo/prettypiggie.git
-- **Production deployment URL:** `PENDING VERCEL STAGING/PRODUCTION DEPLOYMENT (Verified locally on http://localhost:3000)`
-- **Verification date:** `2026-11-19T22:11:00-06:00`
-- **Responsible developer / verifier:** `Antigravity AI Engineering & Verification Lead (with Subagents: Cosmetics & E-Commerce Compliance Specialist [c9b6210f], Go-To-Market Launch Auditor [c0dda6cf], Browser Runtime Auditor [1166e421])`
+- **Release Candidate:** `remediation/v1.0.0-rc2`
+- **Code Commit SHA:** `eb380e109cb37c131d92f274e9bd0babd87eb3d0` (Rollback Baseline: `v1.0.0-rc1` / `18592fc7190cd840b4589f6cfce4840fdf41bc83`)
+- **Local Production Build ID:** `k0O_JhkFSYGCF79h5Odh-`
+- **Verification Date:** `2026-11-20`
+- **Overall Release Decision:** **`NO-GO`** *(Controlled Remediation Continues)*
 
-| Approval | Name | Status | Date |
-|---|---|---|---|
-| **Technical implementation** | Antigravity AI Engineering Lead | **PASS (Local & GitHub)** / **PENDING (Vercel URL)** | 2026-11-19 |
-| **Security verification** | Compliance Specialist (`c9b6210f`) & Runtime Audit | **PASS** *(0 cost/margin leaks; 0 supplier CDN leaks via `/api/product-image` proxy)* | 2026-11-19 |
-| **E-commerce verification** | Browser Runtime Auditor (`1166e421`) | **PENDING LIVE SHOPIFY** *(52 verified items purchasable; 54 unverified locked; sandbox verified)* | 2026-11-19 |
-| **Mobile verification** | Browser Runtime Auditor (`1166e421`) | **PENDING PHYSICAL HARDWARE** *(390x844 portrait emulation & sticky `Bag (1)` verified)* | 2026-11-19 |
-| **Accessibility verification** | Compliance Specialist (`c9b6210f`) & Runtime Audit | **PASS** *(WCAG 2.1 AA zoom, ARIA dialogs/tabs/swatches, contrast & 2D fallback verified)* | 2026-11-19 |
-| **Cosmetics documentation review** | Cosmetics Compliance Specialist (`c9b6210f`) | **PARTIAL / HOLD ACTIVE** *(56 verified; 54 locked as `UNVERIFIED` pending manufacturer sheets; MoCRA street address pending)* | 2026-11-19 |
-| **Canadian regulatory review** | Cosmetics Compliance Specialist (`c9b6210f`) | **U.S.-ONLY LOCK ACTIVE** *(Canadian shipping disabled; EN/FR warnings, PIPEDA, CASL & 10-day post-sale CNF workflow in place)* | 2026-11-19 |
+| # | Approval Domain | Responsible Signatory | Current Status | Evidence / Remaining Gate | Date |
+|---|---|---|---|---|---|
+| **1** | **Engineering verification** | Lead Software Engineer (`Antigravity AI`) | **PASS (Local RC2 Build) / PENDING (Vercel Staging)** | Reconciled `52/4/54 = 110` register & API, `54/54` + `4/4` server-side `422` checkout lock proof, `0` bundle leaks, `0` TS/build errors. Remaining: Vercel staging deployment & smoke test (Gate 6). | 2026-11-20 |
+| **2** | **Supplier documentation verification** | Supplier Liaison / Brand Owner *(Human Evidence Required)* | **HOLD / INCOMPLETE** | `56` verbatim INCI captures on file (`52` in stock, `4` OOS); `54` products locked as `UNVERIFIED` pending untruncated manufacturer INCI/PIF sheets; signed vegan/paraben-free/cruelty-free CoAs pending (all claims suppressed). | `PENDING` |
+| **3** | **Regulatory review** | Qualified Cosmetics Regulatory Counsel *(Human Review Required)* | **PENDING QUALIFIED REVIEW** | Storefront MoCRA statutory wording corrected & placeholders removed; bilingual EN/FR warnings, PIPEDA/CASL controls & 10-day post-sale CNF workflow drafted. Remaining: Owner MoCRA Responsible Person & monitored contact confirmation (Gate 3) + independent regulatory sign-off. | `PENDING` |
+| **4** | **Live commerce verification** | Commerce Lead / Store Owner | **BLOCKED / PENDING LIVE SHOPIFY** | Sandbox preview & server-side guards verified locally. Remaining: Live Shopify credentials, variant/price/inventory/tax verification, **Shopify Admin U.S.-only shipping zone + Canada address-change rejection proof (Gate 2)**, live low-value order & refund proof (Gate 5). | `PENDING` |
+| **5** | **Physical-device verification** | Mobile QA Lead | **PENDING STAGING URL** | Requires deployed HTTPS Vercel staging URL to execute physical iPhone Safari, Android Chrome, TikTok in-app, and Instagram in-app test matrix with device screenshots (Gate 7). | `PENDING` |
+| **6** | **Business-owner authorization** | Business Owner (`Stephan — Pretty Piggie Makeup`) | **NOT GRANTED (`NO-GO`)** | Final General Availability authorization belongs solely to the Business Owner after Domains 1–5 are evidenced and closed. | `PENDING` |
 
-**Final Recommendation: `NO-GO` Until Owner Supplies External Credentials, Manufacturer Sheets & Physical Device Sign-Off**
+### Engineering Declaration
 
-- **Remaining External Owner Actions Required to Transition to `GO`:**
-  1. **`[P0-REG-01]`:** Provide official U.S. physical street address and domestic phone number for the MoCRA Responsible Person in [LegalComplianceModal.tsx](file:///c:/Users/ssabe/Downloads/prettypiggie/src/components/ui/LegalComplianceModal.tsx), and upload official Blanka manufacturer INCI sheets for any of the 54 locked `UNVERIFIED` products you wish to unlock for launch (or launch initially with the 52 `VERIFIED_COMPLETE` in-stock products while keeping the remaining 54 locked).
-  2. **`[P0-COM-01]`:** Provide live `NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN` and `NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN` to execute and record the live low-value Shopify test transaction and refund verification.
-  3. **`[P1-DEP-01]` & `[P1-MOB-01]`:** Connect https://github.com/noobiedoobiedoodo/prettypiggie.git to Vercel, deploy `remediation/v1.0.0-rc2` to a staging URL, and complete the physical iPhone Safari, Android Chrome, and TikTok/Instagram in-app browser test checklist.
-- **Rollback Baseline:** `git checkout v1.0.0-rc1` (`commit 18592fc7190cd840b4589f6cfce4840fdf41bc83`, archived Build ID `8iwZOJS3uDI5rLgSQuRKs`).
+I confirm that all engineering test results recorded in this report reflect actual automated and runtime checks performed on commit `eb380e109cb37c131d92f274e9bd0babd87eb3d0` (Build ID `k0O_JhkFSYGCF79h5Odh-`). No unverified external dependency, live Shopify transaction, supplier certificate, regulatory opinion, staging deployment, or physical-device check has been represented as completed.
 
-### Developer Declaration
+- **Engineering verifier:** `Antigravity AI Engineering Lead`
+- **Date:** `2026-11-20`
 
-I confirm that the verification results in this report are based on actual testing and documented evidence. I have identified all known outstanding defects and have not represented unverified requirements as completed.
+### Business-Owner Authorization
 
-- **Developer signature:** `Antigravity AI Engineering & Verification Lead`
-- **Date:** `2026-11-19`
-
----
-
-### Owner Authorization
-
-The final production release decision belongs to the business owner. No developer, automated auditor or deployment pipeline may independently declare final business approval.
-
-- **Release authorization:** `PENDING OWNER REVIEW (CURRENT STATUS: NO-GO / CONTROLLED REMEDIATION)`
-- **Owner:** `__________________________ (Stephan — Pretty Piggie Makeup)`
+- **Release decision:** `NO-GO (PENDING EXTERNAL GATES 2, 3, 5, 6, 7 & QUALIFIED REGULATORY / SUPPLIER SIGN-OFF)`
+- **Business Owner signature:** `__________________________ (Stephan — Pretty Piggie Makeup)`
 - **Date:** `__________________________`
