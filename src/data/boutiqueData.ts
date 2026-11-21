@@ -7,6 +7,7 @@ import {
   CatalogReconciliationSummary,
   FinishType,
   InciVerificationStatus,
+  IngredientEvidenceTier,
   ProductModelType,
   ProductShade,
 } from '@/types/boutique';
@@ -456,8 +457,8 @@ function analyzeRegulatoryProfile(
   }
 
   const verificationLine = manufacturerVerified
-    ? 'Complete Manufacturer INCI Specification On File'
-    : 'UNVERIFIED — Purchase Locked Pending Full Manufacturer INCI Sheet';
+    ? 'Complete INCI List Transcribed From Supplier Listing (Authoritative Manufacturer Certification Pending)'
+    : 'UNVERIFIED — Purchase Locked Pending Authoritative Manufacturer INCI Sheet';
 
   let highlights: string[] = [];
   let howToApply = '';
@@ -547,6 +548,8 @@ interface SanitizedCatalogItem {
   price: number;
   inStock: boolean;
   manufacturerVerified: boolean;
+  manufacturerCertifiedDocOnFile?: boolean;
+  ingredientEvidenceTier?: IngredientEvidenceTier;
   inciStatus: InciVerificationStatus;
   availabilityState?: AvailabilityState;
   canPurchase: boolean;
@@ -582,6 +585,15 @@ export const PRETTYPIGGIE_PRODUCTS: BoutiqueProduct[] = rawItems.map((item) => {
     item.inciStatus || 'UNVERIFIED_MISSING_SPEC';
   const manufacturerVerified =
     Boolean(item.manufacturerVerified) && inciStatus === 'VERIFIED_COMPLETE';
+  const manufacturerCertifiedDocOnFile = Boolean(
+    item.manufacturerCertifiedDocOnFile
+  );
+  const ingredientEvidenceTier: IngredientEvidenceTier =
+    manufacturerCertifiedDocOnFile
+      ? 'MANUFACTURER_CERTIFIED_DOC_ON_FILE'
+      : manufacturerVerified
+      ? 'SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION'
+      : 'INCOMPLETE_OR_MISSING_LISTING';
   const inStock = Boolean(item.inStock);
   const availabilityState: AvailabilityState = !manufacturerVerified
     ? 'UNVERIFIED_PURCHASE_LOCKED'
@@ -624,6 +636,8 @@ export const PRETTYPIGGIE_PRODUCTS: BoutiqueProduct[] = rawItems.map((item) => {
     price: item.price,
     inStock,
     manufacturerVerified,
+    manufacturerCertifiedDocOnFile,
+    ingredientEvidenceTier,
     inciStatus,
     availabilityState,
     canPurchase,
@@ -702,5 +716,11 @@ export const CATALOG_RECONCILIATION: CatalogReconciliationSummary = {
   ).length,
   unverifiedMissingSpec: PRETTYPIGGIE_PRODUCTS.filter(
     (p) => p.inciStatus === 'UNVERIFIED_MISSING_SPEC'
+  ).length,
+  supplierListingCompleteTranscriptions: PRETTYPIGGIE_PRODUCTS.filter(
+    (p) => p.ingredientEvidenceTier === 'SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION'
+  ).length,
+  manufacturerCertifiedDocumentsOnFile: PRETTYPIGGIE_PRODUCTS.filter(
+    (p) => p.manufacturerCertifiedDocOnFile
   ).length,
 };

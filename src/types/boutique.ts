@@ -31,6 +31,11 @@ export type AvailabilityState =
   | 'VERIFIED_OUT_OF_STOCK'
   | 'UNVERIFIED_PURCHASE_LOCKED';
 
+export type IngredientEvidenceTier =
+  | 'SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION'
+  | 'MANUFACTURER_CERTIFIED_DOC_ON_FILE'
+  | 'INCOMPLETE_OR_MISSING_LISTING';
+
 export interface CatalogReconciliationSummary {
   totalProducts: number;
   verifiedComplete: number;
@@ -39,6 +44,8 @@ export interface CatalogReconciliationSummary {
   unverifiedPurchaseLocked: number;
   unverifiedTruncatedSpec: number;
   unverifiedMissingSpec: number;
+  supplierListingCompleteTranscriptions: number;
+  manufacturerCertifiedDocumentsOnFile: number;
 }
 
 export interface CameraWaypoint {
@@ -110,9 +117,13 @@ export interface BoutiqueProduct {
   /** Retail selling price */
   price: number;
   inStock: boolean;
-  /** Whether a complete, untruncated manufacturer INCI declaration is on file */
+  /** Whether a complete, untruncated supplier-listing INCI transcription is captured (NOT manufacturer-certified evidence by itself) */
   manufacturerVerified: boolean;
-  /** Manufacturer INCI documentation status */
+  /** Whether an authoritative signed manufacturer INCI/PIF document has been verified and logged */
+  manufacturerCertifiedDocOnFile: boolean;
+  /** Distinguishes supplier-listing transcriptions from authoritative manufacturer-certified documentation */
+  ingredientEvidenceTier: IngredientEvidenceTier;
+  /** Captured INCI completeness status */
   inciStatus: InciVerificationStatus;
   /** Reconciled 3-state availability & regulatory lock state */
   availabilityState: AvailabilityState;

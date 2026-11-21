@@ -29,7 +29,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-age-defying-serum",
@@ -61,7 +63,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-all-in-one-body-wash",
@@ -92,7 +96,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-angled-liner-brush",
@@ -123,7 +129,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-anti-aging-rose-gold-oil",
@@ -155,7 +163,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-automatic-eyebrow-pencil",
@@ -219,7 +229,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-automatic-lip-liner",
@@ -267,7 +279,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-bb-cream",
@@ -363,7 +377,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-beard-butter",
@@ -394,7 +410,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-beard-oil",
@@ -442,7 +460,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-blush-palette",
@@ -490,7 +510,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-bounce-boost-mousse",
@@ -521,7 +543,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-bronzer",
@@ -577,7 +601,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-bronzing-moisturizer",
@@ -625,7 +651,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-brow-soap",
@@ -656,7 +684,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-cheek-fan-brush",
@@ -687,7 +717,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-classic-blender",
@@ -718,7 +750,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-cleansing-oil",
@@ -750,7 +784,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-coconut-moisture-conditioner",
@@ -781,7 +817,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-coconut-moisture-shampoo",
@@ -812,7 +850,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-collagen-and-retinol-serum",
@@ -844,7 +884,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-color-rich-pro-line",
@@ -876,7 +918,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-concealing-cream",
@@ -980,7 +1024,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-creme-concealer-stick",
@@ -1076,7 +1122,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-daily-curl-conditioner",
@@ -1107,7 +1155,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-daily-repair-conditioner",
@@ -1138,7 +1188,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-daily-repair-shampoo",
@@ -1169,7 +1221,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-define-hold-curl-cream",
@@ -1200,7 +1254,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-dual-blend-powder-foundation",
@@ -1328,7 +1384,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-dual-tip-eye-definer-pen",
@@ -1360,7 +1418,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": false,
-    "availabilityState": "VERIFIED_OUT_OF_STOCK"
+    "availabilityState": "VERIFIED_OUT_OF_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-embrace-collagen-moisturizer",
@@ -1392,7 +1452,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-extreme-moisture-blend",
@@ -1424,7 +1486,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-eye-lip-primer",
@@ -1456,7 +1520,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-eyebrow-gel",
@@ -1488,7 +1554,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-eyeshadow-palette",
@@ -1552,7 +1620,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-finishing-powder",
@@ -1584,7 +1654,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-firm-serum",
@@ -1616,7 +1688,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-foaming-beard-wash",
@@ -1647,7 +1721,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-foundation",
@@ -1807,7 +1883,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-foundation-primer",
@@ -1839,7 +1917,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-full-cover-foundation",
@@ -1991,7 +2071,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-gel-eyeliner",
@@ -2039,7 +2121,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-glitter-dust",
@@ -2095,7 +2179,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-glycolic-acid-serum",
@@ -2127,7 +2213,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-hair-scalp-renewal-serum",
@@ -2159,7 +2247,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-heat-protective-spray",
@@ -2190,7 +2280,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-hemp-infused-beard-growth-oil",
@@ -2222,7 +2314,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-highlighter-stick",
@@ -2278,7 +2372,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-hyaluronic-acid-serum",
@@ -2310,7 +2406,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": false,
-    "availabilityState": "VERIFIED_OUT_OF_STOCK"
+    "availabilityState": "VERIFIED_OUT_OF_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-hyaluronic-moisturizer",
@@ -2342,7 +2440,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-hydrating-facial-cleanser",
@@ -2374,7 +2474,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-hydrating-lip-oil",
@@ -2446,7 +2548,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-hydration-serum",
@@ -2478,7 +2582,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-kale-face-cleanser",
@@ -2509,7 +2615,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-keratin-smoothing-conditioner",
@@ -2540,7 +2648,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-keratin-smoothing-shampoo",
@@ -2571,7 +2681,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-khol-eyeliner",
@@ -2635,7 +2747,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-large-blurrer-brush",
@@ -2666,7 +2780,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-lash-rejuvenator",
@@ -2698,7 +2814,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": false,
-    "availabilityState": "VERIFIED_OUT_OF_STOCK"
+    "availabilityState": "VERIFIED_OUT_OF_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-leave-in-hair-mask",
@@ -2729,7 +2847,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-lip-butter",
@@ -2761,7 +2881,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-lip-gloss",
@@ -2905,7 +3027,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-lip-liner",
@@ -3033,7 +3157,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-lip-plumper",
@@ -3065,7 +3191,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-lipstick",
@@ -3201,7 +3329,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-liquid-blush",
@@ -3265,7 +3395,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-liquid-shimmer",
@@ -3297,7 +3429,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-liquid-to-matte-lipstick",
@@ -3385,7 +3519,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-luminizing-powder",
@@ -3425,7 +3561,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-luxe-leave-in-conditioner",
@@ -3456,7 +3594,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-luxury-cream-lipstick",
@@ -3504,7 +3644,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-luxury-matte-lipstick",
@@ -3552,7 +3694,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-makeup-bag",
@@ -3591,7 +3735,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-makeup-remover-solution",
@@ -3623,7 +3769,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-mascara",
@@ -3655,7 +3803,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-matte-lip-stain",
@@ -3775,7 +3925,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-matte-lipstick",
@@ -3855,7 +4007,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-mattifying-face-primer",
@@ -3887,7 +4041,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-men-s-face-moisturizer",
@@ -3918,7 +4074,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-men-s-shampoo",
@@ -3949,7 +4107,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-men-s-under-eye-cream",
@@ -3980,7 +4140,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-mild-toning-elixir",
@@ -4012,7 +4174,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-mini-crease-brush",
@@ -4043,7 +4207,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-mint-exfoliating-facial-polish",
@@ -4075,7 +4241,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-natural-konjac-sponge",
@@ -4106,7 +4274,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-natural-soap",
@@ -4233,7 +4403,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-niacinamide-vitamin-boost-serum",
@@ -4265,7 +4437,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-night-renewal-creme",
@@ -4297,7 +4471,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-nourish-hand-cream",
@@ -4329,7 +4505,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-oil-control-hydrator",
@@ -4361,7 +4539,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-oil-control-setting-spray",
@@ -4393,7 +4573,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-oil-free-daily-moisturizer",
@@ -4425,7 +4607,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-packing-eye-brush",
@@ -4456,7 +4640,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-pearl-eye-primer",
@@ -4488,7 +4674,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-precision-tweezers",
@@ -4519,7 +4707,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-pro-cheek-palette",
@@ -4567,7 +4757,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-scented-candle",
@@ -4615,7 +4807,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-setting-spray",
@@ -4647,7 +4841,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-shea-body-butter",
@@ -4679,7 +4875,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-single-pan-blush",
@@ -4735,7 +4933,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-single-pan-eyeshadow",
@@ -4815,7 +5015,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-solid-fragrance",
@@ -4870,7 +5072,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-soothing-emulsion",
@@ -4902,7 +5106,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-stipple-blend-foundation-brush",
@@ -4933,7 +5139,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-tanning-drops",
@@ -4965,7 +5173,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-tanning-mousse",
@@ -5004,7 +5214,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-tinted-moisturizer",
@@ -5092,7 +5304,9 @@
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
     "canPurchase": false,
-    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING"
   },
   {
     "id": "pp-touch-up-blotting-papers",
@@ -5123,7 +5337,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-vegan-lip-balm",
@@ -5155,7 +5371,9 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": false,
-    "availabilityState": "VERIFIED_OUT_OF_STOCK"
+    "availabilityState": "VERIFIED_OUT_OF_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   },
   {
     "id": "pp-volumizing-hair-spray",
@@ -5186,6 +5404,8 @@
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
     "canPurchase": true,
-    "availabilityState": "VERIFIED_IN_STOCK"
+    "availabilityState": "VERIFIED_IN_STOCK",
+    "manufacturerCertifiedDocOnFile": false,
+    "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION"
   }
 ]

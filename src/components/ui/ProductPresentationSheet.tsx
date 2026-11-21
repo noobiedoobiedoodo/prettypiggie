@@ -151,18 +151,20 @@ export function ProductPresentationSheet({
             </div>
           )}
 
-          {/* Distinct Banner When Product INCI Is Verified But Inventory Is Out of Stock */}
+          {/* Distinct Banner When Complete Supplier-Listing INCI Is Captured But Inventory Is Out of Stock */}
           {product.availabilityState === 'VERIFIED_OUT_OF_STOCK' && (
             <div className="mb-3 flex items-start gap-2.5 rounded-2xl border border-rose-200 bg-rose-50 p-3 text-[11px] leading-snug text-rose-950">
               <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-rose-700" />
               <div>
                 <strong className="block font-bold uppercase tracking-wider text-rose-900">
-                  VERIFIED INCI — Temporarily Out of Stock
+                  COMPLETE SUPPLIER LISTING INCI — Temporarily Out of Stock
                 </strong>
                 <span className="mt-0.5 block text-rose-800">
-                  Complete manufacturer INCI documentation is verified on file (
-                  <code>VERIFIED_COMPLETE</code>), but this item is currently
-                  out of stock and unavailable for checkout.
+                  A complete ingredient list was transcribed from the supplier
+                  catalog listing (<code>VERIFIED_COMPLETE</code> listing
+                  capture; authoritative manufacturer certification pending),
+                  and this item is currently out of stock and unavailable for
+                  checkout.
                 </span>
               </div>
             </div>
@@ -282,8 +284,10 @@ export function ProductPresentationSheet({
                 ${product.price.toFixed(2)}
               </div>
               <div className="text-[10px] font-semibold uppercase tracking-wider text-piggie-600">
-                {product.manufacturerVerified
-                  ? 'Verified INCI'
+                {product.manufacturerCertifiedDocOnFile
+                  ? 'Manufacturer Certified INCI'
+                  : product.manufacturerVerified
+                  ? 'Complete Listing INCI'
                   : 'Preview Only'}
               </div>
             </div>
@@ -398,7 +402,10 @@ export function ProductPresentationSheet({
               <div className="space-y-2.5">
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-piggie-700">
-                    Manufacturer INCI Record ({product.inciStatus} •{' '}
+                    {product.manufacturerCertifiedDocOnFile
+                      ? 'Authoritative Manufacturer INCI Record'
+                      : 'Supplier-Listing INCI Transcription'}{' '}
+                    ({product.inciStatus} • {product.ingredientEvidenceTier} •{' '}
                     {product.originLabel})
                   </span>
                   <p className="mt-1 rounded-xl bg-piggie-50 p-3 font-mono text-[11px] leading-relaxed text-piggie-900">

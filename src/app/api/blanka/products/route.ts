@@ -47,8 +47,18 @@ export async function GET(request: Request) {
     brandName: 'Pretty Piggie Makeup',
     releaseCandidate: 'remediation/v1.0.0-rc2',
     catalogPolicy:
-      'Pre-GA Controlled Remediation — Authoritative Manufacturer INCI Purchase Lock Enforced',
+      'Pre-GA Controlled Remediation — Supplier-Listing INCI Transcriptions Distinguished From Authoritative Manufacturer-Certified Documentation; 54 Incomplete Items Locked',
     reconciliation: CATALOG_RECONCILIATION,
+    evidenceClassification: {
+      supplierListingCompleteTranscriptions:
+        CATALOG_RECONCILIATION.supplierListingCompleteTranscriptions,
+      manufacturerCertifiedDocumentsOnFile:
+        CATALOG_RECONCILIATION.manufacturerCertifiedDocumentsOnFile,
+      incompleteOrMissingListingsLocked:
+        CATALOG_RECONCILIATION.unverifiedPurchaseLocked,
+      distinctionNote:
+        'Complete ingredient lists transcribed from supplier catalog listings (56 products: 52 in stock + 4 out of stock) are NOT manufacturer-certified evidence.',
+    },
     count: filtered.length,
     products: filtered,
   });

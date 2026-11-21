@@ -139,7 +139,7 @@ export function validateCartForCheckout(
         availabilityState: 'VERIFIED_OUT_OF_STOCK',
         inciStatus: product.inciStatus,
         reason:
-          'Purchase disabled: product has verified INCI on file but is currently out of stock.',
+          'Purchase disabled: complete supplier-listing INCI transcription is captured (authoritative manufacturer certification pending), and this product is currently out of stock.',
       });
       continue;
     }

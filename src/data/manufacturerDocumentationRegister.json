@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "2.0.0-rc2-reconciled",
-  "generatedAt": "2026-11-21T04:31:37.057Z",
+  "schemaVersion": "2.1.0-rc2-evidence-classified",
+  "generatedAt": "2026-11-21T05:38:47.977Z",
   "reconciliation": {
     "totalProducts": 110,
     "verifiedComplete": 56,
@@ -16,8 +16,16 @@
         "PP-LB-01-04-YP-EP05"
       ]
     },
+    "evidenceClassification": {
+      "supplierListingCompleteTranscriptions": 56,
+      "supplierListingCompleteInStock": 52,
+      "supplierListingCompleteOutOfStock": 4,
+      "manufacturerCertifiedDocumentsOnFile": 0,
+      "incompleteOrMissingListingsLocked": 54,
+      "classificationRule": "Complete ingredient lists transcribed from Blanka supplier catalog listings (56 products: 52 in stock + 4 out of stock) are NOT manufacturer-certified evidence. Authoritative manufacturer certification requires signed PIF/INCI specification sheets or CoAs logged with documentSource, dateReceived, sku, and qualified human reviewer."
+    },
     "distinctRetailPrices": 78,
-    "unlockPolicy": "NO_MANUAL_UNLOCK_PERMITTED: Unlocking any of the 54 UNVERIFIED_PURCHASE_LOCKED products requires complete untruncated manufacturer INCI/PIF documentation and documented regulatory review."
+    "unlockPolicy": "NO_MANUAL_UNLOCK_PERMITTED: Unlocking any of the 54 UNVERIFIED_PURCHASE_LOCKED products requires authoritative manufacturer INCI/PIF documentation and documented human review."
   },
   "verifiedOutOfStockProducts": [
     {
@@ -26,6 +34,8 @@
       "title": "Dual Tip Eye Definer Pen",
       "price": 25.4,
       "inciStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "inStock": false,
       "availabilityState": "VERIFIED_OUT_OF_STOCK",
       "canPurchase": false
@@ -36,6 +46,8 @@
       "title": "Hyaluronic Acid Serum",
       "price": 35,
       "inciStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "inStock": false,
       "availabilityState": "VERIFIED_OUT_OF_STOCK",
       "canPurchase": false
@@ -46,6 +58,8 @@
       "title": "Lash Rejuvenator",
       "price": 33.3,
       "inciStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "inStock": false,
       "availabilityState": "VERIFIED_OUT_OF_STOCK",
       "canPurchase": false
@@ -56,6 +70,8 @@
       "title": "Vegan Lip Balm",
       "price": 16.6,
       "inciStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "inStock": false,
       "availabilityState": "VERIFIED_OUT_OF_STOCK",
       "canPurchase": false
@@ -97,17 +113,24 @@
       "price": 47.1,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-PC-03-04-CR-AEC",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-CA-03-02-SE-ADEF",
@@ -116,17 +139,24 @@
       "price": 56.7,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-CA-03-02-SE-ADEF",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-SS-05-06-BWSH",
@@ -135,17 +165,24 @@
       "price": 50.2,
       "inStock": false,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-SS-05-06-BWSH",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase (also Out of Stock). Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase (also Out of Stock). Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-CS-01-03-AGL-EB56",
@@ -154,17 +191,24 @@
       "price": 18.6,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 14,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-CS-01-03-AGL-EB56",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-EZ-03-02-RGS",
@@ -173,17 +217,24 @@
       "price": 42.8,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 309,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-EZ-03-02-RGS",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-01-02-BP-AB6",
@@ -192,17 +243,24 @@
       "price": 25.2,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 373,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-BP-AB6",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-LB-01-01-RL-ALL01",
@@ -211,17 +269,24 @@
       "price": 25.9,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_MISSING_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-LB-01-01-RL-ALL01",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain official manufacturer INCI declaration / material specification sheet and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative manufacturer INCI declaration / material specification sheet and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-02-BC-FB105",
@@ -230,17 +295,24 @@
       "price": 31.7,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-BC-FB105",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-FE-05-07-BTT",
@@ -249,17 +321,24 @@
       "price": 24,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 212,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-FE-05-07-BTT",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-FE-05-07-BL-BIO1",
@@ -268,17 +347,24 @@
       "price": 29.9,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-FE-05-07-BL-BIO1",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-02-BL-KBL31",
@@ -287,17 +373,24 @@
       "price": 26.1,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-BL-KBL31",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-EV-06-12-HMO-BBM",
@@ -306,17 +399,24 @@
       "price": 44.9,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 309,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-EV-06-12-HMO-BBM",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-01-02-BR-BRZ01",
@@ -325,17 +425,24 @@
       "price": 37.7,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 249,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-BR-BRZ01",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-01-02-TM-BMZ03",
@@ -344,17 +451,24 @@
       "price": 30.9,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-TM-BMZ03",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-EZ-01-02-BWS",
@@ -363,17 +477,24 @@
       "price": 23,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 143,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-EZ-01-02-BWS",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-CS-01-03-BH-EB180",
@@ -382,17 +503,24 @@
       "price": 28.2,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 14,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-CS-01-03-BH-EB180",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-AB-04-02-MS1",
@@ -401,17 +529,24 @@
       "price": 15.5,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 15,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-AB-04-02-MS1",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-LB-03-02-CL-CO",
@@ -420,17 +555,24 @@
       "price": 37,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-LB-03-02-CL-CO",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-BT-06-09-CDT-COCDT",
@@ -439,17 +581,24 @@
       "price": 25.8,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-BT-06-09-CDT-COCDT",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-BT-06-09-SMP-COSMP",
@@ -458,17 +607,24 @@
       "price": 25.8,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-BT-06-09-SMP-COSMP",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-GF-03-02-CRS",
@@ -477,17 +633,24 @@
       "price": 51.3,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 265,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-GF-03-02-CRS",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-01-04-GE-CPL109",
@@ -496,17 +659,24 @@
       "price": 33.2,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 449,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-04-GE-CPL109",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-02-CC-HC129T",
@@ -515,17 +685,24 @@
       "price": 25.9,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 449,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-CC-HC129T",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-LB-01-02-CS-LC3",
@@ -534,17 +711,24 @@
       "price": 32.7,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-LB-01-02-CS-LC3",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-EV-06-09-CDT-CCDT",
@@ -553,17 +737,24 @@
       "price": 33.5,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 438,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-EV-06-09-CDT-CCDT",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-EV-06-09-CDT-RCDT",
@@ -572,17 +763,24 @@
       "price": 36.2,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-EV-06-09-CDT-RCDT",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-EV-06-09-SMP-RSMP",
@@ -591,17 +789,24 @@
       "price": 36.2,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 377,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-EV-06-09-SMP-RSMP",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-BT-06-12-CRM-CURL",
@@ -610,17 +815,24 @@
       "price": 27,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 422,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-BT-06-12-CRM-CURL",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-01-02-WD-WD145",
@@ -629,17 +841,24 @@
       "price": 31.7,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-WD-WD145",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-04-ED-EDT01",
@@ -648,17 +867,24 @@
       "price": 25.4,
       "inStock": false,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_OUT_OF_STOCK",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "VERIFIED_OUT_OF_STOCK (Verified • Sold Out)",
       "verbatimCharsCaptured": 129,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-04-ED-EDT01",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file, but currently OUT OF STOCK (purchase disabled). Confirm live Shopify inventory restock before sale; obtain signed CoAs for any marketing claims."
+      "requiredAction": "Complete supplier-listing INCI transcription on file (NOT yet manufacturer-certified), currently OUT OF STOCK (purchase disabled). Confirm restock & signed manufacturer INCI/PIF documentation."
     },
     {
       "sku": "PP-PC-03-04-CR-AAC",
@@ -667,17 +893,24 @@
       "price": 64.3,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 344,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-PC-03-04-CR-AAC",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-03-02-HM-SM3D",
@@ -686,17 +919,24 @@
       "price": 27.7,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-03-02-HM-SM3D",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-LB-01-04-YP-EP05",
@@ -705,17 +945,24 @@
       "price": 29.5,
       "inStock": false,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 334,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-LB-01-04-YP-EP05",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase (also Out of Stock). Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase (also Out of Stock). Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-02-BG-BG1",
@@ -724,17 +971,24 @@
       "price": 24.8,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 106,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-BG-BG1",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-01-04-SP-ETM105",
@@ -743,17 +997,24 @@
       "price": 27.4,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-04-SP-ETM105",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-LB-01-02-STP-STP",
@@ -762,17 +1023,24 @@
       "price": 33.2,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 248,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-LB-01-02-STP-STP",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-PC-03-04-SER-FSR",
@@ -781,17 +1049,24 @@
       "price": 59.6,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 258,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-PC-03-04-SER-FSR",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-FE-05-07-WSH",
@@ -800,17 +1075,24 @@
       "price": 21.3,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 303,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-FE-05-07-WSH",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-01-02-FN-FK115",
@@ -819,17 +1101,24 @@
       "price": 37.5,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-FN-FK115",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-PC-01-02-MF-CRP",
@@ -838,17 +1127,24 @@
       "price": 50.2,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 227,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-PC-01-02-MF-CRP",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-01-02-FH-FH100",
@@ -857,17 +1153,24 @@
       "price": 34.6,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-FH-FH100",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-JE-01-04-GE-EG1002",
@@ -876,17 +1179,24 @@
       "price": 28.8,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 411,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-JE-01-04-GE-EG1002",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-JE-01-04-ES-GLT-GLT01",
@@ -895,17 +1205,24 @@
       "price": 28.8,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 405,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-JE-01-04-ES-GLT-GLT01",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-GF-03-02-GLYS",
@@ -914,17 +1231,24 @@
       "price": 50.9,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 210,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-GF-03-02-GLYS",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-BT-06-11-HOL-HSS",
@@ -933,17 +1257,24 @@
       "price": 29,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 291,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-BT-06-11-HOL-HSS",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-BT-06-09-HSP-HPSPR",
@@ -952,17 +1283,24 @@
       "price": 27,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 443,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-BT-06-09-HSP-HPSPR",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-FE-05-07-BGO-BGO1",
@@ -971,17 +1309,24 @@
       "price": 29.9,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 347,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-FE-05-07-BGO-BGO1",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-LB-01-02-HS-HST104",
@@ -990,17 +1335,24 @@
       "price": 34.2,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-LB-01-02-HS-HST104",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-GF-03-02-HAS",
@@ -1009,17 +1361,24 @@
       "price": 35,
       "inStock": false,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_OUT_OF_STOCK",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "VERIFIED_OUT_OF_STOCK (Verified • Sold Out)",
       "verbatimCharsCaptured": 100,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-GF-03-02-HAS",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file, but currently OUT OF STOCK (purchase disabled). Confirm live Shopify inventory restock before sale; obtain signed CoAs for any marketing claims."
+      "requiredAction": "Complete supplier-listing INCI transcription on file (NOT yet manufacturer-certified), currently OUT OF STOCK (purchase disabled). Confirm restock & signed manufacturer INCI/PIF documentation."
     },
     {
       "sku": "PP-PC-03-04-CR-HMZ",
@@ -1028,17 +1387,24 @@
       "price": 64.3,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-PC-03-04-CR-HMZ",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-03-02-CL-HFC",
@@ -1047,17 +1413,24 @@
       "price": 30,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 439,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-03-02-CL-HFC",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-LB-01-01-LO-LO05",
@@ -1066,17 +1439,24 @@
       "price": 28.4,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_MISSING_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-LB-01-01-LO-LO05",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain official manufacturer INCI declaration / material specification sheet and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative manufacturer INCI declaration / material specification sheet and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-EC-03-02-HDS",
@@ -1085,17 +1465,24 @@
       "price": 38.7,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 78,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-EC-03-02-HDS",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-PV-03-02-KCL",
@@ -1104,17 +1491,24 @@
       "price": 43.9,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 421,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-PV-03-02-KCL",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-BT-06-09-CDT-KCDT",
@@ -1123,17 +1517,24 @@
       "price": 25.8,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 354,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-BT-06-09-CDT-KCDT",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-BT-06-09-SMP-KSMP",
@@ -1142,17 +1543,24 @@
       "price": 25.8,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-BT-06-09-SMP-KSMP",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-CO-01-04-KOL-K36",
@@ -1161,17 +1569,24 @@
       "price": 24.1,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 449,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-CO-01-04-KOL-K36",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-CS-01-03-BU-EB88",
@@ -1180,17 +1595,24 @@
       "price": 28.2,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 14,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-CS-01-03-BU-EB88",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-EZ-01-02-BLR",
@@ -1199,17 +1621,24 @@
       "price": 33.3,
       "inStock": false,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_OUT_OF_STOCK",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "VERIFIED_OUT_OF_STOCK (Verified • Sold Out)",
       "verbatimCharsCaptured": 371,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-EZ-01-02-BLR",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file, but currently OUT OF STOCK (purchase disabled). Confirm live Shopify inventory restock before sale; obtain signed CoAs for any marketing claims."
+      "requiredAction": "Complete supplier-listing INCI transcription on file (NOT yet manufacturer-certified), currently OUT OF STOCK (purchase disabled). Confirm restock & signed manufacturer INCI/PIF documentation."
     },
     {
       "sku": "PP-BT-06-11-HMK-HMSK",
@@ -1218,17 +1647,24 @@
       "price": 27.8,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 374,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-BT-06-11-HMK-HMSK",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-LB-03-01-PP-LB01",
@@ -1237,17 +1673,24 @@
       "price": 25.6,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_MISSING_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-LB-03-01-PP-LB01",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain official manufacturer INCI declaration / material specification sheet and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative manufacturer INCI declaration / material specification sheet and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-01-LG-LG27",
@@ -1256,17 +1699,24 @@
       "price": 25.9,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_MISSING_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-01-LG-LG27",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain official manufacturer INCI declaration / material specification sheet and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative manufacturer INCI declaration / material specification sheet and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-CO-01-01-LP-LP48",
@@ -1275,17 +1725,24 @@
       "price": 24.3,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_MISSING_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-CO-01-01-LP-LP48",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain official manufacturer INCI declaration / material specification sheet and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative manufacturer INCI declaration / material specification sheet and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-AM-01-01-LG-PLG02",
@@ -1294,17 +1751,24 @@
       "price": 26.4,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_MISSING_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-AM-01-01-LG-PLG02",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain official manufacturer INCI declaration / material specification sheet and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative manufacturer INCI declaration / material specification sheet and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-CA-01-01-LS-P023-236P",
@@ -1313,17 +1777,24 @@
       "price": 28,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_MISSING_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-CA-01-01-LS-P023-236P",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain official manufacturer INCI declaration / material specification sheet and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative manufacturer INCI declaration / material specification sheet and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-02-QBL02",
@@ -1332,17 +1803,24 @@
       "price": 26.7,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-QBL02",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-04-SH-SHM02",
@@ -1351,17 +1829,24 @@
       "price": 26.4,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_MISSING_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-04-SH-SHM02",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain official manufacturer INCI declaration / material specification sheet and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative manufacturer INCI declaration / material specification sheet and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-01-LML-LML02",
@@ -1370,17 +1855,24 @@
       "price": 31.7,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-01-LML-LML02",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-02-LZ-LMZ01",
@@ -1389,17 +1881,24 @@
       "price": 33.5,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 231,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-LZ-LMZ01",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-EV-06-11-LCDT-LUXE",
@@ -1408,17 +1907,24 @@
       "price": 47.1,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 309,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-EV-06-11-LCDT-LUXE",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MN-01-01-LS-CP29-DE3",
@@ -1427,17 +1933,24 @@
       "price": 26.4,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MN-01-01-LS-CP29-DE3",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MN-01-01-ML-M20-BX3",
@@ -1446,17 +1959,24 @@
       "price": 26.4,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MN-01-01-ML-M20-BX3",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-AB-04-04-MB01",
@@ -1465,17 +1985,24 @@
       "price": 14.9,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_MISSING_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-AB-04-04-MB01",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain official manufacturer INCI declaration / material specification sheet and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative manufacturer INCI declaration / material specification sheet and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-03-02-MR-MR2",
@@ -1484,17 +2011,24 @@
       "price": 27.4,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 277,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-03-02-MR-MR2",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-JE-01-04-MC03",
@@ -1503,17 +2037,24 @@
       "price": 22.8,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-JE-01-04-MC03",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-01-MT-LSP44",
@@ -1522,17 +2063,24 @@
       "price": 28.4,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-01-MT-LSP44",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-CA-01-01-LS-MM2",
@@ -1541,17 +2089,24 @@
       "price": 28,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-CA-01-01-LS-MM2",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-02-MF-SP484",
@@ -1560,17 +2115,24 @@
       "price": 21.6,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 62,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-MF-SP484",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-SS-05-02-MST",
@@ -1579,17 +2141,24 @@
       "price": 50.2,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 449,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-SS-05-02-MST",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-SS-05-07-SMP",
@@ -1598,17 +2167,24 @@
       "price": 42.6,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-SS-05-07-SMP",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-SS-05-04-UEC",
@@ -1617,17 +2193,24 @@
       "price": 53.1,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-SS-05-04-UEC",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-CA-03-02-TO-ELX",
@@ -1636,17 +2219,24 @@
       "price": 36.1,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 417,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-CA-03-02-TO-ELX",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-CS-01-03-MB-EB76",
@@ -1655,17 +2245,24 @@
       "price": 20.9,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 14,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-CS-01-03-MB-EB76",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-PC-03-04-EXFL-MEF",
@@ -1674,17 +2271,24 @@
       "price": 55.2,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-PC-03-04-EXFL-MEF",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-AB-04-02-KJS",
@@ -1693,17 +2297,24 @@
       "price": 15.5,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 18,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-AB-04-02-KJS",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-JE-07-06-NS13",
@@ -1712,17 +2323,24 @@
       "price": 24.9,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 392,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-JE-07-06-NS13",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-GF-03-02-VBS",
@@ -1731,17 +2349,24 @@
       "price": 43.3,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 154,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-GF-03-02-VBS",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-CA-03-02-PP-RNEW",
@@ -1750,17 +2375,24 @@
       "price": 56.7,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-CA-03-02-PP-RNEW",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-PC-03-05-CR-NHC",
@@ -1769,17 +2401,24 @@
       "price": 38,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-PC-03-05-CR-NHC",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-03-02-OM-SM5O",
@@ -1788,17 +2427,24 @@
       "price": 30.9,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 304,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-03-02-OM-SM5O",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-01-02-OC-SS12",
@@ -1807,17 +2453,24 @@
       "price": 26.8,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 286,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-OC-SS12",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-CA-03-02-PP-DMOZ",
@@ -1826,17 +2479,24 @@
       "price": 46.4,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-CA-03-02-PP-DMOZ",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-CS-01-03-PS-EB62",
@@ -1845,17 +2505,24 @@
       "price": 18.8,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 14,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-CS-01-03-PS-EB62",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-LB-01-04-YP-EP10",
@@ -1864,17 +2531,24 @@
       "price": 30.4,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-LB-01-04-YP-EP10",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-AB-04-04-TZ",
@@ -1883,17 +2557,24 @@
       "price": 13.2,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 15,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-AB-04-04-TZ",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-01-02-CP-PCP51",
@@ -1902,17 +2583,24 @@
       "price": 26.1,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-CP-PCP51",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-LO-09-22-CA-HPC03",
@@ -1921,17 +2609,24 @@
       "price": 52.5,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 30,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-LO-09-22-CA-HPC03",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-MB-01-02-SS-SS11A",
@@ -1940,17 +2635,24 @@
       "price": 23.3,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 267,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-SS-SS11A",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-PC-03-06-CR-SBB",
@@ -1959,17 +2661,24 @@
       "price": 41.8,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 378,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-PC-03-06-CR-SBB",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-CO-01-02-SP-SPB1",
@@ -1978,17 +2687,24 @@
       "price": 27.2,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-CO-01-02-SP-SPB1",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-CO-01-04-SP-SPE178",
@@ -1997,17 +2713,24 @@
       "price": 20.3,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 370,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-CO-01-04-SP-SPE178",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-FE-05-07-CG-CG2",
@@ -2016,17 +2739,24 @@
       "price": 38.7,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-FE-05-07-CG-CG2",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-03-02-PP-SE",
@@ -2035,17 +2765,24 @@
       "price": 26.6,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 450,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-03-02-PP-SE",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-CS-01-03-SB-EB250",
@@ -2054,17 +2791,24 @@
       "price": 39.8,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 14,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-CS-01-03-SB-EB250",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-LB-03-02-TDR",
@@ -2073,17 +2817,24 @@
       "price": 43.4,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-LB-03-02-TDR",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-LB-03-02-TMS02",
@@ -2092,17 +2843,24 @@
       "price": 46.4,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-LB-03-02-TMS02",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-MB-01-02-TM-TM-TM100",
@@ -2111,17 +2869,24 @@
       "price": 31.6,
       "inStock": true,
       "inciVerificationStatus": "UNVERIFIED_TRUNCATED_SPEC",
+      "ingredientEvidenceTier": "INCOMPLETE_OR_MISSING_LISTING",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": false,
       "availabilityState": "UNVERIFIED_PURCHASE_LOCKED",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "UNVERIFIED_PURCHASE_LOCKED (Locked)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "MISSING_OR_TRUNCATED_MANUFACTURER_EVIDENCE",
+      "evidenceAuditRecord": {
+        "sku": "PP-MB-01-02-TM-TM-TM100",
+        "documentSource": "PENDING_AUTHORITATIVE_MANUFACTURER_DOCUMENT",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "LOCKED from purchase. Obtain complete untruncated manufacturer INCI specification sheet / PIF and complete documented regulatory review before unlocking."
+      "requiredAction": "LOCKED from purchase. Obtain authoritative untruncated manufacturer INCI specification sheet / PIF and log document source, date received, SKU, and reviewer before unlocking."
     },
     {
       "sku": "PP-JE-04-02-BT",
@@ -2130,17 +2895,24 @@
       "price": 15.5,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-JE-04-02-BT",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     },
     {
       "sku": "PP-FE-03-01-VLB-VLB1",
@@ -2149,17 +2921,24 @@
       "price": 16.6,
       "inStock": false,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_OUT_OF_STOCK",
       "storefrontPurchaseEnabled": false,
       "storefrontSaleStatusLabel": "VERIFIED_OUT_OF_STOCK (Verified • Sold Out)",
       "verbatimCharsCaptured": 275,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-FE-03-01-VLB-VLB1",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file, but currently OUT OF STOCK (purchase disabled). Confirm live Shopify inventory restock before sale; obtain signed CoAs for any marketing claims."
+      "requiredAction": "Complete supplier-listing INCI transcription on file (NOT yet manufacturer-certified), currently OUT OF STOCK (purchase disabled). Confirm restock & signed manufacturer INCI/PIF documentation."
     },
     {
       "sku": "PP-PV-06-09-HSP-VOL",
@@ -2168,17 +2947,24 @@
       "price": 44.9,
       "inStock": true,
       "inciVerificationStatus": "VERIFIED_COMPLETE",
+      "ingredientEvidenceTier": "SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION",
+      "manufacturerCertifiedDocOnFile": false,
       "manufacturerVerified": true,
       "availabilityState": "VERIFIED_IN_STOCK",
       "storefrontPurchaseEnabled": true,
       "storefrontSaleStatusLabel": "VERIFIED_IN_STOCK (Purchase Eligible)",
       "verbatimCharsCaptured": 0,
-      "evidenceFileReference": "Blanka Brand #73904 Verbatim Product Spec Capture (Audit Ref v1.0.0-rc1) — Supplier Signed CoA/PIF Archive Recommended",
+      "evidenceAuditRecord": {
+        "sku": "PP-PV-06-09-HSP-VOL",
+        "documentSource": "Supplier Catalog Listing Transcription Only (Blanka Brand #73904) — Authoritative Manufacturer PIF/INCI Sheet Pending",
+        "dateReceived": "PENDING",
+        "reviewer": "PENDING_HUMAN_REVIEWER"
+      },
       "veganClaimSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "parabenFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_COA",
       "crueltyFreeSubstantiation": "SUPPRESSED_PENDING_SIGNED_MANUFACTURER_ATTESTATION",
       "mocraResponsiblePersonStatus": "PENDING_OWNER_RESPONSIBLE_PERSON_AND_MONITORED_CONTACT_CONFIRMATION",
-      "requiredAction": "Complete verbatim manufacturer INCI on file & in stock. Suppressed vegan/paraben-free/cruelty-free claims require signed manufacturer CoA/attestations before display."
+      "requiredAction": "Complete supplier-listing INCI transcription on file & in stock (NOT yet manufacturer-certified). Obtain signed manufacturer INCI/PIF sheet & CoAs for any marketing claims."
     }
   ]
 }

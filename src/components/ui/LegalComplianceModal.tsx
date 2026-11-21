@@ -159,31 +159,49 @@ export function LegalComplianceModal({
                 US FDA / MoCRA & Health Canada Cosmetic Regulatory Controls
               </h3>
               <p>
-                <strong>Strict Manufacturer INCI Verification Policy (21 CFR § 701.3):</strong>{' '}
+                <strong>Ingredient Evidence Classification & Purchase-Lock Policy (21 CFR § 701.3):</strong>{' '}
                 PrettyPiggie.com prohibits synthetic, reconstructed, or inferred
-                ingredient declarations. Across our{' '}
+                ingredient declarations and explicitly distinguishes between{' '}
+                <strong>
+                  complete ingredient lists transcribed verbatim from supplier
+                  catalog listings
+                </strong>{' '}
+                and{' '}
+                <strong>
+                  authoritative manufacturer-certified documentation
+                </strong>{' '}
+                (signed PIFs, official manufacturer INCI specification sheets,
+                and Certificates of Analysis). Across our{' '}
                 <strong>{CATALOG_RECONCILIATION.totalProducts}-product</strong>{' '}
-                catalogue,{' '}
+                catalogue:{' '}
                 <strong>
-                  {CATALOG_RECONCILIATION.verifiedInStock} products are verified
-                  and in stock
+                  {CATALOG_RECONCILIATION.verifiedInStock} products
                 </strong>{' '}
-                (<code>VERIFIED_IN_STOCK</code> — eligible for checkout once all
-                release gates pass),{' '}
+                have complete supplier-listing INCI transcriptions and are in
+                stock (<code>VERIFIED_IN_STOCK</code> /{' '}
+                <code>SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION</code>),{' '}
                 <strong>
-                  {CATALOG_RECONCILIATION.verifiedOutOfStock} products are
-                  verified but currently out of stock
+                  {CATALOG_RECONCILIATION.verifiedOutOfStock} products
                 </strong>{' '}
-                (<code>VERIFIED_OUT_OF_STOCK</code> — checkout disabled), and{' '}
+                have complete supplier-listing INCI transcriptions but are out
+                of stock (<code>VERIFIED_OUT_OF_STOCK</code> — checkout
+                disabled), and{' '}
                 <strong>
-                  {CATALOG_RECONCILIATION.unverifiedPurchaseLocked} products are
-                  unverified and purchase-locked
+                  {CATALOG_RECONCILIATION.unverifiedPurchaseLocked} products
                 </strong>{' '}
-                (<code>UNVERIFIED_PURCHASE_LOCKED</code>:{' '}
-                {CATALOG_RECONCILIATION.unverifiedTruncatedSpec} truncated +{' '}
-                {CATALOG_RECONCILIATION.unverifiedMissingSpec} missing). No
-                locked product may be unlocked without official manufacturer
-                evidence and documented regulatory review.
+                have truncated ({CATALOG_RECONCILIATION.unverifiedTruncatedSpec})
+                or missing ({CATALOG_RECONCILIATION.unverifiedMissingSpec})
+                supplier listings and remain programmatically purchase-locked (
+                <code>UNVERIFIED_PURCHASE_LOCKED</code>). Authoritative
+                manufacturer-certified documents currently logged:{' '}
+                <strong>
+                  {CATALOG_RECONCILIATION.manufacturerCertifiedDocumentsOnFile}{' '}
+                  of {CATALOG_RECONCILIATION.totalProducts}
+                </strong>{' '}
+                (a supplier-page transcription is never represented as
+                manufacturer-certified evidence). No locked product may be
+                unlocked without authoritative manufacturer documentation and
+                documented human review.
               </p>
               <p>
                 <strong>

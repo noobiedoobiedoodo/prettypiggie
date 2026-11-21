@@ -365,11 +365,12 @@ export function LuxuryFallback2D({
                   Pretty Piggie Makeup Boutique
                 </strong>
                 <p className="text-[11px] text-piggie-600">
-                  Authoritative Manufacturer INCI Verification ({CATALOG_RECONCILIATION.verifiedInStock}{' '}
-                  Verified In Stock • {CATALOG_RECONCILIATION.verifiedOutOfStock}{' '}
-                  Verified Out of Stock •{' '}
+                  Ingredient Evidence Governance ({CATALOG_RECONCILIATION.verifiedInStock}{' '}
+                  Complete Listing In Stock • {CATALOG_RECONCILIATION.verifiedOutOfStock}{' '}
+                  Complete Listing Out of Stock •{' '}
                   {CATALOG_RECONCILIATION.unverifiedPurchaseLocked} Unverified
-                  Locked) • U.S.-Only Launch Scope
+                  Locked • Authoritative Manufacturer Docs Pending) • U.S.-Only
+                  Launch Scope
                 </p>
               </div>
             </div>
