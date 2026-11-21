@@ -12,6 +12,7 @@ import {
 import { CartItem, LegalPolicyTab } from '@/types/boutique';
 import {
   CheckoutSessionResult,
+  PurchaseLockError,
   initiateShopifyCheckout,
   isShopifyConfigured,
 } from '@/lib/shopify';
@@ -43,6 +44,7 @@ export function ShoppingBagDrawer({
   >('shopify');
   const [completedSession, setCompletedSession] =
     useState<CheckoutSessionResult | null>(null);
+  const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const [guestEmail, setGuestEmail] = useState('');
   const [caslMarketingOptIn, setCaslMarketingOptIn] = useState(false);
 
@@ -65,18 +67,30 @@ export function ShoppingBagDrawer({
     method: 'shopify' | 'apple-pay' | 'shop-pay'
   ) => {
     if (items.length === 0) return;
+    setCheckoutError(null);
     setCheckoutMethod(method);
     setIsCheckingOut(true);
 
-    const session = await initiateShopifyCheckout(items, guestEmail);
-    setIsCheckingOut(false);
+    try {
+      const session = await initiateShopifyCheckout(items, guestEmail, method);
+      setIsCheckingOut(false);
 
-    if (session.mode === 'shopify-live') {
-      window.location.href = session.checkoutUrl;
-      return;
+      if (session.mode === 'shopify-live' && !session.isSimulatedPreview) {
+        window.location.href = session.checkoutUrl;
+        return;
+      }
+
+      setCompletedSession(session);
+    } catch (err) {
+      setIsCheckingOut(false);
+      if (err instanceof PurchaseLockError) {
+        setCheckoutError(err.message);
+      } else {
+        setCheckoutError(
+          'Unable to initialize checkout right now. Please try again.'
+        );
+      }
     }
-
-    setCompletedSession(session);
   };
 
   return (
@@ -149,10 +163,21 @@ export function ShoppingBagDrawer({
             />
           </div>
           <p className="mt-1.5 text-[10px] font-semibold text-piggie-700">
-            U.S. Domestic Shipping Only (50 States & D.C.) • Canadian Shipping
-            Disabled Pending Regulatory Gate
+            U.S. Domestic Shipping Scope Only (50 States & D.C.) • Canadian &
+            International Shipping Disabled
           </p>
         </div>
+
+        {/* Server-Side Purchase Lock or Checkout Rejection Banner */}
+        {checkoutError && (
+          <div
+            role="alert"
+            className="mx-5 mt-3 rounded-2xl border border-rose-300 bg-rose-50 px-3.5 py-2.5 text-xs font-medium text-rose-900"
+          >
+            <strong className="block font-bold">Checkout Blocked:</strong>
+            <span>{checkoutError}</span>
+          </div>
+        )}
 
         {/* Completed Order Preview Receipt or Cart Line Items */}
         {completedSession ? (
@@ -163,7 +188,7 @@ export function ShoppingBagDrawer({
                 alt="Pretty Piggie Makeup"
                 className="h-full w-full object-contain"
               />
-              <span className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-600 text-white shadow">
+              <span className="absolute -bottom-1 -right-1 flex h-6 w-6 items-center justify-center rounded-full bg-amber-600 text-white shadow">
                 <CheckCircle2 className="h-4 w-4" />
               </span>
             </div>
@@ -176,25 +201,27 @@ export function ShoppingBagDrawer({
                   ? 'Shop Pay One-Tap'
                   : 'Shopify Guest Checkout'}
               </span>
-              {completedSession.mode === 'shopify-preview' && (
-                <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-900">
-                  Sandbox Preview • No Live Charge
-                </span>
-              )}
+              <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-900 ring-1 ring-amber-300">
+                Simulated Sandbox Preview • Not a Live Order
+              </span>
             </div>
 
             <h3 className="mt-2 font-serif text-2xl font-bold text-piggie-950">
-              Merci! Order Preview Confirmed
+              Sandbox Checkout Preview Only
             </h3>
             <p className="mt-1.5 text-xs leading-relaxed text-piggie-700">
-              Your Pretty Piggie Makeup Virtual Boutique order{' '}
+              Preview Reference{' '}
               <strong className="text-piggie-950">
                 #{completedSession.orderReference}
               </strong>{' '}
-              is ready for Shopify fulfillment.
+              passed server-side INCI purchase-lock validation.{' '}
+              <strong className="text-amber-900">
+                No real payment, order, or shipment was created
+              </strong>{' '}
+              because live Shopify Storefront credentials are not yet connected.
               {completedSession.guestEmail && (
                 <span className="mt-1 block">
-                  Confirmation email:{' '}
+                  Preview email field:{' '}
                   <strong className="text-piggie-950">
                     {completedSession.guestEmail}
                   </strong>
@@ -204,7 +231,7 @@ export function ShoppingBagDrawer({
 
             <div className="mt-5 w-full rounded-2xl border border-piggie-100 bg-piggie-50/70 p-4 text-left text-xs">
               <div className="flex justify-between border-b border-piggie-100 pb-2 font-semibold text-piggie-900">
-                <span>Shopify Cart ID</span>
+                <span>Sandbox Preview ID</span>
                 <span className="font-mono text-[10px] text-piggie-700">
                   {completedSession.cartId}
                 </span>

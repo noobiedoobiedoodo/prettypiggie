@@ -13,6 +13,7 @@ import {
   Star,
   Truck,
 } from 'lucide-react';
+import { isProductPurchasable } from '@/lib/purchaseGuard';
 import {
   BoutiqueProduct,
   LegalPolicyTab,
@@ -65,11 +66,7 @@ export function ProductPresentationSheet({
     useState<boolean>(false);
   const [showBoxMockup, setShowBoxMockup] = useState<boolean>(false);
 
-  const isPurchasable =
-    product.manufacturerVerified &&
-    product.canPurchase &&
-    product.inStock &&
-    selectedShade.inStock;
+  const isPurchasable = isProductPurchasable(product, selectedShade);
 
   const handleAdd = () => {
     if (!isPurchasable) return;
@@ -137,17 +134,35 @@ export function ProductPresentationSheet({
         {/* Scrollable Content Body */}
         <div className="overflow-y-auto px-5 pt-2 pb-4 md:px-6 md:pt-5">
           {/* Mandatory Regulatory Hold Banner When Manufacturer INCI Is Unverified */}
-          {!product.manufacturerVerified && (
+          {product.availabilityState === 'UNVERIFIED_PURCHASE_LOCKED' && (
             <div className="mb-3 flex items-start gap-2.5 rounded-2xl border border-amber-300 bg-amber-50 p-3 text-[11px] leading-snug text-amber-950">
               <Lock className="mt-0.5 h-4 w-4 shrink-0 text-amber-700" />
               <div>
                 <strong className="block font-bold uppercase tracking-wider text-amber-900">
-                  UNVERIFIED — Purchase Disabled Pending Manufacturer INCI Sheet
+                  UNVERIFIED — Purchase Locked Pending Manufacturer INCI Sheet
                 </strong>
                 <span className="mt-0.5 block text-amber-800">
                   Available for 3D virtual preview only. Commercial checkout is
                   locked until the complete, untruncated manufacturer INCI
-                  declaration (`{product.inciStatus}`) is verified on file.
+                  declaration (<code>{product.inciStatus}</code>) is verified on
+                  file and cleared through documented review.
+                </span>
+              </div>
+            </div>
+          )}
+
+          {/* Distinct Banner When Product INCI Is Verified But Inventory Is Out of Stock */}
+          {product.availabilityState === 'VERIFIED_OUT_OF_STOCK' && (
+            <div className="mb-3 flex items-start gap-2.5 rounded-2xl border border-rose-200 bg-rose-50 p-3 text-[11px] leading-snug text-rose-950">
+              <BadgeCheck className="mt-0.5 h-4 w-4 shrink-0 text-rose-700" />
+              <div>
+                <strong className="block font-bold uppercase tracking-wider text-rose-900">
+                  VERIFIED INCI — Temporarily Out of Stock
+                </strong>
+                <span className="mt-0.5 block text-rose-800">
+                  Complete manufacturer INCI documentation is verified on file (
+                  <code>VERIFIED_COMPLETE</code>), but this item is currently
+                  out of stock and unavailable for checkout.
                 </span>
               </div>
             </div>
@@ -165,19 +180,20 @@ export function ProductPresentationSheet({
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-center gap-1.5">
-                  {!product.manufacturerVerified ? (
+                  {product.availabilityState === 'UNVERIFIED_PURCHASE_LOCKED' ? (
                     <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-900 ring-1 ring-amber-300">
                       <Lock className="h-3 w-3" />
-                      UNVERIFIED • Hold
+                      UNVERIFIED • Purchase Locked
                     </span>
-                  ) : isPurchasable ? (
-                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 ring-1 ring-emerald-200">
+                  ) : product.availabilityState === 'VERIFIED_OUT_OF_STOCK' ? (
+                    <span className="inline-flex items-center gap-1 rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-bold text-rose-800 ring-1 ring-rose-200">
                       <BadgeCheck className="h-3 w-3" />
-                      VERIFIED INCI • Ready to Ship
+                      Verified • Out of Stock
                     </span>
                   ) : (
-                    <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-bold text-rose-700">
-                      Sold Out
+                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-700 ring-1 ring-emerald-200">
+                      <BadgeCheck className="h-3 w-3" />
+                      Verified • In Stock
                     </span>
                   )}
                   <span className="rounded-full bg-piggie-100 px-2 py-0.5 text-[10px] font-semibold text-piggie-800">
@@ -505,13 +521,14 @@ export function ProductPresentationSheet({
                   : 'bg-gradient-to-r from-piggie-950 via-piggie-800 to-piggie-950 hover:from-piggie-900 hover:to-piggie-800'
               }`}
             >
-              {!product.manufacturerVerified ? (
+              {product.availabilityState === 'UNVERIFIED_PURCHASE_LOCKED' ? (
                 <>
                   <Lock className="h-3.5 w-3.5 shrink-0" />
                   <span>UNVERIFIED — Purchase Locked</span>
                 </>
-              ) : !isPurchasable ? (
-                <span>Temporarily Sold Out</span>
+              ) : product.availabilityState === 'VERIFIED_OUT_OF_STOCK' ||
+                !isPurchasable ? (
+                <span>Verified INCI • Out of Stock</span>
               ) : addedFeedback ? (
                 <>
                   <Check className="h-4 w-4" />

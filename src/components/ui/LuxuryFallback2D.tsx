@@ -2,7 +2,10 @@
 
 import React, { useState } from 'react';
 import { Check, Eye, ShieldCheck, Sparkles, Star } from 'lucide-react';
-import { BOUTIQUE_ZONES } from '@/data/boutiqueData';
+import {
+  BOUTIQUE_ZONES,
+  CATALOG_RECONCILIATION,
+} from '@/data/boutiqueData';
 import {
   BoutiqueProduct,
   BoutiqueZoneId,
@@ -96,6 +99,19 @@ export function LuxuryFallback2D({
               <p className="mt-2.5 max-w-xl text-xs leading-relaxed text-piggie-100/90 md:text-sm">
                 {currentZone.description}
               </p>
+              <div className="mt-2.5 flex flex-wrap items-center gap-1.5 text-[10px] font-bold">
+                <span className="rounded-full bg-emerald-500/20 px-2.5 py-0.5 text-emerald-200 ring-1 ring-emerald-400/40">
+                  {CATALOG_RECONCILIATION.verifiedInStock} Verified In Stock
+                </span>
+                <span className="rounded-full bg-rose-500/20 px-2.5 py-0.5 text-rose-200 ring-1 ring-rose-400/40">
+                  {CATALOG_RECONCILIATION.verifiedOutOfStock} Verified Out of
+                  Stock
+                </span>
+                <span className="rounded-full bg-amber-500/20 px-2.5 py-0.5 text-amber-200 ring-1 ring-amber-400/40">
+                  {CATALOG_RECONCILIATION.unverifiedPurchaseLocked} Unverified
+                  Locked
+                </span>
+              </div>
 
               {/* Department Quick-Filter Pills */}
               <div className="mt-5 flex flex-wrap gap-2">
@@ -152,18 +168,22 @@ export function LuxuryFallback2D({
                       </span>
                       <span
                         className={`rounded-full px-2.5 py-0.5 text-[10px] font-semibold ${
-                          !product.manufacturerVerified
+                          product.availabilityState ===
+                          'UNVERIFIED_PURCHASE_LOCKED'
                             ? 'bg-amber-100 text-amber-950 ring-1 ring-amber-300'
-                            : !product.inStock
+                            : product.availabilityState ===
+                              'VERIFIED_OUT_OF_STOCK'
                             ? 'bg-rose-600 text-white'
                             : 'bg-piggie-950 text-white'
                         }`}
                       >
-                        {!product.manufacturerVerified
-                          ? 'UNVERIFIED • Hold'
-                          : !product.inStock
-                          ? 'Sold Out'
-                          : product.badge || 'Verified INCI'}
+                        {product.availabilityState ===
+                        'UNVERIFIED_PURCHASE_LOCKED'
+                          ? 'UNVERIFIED • Purchase Locked'
+                          : product.availabilityState ===
+                            'VERIFIED_OUT_OF_STOCK'
+                          ? 'Verified • Out of Stock'
+                          : product.badge || 'Verified • In Stock'}
                       </span>
                     </div>
 
@@ -303,10 +323,11 @@ export function LuxuryFallback2D({
                         : 'bg-piggie-950 hover:bg-piggie-800'
                     }`}
                   >
-                    {!product.manufacturerVerified ? (
-                      <span>UNVERIFIED — Hold</span>
-                    ) : !product.inStock ? (
-                      <span>Sold Out</span>
+                    {product.availabilityState ===
+                    'UNVERIFIED_PURCHASE_LOCKED' ? (
+                      <span>UNVERIFIED — Purchase Locked</span>
+                    ) : product.availabilityState === 'VERIFIED_OUT_OF_STOCK' ? (
+                      <span>Verified • Out of Stock</span>
                     ) : isAdded ? (
                       <>
                         <Check className="h-3.5 w-3.5" />
@@ -344,8 +365,11 @@ export function LuxuryFallback2D({
                   Pretty Piggie Makeup Boutique
                 </strong>
                 <p className="text-[11px] text-piggie-600">
-                  100% Cruelty-Free • Full INCI Ingredient Transparency • 30-Day
-                  Shade Guarantee
+                  Authoritative Manufacturer INCI Verification ({CATALOG_RECONCILIATION.verifiedInStock}{' '}
+                  Verified In Stock • {CATALOG_RECONCILIATION.verifiedOutOfStock}{' '}
+                  Verified Out of Stock •{' '}
+                  {CATALOG_RECONCILIATION.unverifiedPurchaseLocked} Unverified
+                  Locked) • U.S.-Only Launch Scope
                 </p>
               </div>
             </div>

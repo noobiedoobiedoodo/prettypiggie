@@ -13,7 +13,10 @@ import {
   ShoppingBag,
   X,
 } from 'lucide-react';
-import { BOUTIQUE_ZONES } from '@/data/boutiqueData';
+import {
+  BOUTIQUE_ZONES,
+  CATALOG_RECONCILIATION,
+} from '@/data/boutiqueData';
 import {
   BoutiqueProduct,
   BoutiqueZoneId,
@@ -39,7 +42,9 @@ interface BoutiqueNavigationHUDProps {
 
 const CATEGORIES = [
   'All',
-  'Verified Only',
+  'Verified In Stock',
+  'Verified Out of Stock',
+  'Unverified Locked',
   'Lipstick',
   'Lip Gloss',
   'Blush & Glow',
@@ -104,11 +109,26 @@ export function BoutiqueNavigationHUD({
         ];
 
   const searchResults = products.filter((p) => {
-    if (selectedCategory === 'Verified Only' && !p.canPurchase) {
+    if (
+      selectedCategory === 'Verified In Stock' &&
+      p.availabilityState !== 'VERIFIED_IN_STOCK'
+    ) {
+      return false;
+    } else if (
+      selectedCategory === 'Verified Out of Stock' &&
+      p.availabilityState !== 'VERIFIED_OUT_OF_STOCK'
+    ) {
+      return false;
+    } else if (
+      selectedCategory === 'Unverified Locked' &&
+      p.availabilityState !== 'UNVERIFIED_PURCHASE_LOCKED'
+    ) {
       return false;
     } else if (
       selectedCategory !== 'All' &&
-      selectedCategory !== 'Verified Only' &&
+      selectedCategory !== 'Verified In Stock' &&
+      selectedCategory !== 'Verified Out of Stock' &&
+      selectedCategory !== 'Unverified Locked' &&
       p.category !== selectedCategory
     ) {
       return false;
@@ -370,7 +390,11 @@ export function BoutiqueNavigationHUD({
                       </h2>
                       <span className="inline-flex items-center gap-1 rounded-full bg-piggie-100 px-2.5 py-0.5 text-[10px] font-bold text-piggie-800">
                         <BadgeCheck className="h-3.5 w-3.5 text-piggie-600" />
-                        100% Cruelty-Free
+                        {CATALOG_RECONCILIATION.verifiedInStock} Verified In
+                        Stock • {CATALOG_RECONCILIATION.verifiedOutOfStock}{' '}
+                        Verified Out of Stock •{' '}
+                        {CATALOG_RECONCILIATION.unverifiedPurchaseLocked}{' '}
+                        Unverified Locked
                       </span>
                     </div>
                     <p className="mt-0.5 text-[11px] text-piggie-700">
@@ -491,18 +515,18 @@ export function BoutiqueNavigationHUD({
                           <span className="rounded-full bg-piggie-100 px-2 py-0.5 text-[10px] font-semibold text-piggie-700">
                             {prod.category}
                           </span>
-                          {prod.manufacturerVerified ? (
+                          {prod.availabilityState === 'VERIFIED_IN_STOCK' ? (
                             <span className="rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-800 ring-1 ring-emerald-200">
-                              Verified INCI
+                              Verified • In Stock
+                            </span>
+                          ) : prod.availabilityState ===
+                            'VERIFIED_OUT_OF_STOCK' ? (
+                            <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-bold text-rose-800 ring-1 ring-rose-200">
+                              Verified • Out of Stock
                             </span>
                           ) : (
-                            <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-900">
-                              UNVERIFIED • Hold
-                            </span>
-                          )}
-                          {!prod.inStock && (
-                            <span className="rounded-full bg-rose-100 px-2 py-0.5 text-[10px] font-bold text-rose-700">
-                              Sold Out
+                            <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-900 ring-1 ring-amber-300">
+                              UNVERIFIED • Purchase Locked
                             </span>
                           )}
                           {prod.isShowroomFloorHero && (

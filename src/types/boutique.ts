@@ -26,6 +26,21 @@ export type InciVerificationStatus =
   | 'UNVERIFIED_TRUNCATED_SPEC'
   | 'UNVERIFIED_MISSING_SPEC';
 
+export type AvailabilityState =
+  | 'VERIFIED_IN_STOCK'
+  | 'VERIFIED_OUT_OF_STOCK'
+  | 'UNVERIFIED_PURCHASE_LOCKED';
+
+export interface CatalogReconciliationSummary {
+  totalProducts: number;
+  verifiedComplete: number;
+  verifiedInStock: number;
+  verifiedOutOfStock: number;
+  unverifiedPurchaseLocked: number;
+  unverifiedTruncatedSpec: number;
+  unverifiedMissingSpec: number;
+}
+
 export interface CameraWaypoint {
   position: [number, number, number];
   target: [number, number, number];
@@ -99,7 +114,9 @@ export interface BoutiqueProduct {
   manufacturerVerified: boolean;
   /** Manufacturer INCI documentation status */
   inciStatus: InciVerificationStatus;
-  /** True ONLY when manufacturerVerified && inStock */
+  /** Reconciled 3-state availability & regulatory lock state */
+  availabilityState: AvailabilityState;
+  /** True ONLY when availabilityState === 'VERIFIED_IN_STOCK' (manufacturerVerified && inStock) */
   canPurchase: boolean;
   /** First-party proxied Pretty Piggie Makeup Product Render URL */
   primaryImage?: string | null;

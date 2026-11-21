@@ -1,8 +1,10 @@
 import blankaCatalogRaw from './blankaCatalog.json';
 import {
+  AvailabilityState,
   BoutiqueProduct,
   BoutiqueZone,
   BoutiqueZoneId,
+  CatalogReconciliationSummary,
   FinishType,
   InciVerificationStatus,
   ProductModelType,
@@ -546,6 +548,7 @@ interface SanitizedCatalogItem {
   inStock: boolean;
   manufacturerVerified: boolean;
   inciStatus: InciVerificationStatus;
+  availabilityState?: AvailabilityState;
   canPurchase: boolean;
   categoriesText: string;
   imageUrls: string[];
@@ -574,8 +577,18 @@ export const PRETTYPIGGIE_PRODUCTS: BoutiqueProduct[] = rawItems.map((item) => {
     .includes('bestseller');
   const isNewArrival = item.categoriesText.toLowerCase().includes('new');
 
-  const manufacturerVerified = Boolean(item.manufacturerVerified);
-  const canPurchase = Boolean(manufacturerVerified && item.inStock);
+  // Strict deterministic 3-state availability derivation (never trust manual unlock flags)
+  const inciStatus: InciVerificationStatus =
+    item.inciStatus || 'UNVERIFIED_MISSING_SPEC';
+  const manufacturerVerified =
+    Boolean(item.manufacturerVerified) && inciStatus === 'VERIFIED_COMPLETE';
+  const inStock = Boolean(item.inStock);
+  const availabilityState: AvailabilityState = !manufacturerVerified
+    ? 'UNVERIFIED_PURCHASE_LOCKED'
+    : !inStock
+    ? 'VERIFIED_OUT_OF_STOCK'
+    : 'VERIFIED_IN_STOCK';
+  const canPurchase = availabilityState === 'VERIFIED_IN_STOCK';
 
   const regProfile = analyzeRegulatoryProfile(
     item.slug,
@@ -609,24 +622,26 @@ export const PRETTYPIGGIE_PRODUCTS: BoutiqueProduct[] = rawItems.map((item) => {
     isShowroomFloorHero: Boolean(heroPlacement),
     position3D: heroPlacement?.position3D ?? [0, 1.5, 0],
     price: item.price,
-    inStock: item.inStock,
+    inStock,
     manufacturerVerified,
-    inciStatus: item.inciStatus || 'UNVERIFIED_MISSING_SPEC',
+    inciStatus,
+    availabilityState,
     canPurchase,
     primaryImage: item.primaryImage,
     boxImage: item.boxImage,
     rating: 4.9,
     reviewCount: 1,
-    badge: !manufacturerVerified
-      ? 'UNVERIFIED • Hold'
-      : !item.inStock
-      ? 'Sold Out'
-      : heroPlacement?.badge ||
-        (isBestseller
-          ? 'Verified • Bestseller'
-          : isNewArrival
-          ? 'Verified • New'
-          : 'Verified INCI'),
+    badge:
+      availabilityState === 'UNVERIFIED_PURCHASE_LOCKED'
+        ? 'UNVERIFIED • Locked'
+        : availabilityState === 'VERIFIED_OUT_OF_STOCK'
+        ? 'Verified • Out of Stock'
+        : heroPlacement?.badge ||
+          (isBestseller
+            ? 'Verified • Bestseller'
+            : isNewArrival
+            ? 'Verified • New'
+            : 'Verified • In Stock'),
     isBestseller,
     isNewArrival,
     isVegan: regProfile.isVegan,
@@ -667,3 +682,25 @@ export const PRETTYPIGGIE_PRODUCTS: BoutiqueProduct[] = rawItems.map((item) => {
 /** The 11 signature 3D hero products mounted on the 3D showroom shelves, counters, and podiums */
 export const SHOWROOM_FLOOR_PRODUCTS: BoutiqueProduct[] =
   PRETTYPIGGIE_PRODUCTS.filter((p) => p.isShowroomFloorHero);
+
+/** Authoritative reconciled counts matching MANUFACTURER_DOCUMENTATION_REGISTER.md & JSON */
+export const CATALOG_RECONCILIATION: CatalogReconciliationSummary = {
+  totalProducts: PRETTYPIGGIE_PRODUCTS.length,
+  verifiedComplete: PRETTYPIGGIE_PRODUCTS.filter((p) => p.manufacturerVerified)
+    .length,
+  verifiedInStock: PRETTYPIGGIE_PRODUCTS.filter(
+    (p) => p.availabilityState === 'VERIFIED_IN_STOCK'
+  ).length,
+  verifiedOutOfStock: PRETTYPIGGIE_PRODUCTS.filter(
+    (p) => p.availabilityState === 'VERIFIED_OUT_OF_STOCK'
+  ).length,
+  unverifiedPurchaseLocked: PRETTYPIGGIE_PRODUCTS.filter(
+    (p) => p.availabilityState === 'UNVERIFIED_PURCHASE_LOCKED'
+  ).length,
+  unverifiedTruncatedSpec: PRETTYPIGGIE_PRODUCTS.filter(
+    (p) => p.inciStatus === 'UNVERIFIED_TRUNCATED_SPEC'
+  ).length,
+  unverifiedMissingSpec: PRETTYPIGGIE_PRODUCTS.filter(
+    (p) => p.inciStatus === 'UNVERIFIED_MISSING_SPEC'
+  ).length,
+};

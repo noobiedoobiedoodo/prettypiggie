@@ -23,12 +23,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-PC-03-04-CR-AEC-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-age-defying-serum",
@@ -54,12 +55,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-CA-03-02-SE-ADEF-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-all-in-one-body-wash",
@@ -89,7 +91,8 @@
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-angled-liner-brush",
@@ -119,7 +122,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-anti-aging-rose-gold-oil",
@@ -150,7 +154,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-automatic-eyebrow-pencil",
@@ -213,7 +218,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-automatic-lip-liner",
@@ -239,7 +245,7 @@
         "rgb": "rgb(216, 88, 98)",
         "hex": "#D85862",
         "sku": "PP-LB-01-01-RL-ALL01-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "automatic-lip-liner-2",
@@ -247,7 +253,7 @@
         "rgb": "rgb(158, 40, 92)",
         "hex": "#9E285C",
         "sku": "PP-LB-01-01-RL-ALL01-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "automatic-lip-liner-3",
@@ -255,12 +261,13 @@
         "rgb": "rgb(185, 24, 45)",
         "hex": "#B9182D",
         "sku": "PP-LB-01-01-RL-ALL01-03",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-bb-cream",
@@ -286,7 +293,7 @@
         "rgb": "rgb(203, 174, 145)",
         "hex": "#CBAE91",
         "sku": "PP-MB-01-02-BC-FB105-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "bb-cream-2",
@@ -294,7 +301,7 @@
         "rgb": "rgb(188, 151, 107)",
         "hex": "#BC976B",
         "sku": "PP-MB-01-02-BC-FB105-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "bb-cream-3",
@@ -302,7 +309,7 @@
         "rgb": "rgb(207, 173, 136)",
         "hex": "#CFAD88",
         "sku": "PP-MB-01-02-BC-FB105-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "bb-cream-4",
@@ -310,7 +317,7 @@
         "rgb": "rgb(214, 189, 161)",
         "hex": "#D6BDA1",
         "sku": "PP-MB-01-02-BC-FB105-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "bb-cream-5",
@@ -318,7 +325,7 @@
         "rgb": "rgb(176, 140, 114)",
         "hex": "#B08C72",
         "sku": "PP-MB-01-02-BC-FB105-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "bb-cream-6",
@@ -326,7 +333,7 @@
         "rgb": "rgb(224, 193, 175)",
         "hex": "#E0C1AF",
         "sku": "PP-MB-01-02-BC-FB105-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "bb-cream-7",
@@ -334,7 +341,7 @@
         "rgb": "rgb(179, 134, 100)",
         "hex": "#B38664",
         "sku": "PP-MB-01-02-BC-FB105-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "bb-cream-8",
@@ -342,7 +349,7 @@
         "rgb": "rgb(154, 122, 94)",
         "hex": "#9A7A5E",
         "sku": "PP-MB-01-02-BC-FB105-08",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "bb-cream-9",
@@ -350,12 +357,13 @@
         "rgb": "rgb(173, 138, 107)",
         "hex": "#AD8A6B",
         "sku": "PP-MB-01-02-BC-FB105-09",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-beard-butter",
@@ -385,7 +393,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-beard-oil",
@@ -411,7 +420,7 @@
         "rgb": "rgb(234, 229, 175)",
         "hex": "#EAE5AF",
         "sku": "PP-FE-05-07-BL-BIO1-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "beard-oil-2",
@@ -419,7 +428,7 @@
         "rgb": "rgb(234, 229, 175)",
         "hex": "#EAE5AF",
         "sku": "PP-FE-05-07-BL-BIO1-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "beard-oil-3",
@@ -427,12 +436,13 @@
         "rgb": "rgb(234, 229, 175)",
         "hex": "#EAE5AF",
         "sku": "PP-FE-05-07-BL-BIO1-03",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-blush-palette",
@@ -458,7 +468,7 @@
         "rgb": "rgb(255, 137, 104)",
         "hex": "#FF8968",
         "sku": "PP-MB-01-02-BL-KBL31-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "blush-palette-2",
@@ -466,7 +476,7 @@
         "rgb": "rgb(213, 137, 118)",
         "hex": "#D58976",
         "sku": "PP-MB-01-02-BL-KBL31-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "blush-palette-3",
@@ -474,12 +484,13 @@
         "rgb": "rgb(202, 106, 105)",
         "hex": "#CA6A69",
         "sku": "PP-MB-01-02-BL-KBL31-03",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-bounce-boost-mousse",
@@ -509,7 +520,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-bronzer",
@@ -564,7 +576,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-bronzing-moisturizer",
@@ -590,7 +603,7 @@
         "rgb": "rgb(66, 36, 15)",
         "hex": "#42240F",
         "sku": "PP-MB-01-02-TM-BMZ03-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "bronzing-moisturizer-2",
@@ -598,7 +611,7 @@
         "rgb": "rgb(144, 91, 50)",
         "hex": "#905B32",
         "sku": "PP-MB-01-02-TM-BMZ03-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "bronzing-moisturizer-3",
@@ -606,12 +619,13 @@
         "rgb": "rgb(133, 96, 64)",
         "hex": "#856040",
         "sku": "PP-MB-01-02-TM-BMZ03-03",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-brow-soap",
@@ -641,7 +655,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-cheek-fan-brush",
@@ -671,7 +686,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-classic-blender",
@@ -701,7 +717,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-cleansing-oil",
@@ -727,12 +744,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-LB-03-02-CL-CO-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-coconut-moisture-conditioner",
@@ -757,12 +775,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-BT-06-09-CDT-COCDT-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-coconut-moisture-shampoo",
@@ -787,12 +806,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-BT-06-09-SMP-COSMP-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-collagen-and-retinol-serum",
@@ -823,7 +843,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-color-rich-pro-line",
@@ -849,12 +870,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-MB-01-04-GE-CPL109-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-concealing-cream",
@@ -880,7 +902,7 @@
         "rgb": "rgb(138, 95, 79)",
         "hex": "#8A5F4F",
         "sku": "PP-MB-01-02-CC-HC129T-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "concealing-cream-2",
@@ -888,7 +910,7 @@
         "rgb": "rgb(183, 132, 96)",
         "hex": "#B78460",
         "sku": "PP-MB-01-02-CC-HC129T-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "concealing-cream-3",
@@ -896,7 +918,7 @@
         "rgb": "rgb(211, 157, 123)",
         "hex": "#D39D7B",
         "sku": "PP-MB-01-02-CC-HC129T-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "concealing-cream-4",
@@ -904,7 +926,7 @@
         "rgb": "rgb(248, 222, 183)",
         "hex": "#F8DEB7",
         "sku": "PP-MB-01-02-CC-HC129T-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "concealing-cream-5",
@@ -912,7 +934,7 @@
         "rgb": "rgb(205, 165, 131)",
         "hex": "#CDA583",
         "sku": "PP-MB-01-02-CC-HC129T-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "concealing-cream-6",
@@ -920,7 +942,7 @@
         "rgb": "rgb(164, 110, 76)",
         "hex": "#A46E4C",
         "sku": "PP-MB-01-02-CC-HC129T-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "concealing-cream-7",
@@ -928,7 +950,7 @@
         "rgb": "rgb(236, 194, 158)",
         "hex": "#ECC29E",
         "sku": "PP-MB-01-02-CC-HC129T-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "concealing-cream-8",
@@ -936,7 +958,7 @@
         "rgb": "rgb(236, 195, 165)",
         "hex": "#ECC3A5",
         "sku": "PP-MB-01-02-CC-HC129T-08",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "concealing-cream-9",
@@ -944,7 +966,7 @@
         "rgb": "rgb(229, 181, 147)",
         "hex": "#E5B593",
         "sku": "PP-MB-01-02-CC-HC129T-09",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "concealing-cream-10",
@@ -952,12 +974,13 @@
         "rgb": "rgb(235, 205, 180)",
         "hex": "#EBCDB4",
         "sku": "PP-MB-01-02-CC-HC129T-10",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-creme-concealer-stick",
@@ -983,7 +1006,7 @@
         "rgb": "rgb(199, 176, 147)",
         "hex": "#C7B093",
         "sku": "PP-LB-01-02-CS-LC3-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "creme-concealer-stick-2",
@@ -991,7 +1014,7 @@
         "rgb": "rgb(217, 190, 164)",
         "hex": "#D9BEA4",
         "sku": "PP-LB-01-02-CS-LC3-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "creme-concealer-stick-3",
@@ -999,7 +1022,7 @@
         "rgb": "rgb(227, 199, 161)",
         "hex": "#E3C7A1",
         "sku": "PP-LB-01-02-CS-LC3-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "creme-concealer-stick-4",
@@ -1007,7 +1030,7 @@
         "rgb": "rgb(226, 187, 140)",
         "hex": "#E2BB8C",
         "sku": "PP-LB-01-02-CS-LC3-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "creme-concealer-stick-5",
@@ -1015,7 +1038,7 @@
         "rgb": "rgb(133, 87, 59)",
         "hex": "#85573B",
         "sku": "PP-LB-01-02-CS-LC3-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "creme-concealer-stick-6",
@@ -1023,7 +1046,7 @@
         "rgb": "rgb(142, 103, 67)",
         "hex": "#8E6743",
         "sku": "PP-LB-01-02-CS-LC3-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "creme-concealer-stick-7",
@@ -1031,7 +1054,7 @@
         "rgb": "rgb(133, 85, 57)",
         "hex": "#855539",
         "sku": "PP-LB-01-02-CS-LC3-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "creme-concealer-stick-8",
@@ -1039,7 +1062,7 @@
         "rgb": "rgb(189, 149, 104)",
         "hex": "#BD9568",
         "sku": "PP-LB-01-02-CS-LC3-08",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "creme-concealer-stick-9",
@@ -1047,12 +1070,13 @@
         "rgb": "rgb(222, 182, 131)",
         "hex": "#DEB683",
         "sku": "PP-LB-01-02-CS-LC3-09",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-daily-curl-conditioner",
@@ -1082,7 +1106,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-daily-repair-conditioner",
@@ -1107,12 +1132,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-EV-06-09-CDT-RCDT-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-daily-repair-shampoo",
@@ -1142,7 +1168,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-define-hold-curl-cream",
@@ -1172,7 +1199,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-dual-blend-powder-foundation",
@@ -1198,7 +1226,7 @@
         "rgb": "rgb(88, 38, 17)",
         "hex": "#582611",
         "sku": "PP-MB-01-02-WD-WD145-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-2",
@@ -1206,7 +1234,7 @@
         "rgb": "rgb(127, 70, 52)",
         "hex": "#7F4634",
         "sku": "PP-MB-01-02-WD-WD145-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-3",
@@ -1214,7 +1242,7 @@
         "rgb": "rgb(230, 194, 165)",
         "hex": "#E6C2A5",
         "sku": "PP-MB-01-02-WD-WD145-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-4",
@@ -1222,7 +1250,7 @@
         "rgb": "rgb(130, 75, 33)",
         "hex": "#824B21",
         "sku": "PP-MB-01-02-WD-WD145-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-5",
@@ -1230,7 +1258,7 @@
         "rgb": "rgb(173, 122, 97)",
         "hex": "#AD7A61",
         "sku": "PP-MB-01-02-WD-WD145-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-6",
@@ -1238,7 +1266,7 @@
         "rgb": "rgb(106, 51, 25)",
         "hex": "#6A3319",
         "sku": "PP-MB-01-02-WD-WD145-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-7",
@@ -1246,7 +1274,7 @@
         "rgb": "rgb(180, 144, 122)",
         "hex": "#B4907A",
         "sku": "PP-MB-01-02-WD-WD145-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-8",
@@ -1254,7 +1282,7 @@
         "rgb": "rgb(191, 142, 108)",
         "hex": "#BF8E6C",
         "sku": "PP-MB-01-02-WD-WD145-08",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-9",
@@ -1262,7 +1290,7 @@
         "rgb": "rgb(217, 161, 120)",
         "hex": "#D9A178",
         "sku": "PP-MB-01-02-WD-WD145-09",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-10",
@@ -1270,7 +1298,7 @@
         "rgb": "rgb(225, 177, 137)",
         "hex": "#E1B189",
         "sku": "PP-MB-01-02-WD-WD145-10",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-11",
@@ -1278,7 +1306,7 @@
         "rgb": "rgb(242, 207, 188)",
         "hex": "#F2CFBC",
         "sku": "PP-MB-01-02-WD-WD145-11",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-12",
@@ -1286,7 +1314,7 @@
         "rgb": "rgb(225, 185, 153)",
         "hex": "#E1B999",
         "sku": "PP-MB-01-02-WD-WD145-12",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "dual-blend-powder-foundation-13",
@@ -1294,12 +1322,13 @@
         "rgb": "rgb(222, 173, 146)",
         "hex": "#DEAD92",
         "sku": "PP-MB-01-02-WD-WD145-13",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-dual-tip-eye-definer-pen",
@@ -1330,7 +1359,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "VERIFIED_OUT_OF_STOCK"
   },
   {
     "id": "pp-embrace-collagen-moisturizer",
@@ -1361,7 +1391,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-extreme-moisture-blend",
@@ -1387,12 +1418,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-MB-03-02-HM-SM3D-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-eye-lip-primer",
@@ -1423,7 +1455,8 @@
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-eyebrow-gel",
@@ -1454,7 +1487,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-eyeshadow-palette",
@@ -1480,7 +1514,7 @@
         "rgb": "rgb(154, 113, 97)",
         "hex": "#9A7161",
         "sku": "PP-MB-01-04-SP-ETM105-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "eyeshadow-palette-2",
@@ -1488,7 +1522,7 @@
         "rgb": "rgb(184, 146, 115)",
         "hex": "#B89273",
         "sku": "PP-MB-01-04-SP-ETM105-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "eyeshadow-palette-3",
@@ -1496,7 +1530,7 @@
         "rgb": "rgb(209, 151, 112)",
         "hex": "#D19770",
         "sku": "PP-MB-01-04-SP-ETM105-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "eyeshadow-palette-4",
@@ -1504,7 +1538,7 @@
         "rgb": "rgb(170, 134, 108)",
         "hex": "#AA866C",
         "sku": "PP-MB-01-04-SP-ETM105-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "eyeshadow-palette-5",
@@ -1512,12 +1546,13 @@
         "rgb": "rgb(106, 78, 92)",
         "hex": "#6A4E5C",
         "sku": "PP-MB-01-04-SP-ETM105-05",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-finishing-powder",
@@ -1548,7 +1583,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-firm-serum",
@@ -1579,7 +1615,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-foaming-beard-wash",
@@ -1609,7 +1646,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-foundation",
@@ -1635,7 +1673,7 @@
         "rgb": "rgb(170, 132, 100)",
         "hex": "#AA8464",
         "sku": "PP-MB-01-02-FN-FK115-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-2",
@@ -1643,7 +1681,7 @@
         "rgb": "rgb(165, 116, 82)",
         "hex": "#A57452",
         "sku": "PP-MB-01-02-FN-FK115-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-3",
@@ -1651,7 +1689,7 @@
         "rgb": "rgb(254, 242, 213)",
         "hex": "#FEF2D5",
         "sku": "PP-MB-01-02-FN-FK115-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-4",
@@ -1659,7 +1697,7 @@
         "rgb": "rgb(144, 94, 49)",
         "hex": "#905E31",
         "sku": "PP-MB-01-02-FN-FK115-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-5",
@@ -1667,7 +1705,7 @@
         "rgb": "rgb(198, 154, 116)",
         "hex": "#C69A74",
         "sku": "PP-MB-01-02-FN-FK115-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-6",
@@ -1675,7 +1713,7 @@
         "rgb": "rgb(128, 77, 54)",
         "hex": "#804D36",
         "sku": "PP-MB-01-02-FN-FK115-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-7",
@@ -1683,7 +1721,7 @@
         "rgb": "rgb(190, 154, 116)",
         "hex": "#BE9A74",
         "sku": "PP-MB-01-02-FN-FK115-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-8",
@@ -1691,7 +1729,7 @@
         "rgb": "rgb(159, 107, 73)",
         "hex": "#9F6B49",
         "sku": "PP-MB-01-02-FN-FK115-08",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-9",
@@ -1699,7 +1737,7 @@
         "rgb": "rgb(206, 133, 79)",
         "hex": "#CE854F",
         "sku": "PP-MB-01-02-FN-FK115-09",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-10",
@@ -1707,7 +1745,7 @@
         "rgb": "rgb(215, 175, 150)",
         "hex": "#D7AF96",
         "sku": "PP-MB-01-02-FN-FK115-10",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-11",
@@ -1715,7 +1753,7 @@
         "rgb": "rgb(205, 168, 138)",
         "hex": "#CDA88A",
         "sku": "PP-MB-01-02-FN-FK115-11",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-12",
@@ -1723,7 +1761,7 @@
         "rgb": "rgb(255, 218, 178)",
         "hex": "#FFDAB2",
         "sku": "PP-MB-01-02-FN-FK115-12",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-13",
@@ -1731,7 +1769,7 @@
         "rgb": "rgb(206, 177, 150)",
         "hex": "#CEB196",
         "sku": "PP-MB-01-02-FN-FK115-13",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-14",
@@ -1739,7 +1777,7 @@
         "rgb": "rgb(207, 164, 135)",
         "hex": "#CFA487",
         "sku": "PP-MB-01-02-FN-FK115-14",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-15",
@@ -1747,7 +1785,7 @@
         "rgb": "rgb(83, 45, 24)",
         "hex": "#532D18",
         "sku": "PP-MB-01-02-FN-FK115-15",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-16",
@@ -1755,7 +1793,7 @@
         "rgb": "rgb(188, 149, 121)",
         "hex": "#BC9579",
         "sku": "PP-MB-01-02-FN-FK115-16",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "foundation-17",
@@ -1763,12 +1801,13 @@
         "rgb": "rgb(133, 93, 61)",
         "hex": "#855D3D",
         "sku": "PP-MB-01-02-FN-FK115-17",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-foundation-primer",
@@ -1799,7 +1838,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-full-cover-foundation",
@@ -1825,7 +1865,7 @@
         "rgb": "rgb(217, 195, 175)",
         "hex": "#D9C3AF",
         "sku": "PP-MB-01-02-FH-FH100-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-2",
@@ -1833,7 +1873,7 @@
         "rgb": "rgb(228, 212, 192)",
         "hex": "#E4D4C0",
         "sku": "PP-MB-01-02-FH-FH100-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-3",
@@ -1841,7 +1881,7 @@
         "rgb": "rgb(239, 210, 185)",
         "hex": "#EFD2B9",
         "sku": "PP-MB-01-02-FH-FH100-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-4",
@@ -1849,7 +1889,7 @@
         "rgb": "rgb(233, 203, 168)",
         "hex": "#E9CBA8",
         "sku": "PP-MB-01-02-FH-FH100-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-5",
@@ -1857,7 +1897,7 @@
         "rgb": "rgb(245, 197, 146)",
         "hex": "#F5C592",
         "sku": "PP-MB-01-02-FH-FH100-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-6",
@@ -1865,7 +1905,7 @@
         "rgb": "rgb(195, 169, 130)",
         "hex": "#C3A982",
         "sku": "PP-MB-01-02-FH-FH100-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-7",
@@ -1873,7 +1913,7 @@
         "rgb": "rgb(202, 158, 123)",
         "hex": "#CA9E7B",
         "sku": "PP-MB-01-02-FH-FH100-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-8",
@@ -1881,7 +1921,7 @@
         "rgb": "rgb(206, 147, 96)",
         "hex": "#CE9360",
         "sku": "PP-MB-01-02-FH-FH100-08",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-9",
@@ -1889,7 +1929,7 @@
         "rgb": "rgb(137, 91, 51)",
         "hex": "#895B33",
         "sku": "PP-MB-01-02-FH-FH100-09",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-10",
@@ -1897,7 +1937,7 @@
         "rgb": "rgb(169, 111, 71)",
         "hex": "#A96F47",
         "sku": "PP-MB-01-02-FH-FH100-10",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-11",
@@ -1905,7 +1945,7 @@
         "rgb": "rgb(160, 101, 66)",
         "hex": "#A06542",
         "sku": "PP-MB-01-02-FH-FH100-11",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-12",
@@ -1913,7 +1953,7 @@
         "rgb": "rgb(98, 60, 38)",
         "hex": "#623C26",
         "sku": "PP-MB-01-02-FH-FH100-12",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-13",
@@ -1921,7 +1961,7 @@
         "rgb": "rgb(126, 64, 34)",
         "hex": "#7E4022",
         "sku": "PP-MB-01-02-FH-FH100-13",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-14",
@@ -1929,7 +1969,7 @@
         "rgb": "rgb(121, 68, 26)",
         "hex": "#79441A",
         "sku": "PP-MB-01-02-FH-FH100-14",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-15",
@@ -1937,7 +1977,7 @@
         "rgb": "rgb(230, 199, 171)",
         "hex": "#E6C7AB",
         "sku": "PP-MB-01-02-FH-FH100-15",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "full-cover-foundation-16",
@@ -1945,12 +1985,13 @@
         "rgb": "rgb(203, 149, 95)",
         "hex": "#CB955F",
         "sku": "PP-MB-01-02-FH-FH100-16",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-gel-eyeliner",
@@ -1997,7 +2038,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-glitter-dust",
@@ -2052,7 +2094,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-glycolic-acid-serum",
@@ -2083,7 +2126,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-hair-scalp-renewal-serum",
@@ -2114,7 +2158,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-heat-protective-spray",
@@ -2144,7 +2189,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-hemp-infused-beard-growth-oil",
@@ -2175,7 +2221,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-highlighter-stick",
@@ -2201,7 +2248,7 @@
         "rgb": "rgb(230, 208, 220)",
         "hex": "#E6D0DC",
         "sku": "PP-LB-01-02-HS-HST104-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "highlighter-stick-2",
@@ -2209,7 +2256,7 @@
         "rgb": "rgb(218, 185, 199)",
         "hex": "#DAB9C7",
         "sku": "PP-LB-01-02-HS-HST104-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "highlighter-stick-3",
@@ -2217,7 +2264,7 @@
         "rgb": "rgb(206, 149, 128)",
         "hex": "#CE9580",
         "sku": "PP-LB-01-02-HS-HST104-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "highlighter-stick-4",
@@ -2225,12 +2272,13 @@
         "rgb": "rgb(229, 192, 172)",
         "hex": "#E5C0AC",
         "sku": "PP-LB-01-02-HS-HST104-04",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-hyaluronic-acid-serum",
@@ -2261,7 +2309,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "VERIFIED_OUT_OF_STOCK"
   },
   {
     "id": "pp-hyaluronic-moisturizer",
@@ -2287,12 +2336,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-PC-03-04-CR-HMZ-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-hydrating-facial-cleanser",
@@ -2323,7 +2373,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-hydrating-lip-oil",
@@ -2349,7 +2400,7 @@
         "rgb": "rgb(224, 111, 106)",
         "hex": "#E06F6A",
         "sku": "PP-LB-01-01-LO-LO05-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "hydrating-lip-oil-2",
@@ -2357,7 +2408,7 @@
         "rgb": "rgb(177, 109, 118)",
         "hex": "#B16D76",
         "sku": "PP-LB-01-01-LO-LO05-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "hydrating-lip-oil-3",
@@ -2365,7 +2416,7 @@
         "rgb": "rgb(187, 85, 111)",
         "hex": "#BB556F",
         "sku": "PP-LB-01-01-LO-LO05-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "hydrating-lip-oil-4",
@@ -2373,7 +2424,7 @@
         "rgb": "rgb(179, 131, 120)",
         "hex": "#B38378",
         "sku": "PP-LB-01-01-LO-LO05-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "hydrating-lip-oil-5",
@@ -2381,7 +2432,7 @@
         "rgb": "rgb(246, 244, 243)",
         "hex": "#F6F4F3",
         "sku": "PP-LB-01-01-LO-LO05-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "hydrating-lip-oil-6",
@@ -2389,12 +2440,13 @@
         "rgb": "rgb(125, 75, 74)",
         "hex": "#7D4B4A",
         "sku": "PP-LB-01-01-LO-LO05-06",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-hydration-serum",
@@ -2425,7 +2477,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-kale-face-cleanser",
@@ -2455,7 +2508,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-keratin-smoothing-conditioner",
@@ -2485,7 +2539,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-keratin-smoothing-shampoo",
@@ -2510,12 +2565,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-BT-06-09-SMP-KSMP-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-khol-eyeliner",
@@ -2541,7 +2597,7 @@
         "rgb": "rgb(255, 255, 255)",
         "hex": "#FFFFFF",
         "sku": "PP-CO-01-04-KOL-K36-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "khol-eyeliner-2",
@@ -2549,7 +2605,7 @@
         "rgb": "rgb(69, 55, 46)",
         "hex": "#45372E",
         "sku": "PP-CO-01-04-KOL-K36-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "khol-eyeliner-3",
@@ -2557,7 +2613,7 @@
         "rgb": "rgb(66, 114, 169)",
         "hex": "#4272A9",
         "sku": "PP-CO-01-04-KOL-K36-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "khol-eyeliner-4",
@@ -2565,7 +2621,7 @@
         "rgb": "rgb(62, 99, 79)",
         "hex": "#3E634F",
         "sku": "PP-CO-01-04-KOL-K36-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "khol-eyeliner-5",
@@ -2573,12 +2629,13 @@
         "rgb": "rgb(0, 0, 0)",
         "hex": "#000000",
         "sku": "PP-CO-01-04-KOL-K36-05",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-large-blurrer-brush",
@@ -2608,7 +2665,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-lash-rejuvenator",
@@ -2639,7 +2697,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "VERIFIED_OUT_OF_STOCK"
   },
   {
     "id": "pp-leave-in-hair-mask",
@@ -2669,7 +2728,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-lip-butter",
@@ -2695,12 +2755,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-LB-03-01-PP-LB01-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-lip-gloss",
@@ -2726,7 +2787,7 @@
         "rgb": "rgb(214, 149, 159)",
         "hex": "#D6959F",
         "sku": "PP-MB-01-01-LG-LG27-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-2",
@@ -2734,7 +2795,7 @@
         "rgb": "rgb(179, 52, 90)",
         "hex": "#B3345A",
         "sku": "PP-MB-01-01-LG-LG27-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-3",
@@ -2742,7 +2803,7 @@
         "rgb": "rgb(234, 154, 122)",
         "hex": "#EA9A7A",
         "sku": "PP-MB-01-01-LG-LG27-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-4",
@@ -2750,7 +2811,7 @@
         "rgb": "rgb(253, 170, 196)",
         "hex": "#FDAAC4",
         "sku": "PP-MB-01-01-LG-LG27-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-5",
@@ -2758,7 +2819,7 @@
         "rgb": "rgb(226, 170, 144)",
         "hex": "#E2AA90",
         "sku": "PP-MB-01-01-LG-LG27-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-6",
@@ -2766,7 +2827,7 @@
         "rgb": "rgb(248, 232, 238)",
         "hex": "#F8E8EE",
         "sku": "PP-MB-01-01-LG-LG27-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-7",
@@ -2774,7 +2835,7 @@
         "rgb": "rgb(178, 91, 111)",
         "hex": "#B25B6F",
         "sku": "PP-MB-01-01-LG-LG27-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-8",
@@ -2782,7 +2843,7 @@
         "rgb": "rgb(249, 181, 199)",
         "hex": "#F9B5C7",
         "sku": "PP-MB-01-01-LG-LG27-08",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-9",
@@ -2790,7 +2851,7 @@
         "rgb": "rgb(228, 219, 220)",
         "hex": "#E4DBDC",
         "sku": "PP-MB-01-01-LG-LG27-09",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-10",
@@ -2798,7 +2859,7 @@
         "rgb": "rgb(241, 122, 138)",
         "hex": "#F17A8A",
         "sku": "PP-MB-01-01-LG-LG27-10",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-11",
@@ -2806,7 +2867,7 @@
         "rgb": "rgb(179, 118, 107)",
         "hex": "#B3766B",
         "sku": "PP-MB-01-01-LG-LG27-11",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-12",
@@ -2814,7 +2875,7 @@
         "rgb": "rgb(181, 101, 98)",
         "hex": "#B56562",
         "sku": "PP-MB-01-01-LG-LG27-12",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-13",
@@ -2822,7 +2883,7 @@
         "rgb": "rgb(205, 156, 145)",
         "hex": "#CD9C91",
         "sku": "PP-MB-01-01-LG-LG27-13",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-14",
@@ -2830,7 +2891,7 @@
         "rgb": "rgb(211, 115, 121)",
         "hex": "#D37379",
         "sku": "PP-MB-01-01-LG-LG27-14",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-gloss-15",
@@ -2838,12 +2899,13 @@
         "rgb": "rgb(128, 0, 13)",
         "hex": "#80000D",
         "sku": "PP-MB-01-01-LG-LG27-15",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-lip-liner",
@@ -2869,7 +2931,7 @@
         "rgb": "rgb(142, 58, 51)",
         "hex": "#8E3A33",
         "sku": "PP-CO-01-01-LP-LP48-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-2",
@@ -2877,7 +2939,7 @@
         "rgb": "rgb(176, 94, 70)",
         "hex": "#B05E46",
         "sku": "PP-CO-01-01-LP-LP48-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-3",
@@ -2885,7 +2947,7 @@
         "rgb": "rgb(194, 38, 78)",
         "hex": "#C2264E",
         "sku": "PP-CO-01-01-LP-LP48-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-4",
@@ -2893,7 +2955,7 @@
         "rgb": "rgb(129, 9, 36)",
         "hex": "#810924",
         "sku": "PP-CO-01-01-LP-LP48-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-5",
@@ -2901,7 +2963,7 @@
         "rgb": "rgb(144, 38, 64)",
         "hex": "#902640",
         "sku": "PP-CO-01-01-LP-LP48-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-6",
@@ -2909,7 +2971,7 @@
         "rgb": "rgb(129, 41, 30)",
         "hex": "#81291E",
         "sku": "PP-CO-01-01-LP-LP48-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-7",
@@ -2917,7 +2979,7 @@
         "rgb": "rgb(213, 23, 0)",
         "hex": "#D51700",
         "sku": "PP-CO-01-01-LP-LP48-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-8",
@@ -2925,7 +2987,7 @@
         "rgb": "rgb(162, 13, 48)",
         "hex": "#A20D30",
         "sku": "PP-CO-01-01-LP-LP48-08",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-9",
@@ -2933,7 +2995,7 @@
         "rgb": "rgb(179, 17, 18)",
         "hex": "#B31112",
         "sku": "PP-CO-01-01-LP-LP48-09",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-10",
@@ -2941,7 +3003,7 @@
         "rgb": "rgb(144, 65, 48)",
         "hex": "#904130",
         "sku": "PP-CO-01-01-LP-LP48-10",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-11",
@@ -2949,7 +3011,7 @@
         "rgb": "rgb(129, 78, 51)",
         "hex": "#814E33",
         "sku": "PP-CO-01-01-LP-LP48-11",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-12",
@@ -2957,7 +3019,7 @@
         "rgb": "rgb(102, 5, 31)",
         "hex": "#66051F",
         "sku": "PP-CO-01-01-LP-LP48-12",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lip-liner-13",
@@ -2965,12 +3027,13 @@
         "rgb": "rgb(148, 64, 37)",
         "hex": "#944025",
         "sku": "PP-CO-01-01-LP-LP48-13",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-lip-plumper",
@@ -2996,12 +3059,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-AM-01-01-LG-PLG02-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-lipstick",
@@ -3027,7 +3091,7 @@
         "rgb": "rgb(203, 113, 112)",
         "hex": "#CB7170",
         "sku": "PP-CA-01-01-LS-P023-236P-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-2",
@@ -3035,7 +3099,7 @@
         "rgb": "rgb(200, 108, 107)",
         "hex": "#C86C6B",
         "sku": "PP-CA-01-01-LS-P023-236P-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-3",
@@ -3043,7 +3107,7 @@
         "rgb": "rgb(159, 57, 56)",
         "hex": "#9F3938",
         "sku": "PP-CA-01-01-LS-P023-236P-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-4",
@@ -3051,7 +3115,7 @@
         "rgb": "rgb(246, 139, 178)",
         "hex": "#F68BB2",
         "sku": "PP-CA-01-01-LS-P023-236P-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-5",
@@ -3059,7 +3123,7 @@
         "rgb": "rgb(255, 129, 156)",
         "hex": "#FF819C",
         "sku": "PP-CA-01-01-LS-P023-236P-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-6",
@@ -3067,7 +3131,7 @@
         "rgb": "rgb(130, 54, 64)",
         "hex": "#823640",
         "sku": "PP-CA-01-01-LS-P023-236P-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-7",
@@ -3075,7 +3139,7 @@
         "rgb": "rgb(200, 56, 61)",
         "hex": "#C8383D",
         "sku": "PP-CA-01-01-LS-P023-236P-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-8",
@@ -3083,7 +3147,7 @@
         "rgb": "rgb(200, 108, 107)",
         "hex": "#C86C6B",
         "sku": "PP-CA-01-01-LS-P023-236P-08",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-9",
@@ -3091,7 +3155,7 @@
         "rgb": "rgb(190, 87, 98)",
         "hex": "#BE5762",
         "sku": "PP-CA-01-01-LS-P023-236P-09",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-10",
@@ -3099,7 +3163,7 @@
         "rgb": "rgb(175, 104, 107)",
         "hex": "#AF686B",
         "sku": "PP-CA-01-01-LS-P023-236P-10",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-11",
@@ -3107,7 +3171,7 @@
         "rgb": "rgb(182, 77, 125)",
         "hex": "#B64D7D",
         "sku": "PP-CA-01-01-LS-P023-236P-11",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-12",
@@ -3115,7 +3179,7 @@
         "rgb": "rgb(128, 59, 56)",
         "hex": "#803B38",
         "sku": "PP-CA-01-01-LS-P023-236P-12",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-13",
@@ -3123,7 +3187,7 @@
         "rgb": "rgb(116, 70, 69)",
         "hex": "#744645",
         "sku": "PP-CA-01-01-LS-P023-236P-13",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "lipstick-14",
@@ -3131,12 +3195,13 @@
         "rgb": "rgb(157, 97, 83)",
         "hex": "#9D6153",
         "sku": "PP-CA-01-01-LS-P023-236P-14",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-liquid-blush",
@@ -3162,7 +3227,7 @@
         "rgb": "rgb(255, 186, 136)",
         "hex": "#FFBA88",
         "sku": "PP-MB-01-02-QBL02-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "liquid-blush-2",
@@ -3170,7 +3235,7 @@
         "rgb": "rgb(243, 87, 76)",
         "hex": "#F3574C",
         "sku": "PP-MB-01-02-QBL02-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "liquid-blush-3",
@@ -3178,7 +3243,7 @@
         "rgb": "rgb(194, 100, 95)",
         "hex": "#C2645F",
         "sku": "PP-MB-01-02-QBL02-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "liquid-blush-4",
@@ -3186,7 +3251,7 @@
         "rgb": "rgb(255, 144, 103)",
         "hex": "#FF9067",
         "sku": "PP-MB-01-02-QBL02-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "liquid-blush-5",
@@ -3194,12 +3259,13 @@
         "rgb": "rgb(167, 57, 66)",
         "hex": "#A73942",
         "sku": "PP-MB-01-02-QBL02-05",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-liquid-shimmer",
@@ -3225,12 +3291,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-MB-01-04-SH-SHM02-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-liquid-to-matte-lipstick",
@@ -3256,7 +3323,7 @@
         "rgb": "rgb(202, 152, 135)",
         "hex": "#CA9887",
         "sku": "PP-MB-01-01-LML-LML02-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "liquid-to-matte-lipstick-2",
@@ -3264,7 +3331,7 @@
         "rgb": "rgb(184, 99, 122)",
         "hex": "#B8637A",
         "sku": "PP-MB-01-01-LML-LML02-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "liquid-to-matte-lipstick-3",
@@ -3272,7 +3339,7 @@
         "rgb": "rgb(124, 26, 82)",
         "hex": "#7C1A52",
         "sku": "PP-MB-01-01-LML-LML02-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "liquid-to-matte-lipstick-4",
@@ -3280,7 +3347,7 @@
         "rgb": "rgb(120, 42, 24)",
         "hex": "#782A18",
         "sku": "PP-MB-01-01-LML-LML02-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "liquid-to-matte-lipstick-5",
@@ -3288,7 +3355,7 @@
         "rgb": "rgb(101, 19, 15)",
         "hex": "#65130F",
         "sku": "PP-MB-01-01-LML-LML02-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "liquid-to-matte-lipstick-6",
@@ -3296,7 +3363,7 @@
         "rgb": "rgb(196, 94, 140)",
         "hex": "#C45E8C",
         "sku": "PP-MB-01-01-LML-LML02-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "liquid-to-matte-lipstick-7",
@@ -3304,7 +3371,7 @@
         "rgb": "rgb(166, 104, 126)",
         "hex": "#A6687E",
         "sku": "PP-MB-01-01-LML-LML02-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "liquid-to-matte-lipstick-8",
@@ -3312,12 +3379,13 @@
         "rgb": "rgb(143, 16, 38)",
         "hex": "#8F1026",
         "sku": "PP-MB-01-01-LML-LML02-08",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-luminizing-powder",
@@ -3356,7 +3424,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-luxe-leave-in-conditioner",
@@ -3386,7 +3455,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-luxury-cream-lipstick",
@@ -3412,7 +3482,7 @@
         "rgb": "rgb(172, 99, 98)",
         "hex": "#AC6362",
         "sku": "PP-MN-01-01-LS-CP29-DE3-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "luxury-cream-lipstick-2",
@@ -3420,7 +3490,7 @@
         "rgb": "rgb(177, 88, 101)",
         "hex": "#B15865",
         "sku": "PP-MN-01-01-LS-CP29-DE3-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "luxury-cream-lipstick-3",
@@ -3428,12 +3498,13 @@
         "rgb": "rgb(204, 109, 109)",
         "hex": "#CC6D6D",
         "sku": "PP-MN-01-01-LS-CP29-DE3-03",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-luxury-matte-lipstick",
@@ -3459,7 +3530,7 @@
         "rgb": "rgb(170, 64, 51)",
         "hex": "#AA4033",
         "sku": "PP-MN-01-01-ML-M20-BX3-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "luxury-matte-lipstick-2",
@@ -3467,7 +3538,7 @@
         "rgb": "rgb(157, 89, 100)",
         "hex": "#9D5964",
         "sku": "PP-MN-01-01-ML-M20-BX3-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "luxury-matte-lipstick-3",
@@ -3475,12 +3546,13 @@
         "rgb": "rgb(176, 104, 101)",
         "hex": "#B06865",
         "sku": "PP-MN-01-01-ML-M20-BX3-03",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-makeup-bag",
@@ -3505,7 +3577,7 @@
         "rgb": "rgb(255, 255, 255)",
         "hex": "#FFFFFF",
         "sku": "PP-AB-04-04-MB01-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "makeup-bag-2",
@@ -3513,12 +3585,13 @@
         "rgb": "rgb(0, 0, 0)",
         "hex": "#000000",
         "sku": "PP-AB-04-04-MB01-02",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_MISSING_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-makeup-remover-solution",
@@ -3549,7 +3622,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-mascara",
@@ -3575,12 +3649,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-JE-01-04-MC03-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-matte-lip-stain",
@@ -3606,7 +3681,7 @@
         "rgb": "rgb(181, 42, 36)",
         "hex": "#B52A24",
         "sku": "PP-MB-01-01-MT-LSP44-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lip-stain-2",
@@ -3614,7 +3689,7 @@
         "rgb": "rgb(179, 94, 86)",
         "hex": "#B35E56",
         "sku": "PP-MB-01-01-MT-LSP44-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lip-stain-3",
@@ -3622,7 +3697,7 @@
         "rgb": "rgb(136, 36, 51)",
         "hex": "#882433",
         "sku": "PP-MB-01-01-MT-LSP44-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lip-stain-4",
@@ -3630,7 +3705,7 @@
         "rgb": "rgb(120, 67, 53)",
         "hex": "#784335",
         "sku": "PP-MB-01-01-MT-LSP44-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lip-stain-5",
@@ -3638,7 +3713,7 @@
         "rgb": "rgb(92, 33, 46)",
         "hex": "#5C212E",
         "sku": "PP-MB-01-01-MT-LSP44-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lip-stain-6",
@@ -3646,7 +3721,7 @@
         "rgb": "rgb(121, 48, 67)",
         "hex": "#793043",
         "sku": "PP-MB-01-01-MT-LSP44-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lip-stain-7",
@@ -3654,7 +3729,7 @@
         "rgb": "rgb(83, 16, 25)",
         "hex": "#531019",
         "sku": "PP-MB-01-01-MT-LSP44-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lip-stain-8",
@@ -3662,7 +3737,7 @@
         "rgb": "rgb(76, 25, 31)",
         "hex": "#4C191F",
         "sku": "PP-MB-01-01-MT-LSP44-08",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lip-stain-9",
@@ -3670,7 +3745,7 @@
         "rgb": "rgb(173, 115, 109)",
         "hex": "#AD736D",
         "sku": "PP-MB-01-01-MT-LSP44-09",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lip-stain-10",
@@ -3678,7 +3753,7 @@
         "rgb": "rgb(100, 43, 40)",
         "hex": "#642B28",
         "sku": "PP-MB-01-01-MT-LSP44-10",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lip-stain-11",
@@ -3686,7 +3761,7 @@
         "rgb": "rgb(161, 12, 25)",
         "hex": "#A10C19",
         "sku": "PP-MB-01-01-MT-LSP44-11",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lip-stain-12",
@@ -3694,12 +3769,13 @@
         "rgb": "rgb(105, 35, 54)",
         "hex": "#692336",
         "sku": "PP-MB-01-01-MT-LSP44-12",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-matte-lipstick",
@@ -3725,7 +3801,7 @@
         "rgb": "rgb(197, 72, 85)",
         "hex": "#C54855",
         "sku": "PP-CA-01-01-LS-MM2-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lipstick-2",
@@ -3733,7 +3809,7 @@
         "rgb": "rgb(72, 28, 40)",
         "hex": "#481C28",
         "sku": "PP-CA-01-01-LS-MM2-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lipstick-3",
@@ -3741,7 +3817,7 @@
         "rgb": "rgb(247, 103, 149)",
         "hex": "#F76795",
         "sku": "PP-CA-01-01-LS-MM2-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lipstick-4",
@@ -3749,7 +3825,7 @@
         "rgb": "rgb(111, 24, 24)",
         "hex": "#6F1818",
         "sku": "PP-CA-01-01-LS-MM2-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lipstick-5",
@@ -3757,7 +3833,7 @@
         "rgb": "rgb(112, 23, 22)",
         "hex": "#701716",
         "sku": "PP-CA-01-01-LS-MM2-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lipstick-6",
@@ -3765,7 +3841,7 @@
         "rgb": "rgb(246, 139, 178)",
         "hex": "#F68BB2",
         "sku": "PP-CA-01-01-LS-MM2-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "matte-lipstick-7",
@@ -3773,12 +3849,13 @@
         "rgb": "rgb(162, 102, 94)",
         "hex": "#A2665E",
         "sku": "PP-CA-01-01-LS-MM2-07",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-mattifying-face-primer",
@@ -3809,7 +3886,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-men-s-face-moisturizer",
@@ -3834,12 +3912,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-SS-05-02-MST-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-men-s-shampoo",
@@ -3864,12 +3943,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-SS-05-07-SMP-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-men-s-under-eye-cream",
@@ -3894,12 +3974,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-SS-05-04-UEC-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-mild-toning-elixir",
@@ -3930,7 +4011,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-mini-crease-brush",
@@ -3960,7 +4042,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-mint-exfoliating-facial-polish",
@@ -3986,12 +4069,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-PC-03-04-EXFL-MEF-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-natural-konjac-sponge",
@@ -4021,7 +4105,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-natural-soap",
@@ -4147,7 +4232,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-niacinamide-vitamin-boost-serum",
@@ -4178,7 +4264,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-night-renewal-creme",
@@ -4204,12 +4291,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-CA-03-02-PP-RNEW-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-nourish-hand-cream",
@@ -4235,12 +4323,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-PC-03-05-CR-NHC-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-oil-control-hydrator",
@@ -4271,7 +4360,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-oil-control-setting-spray",
@@ -4302,7 +4392,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-oil-free-daily-moisturizer",
@@ -4328,12 +4419,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-CA-03-02-PP-DMOZ-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-packing-eye-brush",
@@ -4363,7 +4455,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-pearl-eye-primer",
@@ -4389,12 +4482,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-LB-01-04-YP-EP10-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-precision-tweezers",
@@ -4424,7 +4518,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-pro-cheek-palette",
@@ -4450,7 +4545,7 @@
         "rgb": "rgb(249, 128, 101)",
         "hex": "#F98065",
         "sku": "PP-MB-01-02-CP-PCP51-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "pro-cheek-palette-2",
@@ -4458,7 +4553,7 @@
         "rgb": "rgb(241, 107, 110)",
         "hex": "#F16B6E",
         "sku": "PP-MB-01-02-CP-PCP51-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "pro-cheek-palette-3",
@@ -4466,12 +4561,13 @@
         "rgb": "rgb(212, 99, 77)",
         "hex": "#D4634D",
         "sku": "PP-MB-01-02-CP-PCP51-03",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-scented-candle",
@@ -4518,7 +4614,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-setting-spray",
@@ -4549,7 +4646,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-shea-body-butter",
@@ -4580,7 +4678,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-single-pan-blush",
@@ -4606,7 +4705,7 @@
         "rgb": "rgb(156, 51, 69)",
         "hex": "#9C3345",
         "sku": "PP-CO-01-02-SP-SPB1-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "single-pan-blush-2",
@@ -4614,7 +4713,7 @@
         "rgb": "rgb(205, 102, 94)",
         "hex": "#CD665E",
         "sku": "PP-CO-01-02-SP-SPB1-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "single-pan-blush-3",
@@ -4622,7 +4721,7 @@
         "rgb": "rgb(185, 90, 86)",
         "hex": "#B95A56",
         "sku": "PP-CO-01-02-SP-SPB1-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "single-pan-blush-4",
@@ -4630,12 +4729,13 @@
         "rgb": "rgb(228, 129, 152)",
         "hex": "#E48198",
         "sku": "PP-CO-01-02-SP-SPB1-04",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-single-pan-eyeshadow",
@@ -4714,7 +4814,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-solid-fragrance",
@@ -4739,7 +4840,7 @@
         "rgb": "rgb(174, 179, 150)",
         "hex": "#AEB396",
         "sku": "PP-FE-05-07-CG-CG2-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "solid-fragrance-2",
@@ -4747,7 +4848,7 @@
         "rgb": "rgb(174, 179, 150)",
         "hex": "#AEB396",
         "sku": "PP-FE-05-07-CG-CG2-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "solid-fragrance-3",
@@ -4755,7 +4856,7 @@
         "rgb": "rgb(174, 179, 150)",
         "hex": "#AEB396",
         "sku": "PP-FE-05-07-CG-CG2-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "solid-fragrance-4",
@@ -4763,12 +4864,13 @@
         "rgb": "rgb(174, 179, 150)",
         "hex": "#AEB396",
         "sku": "PP-FE-05-07-CG-CG2-04",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-soothing-emulsion",
@@ -4794,12 +4896,13 @@
         "rgb": "rgb(244, 182, 203)",
         "hex": "#F4B6CB",
         "sku": "PP-MB-03-02-PP-SE-01",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-stipple-blend-foundation-brush",
@@ -4829,7 +4932,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-tanning-drops",
@@ -4860,7 +4964,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-tanning-mousse",
@@ -4885,7 +4990,7 @@
         "rgb": "rgb(116, 79, 48)",
         "hex": "#744F30",
         "sku": "PP-LB-03-02-TMS02-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "tanning-mousse-2",
@@ -4893,12 +4998,13 @@
         "rgb": "rgb(176, 111, 60)",
         "hex": "#B06F3C",
         "sku": "PP-LB-03-02-TMS02-02",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-tinted-moisturizer",
@@ -4924,7 +5030,7 @@
         "rgb": "rgb(255, 217, 178)",
         "hex": "#FFD9B2",
         "sku": "PP-MB-01-02-TM-TM-TM100-01",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "tinted-moisturizer-2",
@@ -4932,7 +5038,7 @@
         "rgb": "rgb(253, 186, 120)",
         "hex": "#FDBA78",
         "sku": "PP-MB-01-02-TM-TM-TM100-02",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "tinted-moisturizer-3",
@@ -4940,7 +5046,7 @@
         "rgb": "rgb(252, 197, 152)",
         "hex": "#FCC598",
         "sku": "PP-MB-01-02-TM-TM-TM100-03",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "tinted-moisturizer-4",
@@ -4948,7 +5054,7 @@
         "rgb": "rgb(249, 197, 143)",
         "hex": "#F9C58F",
         "sku": "PP-MB-01-02-TM-TM-TM100-04",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "tinted-moisturizer-5",
@@ -4956,7 +5062,7 @@
         "rgb": "rgb(224, 133, 89)",
         "hex": "#E08559",
         "sku": "PP-MB-01-02-TM-TM-TM100-05",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "tinted-moisturizer-6",
@@ -4964,7 +5070,7 @@
         "rgb": "rgb(216, 129, 80)",
         "hex": "#D88150",
         "sku": "PP-MB-01-02-TM-TM-TM100-06",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "tinted-moisturizer-7",
@@ -4972,7 +5078,7 @@
         "rgb": "rgb(116, 66, 44)",
         "hex": "#74422C",
         "sku": "PP-MB-01-02-TM-TM-TM100-07",
-        "inStock": true
+        "inStock": false
       },
       {
         "id": "tinted-moisturizer-8",
@@ -4980,12 +5086,13 @@
         "rgb": "rgb(219, 150, 100)",
         "hex": "#DB9664",
         "sku": "PP-MB-01-02-TM-TM-TM100-08",
-        "inStock": true
+        "inStock": false
       }
     ],
     "manufacturerVerified": false,
     "inciStatus": "UNVERIFIED_TRUNCATED_SPEC",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "UNVERIFIED_PURCHASE_LOCKED"
   },
   {
     "id": "pp-touch-up-blotting-papers",
@@ -5015,7 +5122,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   },
   {
     "id": "pp-vegan-lip-balm",
@@ -5046,7 +5154,8 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": false
+    "canPurchase": false,
+    "availabilityState": "VERIFIED_OUT_OF_STOCK"
   },
   {
     "id": "pp-volumizing-hair-spray",
@@ -5076,6 +5185,7 @@
     ],
     "manufacturerVerified": true,
     "inciStatus": "VERIFIED_COMPLETE",
-    "canPurchase": true
+    "canPurchase": true,
+    "availabilityState": "VERIFIED_IN_STOCK"
   }
 ]

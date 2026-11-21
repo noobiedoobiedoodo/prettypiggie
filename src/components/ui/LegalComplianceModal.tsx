@@ -10,6 +10,7 @@ import {
   Truck,
   X,
 } from 'lucide-react';
+import { CATALOG_RECONCILIATION } from '@/data/boutiqueData';
 import { LegalPolicyTab } from '@/types/boutique';
 
 interface LegalComplianceModalProps {
@@ -118,12 +119,15 @@ export function LegalComplianceModal({
               </h3>
               <div className="rounded-2xl border border-amber-200 bg-amber-50 p-3 text-amber-950">
                 <strong>Initial Launch Market Scope (U.S. Only):</strong>{' '}
-                Checkout and carrier delivery are currently restricted to
-                addresses within the <strong>50 United States and D.C.</strong>{' '}
-                (enforced via <code>buyerIdentity.countryCode = &apos;US&apos;</code>).
-                Canadian and international shipping are disabled until Canadian
-                bilingual packaging, Hotlist concentration certificates, and
-                post-sale CNF workflows are cleared for activation.
+                Orders and carrier delivery are strictly limited to addresses
+                within the <strong>50 United States and D.C.</strong> Canadian
+                and international shipping are disabled until Canadian bilingual
+                labelling, Health Canada Hotlist concentration certificates,
+                Quebec French requirements, and post-sale CNF workflows are
+                completed. Storefront checkout requests enforce U.S.-only
+                shipping at the API layer, and live Shopify Admin shipping zones
+                must independently block non-U.S. destinations before General
+                Availability.
               </div>
               <p>
                 <strong>Free Express Boutique Shipping ($65+ USD):</strong>{' '}
@@ -157,13 +161,29 @@ export function LegalComplianceModal({
               <p>
                 <strong>Strict Manufacturer INCI Verification Policy (21 CFR § 701.3):</strong>{' '}
                 PrettyPiggie.com prohibits synthetic, reconstructed, or inferred
-                ingredient declarations. Only products with a complete,
-                untruncated manufacturer INCI declaration on file (
-                <code>VERIFIED_COMPLETE</code> — 56 products) are enabled for
-                commercial checkout. Products whose manufacturer INCI record is
-                pending full specification verification (54 products) are marked{' '}
-                <strong>UNVERIFIED</strong> and are programmatically locked from
-                purchase.
+                ingredient declarations. Across our{' '}
+                <strong>{CATALOG_RECONCILIATION.totalProducts}-product</strong>{' '}
+                catalogue,{' '}
+                <strong>
+                  {CATALOG_RECONCILIATION.verifiedInStock} products are verified
+                  and in stock
+                </strong>{' '}
+                (<code>VERIFIED_IN_STOCK</code> — eligible for checkout once all
+                release gates pass),{' '}
+                <strong>
+                  {CATALOG_RECONCILIATION.verifiedOutOfStock} products are
+                  verified but currently out of stock
+                </strong>{' '}
+                (<code>VERIFIED_OUT_OF_STOCK</code> — checkout disabled), and{' '}
+                <strong>
+                  {CATALOG_RECONCILIATION.unverifiedPurchaseLocked} products are
+                  unverified and purchase-locked
+                </strong>{' '}
+                (<code>UNVERIFIED_PURCHASE_LOCKED</code>:{' '}
+                {CATALOG_RECONCILIATION.unverifiedTruncatedSpec} truncated +{' '}
+                {CATALOG_RECONCILIATION.unverifiedMissingSpec} missing). No
+                locked product may be unlocked without official manufacturer
+                evidence and documented regulatory review.
               </p>
               <p>
                 <strong>
@@ -186,22 +206,32 @@ export function LegalComplianceModal({
                 Form (CNF) to Health Canada <strong>within 10 days after first
                 sale in Canada</strong>. PrettyPiggie maintains a pre-sale
                 Health Canada Hotlist and CNF preparation register; Canadian
-                checkout remains disabled until all Hotlist concentration CoAs
-                and Quebec Bill 96 requirements are finalized.
+                shipping remains disabled until all Canadian obligations are
+                finalized and verified.
               </p>
-              <div className="rounded-2xl border border-piggie-200 bg-piggie-50 p-3.5">
+              <div className="rounded-2xl border border-piggie-200 bg-piggie-50 p-3.5 space-y-1.5">
                 <strong className="block text-piggie-950">
-                  MoCRA Responsible Person & Adverse Event Contact (21 U.S.C. §
-                  364e):
+                  MoCRA Responsible Person & Adverse Event Reporting Contact
+                  (FD&C Act § 609(a), 21 U.S.C. § 364e):
                 </strong>
-                <span className="mt-1 block text-piggie-700">
-                  Pretty Piggie Makeup Consumer Safety Desk • Electronic Adverse
-                  Event Intake: <strong>safety@prettypiggie.com</strong> •
-                  Customer Care: <strong>support@prettypiggie.com</strong> (U.S.
-                  physical street address and domestic telephone number to be
-                  populated by the Brand Owner prior to General Availability
-                  sign-off).
-                </span>
+                <p className="text-piggie-800">
+                  Under MoCRA, each applicable cosmetic product label must bear
+                  a <strong>domestic address, domestic phone number, OR
+                  electronic contact information</strong> through which the
+                  legally designated Responsible Person can receive
+                  adverse-event reports. Both a street address and phone number
+                  are not mandatory in every case.
+                </p>
+                <p className="rounded-xl border border-amber-200 bg-amber-50 px-2.5 py-1.5 text-[11px] font-semibold text-amber-950">
+                  Pre-GA Governance Hold — Pending Business Owner Confirmation
+                  (no placeholder or unmonitored contact details are published):
+                  before General Availability, the Owner must confirm (1) who
+                  legally qualifies as the Responsible Person for each product,
+                  (2) whose name appears on the physical product label, (3)
+                  which compliant contact method will be used, and (4) that the
+                  designated channel is actively monitored to receive adverse
+                  event reports.
+                </p>
               </div>
             </div>
           )}
@@ -246,9 +276,9 @@ export function LegalComplianceModal({
               <p>
                 <strong>4. CCPA / CPRA Rights:</strong> We do not sell or share
                 personal information for cross-context behavioral advertising.
-                To exercise access, correction, or deletion rights under PIPEDA,
-                CCPA, or GDPR, contact our Privacy Officer at{' '}
-                <strong>privacy@prettypiggie.com</strong>.
+                Verified Privacy Officer contact details will be published by
+                the Business Owner prior to General Availability (no placeholder
+                contact details are listed in this release candidate).
               </p>
             </div>
           )}

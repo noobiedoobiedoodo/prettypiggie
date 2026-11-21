@@ -1,1545 +1,1673 @@
-[
-  {
-    "sku": "PP-PC-03-04-CR-AEC",
-    "slug": "active-eye-cream",
-    "title": "Active Eye Cream",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Health Canada Hotlist Watch: Alpha-Arbutin / Arbutin — obtain hydroquinone stability/impurity specification."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CA-03-02-SE-ADEF",
-    "slug": "age-defying-serum",
-    "title": "Age Defying Serum",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-SS-05-06-BWSH",
-    "slug": "all-in-one-body-wash",
-    "title": "All-In-One Body Wash",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CS-01-03-AGL-EB56",
-    "slug": "angled-liner-brush",
-    "title": "Angled Liner Brush",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-EZ-03-02-RGS",
-    "slug": "anti-aging-rose-gold-oil",
-    "title": "Anti-aging Rose Gold Oil",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-BP-AB6",
-    "slug": "automatic-eyebrow-pencil",
-    "title": "Automatic Eyebrow Pencil",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LB-01-01-RL-ALL01",
-    "slug": "automatic-lip-liner",
-    "title": "Automatic Lip Liner",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-BC-FB105",
-    "slug": "bb-cream",
-    "title": "BB Cream",
-    "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-FE-05-07-BTT",
-    "slug": "beard-butter",
-    "title": "Beard Butter",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-FE-05-07-BL-BIO1",
-    "slug": "beard-oil",
-    "title": "Beard Oil",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-BL-KBL31",
-    "slug": "blush-palette",
-    "title": "Blush Palette",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-EV-06-12-HMO-BBM",
-    "slug": "bounce-boost-mousse",
-    "title": "Bounce Boost Mousse",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-BR-BRZ01",
-    "slug": "bronzer",
-    "title": "Bronzer",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-TM-BMZ03",
-    "slug": "bronzing-moisturizer",
-    "title": "Bronzing Moisturizer",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-EZ-01-02-BWS",
-    "slug": "brow-soap",
-    "title": "Brow Soap",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CS-01-03-BH-EB180",
-    "slug": "cheek-fan-brush",
-    "title": "Cheek Fan Brush",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-AB-04-02-MS1",
-    "slug": "classic-blender",
-    "title": "Classic Blender",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LB-03-02-CL-CO",
-    "slug": "cleansing-oil",
-    "title": "Cleansing Oil",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-BT-06-09-CDT-COCDT",
-    "slug": "coconut-moisture-conditioner",
-    "title": "Coconut Moisture Conditioner",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-BT-06-09-SMP-COSMP",
-    "slug": "coconut-moisture-shampoo",
-    "title": "Coconut Moisture Shampoo",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-GF-03-02-CRS",
-    "slug": "collagen-and-retinol-serum",
-    "title": "Collagen and Retinol Serum",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Health Canada Hotlist Restricted: Retinol & esters — verify concentration % for CNF filing."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-04-GE-CPL109",
-    "slug": "color-rich-pro-line",
-    "title": "Color Rich Pro Line",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-CC-HC129T",
-    "slug": "concealing-cream",
-    "title": "Concealing Cream",
-    "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LB-01-02-CS-LC3",
-    "slug": "creme-concealer-stick",
-    "title": "Creme Concealer Stick",
-    "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
-    "hotlistFlagCount": 2,
-    "hotlistReviewNotes": [
-      "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning.",
-      "Health Canada Hotlist Restricted: Retinol & esters — verify concentration % for CNF filing."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-EV-06-09-CDT-CCDT",
-    "slug": "daily-curl-conditioner",
-    "title": "Daily Curl Conditioner",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-EV-06-09-CDT-RCDT",
-    "slug": "daily-repair-conditioner",
-    "title": "Daily Repair Conditioner",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-EV-06-09-SMP-RSMP",
-    "slug": "daily-repair-shampoo",
-    "title": "Daily Repair Shampoo",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-BT-06-12-CRM-CURL",
-    "slug": "define-hold-curl-cream",
-    "title": "Define & Hold Curl Cream",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-WD-WD145",
-    "slug": "dual-blend-powder-foundation",
-    "title": "Dual Blend Powder Foundation",
-    "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-04-ED-EDT01",
-    "slug": "dual-tip-eye-definer-pen",
-    "title": "Dual Tip Eye Definer Pen",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-PC-03-04-CR-AAC",
-    "slug": "embrace-collagen-moisturizer",
-    "title": "Embrace Collagen Moisturizer",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-03-02-HM-SM3D",
-    "slug": "extreme-moisture-blend",
-    "title": "Extreme Moisture Blend",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LB-01-04-YP-EP05",
-    "slug": "eye-lip-primer",
-    "title": "Eye & Lip Primer",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-BG-BG1",
-    "slug": "eyebrow-gel",
-    "title": "Eyebrow Gel",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-04-SP-ETM105",
-    "slug": "eyeshadow-palette",
-    "title": "Eyeshadow Palette",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LB-01-02-STP-STP",
-    "slug": "finishing-powder",
-    "title": "Finishing Powder",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-PC-03-04-SER-FSR",
-    "slug": "firm-serum",
-    "title": "Firm Serum",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-FE-05-07-WSH",
-    "slug": "foaming-beard-wash",
-    "title": "Foaming Beard Wash",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-FN-FK115",
-    "slug": "foundation",
-    "title": "Foundation",
-    "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-PC-01-02-MF-CRP",
-    "slug": "foundation-primer",
-    "title": "Foundation Primer",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-FH-FH100",
-    "slug": "full-cover-foundation",
-    "title": "Full Cover Foundation",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-JE-01-04-GE-EG1002",
-    "slug": "gel-eyeliner",
-    "title": "Gel Eyeliner",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-JE-01-04-ES-GLT-GLT01",
-    "slug": "glitter-dust",
-    "title": "Glitter Dust",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-GF-03-02-GLYS",
-    "slug": "glycolic-acid-serum",
-    "title": "Glycolic Acid Serum",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Health Canada Hotlist Restricted: Glycolic Acid (AHA) — verify concentration <= 10% and pH >= 3.5; bilingual sunburn alert implemented."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-BT-06-11-HOL-HSS",
-    "slug": "hair-scalp-renewal-serum",
-    "title": "Hair & Scalp Renewal Serum",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-BT-06-09-HSP-HPSPR",
-    "slug": "heat-protective-spray",
-    "title": "Heat Protective Spray",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-FE-05-07-BGO-BGO1",
-    "slug": "hemp-infused-beard-growth-oil",
-    "title": "Hemp Infused Beard Growth Oil",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LB-01-02-HS-HST104",
-    "slug": "highlighter-stick",
-    "title": "Highlighter Stick",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Health Canada Hotlist Restricted: Retinol & esters — verify concentration % for CNF filing."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-GF-03-02-HAS",
-    "slug": "hyaluronic-acid-serum",
-    "title": "Hyaluronic Acid Serum",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-PC-03-04-CR-HMZ",
-    "slug": "hyaluronic-moisturizer",
-    "title": "Hyaluronic Moisturizer",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-03-02-CL-HFC",
-    "slug": "hydrating-facial-cleanser",
-    "title": "Hydrating Facial Cleanser",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LB-01-01-LO-LO05",
-    "slug": "hydrating-lip-oil",
-    "title": "Hydrating Lip Oil",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-EC-03-02-HDS",
-    "slug": "hydration-serum",
-    "title": "Hydration Serum",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-PV-03-02-KCL",
-    "slug": "kale-face-cleanser",
-    "title": "Kale Face Cleanser",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-BT-06-09-CDT-KCDT",
-    "slug": "keratin-smoothing-conditioner",
-    "title": "Keratin Smoothing Conditioner",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-BT-06-09-SMP-KSMP",
-    "slug": "keratin-smoothing-shampoo",
-    "title": "Keratin Smoothing Shampoo",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CO-01-04-KOL-K36",
-    "slug": "khol-eyeliner",
-    "title": "Khol Eyeliner",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CS-01-03-BU-EB88",
-    "slug": "large-blurrer-brush",
-    "title": "Large Blurrer Brush",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-EZ-01-02-BLR",
-    "slug": "lash-rejuvenator",
-    "title": "Lash Rejuvenator",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-BT-06-11-HMK-HMSK",
-    "slug": "leave-in-hair-mask",
-    "title": "Leave-in Hair Mask",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LB-03-01-PP-LB01",
-    "slug": "lip-butter",
-    "title": "Lip Butter",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-01-LG-LG27",
-    "slug": "lip-gloss",
-    "title": "Lip Gloss",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CO-01-01-LP-LP48",
-    "slug": "lip-liner",
-    "title": "Lip Liner",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-AM-01-01-LG-PLG02",
-    "slug": "lip-plumper",
-    "title": "Lip Plumper",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CA-01-01-LS-P023-236P",
-    "slug": "lipstick",
-    "title": "Lipstick",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-QBL02",
-    "slug": "liquid-blush",
-    "title": "Liquid Blush",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-04-SH-SHM02",
-    "slug": "liquid-shimmer",
-    "title": "Liquid Shimmer",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-01-LML-LML02",
-    "slug": "liquid-to-matte-lipstick",
-    "title": "Liquid to Matte Lipstick",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-LZ-LMZ01",
-    "slug": "luminizing-powder",
-    "title": "Luminizing Powder",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-EV-06-11-LCDT-LUXE",
-    "slug": "luxe-leave-in-conditioner",
-    "title": "Luxe Leave-In Conditioner",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MN-01-01-LS-CP29-DE3",
-    "slug": "luxury-cream-lipstick",
-    "title": "Luxury Cream Lipstick",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MN-01-01-ML-M20-BX3",
-    "slug": "luxury-matte-lipstick",
-    "title": "Luxury Matte Lipstick",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-AB-04-04-MB01",
-    "slug": "makeup-bag",
-    "title": "Makeup Bag",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-03-02-MR-MR2",
-    "slug": "makeup-remover-solution",
-    "title": "Makeup Remover Solution",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-JE-01-04-MC03",
-    "slug": "mascara",
-    "title": "Mascara",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-01-MT-LSP44",
-    "slug": "matte-lip-stain",
-    "title": "Matte Lip Stain",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CA-01-01-LS-MM2",
-    "slug": "matte-lipstick",
-    "title": "Matte Lipstick",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-MF-SP484",
-    "slug": "mattifying-face-primer",
-    "title": "Mattifying Face Primer",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-SS-05-02-MST",
-    "slug": "men-s-face-moisturizer",
-    "title": "Men's Face Moisturizer",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-SS-05-07-SMP",
-    "slug": "men-s-shampoo",
-    "title": "Men's Shampoo",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-SS-05-04-UEC",
-    "slug": "men-s-under-eye-cream",
-    "title": "Men's Under Eye Cream",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CA-03-02-TO-ELX",
-    "slug": "mild-toning-elixir",
-    "title": "Mild Toning Elixir",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CS-01-03-MB-EB76",
-    "slug": "mini-crease-brush",
-    "title": "Mini Crease Brush",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-PC-03-04-EXFL-MEF",
-    "slug": "mint-exfoliating-facial-polish",
-    "title": "Mint Exfoliating Facial Polish",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-AB-04-02-KJS",
-    "slug": "natural-konjac-sponge",
-    "title": "Natural Konjac Sponge",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-JE-07-06-NS13",
-    "slug": "natural-soap",
-    "title": "Natural Soap",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-GF-03-02-VBS",
-    "slug": "niacinamide-vitamin-boost-serum",
-    "title": "Niacinamide Vitamin Boost Serum",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CA-03-02-PP-RNEW",
-    "slug": "night-renewal-creme",
-    "title": "Night Renewal Creme",
-    "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
-    "hotlistFlagCount": 3,
-    "hotlistReviewNotes": [
-      "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning.",
-      "Health Canada Hotlist Restricted: Retinol & esters — verify concentration % for CNF filing.",
-      "Health Canada Hotlist Restricted: Glycolic Acid (AHA) — verify concentration <= 10% and pH >= 3.5; bilingual sunburn alert implemented."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-PC-03-05-CR-NHC",
-    "slug": "nourish-hand-cream",
-    "title": "Nourish Hand Cream",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Health Canada Hotlist Restricted: Comfrey (Symphytum officinale) — verify absence of prohibited S. asperum / S. x uplandicum and pyrrolizidine alkaloids."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-03-02-OM-SM5O",
-    "slug": "oil-control-hydrator",
-    "title": "Oil Control Hydrator",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-OC-SS12",
-    "slug": "oil-control-setting-spray",
-    "title": "Oil Control Setting Spray",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CA-03-02-PP-DMOZ",
-    "slug": "oil-free-daily-moisturizer",
-    "title": "Oil-Free Daily Moisturizer",
-    "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CS-01-03-PS-EB62",
-    "slug": "packing-eye-brush",
-    "title": "Packing Eye Brush",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LB-01-04-YP-EP10",
-    "slug": "pearl-eye-primer",
-    "title": "Pearl Eye Primer",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-AB-04-04-TZ",
-    "slug": "precision-tweezers",
-    "title": "Precision Tweezers",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-CP-PCP51",
-    "slug": "pro-cheek-palette",
-    "title": "Pro Cheek Palette",
-    "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LO-09-22-CA-HPC03",
-    "slug": "scented-candle",
-    "title": "Scented Candle",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-SS-SS11A",
-    "slug": "setting-spray",
-    "title": "Setting Spray",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-PC-03-06-CR-SBB",
-    "slug": "shea-body-butter",
-    "title": "Shea Body Butter",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CO-01-02-SP-SPB1",
-    "slug": "single-pan-blush",
-    "title": "Single Pan Blush",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CO-01-04-SP-SPE178",
-    "slug": "single-pan-eyeshadow",
-    "title": "Single Pan Eyeshadow",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-FE-05-07-CG-CG2",
-    "slug": "solid-fragrance",
-    "title": "Solid Fragrance",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 1,
-    "hotlistReviewNotes": [
-      "Health Canada Hotlist Restricted: Tea Tree Oil — verify concentration % and peroxide value."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-03-02-PP-SE",
-    "slug": "soothing-emulsion",
-    "title": "Soothing Emulsion",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-CS-01-03-SB-EB250",
-    "slug": "stipple-blend-foundation-brush",
-    "title": "Stipple & Blend Foundation Brush",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LB-03-02-TDR",
-    "slug": "tanning-drops",
-    "title": "Tanning Drops",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-LB-03-02-TMS02",
-    "slug": "tanning-mousse",
-    "title": "Tanning Mousse",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-MB-01-02-TM-TM-TM100",
-    "slug": "tinted-moisturizer",
-    "title": "Tinted Moisturizer",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-JE-04-02-BT",
-    "slug": "touch-up-blotting-papers",
-    "title": "Touch-up Blotting Papers",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-FE-03-01-VLB-VLB1",
-    "slug": "vegan-lip-balm",
-    "title": "Vegan Lip Balm",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  },
-  {
-    "sku": "PP-PV-06-09-HSP-VOL",
-    "slug": "volumizing-hair-spray",
-    "title": "Volumizing Hair Spray",
-    "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
-    "hotlistFlagCount": 0,
-    "hotlistReviewNotes": [
-      "No restricted Health Canada Hotlist substances detected in captured INCI."
-    ],
-    "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
-    "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
-    "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
-    "canadianSaleEligibility": "BLOCKED_US_ONLY_LAUNCH_ACTIVE"
-  }
-]
+{
+  "schemaVersion": "2.0.0-rc2-reconciled",
+  "generatedAt": "2026-11-21T04:31:37.071Z",
+  "usOnlyEnforcementGate": {
+    "status": "PENDING_LIVE_SHOPIFY_ADMIN_CONFIGURATION_AND_CHECKOUT_TEST",
+    "clientAndApiHintsImplemented": [
+      "Storefront messaging states U.S. Domestic Shipping Only (50 States & D.C.)",
+      "Server-side POST /api/checkout rejects any non-US shippingCountry with HTTP 403",
+      "Shopify Storefront API cartCreate sends buyerIdentity.countryCode = \"US\""
+    ],
+    "criticalLimitation": "buyerIdentity.countryCode = \"US\" and storefront banners are NOT sufficient evidence of a U.S.-only shipping restriction because shoppers can edit their shipping country during hosted Shopify Checkout unless Shopify Admin Shipping & Delivery zones restrict shipping exclusively to the United States.",
+    "mandatoryVerificationEvidenceRequired": [
+      "Screenshot / export of Shopify Admin -> Settings -> Shipping and delivery showing United States as the sole enabled shipping zone",
+      "Live checkout test attempting a Canadian shipping destination confirming no eligible shipping rate is returned and checkout cannot be completed",
+      "Live checkout address-change test starting with a U.S. address and switching to a Canadian address inside Shopify Checkout confirming enforcement persists"
+    ]
+  },
+  "products": [
+    {
+      "sku": "PP-PC-03-04-CR-AEC",
+      "slug": "active-eye-cream",
+      "title": "Active Eye Cream",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Health Canada Hotlist Watch: Alpha-Arbutin / Arbutin — obtain hydroquinone stability/impurity specification."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CA-03-02-SE-ADEF",
+      "slug": "age-defying-serum",
+      "title": "Age Defying Serum",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-SS-05-06-BWSH",
+      "slug": "all-in-one-body-wash",
+      "title": "All-In-One Body Wash",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CS-01-03-AGL-EB56",
+      "slug": "angled-liner-brush",
+      "title": "Angled Liner Brush",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-EZ-03-02-RGS",
+      "slug": "anti-aging-rose-gold-oil",
+      "title": "Anti-aging Rose Gold Oil",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-BP-AB6",
+      "slug": "automatic-eyebrow-pencil",
+      "title": "Automatic Eyebrow Pencil",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LB-01-01-RL-ALL01",
+      "slug": "automatic-lip-liner",
+      "title": "Automatic Lip Liner",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-BC-FB105",
+      "slug": "bb-cream",
+      "title": "BB Cream",
+      "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-FE-05-07-BTT",
+      "slug": "beard-butter",
+      "title": "Beard Butter",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-FE-05-07-BL-BIO1",
+      "slug": "beard-oil",
+      "title": "Beard Oil",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-BL-KBL31",
+      "slug": "blush-palette",
+      "title": "Blush Palette",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-EV-06-12-HMO-BBM",
+      "slug": "bounce-boost-mousse",
+      "title": "Bounce Boost Mousse",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-BR-BRZ01",
+      "slug": "bronzer",
+      "title": "Bronzer",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-TM-BMZ03",
+      "slug": "bronzing-moisturizer",
+      "title": "Bronzing Moisturizer",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-EZ-01-02-BWS",
+      "slug": "brow-soap",
+      "title": "Brow Soap",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CS-01-03-BH-EB180",
+      "slug": "cheek-fan-brush",
+      "title": "Cheek Fan Brush",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-AB-04-02-MS1",
+      "slug": "classic-blender",
+      "title": "Classic Blender",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LB-03-02-CL-CO",
+      "slug": "cleansing-oil",
+      "title": "Cleansing Oil",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-BT-06-09-CDT-COCDT",
+      "slug": "coconut-moisture-conditioner",
+      "title": "Coconut Moisture Conditioner",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-BT-06-09-SMP-COSMP",
+      "slug": "coconut-moisture-shampoo",
+      "title": "Coconut Moisture Shampoo",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-GF-03-02-CRS",
+      "slug": "collagen-and-retinol-serum",
+      "title": "Collagen and Retinol Serum",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Health Canada Hotlist Restricted: Retinol & esters — verify concentration % for CNF filing."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-04-GE-CPL109",
+      "slug": "color-rich-pro-line",
+      "title": "Color Rich Pro Line",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-CC-HC129T",
+      "slug": "concealing-cream",
+      "title": "Concealing Cream",
+      "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LB-01-02-CS-LC3",
+      "slug": "creme-concealer-stick",
+      "title": "Creme Concealer Stick",
+      "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
+      "hotlistFlagCount": 2,
+      "hotlistReviewNotes": [
+        "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning.",
+        "Health Canada Hotlist Restricted: Retinol & esters — verify concentration % for CNF filing."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-EV-06-09-CDT-CCDT",
+      "slug": "daily-curl-conditioner",
+      "title": "Daily Curl Conditioner",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-EV-06-09-CDT-RCDT",
+      "slug": "daily-repair-conditioner",
+      "title": "Daily Repair Conditioner",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-EV-06-09-SMP-RSMP",
+      "slug": "daily-repair-shampoo",
+      "title": "Daily Repair Shampoo",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-BT-06-12-CRM-CURL",
+      "slug": "define-hold-curl-cream",
+      "title": "Define & Hold Curl Cream",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-WD-WD145",
+      "slug": "dual-blend-powder-foundation",
+      "title": "Dual Blend Powder Foundation",
+      "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-04-ED-EDT01",
+      "slug": "dual-tip-eye-definer-pen",
+      "title": "Dual Tip Eye Definer Pen",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-PC-03-04-CR-AAC",
+      "slug": "embrace-collagen-moisturizer",
+      "title": "Embrace Collagen Moisturizer",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-03-02-HM-SM3D",
+      "slug": "extreme-moisture-blend",
+      "title": "Extreme Moisture Blend",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LB-01-04-YP-EP05",
+      "slug": "eye-lip-primer",
+      "title": "Eye & Lip Primer",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-BG-BG1",
+      "slug": "eyebrow-gel",
+      "title": "Eyebrow Gel",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-04-SP-ETM105",
+      "slug": "eyeshadow-palette",
+      "title": "Eyeshadow Palette",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LB-01-02-STP-STP",
+      "slug": "finishing-powder",
+      "title": "Finishing Powder",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-PC-03-04-SER-FSR",
+      "slug": "firm-serum",
+      "title": "Firm Serum",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-FE-05-07-WSH",
+      "slug": "foaming-beard-wash",
+      "title": "Foaming Beard Wash",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-FN-FK115",
+      "slug": "foundation",
+      "title": "Foundation",
+      "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-PC-01-02-MF-CRP",
+      "slug": "foundation-primer",
+      "title": "Foundation Primer",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-FH-FH100",
+      "slug": "full-cover-foundation",
+      "title": "Full Cover Foundation",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-JE-01-04-GE-EG1002",
+      "slug": "gel-eyeliner",
+      "title": "Gel Eyeliner",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-JE-01-04-ES-GLT-GLT01",
+      "slug": "glitter-dust",
+      "title": "Glitter Dust",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-GF-03-02-GLYS",
+      "slug": "glycolic-acid-serum",
+      "title": "Glycolic Acid Serum",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Health Canada Hotlist Restricted: Glycolic Acid (AHA) — verify concentration <= 10% and pH >= 3.5; bilingual sunburn alert implemented."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-BT-06-11-HOL-HSS",
+      "slug": "hair-scalp-renewal-serum",
+      "title": "Hair & Scalp Renewal Serum",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-BT-06-09-HSP-HPSPR",
+      "slug": "heat-protective-spray",
+      "title": "Heat Protective Spray",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-FE-05-07-BGO-BGO1",
+      "slug": "hemp-infused-beard-growth-oil",
+      "title": "Hemp Infused Beard Growth Oil",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LB-01-02-HS-HST104",
+      "slug": "highlighter-stick",
+      "title": "Highlighter Stick",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Health Canada Hotlist Restricted: Retinol & esters — verify concentration % for CNF filing."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-GF-03-02-HAS",
+      "slug": "hyaluronic-acid-serum",
+      "title": "Hyaluronic Acid Serum",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-PC-03-04-CR-HMZ",
+      "slug": "hyaluronic-moisturizer",
+      "title": "Hyaluronic Moisturizer",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-03-02-CL-HFC",
+      "slug": "hydrating-facial-cleanser",
+      "title": "Hydrating Facial Cleanser",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LB-01-01-LO-LO05",
+      "slug": "hydrating-lip-oil",
+      "title": "Hydrating Lip Oil",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-EC-03-02-HDS",
+      "slug": "hydration-serum",
+      "title": "Hydration Serum",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-PV-03-02-KCL",
+      "slug": "kale-face-cleanser",
+      "title": "Kale Face Cleanser",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-BT-06-09-CDT-KCDT",
+      "slug": "keratin-smoothing-conditioner",
+      "title": "Keratin Smoothing Conditioner",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-BT-06-09-SMP-KSMP",
+      "slug": "keratin-smoothing-shampoo",
+      "title": "Keratin Smoothing Shampoo",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CO-01-04-KOL-K36",
+      "slug": "khol-eyeliner",
+      "title": "Khol Eyeliner",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CS-01-03-BU-EB88",
+      "slug": "large-blurrer-brush",
+      "title": "Large Blurrer Brush",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-EZ-01-02-BLR",
+      "slug": "lash-rejuvenator",
+      "title": "Lash Rejuvenator",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-BT-06-11-HMK-HMSK",
+      "slug": "leave-in-hair-mask",
+      "title": "Leave-in Hair Mask",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LB-03-01-PP-LB01",
+      "slug": "lip-butter",
+      "title": "Lip Butter",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-01-LG-LG27",
+      "slug": "lip-gloss",
+      "title": "Lip Gloss",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CO-01-01-LP-LP48",
+      "slug": "lip-liner",
+      "title": "Lip Liner",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-AM-01-01-LG-PLG02",
+      "slug": "lip-plumper",
+      "title": "Lip Plumper",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CA-01-01-LS-P023-236P",
+      "slug": "lipstick",
+      "title": "Lipstick",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-QBL02",
+      "slug": "liquid-blush",
+      "title": "Liquid Blush",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-04-SH-SHM02",
+      "slug": "liquid-shimmer",
+      "title": "Liquid Shimmer",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-01-LML-LML02",
+      "slug": "liquid-to-matte-lipstick",
+      "title": "Liquid to Matte Lipstick",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-LZ-LMZ01",
+      "slug": "luminizing-powder",
+      "title": "Luminizing Powder",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-EV-06-11-LCDT-LUXE",
+      "slug": "luxe-leave-in-conditioner",
+      "title": "Luxe Leave-In Conditioner",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MN-01-01-LS-CP29-DE3",
+      "slug": "luxury-cream-lipstick",
+      "title": "Luxury Cream Lipstick",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MN-01-01-ML-M20-BX3",
+      "slug": "luxury-matte-lipstick",
+      "title": "Luxury Matte Lipstick",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-AB-04-04-MB01",
+      "slug": "makeup-bag",
+      "title": "Makeup Bag",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-03-02-MR-MR2",
+      "slug": "makeup-remover-solution",
+      "title": "Makeup Remover Solution",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-JE-01-04-MC03",
+      "slug": "mascara",
+      "title": "Mascara",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-01-MT-LSP44",
+      "slug": "matte-lip-stain",
+      "title": "Matte Lip Stain",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CA-01-01-LS-MM2",
+      "slug": "matte-lipstick",
+      "title": "Matte Lipstick",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-MF-SP484",
+      "slug": "mattifying-face-primer",
+      "title": "Mattifying Face Primer",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-SS-05-02-MST",
+      "slug": "men-s-face-moisturizer",
+      "title": "Men's Face Moisturizer",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-SS-05-07-SMP",
+      "slug": "men-s-shampoo",
+      "title": "Men's Shampoo",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-SS-05-04-UEC",
+      "slug": "men-s-under-eye-cream",
+      "title": "Men's Under Eye Cream",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CA-03-02-TO-ELX",
+      "slug": "mild-toning-elixir",
+      "title": "Mild Toning Elixir",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CS-01-03-MB-EB76",
+      "slug": "mini-crease-brush",
+      "title": "Mini Crease Brush",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-PC-03-04-EXFL-MEF",
+      "slug": "mint-exfoliating-facial-polish",
+      "title": "Mint Exfoliating Facial Polish",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-AB-04-02-KJS",
+      "slug": "natural-konjac-sponge",
+      "title": "Natural Konjac Sponge",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-JE-07-06-NS13",
+      "slug": "natural-soap",
+      "title": "Natural Soap",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-GF-03-02-VBS",
+      "slug": "niacinamide-vitamin-boost-serum",
+      "title": "Niacinamide Vitamin Boost Serum",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CA-03-02-PP-RNEW",
+      "slug": "night-renewal-creme",
+      "title": "Night Renewal Creme",
+      "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
+      "hotlistFlagCount": 3,
+      "hotlistReviewNotes": [
+        "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning.",
+        "Health Canada Hotlist Restricted: Retinol & esters — verify concentration % for CNF filing.",
+        "Health Canada Hotlist Restricted: Glycolic Acid (AHA) — verify concentration <= 10% and pH >= 3.5; bilingual sunburn alert implemented."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-PC-03-05-CR-NHC",
+      "slug": "nourish-hand-cream",
+      "title": "Nourish Hand Cream",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Health Canada Hotlist Restricted: Comfrey (Symphytum officinale) — verify absence of prohibited S. asperum / S. x uplandicum and pyrrolizidine alkaloids."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-03-02-OM-SM5O",
+      "slug": "oil-control-hydrator",
+      "title": "Oil Control Hydrator",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-OC-SS12",
+      "slug": "oil-control-setting-spray",
+      "title": "Oil Control Setting Spray",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CA-03-02-PP-DMOZ",
+      "slug": "oil-free-daily-moisturizer",
+      "title": "Oil-Free Daily Moisturizer",
+      "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CS-01-03-PS-EB62",
+      "slug": "packing-eye-brush",
+      "title": "Packing Eye Brush",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LB-01-04-YP-EP10",
+      "slug": "pearl-eye-primer",
+      "title": "Pearl Eye Primer",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-AB-04-04-TZ",
+      "slug": "precision-tweezers",
+      "title": "Precision Tweezers",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-CP-PCP51",
+      "slug": "pro-cheek-palette",
+      "title": "Pro Cheek Palette",
+      "canadianClassification": "Potential NHP / Non-Prescription Drug Boundary (Contains UV Filter: Octinoxate/Octisalate/Zinc Oxide) — Requires NPN/DIN if any SPF or sun-protection representation is made; must be marketed strictly as non-SPF cosmetic in Canada.",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Contains UV filter ingredient; verify non-therapeutic cosmetic positioning."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LO-09-22-CA-HPC03",
+      "slug": "scented-candle",
+      "title": "Scented Candle",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-SS-SS11A",
+      "slug": "setting-spray",
+      "title": "Setting Spray",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-PC-03-06-CR-SBB",
+      "slug": "shea-body-butter",
+      "title": "Shea Body Butter",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CO-01-02-SP-SPB1",
+      "slug": "single-pan-blush",
+      "title": "Single Pan Blush",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CO-01-04-SP-SPE178",
+      "slug": "single-pan-eyeshadow",
+      "title": "Single Pan Eyeshadow",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-FE-05-07-CG-CG2",
+      "slug": "solid-fragrance",
+      "title": "Solid Fragrance",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 1,
+      "hotlistReviewNotes": [
+        "Health Canada Hotlist Restricted: Tea Tree Oil — verify concentration % and peroxide value."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-03-02-PP-SE",
+      "slug": "soothing-emulsion",
+      "title": "Soothing Emulsion",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-CS-01-03-SB-EB250",
+      "slug": "stipple-blend-foundation-brush",
+      "title": "Stipple & Blend Foundation Brush",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LB-03-02-TDR",
+      "slug": "tanning-drops",
+      "title": "Tanning Drops",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-LB-03-02-TMS02",
+      "slug": "tanning-mousse",
+      "title": "Tanning Mousse",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-MB-01-02-TM-TM-TM100",
+      "slug": "tinted-moisturizer",
+      "title": "Tinted Moisturizer",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-JE-04-02-BT",
+      "slug": "touch-up-blotting-papers",
+      "title": "Touch-up Blotting Papers",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-FE-03-01-VLB-VLB1",
+      "slug": "vegan-lip-balm",
+      "title": "Vegan Lip Balm",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    },
+    {
+      "sku": "PP-PV-06-09-HSP-VOL",
+      "slug": "volumizing-hair-spray",
+      "title": "Volumizing Hair Spray",
+      "canadianClassification": "Cosmetic (Food and Drugs Act / Cosmetic Regulations)",
+      "hotlistFlagCount": 0,
+      "hotlistReviewNotes": [
+        "No restricted Health Canada Hotlist substances detected in captured INCI."
+      ],
+      "bilingualWarningStatus": "IMPLEMENTED_EN_FR_ON_STOREFRONT_SHEET",
+      "quebecBill96Status": "PENDING_FULL_FRENCH_UI_LOCALIZATION (Canadian shipping currently disabled)",
+      "cnfWorkflowStatus": "CNF_TEMPLATE_PREPARED (Statutory filing due within 10 days after first Canadian sale per Cosmetic Regulations s. 30)",
+      "canadianSaleEligibility": "BLOCKED_PENDING_SHOPIFY_ADMIN_AND_CANADIAN_COMPLIANCE",
+      "usOnlyEnforcementStatus": "STOREFRONT_AND_API_GUARD_ACTIVE_PENDING_SHOPIFY_ADMIN_SHIPPING_ZONE_VERIFICATION"
+    }
+  ]
+}

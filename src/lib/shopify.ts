@@ -1,4 +1,5 @@
 import { PRETTYPIGGIE_PRODUCTS } from '@/data/boutiqueData';
+import { BlockedCartLine, validateCartForCheckout } from '@/lib/purchaseGuard';
 import { BoutiqueProduct, CartItem } from '@/types/boutique';
 
 const RAW_SHOPIFY_DOMAIN = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN || '';
@@ -8,7 +9,6 @@ const SHOPIFY_DOMAIN = RAW_SHOPIFY_DOMAIN.replace(/^https?:\/\//, '').replace(
 );
 const SHOPIFY_STOREFRONT_TOKEN =
   process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN || '';
-const SHOPIFY_API_VERSION = '2024-10';
 
 export function isShopifyConfigured(): boolean {
   return Boolean(
@@ -19,153 +19,104 @@ export function isShopifyConfigured(): boolean {
   );
 }
 
-interface ShopifyGraphQLResponse<T> {
-  data?: T;
-  errors?: Array<{ message: string }>;
-}
+export class PurchaseLockError extends Error {
+  code: string;
+  blockedItems: BlockedCartLine[];
 
-export async function shopifyStorefrontFetch<T>(
-  query: string,
-  variables: Record<string, unknown> = {}
-): Promise<T | null> {
-  if (!isShopifyConfigured()) {
-    return null;
-  }
-
-  try {
-    const endpoint = `https://${SHOPIFY_DOMAIN}/api/${SHOPIFY_API_VERSION}/graphql.json`;
-    const response = await fetch(endpoint, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-Shopify-Storefront-Access-Token': SHOPIFY_STOREFRONT_TOKEN,
-      },
-      body: JSON.stringify({ query, variables }),
-    });
-
-    if (!response.ok) {
-      return null;
-    }
-
-    const json = (await response.json()) as ShopifyGraphQLResponse<T>;
-    if (json.errors?.length) {
-      console.warn('Shopify Storefront API warning:', json.errors);
-    }
-    return json.data ?? null;
-  } catch (error) {
-    console.warn('Shopify Storefront network fallback activated:', error);
-    return null;
+  constructor(
+    message: string,
+    code = 'PURCHASE_LOCK_ENFORCED',
+    blockedItems: BlockedCartLine[] = []
+  ) {
+    super(message);
+    this.name = 'PurchaseLockError';
+    this.code = code;
+    this.blockedItems = blockedItems;
   }
 }
-
-const CART_CREATE_MUTATION = `
-  mutation CartCreate($input: CartInput!) {
-    cartCreate(input: $input) {
-      cart {
-        id
-        checkoutUrl
-        totalQuantity
-        cost {
-          subtotalAmount {
-            amount
-            currencyCode
-          }
-          totalAmount {
-            amount
-            currencyCode
-          }
-        }
-      }
-      userErrors {
-        field
-        message
-      }
-    }
-  }
-`;
 
 export interface CheckoutSessionResult {
   mode: 'shopify-live' | 'shopify-preview';
+  isSimulatedPreview: boolean;
   checkoutUrl: string;
   cartId: string;
   orderReference: string;
   guestEmail?: string;
+  notice?: string;
 }
 
+/**
+ * Initiates checkout strictly through the server-side POST /api/checkout endpoint
+ * after running authoritative local cart validation so locked/unverified/OOS products
+ * can never bypass the purchase lock via stale carts or client-side manipulation.
+ */
 export async function initiateShopifyCheckout(
   items: CartItem[],
-  guestEmail?: string
+  guestEmail?: string,
+  checkoutMethod: 'shopify' | 'apple-pay' | 'shop-pay' = 'shopify'
 ): Promise<CheckoutSessionResult> {
-  const orderReference = `PP-${Math.floor(100000 + Math.random() * 900000)}`;
+  const localValidation = validateCartForCheckout(items);
+  if (!localValidation.ok) {
+    throw new PurchaseLockError(
+      localValidation.blockedItems.length > 0
+        ? 'One or more items in your bag are locked pending manufacturer verification or are currently out of stock.'
+        : 'Your shopping bag is empty.',
+      localValidation.blockedItems.length > 0
+        ? 'PURCHASE_LOCK_ENFORCED'
+        : 'EMPTY_CART',
+      localValidation.blockedItems
+    );
+  }
+
   const cleanEmail = guestEmail?.trim() || undefined;
 
-  if (isShopifyConfigured()) {
-    const lines = items.map((item) => ({
-      merchandiseId: item.shopifyVariantId,
-      quantity: item.quantity,
-      attributes: [
-        { key: 'Shade', value: item.shadeName },
-        { key: 'Finish', value: item.finish },
-        { key: 'Source', value: 'PrettyPiggie 3D Virtual Boutique' },
-      ],
-    }));
+  const response = await fetch('/api/checkout', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      items: localValidation.verifiedItems.map((i) => ({
+        productId: i.productId,
+        productHandle: i.productHandle,
+        sku: i.sku,
+        shadeId: i.shadeId,
+        quantity: i.quantity,
+      })),
+      guestEmail: cleanEmail,
+      shippingCountry: 'US',
+      checkoutMethod,
+    }),
+  });
 
-    interface CartCreateData {
-      cartCreate?: {
-        cart?: {
-          id: string;
-          checkoutUrl: string;
-        };
-        userErrors?: Array<{ field?: string[]; message: string }>;
-      };
-    }
+  const payload = (await response.json()) as {
+    error?: string;
+    code?: string;
+    blockedItems?: BlockedCartLine[];
+    mode?: 'shopify-live' | 'shopify-preview';
+    isSimulatedPreview?: boolean;
+    checkoutUrl?: string;
+    cartId?: string;
+    orderReference?: string;
+    guestEmail?: string;
+    notice?: string;
+  };
 
-    const cartInput: Record<string, unknown> = {
-      lines,
-      buyerIdentity: {
-        countryCode: 'US',
-        ...(cleanEmail ? { email: cleanEmail } : {}),
-      },
-      attributes: [
-        {
-          key: 'Storefront Experience',
-          value: 'PrettyPiggie 3D Mobile-First Virtual Boutique',
-        },
-        {
-          key: 'Shipping Market Control',
-          value: 'US_ONLY_INITIAL_LAUNCH (CA Disabled Pending Gate)',
-        },
-      ],
-    };
-
-    const data = await shopifyStorefrontFetch<CartCreateData>(
-      CART_CREATE_MUTATION,
-      {
-        input: cartInput,
-      }
+  if (!response.ok) {
+    throw new PurchaseLockError(
+      payload.error || 'Checkout request could not be completed.',
+      payload.code || 'CHECKOUT_REJECTED',
+      payload.blockedItems || []
     );
-
-    if (data?.cartCreate?.userErrors?.length) {
-      console.warn('Shopify cartCreate userErrors:', data.cartCreate.userErrors);
-    }
-
-    if (data?.cartCreate?.cart?.checkoutUrl) {
-      return {
-        mode: 'shopify-live',
-        checkoutUrl: data.cartCreate.cart.checkoutUrl,
-        cartId: data.cartCreate.cart.id,
-        orderReference,
-        guestEmail: cleanEmail,
-      };
-    }
   }
 
   return {
-    mode: 'shopify-preview',
-    checkoutUrl: `#checkout-${orderReference}`,
-    cartId: `gid://shopify/Cart/${orderReference}`,
-    orderReference,
-    guestEmail: cleanEmail,
+    mode: payload.mode === 'shopify-live' ? 'shopify-live' : 'shopify-preview',
+    isSimulatedPreview:
+      payload.isSimulatedPreview ?? payload.mode !== 'shopify-live',
+    checkoutUrl: payload.checkoutUrl || '#',
+    cartId: payload.cartId || '',
+    orderReference: payload.orderReference || 'PP-PREVIEW',
+    guestEmail: payload.guestEmail,
+    notice: payload.notice,
   };
 }
 
