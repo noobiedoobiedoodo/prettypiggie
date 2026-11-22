@@ -7,14 +7,20 @@ type ImageVariantRecord = {
 };
 
 const IMAGE_MAP = serverImageMapRaw as Record<string, ImageVariantRecord>;
+const ALLOWED_VARIANTS = new Set(['primary', 'box']);
+const UPSTREAM_TIMEOUT_MS = 8000;
 
 export async function GET(
   _request: Request,
   context: { params: { slug: string; variant: string } }
 ) {
   const { slug, variant } = context.params;
-  const entry = IMAGE_MAP[slug];
 
+  if (!ALLOWED_VARIANTS.has(variant)) {
+    return new NextResponse('Invalid Image Variant', { status: 400 });
+  }
+
+  const entry = IMAGE_MAP[slug];
   if (!entry) {
     return new NextResponse('Not Found', { status: 404 });
   }
@@ -29,6 +35,7 @@ export async function GET(
   try {
     const upstreamRes = await fetch(upstreamUrl, {
       next: { revalidate: 86400 },
+      signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
     });
 
     if (!upstreamRes.ok) {
@@ -37,14 +44,19 @@ export async function GET(
       });
     }
 
-    const buffer = await upstreamRes.arrayBuffer();
-    const contentType =
+    const rawContentType =
       upstreamRes.headers.get('content-type') || 'image/webp';
+    if (!rawContentType.toLowerCase().startsWith('image/')) {
+      return new NextResponse('Invalid Upstream Media Type', { status: 502 });
+    }
+
+    const buffer = await upstreamRes.arrayBuffer();
 
     return new NextResponse(buffer, {
       status: 200,
       headers: {
-        'Content-Type': contentType,
+        'Content-Type': rawContentType,
+        'X-Content-Type-Options': 'nosniff',
         'Cache-Control':
           'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800',
       },

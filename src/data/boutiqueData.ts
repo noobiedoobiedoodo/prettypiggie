@@ -619,7 +619,8 @@ export const PRETTYPIGGIE_PRODUCTS: BoutiqueProduct[] = rawItems.map((item) => {
     finish: inferred.finish,
     sku: s.sku,
     inStock: canPurchase,
-    shopifyVariantId: `gid://shopify/ProductVariant/${s.sku}`,
+    // Resolved server-side to live numeric Shopify ProductVariant GIDs in POST /api/checkout
+    shopifyVariantId: '',
   }));
 
   return {

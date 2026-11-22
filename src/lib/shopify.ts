@@ -10,6 +10,9 @@ const SHOPIFY_DOMAIN = RAW_SHOPIFY_DOMAIN.replace(/^https?:\/\//, '').replace(
 const SHOPIFY_STOREFRONT_TOKEN =
   process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN || '';
 
+export const PENDING_SHOPIFY_CART_STORAGE_KEY =
+  'prettypiggie_pending_shopify_cart_id';
+
 export function isShopifyConfigured(): boolean {
   return Boolean(
     SHOPIFY_DOMAIN &&
@@ -42,6 +45,7 @@ export interface CheckoutSessionResult {
   cartId: string;
   orderReference: string;
   guestEmail?: string;
+  marketingConsentRecorded?: boolean;
   notice?: string;
 }
 
@@ -53,7 +57,7 @@ export interface CheckoutSessionResult {
 export async function initiateShopifyCheckout(
   items: CartItem[],
   guestEmail?: string,
-  checkoutMethod: 'shopify' | 'apple-pay' | 'shop-pay' = 'shopify'
+  marketingOptIn = false
 ): Promise<CheckoutSessionResult> {
   const localValidation = validateCartForCheckout(items);
   if (!localValidation.ok) {
@@ -69,6 +73,12 @@ export async function initiateShopifyCheckout(
   }
 
   const cleanEmail = guestEmail?.trim() || undefined;
+  if (marketingOptIn && !cleanEmail) {
+    throw new PurchaseLockError(
+      'Please enter your email address above to record optional marketing consent.',
+      'CONSENT_EMAIL_REQUIRED'
+    );
+  }
 
   const response = await fetch('/api/checkout', {
     method: 'POST',
@@ -82,8 +92,8 @@ export async function initiateShopifyCheckout(
         quantity: i.quantity,
       })),
       guestEmail: cleanEmail,
+      marketingOptIn: Boolean(marketingOptIn),
       shippingCountry: 'US',
-      checkoutMethod,
     }),
   });
 
@@ -97,6 +107,7 @@ export async function initiateShopifyCheckout(
     cartId?: string;
     orderReference?: string;
     guestEmail?: string;
+    marketingConsentRecorded?: boolean;
     notice?: string;
   };
 
@@ -116,8 +127,25 @@ export async function initiateShopifyCheckout(
     cartId: payload.cartId || '',
     orderReference: payload.orderReference || 'PP-PREVIEW',
     guestEmail: payload.guestEmail,
+    marketingConsentRecorded: Boolean(payload.marketingConsentRecorded),
     notice: payload.notice,
   };
+}
+
+export async function checkPendingCheckoutCompleted(
+  cartId: string
+): Promise<boolean> {
+  if (!cartId || !cartId.startsWith('gid://shopify/Cart/')) return false;
+  try {
+    const res = await fetch(
+      `/api/checkout?cartId=${encodeURIComponent(cartId)}`
+    );
+    if (!res.ok) return false;
+    const data = (await res.json()) as { completed?: boolean };
+    return Boolean(data.completed);
+  } catch {
+    return false;
+  }
 }
 
 export async function fetchBoutiqueCatalogue(): Promise<BoutiqueProduct[]> {

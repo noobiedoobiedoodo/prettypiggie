@@ -16,6 +16,10 @@ import {
   sanitizePersistedCart,
 } from '@/lib/purchaseGuard';
 import {
+  PENDING_SHOPIFY_CART_STORAGE_KEY,
+  checkPendingCheckoutCompleted,
+} from '@/lib/shopify';
+import {
   BoutiqueProduct,
   BoutiqueZoneId,
   CartItem,
@@ -160,6 +164,34 @@ export function PrettyPiggieBoutiqueApp() {
       // Ignore storage access errors
     }
   }, [cartItems]);
+
+  // Clear local bag automatically when shopper returns after completing a live Shopify checkout
+  useEffect(() => {
+    let active = true;
+    const verifyPendingCheckout = async () => {
+      try {
+        const pendingCartId = window.sessionStorage.getItem(
+          PENDING_SHOPIFY_CART_STORAGE_KEY
+        );
+        if (!pendingCartId) return;
+        const completed = await checkPendingCheckoutCompleted(pendingCartId);
+        if (completed && active) {
+          setCartItems([]);
+          window.localStorage.setItem(CART_STORAGE_KEY, '[]');
+          window.sessionStorage.removeItem(PENDING_SHOPIFY_CART_STORAGE_KEY);
+        }
+      } catch {
+        // Ignore storage/network errors
+      }
+    };
+
+    verifyPendingCheckout();
+    window.addEventListener('pageshow', verifyPendingCheckout);
+    return () => {
+      active = false;
+      window.removeEventListener('pageshow', verifyPendingCheckout);
+    };
+  }, []);
 
   const handleSelectZone = useCallback((zoneId: BoutiqueZoneId) => {
     setSelectedProduct(null);

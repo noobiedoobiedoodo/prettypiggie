@@ -12,6 +12,7 @@ import {
 import { CartItem, LegalPolicyTab } from '@/types/boutique';
 import {
   CheckoutSessionResult,
+  PENDING_SHOPIFY_CART_STORAGE_KEY,
   PurchaseLockError,
   initiateShopifyCheckout,
   isShopifyConfigured,
@@ -39,9 +40,6 @@ export function ShoppingBagDrawer({
   onOpenLegal,
 }: ShoppingBagDrawerProps) {
   const [isCheckingOut, setIsCheckingOut] = useState(false);
-  const [checkoutMethod, setCheckoutMethod] = useState<
-    'shopify' | 'apple-pay' | 'shop-pay'
-  >('shopify');
   const [completedSession, setCompletedSession] =
     useState<CheckoutSessionResult | null>(null);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
@@ -63,19 +61,28 @@ export function ShoppingBagDrawer({
     subtotal >= FREE_SHIPPING_THRESHOLD || subtotal === 0 ? 0 : 7;
   const total = subtotal + shippingCost;
 
-  const handleCheckout = async (
-    method: 'shopify' | 'apple-pay' | 'shop-pay'
-  ) => {
+  const handleCheckout = async () => {
     if (items.length === 0) return;
     setCheckoutError(null);
-    setCheckoutMethod(method);
     setIsCheckingOut(true);
 
     try {
-      const session = await initiateShopifyCheckout(items, guestEmail, method);
+      const session = await initiateShopifyCheckout(
+        items,
+        guestEmail,
+        caslMarketingOptIn
+      );
       setIsCheckingOut(false);
 
       if (session.mode === 'shopify-live' && !session.isSimulatedPreview) {
+        try {
+          window.sessionStorage.setItem(
+            PENDING_SHOPIFY_CART_STORAGE_KEY,
+            session.cartId
+          );
+        } catch {
+          // Ignore sessionStorage restrictions
+        }
         window.location.href = session.checkoutUrl;
         return;
       }
@@ -195,11 +202,7 @@ export function ShoppingBagDrawer({
 
             <div className="mt-3 flex flex-wrap items-center justify-center gap-1.5">
               <span className="rounded-full bg-piggie-100 px-3 py-0.5 text-[11px] font-semibold uppercase tracking-widest text-piggie-800">
-                {checkoutMethod === 'apple-pay'
-                  ? 'Apple Pay Express'
-                  : checkoutMethod === 'shop-pay'
-                  ? 'Shop Pay One-Tap'
-                  : 'Shopify Guest Checkout'}
+                Shopify Hosted Checkout
               </span>
               <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-amber-900 ring-1 ring-amber-300">
                 Simulated Sandbox Preview • Not a Live Order
@@ -440,32 +443,12 @@ export function ShoppingBagDrawer({
               </div>
             </div>
 
-            {/* Express Mobile Pay Buttons (Apple Pay / Shop Pay) */}
-            <div className="mt-3 grid grid-cols-2 gap-2">
-              <button
-                type="button"
-                disabled={isCheckingOut}
-                onClick={() => handleCheckout('apple-pay')}
-                className="flex items-center justify-center gap-1.5 rounded-full bg-black py-2.5 text-xs font-bold text-white shadow transition hover:bg-neutral-800 active:scale-98"
-              >
-                <span> Pay</span>
-              </button>
-              <button
-                type="button"
-                disabled={isCheckingOut}
-                onClick={() => handleCheckout('shop-pay')}
-                className="flex items-center justify-center gap-1.5 rounded-full bg-[#5A31F4] py-2.5 text-xs font-bold text-white shadow transition hover:bg-[#4922D9] active:scale-98"
-              >
-                <span>Shop Pay</span>
-              </button>
-            </div>
-
-            {/* Primary Shopify Guest Checkout CTA */}
+            {/* Primary Shopify Hosted Checkout CTA (Native Apple Pay, Shop Pay & Cards Presented Inside Shopify Checkout) */}
             <button
               type="button"
               disabled={isCheckingOut}
-              onClick={() => handleCheckout('shopify')}
-              className="mt-2.5 flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-piggie-950 via-piggie-800 to-piggie-950 py-3.5 text-sm font-bold text-white shadow-lg transition hover:from-piggie-900 hover:to-piggie-800 active:scale-98"
+              onClick={handleCheckout}
+              className="mt-3 flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-piggie-950 via-piggie-800 to-piggie-950 py-3.5 text-sm font-bold text-white shadow-lg transition hover:from-piggie-900 hover:to-piggie-800 active:scale-98 disabled:opacity-60"
             >
               <Lock className="h-3.5 w-3.5 text-rosegold-light" />
               <span>
@@ -474,6 +457,10 @@ export function ShoppingBagDrawer({
                   : `Proceed to Shopify Checkout • $${total.toFixed(2)}`}
               </span>
             </button>
+            <p className="mt-1.5 text-center text-[10px] font-medium text-piggie-700">
+              Apple Pay, Shop Pay &amp; major cards available inside Shopify
+              Hosted Checkout • Final shipping &amp; tax calculated at checkout
+            </p>
 
             <div className="mt-2.5 flex flex-wrap items-center justify-center gap-2 text-center text-[10px] text-piggie-600">
               <span>

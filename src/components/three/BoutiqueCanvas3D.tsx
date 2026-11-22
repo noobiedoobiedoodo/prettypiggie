@@ -169,6 +169,14 @@ export function BoutiqueCanvas3D({
     y: 0,
     active: false,
   });
+  const contextLostCleanupRef = useRef<(() => void) | null>(null);
+
+  useEffect(() => {
+    return () => {
+      contextLostCleanupRef.current?.();
+      contextLostCleanupRef.current = null;
+    };
+  }, []);
 
   useEffect(() => {
     setDynamicDpr(capability.dpr[1]);
@@ -262,15 +270,24 @@ export function BoutiqueCanvas3D({
           far: 60,
         }}
         onCreated={({ gl }) => {
+          contextLostCleanupRef.current?.();
+          const canvasEl = gl.domElement;
           const handleContextLost = (event: Event) => {
             event.preventDefault();
             onContextLost?.();
           };
-          gl.domElement.addEventListener(
+          canvasEl.addEventListener(
             'webglcontextlost',
             handleContextLost,
             false
           );
+          contextLostCleanupRef.current = () => {
+            canvasEl.removeEventListener(
+              'webglcontextlost',
+              handleContextLost,
+              false
+            );
+          };
         }}
       >
         <color attach="background" args={['#E6A6BD']} />
