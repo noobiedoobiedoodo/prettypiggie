@@ -15,9 +15,10 @@
 | **Active Remediation Branch** | `remediation/v1.0.0-rc2` | **Active** |
 | **Prior RC2 Core Remediation Commit** | `eb380e109cb37c131d92f274e9bd0babd87eb3d0` *(52/4/54 reconciliation, server-side checkout locks, MoCRA/U.S.-only fixes)* | **Preserved on Branch** |
 | **Prior RC2 Verification Docs Commit** | `41cc752de8b089e7fe61be906be2db812a310566` | **Preserved on Branch** |
-| **Latest RC2 Code & Register Commit (Evidence Classification)** | `4a4ff88f00ea2b9c20eed2d6f96d2ee3a8aab612` *(Distinguishes supplier-listing transcriptions vs. manufacturer-certified docs; adds audit ledger fields)* | **Built & Verified Locally** |
+| **Latest RC2 Code & Register Commit (Evidence Classification)** | `4a4ff88f00ea2b9c20eed2d6f96d2ee3a8aab612` *(Distinguishes supplier-listing transcriptions vs. manufacturer-certified docs; adds audit ledger fields)* | **Preserved on Branch** |
+| **Latest RC2 Production Hardening Commit** | `28fe54dc4f7c779aef038d7b0ae68054a6745fa1` *(Real numeric Shopify variant ID + live availability resolver, `/api/shopify/health`, CASL consent forwarding, express pay cleanup, Next.js `14.2.35` security patch, HTTP security headers, API timeouts & rate limiting, `error.tsx`/`not-found.tsx`/`robots.ts`/`sitemap.ts`, ESLint)* | **Built & Verified Locally** |
 | **Branch HEAD SHA (Includes This Consolidated Package)** | Recorded immediately after commit/push via `git rev-parse HEAD` *(verify exact HEAD on `origin/remediation/v1.0.0-rc2` before deploying to Vercel)* | **Deploy Target** |
-| **Local Production Build (`next build`)** | `PASS` — Build ID `Jome1a7e3V13vt7s4o5fh` (`npx tsc --noEmit`: `0` errors; `19` static JS chunks scanned: `0` leaks) | **PASS (Local)** |
+| **Local Production Build (`next build`)** | `PASS` — Next.js `14.2.35`, Build ID `L3XDn5dr4GZTqVJ_fExHw` (`npx tsc --noEmit`: `0` errors; `npm run lint`: `0` errors/warnings; `22` static JS chunks scanned: `0` leaks) | **PASS (Local)** |
 
 ---
 
@@ -86,10 +87,12 @@ All five product surfaces ([MANUFACTURER_DOCUMENTATION_REGISTER.md](file:///c:/U
 ## 6. Shopify Configuration, U.S.-Only Enforcement & Transaction Evidence (`P0-COM-01`)
 
 - **Current Status:** **`BLOCKED / PENDING LIVE SHOPIFY CREDENTIALS & ADMIN CONFIGURATION`**
-- **Verified Local Engineering & Security Controls (`Build ID: Jome1a7e3V13vt7s4o5fh`):**
-  - `POST /api/checkout` exhaustive live `next start` test: **54/54** `UNVERIFIED_PURCHASE_LOCKED` SKUs rejected `HTTP 422`; **4/4** `VERIFIED_OUT_OF_STOCK` SKUs rejected `HTTP 422`; mixed smuggling rejected `HTTP 422`; `shippingCountry: "CA"` rejected `HTTP 403`; tampered client price (`\$0.01`) overridden to canonical server price (`\$33.50 + \$7.00 = \$40.50 USD`).
+- **Verified Local Engineering & Security Controls (`Build ID: L3XDn5dr4GZTqVJ_fExHw`, Next.js `14.2.35`):**
+  - **Real Numeric Shopify Variant Resolver ([shopifyVariantResolver.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/lib/shopifyVariantResolver.ts)):** Synthetic SKU-string GIDs removed (`0` hits for `gid://shopify/ProductVariant/PP-` in compiled bundles). When live Shopify credentials are supplied, `POST /api/checkout` dynamically resolves real numeric `gid://shopify/ProductVariant/<numeric>` IDs (supporting exact SKU, stripped Blanka SKU, and handle+shade matching), verifies live `availableForSale` (`HTTP 409` if OOS), and rejects unmapped SKUs (`HTTP 422`). `/api/shopify/health` verifies mapping readiness across all 52 eligible SKUs.
+  - `POST /api/checkout` exhaustive live `next start` test: **54/54** `UNVERIFIED_PURCHASE_LOCKED` SKUs rejected `HTTP 422`; **4/4** `VERIFIED_OUT_OF_STOCK` SKUs rejected `HTTP 422`; mixed smuggling rejected `HTTP 422`; `shippingCountry: "CA"` rejected `HTTP 403`; CASL marketing opt-in without email rejected `HTTP 400` and with email recorded with UTC timestamp (`HTTP 200`); tampered client price (`\$0.01`) overridden to canonical server price (`\$33.50 + \$7.00 = \$40.50 USD`).
+  - HTTP Security Headers (`HSTS`, `nosniff`, `SAMEORIGIN`, `Referrer-Policy`, `Permissions-Policy`), per-IP checkout rate limiter, `8s` upstream fetch timeouts, pre-GA `robots.txt` (`Disallow: /`), eligible-only `sitemap.xml`, `error.tsx`, `not-found.tsx`, WebGL listener cleanup, and post-checkout cart-completion check (`GET /api/checkout?cartId=...`) all empirically verified.
   - `sanitizePersistedCart` verified against poisoned 3-item `localStorage` payload: evicted `2/2` locked/OOS items, stripped legacy confidential fields (`wholesaleCost`, `profitPerUnit`, `blankaUrl`), and reset tampered price to `\$33.50`.
-  - Compiled `.next/static/` bundle scan (`19` JS files): `0` occurrences of `wholesaleCost`, `profitPerUnit`, `marginPercent`, `blankaUrl`, `73904-BLNK-`, `images.blankabrand.com`, `SHOPIFY_ADMIN_ACCESS_TOKEN`, placeholder emails, `"100% Cruelty-Free"`, or `"Complete Manufacturer INCI Specification On File"`.
+  - Compiled `.next/static/` bundle scan (`22` JS files): `0` occurrences of `wholesaleCost`, `profitPerUnit`, `marginPercent`, `blankaUrl`, `73904-BLNK-`, `images.blankabrand.com`, `SHOPIFY_ADMIN_ACCESS_TOKEN`, `gid://shopify/ProductVariant/PP-`, placeholder emails, `"100% Cruelty-Free"`, or `"Complete Manufacturer INCI Specification On File"`.
   - Sandbox preview mode returns `isSimulatedPreview: true` and renders unmistakable UI warning (`Simulated Sandbox Preview • Not a Live Order`).
 - **Pending Live Shopify Evidence Required Before GA:**
   - [ ] Connect actual production Shopify store credentials (keep any private Admin API tokens strictly server-side).
@@ -123,7 +126,7 @@ All five product surfaces ([MANUFACTURER_DOCUMENTATION_REGISTER.md](file:///c:/U
 | **`BLK-US-01`** | **P0 (Blocker)** | U.S.-Only Enforcement | Shopify Admin U.S.-only shipping zone restriction and live hosted-checkout Canadian destination & mid-checkout address-change rejection not yet proven. | **OPEN (External)** | Shopify Admin Shipping settings screenshot + live checkout Canada rejection screenshots. |
 | **`BLK-DEP-01`** | **P1 (Blocker)** | Staging Deployment | Exact `remediation/v1.0.0-rc2` HEAD not yet deployed to Vercel staging URL. | **OPEN (External)** | Staging URL, Deployment ID, deployed SHA, env config, and smoke-test log. |
 | **`BLK-QA-01`** | **P1 (Blocker)** | Physical-Device QA | Physical iPhone Safari, Android Chrome, TikTok in-app, and Instagram in-app end-to-end tests pending staging URL. | **OPEN (External)** | Completed 4-device matrix with OS/browser versions and device screenshots. |
-| **`ENG-DEFECTS`** | **None (`0` Open)** | Local Engineering Build | `0` open TypeScript, Next.js build, bundle-leak, reconciliation, or checkout-lock defects on commit `4a4ff88f00ea2b9c20eed2d6f96d2ee3a8aab612`. | **CLOSED (Local)** | Re-verify via staging smoke test once `BLK-DEP-01` is deployed. |
+| **`ENG-DEFECTS`** | **None (`0` Open)** | Local Engineering Build | `0` open TypeScript, ESLint, Next.js `14.2.35` build, bundle-leak, variant-ID, security-header, reconciliation, or checkout-lock defects on commit `28fe54dc4f7c779aef038d7b0ae68054a6745fa1`. | **CLOSED (Local)** | Re-verify via staging smoke test & `/api/shopify/health` once `BLK-DEP-01` and `BLK-COM-01` are supplied. |
 
 ---
 
@@ -155,7 +158,7 @@ If any staging defect or regression requires immediate rollback to the frozen `v
 
 | # | Approval Domain | Responsible Signatory | Current Status | Date |
 |---|---|---|---|---|
-| **1** | **Engineering verification** | Lead Software Engineer (`Antigravity AI`) | **PASS (Local RC2 Build `Jome1a7e3V13vt7s4o5fh`) / PENDING (Vercel Staging)** | 2026-11-20 |
+| **1** | **Engineering verification** | Lead Software Engineer (`Antigravity AI`) | **PASS (Local RC2 Build `L3XDn5dr4GZTqVJ_fExHw`) / PENDING (Vercel Staging)** | 2026-11-21 |
 | **2** | **Supplier documentation verification** | Supplier Liaison / Brand Owner *(Human Evidence Required)* | **HOLD (`0/110` Manufacturer-Certified Docs; `54` Locked; `56` Listing Transcriptions)** | `PENDING` |
 | **3** | **Regulatory review** | Qualified Cosmetics Regulatory Counsel *(Human Review Required)* | **PENDING QUALIFIED REVIEW & OWNER MOCRA CONFIRMATION** | `PENDING` |
 | **4** | **Live commerce verification** | Commerce Lead / Store Owner | **BLOCKED (Pending Live Shopify Store, U.S.-Only Admin Proof & Order/Refund Test)** | `PENDING` |
