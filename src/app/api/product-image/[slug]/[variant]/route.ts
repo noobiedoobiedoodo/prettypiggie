@@ -15,9 +15,9 @@ const MAX_IMAGE_BYTES = 5 * 1024 * 1024; // 5 MB DoS ceiling
 
 export async function GET(
   _request: Request,
-  context: { params: { slug: string; variant: string } }
+  context: { params: Promise<{ slug: string; variant: string }> }
 ) {
-  const { slug, variant } = context.params;
+  const { slug, variant } = await context.params;
 
   if (!ALLOWED_VARIANTS.has(variant)) {
     return new NextResponse('Invalid Image Variant', { status: 400 });

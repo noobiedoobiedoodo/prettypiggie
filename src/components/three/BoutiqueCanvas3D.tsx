@@ -161,8 +161,24 @@ export function BoutiqueCanvas3D({
 }: BoutiqueCanvas3DProps) {
   const [dynamicDpr, setDynamicDpr] = useState<number>(capability.dpr[1]);
   const [isTabVisible, setIsTabVisible] = useState<boolean>(true);
-  const [productRotationY, setProductRotationY] = useState<number>(0);
-  const [panOffsetX, setPanOffsetX] = useState<number>(0);
+  const [rotationState, setRotationState] = useState<{
+    productId: string | null;
+    y: number;
+  }>({ productId: null, y: 0 });
+  const [panState, setPanState] = useState<{
+    zone: BoutiqueZoneId;
+    x: number;
+  }>({ zone: activeZone, x: 0 });
+
+  const productRotationY =
+    rotationState.productId === (selectedProduct?.id ?? null)
+      ? rotationState.y
+      : 0;
+  const panOffsetX = panState.zone === activeZone ? panState.x : 0;
+  const effectiveMaxDpr = Math.max(
+    capability.dpr[0],
+    Math.min(dynamicDpr, capability.dpr[1])
+  );
 
   const dragStartRef = useRef<{ x: number; y: number; active: boolean }>({
     x: 0,
@@ -177,20 +193,6 @@ export function BoutiqueCanvas3D({
       contextLostCleanupRef.current = null;
     };
   }, []);
-
-  useEffect(() => {
-    setDynamicDpr(capability.dpr[1]);
-  }, [capability.dpr]);
-
-  // Reset pan offset when changing zones
-  useEffect(() => {
-    setPanOffsetX(0);
-  }, [activeZone]);
-
-  // Reset product rotation when selecting a new product
-  useEffect(() => {
-    setProductRotationY(0);
-  }, [selectedProduct?.id]);
 
   // Non-negotiable requirement: Pause rendering when the experience is not visible
   useEffect(() => {
@@ -216,12 +218,16 @@ export function BoutiqueCanvas3D({
 
     if (selectedProduct) {
       // 360-degree touch/mouse rotation of the product on the stage
-      setProductRotationY((prev) => prev + deltaX * 0.014);
+      const pid = selectedProduct.id;
+      setRotationState((prev) => ({
+        productId: pid,
+        y: (prev.productId === pid ? prev.y : 0) + deltaX * 0.014,
+      }));
       dragStartRef.current.x = e.clientX;
     } else {
       // Gentle horizontal look pan inside the active boutique zone
       const clampedPan = Math.max(-1.4, Math.min(1.4, -deltaX * 0.0045));
-      setPanOffsetX(clampedPan);
+      setPanState({ zone: activeZone, x: clampedPan });
     }
   };
 
@@ -233,7 +239,7 @@ export function BoutiqueCanvas3D({
 
     // On mobile/tablet, a quick horizontal swipe switches departments
     if (!selectedProduct && Math.abs(totalDeltaX) > 75 && totalDeltaY < 60) {
-      setPanOffsetX(0);
+      setPanState({ zone: activeZone, x: 0 });
       if (totalDeltaX < 0) {
         onSwipeZone('next');
       } else {
@@ -256,7 +262,7 @@ export function BoutiqueCanvas3D({
       }}
     >
       <Canvas
-        dpr={[capability.dpr[0], dynamicDpr]}
+        dpr={[capability.dpr[0], effectiveMaxDpr]}
         frameloop={isTabVisible ? 'always' : 'never'}
         gl={{
           antialias: capability.tier !== 'low',

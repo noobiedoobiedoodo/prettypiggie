@@ -619,7 +619,6 @@ export function VirtualBoutiqueEnvironment3D({
          ================================================================== */}
       {products.map((product) => {
         const isHovered = hoveredProductId === product.id;
-        const isZoneFocused = activeZone === product.zoneId || activeZone === 'rotunda';
         const primaryShade = product.shades[0];
 
         return (
@@ -665,68 +664,79 @@ export function VirtualBoutiqueEnvironment3D({
               autoRotate={!capability.prefersReducedMotion}
             />
 
-            {/* Floating Touch-Friendly Interactive Product Pill Tag (Only shown for active department or central focal products in Rotunda) */}
-            {!selectedProduct &&
-              (activeZone === product.zoneId ||
-                (activeZone === 'rotunda' &&
-                  (product.zoneId === 'collection' ||
-                    product.zoneId === 'beauty-counter' ||
-                    product.handle === 'lip-gloss'))) && (
-              <Html
-                position={[
-                  0,
-                  activeZone === 'rotunda'
-                    ? product.zoneId === 'collection'
-                      ? 0.86
-                      : 1.12
-                    : product.zoneId === 'collection' ||
-                      product.zoneId === 'beauty-counter'
-                    ? 0.88
-                    : 1.05,
-                  0,
-                ]}
-                center
-                distanceFactor={capability.isMobile ? 6.4 : 7.0}
-                zIndexRange={[20, 0]}
-              >
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onSelectProduct(product);
+            {/* Floating Touch-Friendly Interactive Product Pill Tag (Kept mounted stably for React 19 + Drei v10 portal safety) */}
+            {(() => {
+              const isTagVisible =
+                !selectedProduct &&
+                (activeZone === product.zoneId ||
+                  (activeZone === 'rotunda' &&
+                    (product.zoneId === 'collection' ||
+                      product.zoneId === 'beauty-counter' ||
+                      product.handle === 'lip-gloss')));
+              return (
+                <Html
+                  position={[
+                    0,
+                    activeZone === 'rotunda'
+                      ? product.zoneId === 'collection'
+                        ? 0.86
+                        : 1.12
+                      : product.zoneId === 'collection' ||
+                        product.zoneId === 'beauty-counter'
+                      ? 0.88
+                      : 1.05,
+                    0,
+                  ]}
+                  center
+                  distanceFactor={capability.isMobile ? 6.4 : 7.0}
+                  zIndexRange={[20, 0]}
+                  style={{
+                    display: isTagVisible ? 'block' : 'none',
+                    pointerEvents: isTagVisible ? 'auto' : 'none',
                   }}
-                  aria-label={`Inspect ${product.title}, $${product.price.toFixed(2)}`}
-                  className="group flex flex-col items-center transition-all duration-300 select-none"
                 >
-                  <div
-                    className={`flex items-center gap-1.5 rounded-full px-3 py-1 backdrop-blur-md border transition-all shadow-lg whitespace-nowrap ${
-                      isHovered
-                        ? 'bg-piggie-950/95 text-white border-rosegold scale-105'
-                        : 'bg-white/95 text-piggie-950 border-piggie-200 hover:bg-white'
-                    }`}
+                  <button
+                    type="button"
+                    tabIndex={isTagVisible ? 0 : -1}
+                    aria-hidden={!isTagVisible}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (!isTagVisible) return;
+                      onSelectProduct(product);
+                    }}
+                    aria-label={`Inspect ${product.title}, $${product.price.toFixed(2)}`}
+                    className="group flex flex-col items-center transition-all duration-300 select-none"
                   >
-                    <span
-                      className="h-2.5 w-2.5 rounded-full ring-1 ring-black/15 shrink-0"
-                      style={{ backgroundColor: primaryShade.hex }}
-                    />
-                    <span className="text-[11px] font-bold tracking-tight">
-                      {product.title}
-                    </span>
-                    <span className="text-[11px] font-extrabold text-piggie-600 group-hover:text-rosegold-light">
-                      ${product.price.toFixed(2)}
-                    </span>
-                  </div>
-                  {/* Shade count micro-badge (shown inside dedicated department view) */}
-                  {activeZone !== 'rotunda' && (
-                    <span className="mt-1 whitespace-nowrap rounded-full bg-piggie-900/90 px-2.5 py-0.5 text-[10px] font-semibold text-piggie-100 shadow-sm backdrop-blur-sm">
-                      {product.shades.length}{' '}
-                      {product.shades.length === 1 ? 'Formula' : 'Shades'} • Tap
-                      to 3D Try
-                    </span>
-                  )}
-                </button>
-              </Html>
-            )}
+                    <div
+                      className={`flex items-center gap-1.5 rounded-full px-3 py-1 backdrop-blur-md border transition-all shadow-lg whitespace-nowrap ${
+                        isHovered
+                          ? 'bg-piggie-950/95 text-white border-rosegold scale-105'
+                          : 'bg-white/95 text-piggie-950 border-piggie-200 hover:bg-white'
+                      }`}
+                    >
+                      <span
+                        className="h-2.5 w-2.5 rounded-full ring-1 ring-black/15 shrink-0"
+                        style={{ backgroundColor: primaryShade.hex }}
+                      />
+                      <span className="text-[11px] font-bold tracking-tight">
+                        {product.title}
+                      </span>
+                      <span className="text-[11px] font-extrabold text-piggie-600 group-hover:text-rosegold-light">
+                        ${product.price.toFixed(2)}
+                      </span>
+                    </div>
+                    {/* Shade count micro-badge (shown inside dedicated department view) */}
+                    {activeZone !== 'rotunda' && (
+                      <span className="mt-1 whitespace-nowrap rounded-full bg-piggie-900/90 px-2.5 py-0.5 text-[10px] font-semibold text-piggie-100 shadow-sm backdrop-blur-sm">
+                        {product.shades.length}{' '}
+                        {product.shades.length === 1 ? 'Formula' : 'Shades'} • Tap
+                        to 3D Try
+                      </span>
+                    )}
+                  </button>
+                </Html>
+              );
+            })()}
           </group>
         );
       })}

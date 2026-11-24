@@ -200,6 +200,7 @@ async function runStaticAndBundleGates(checks) {
       'images.blankabrand.com',
       'SHOPIFY_ADMIN_ACCESS_TOKEN',
       'SHOPIFY_STOREFRONT_ACCESS_TOKEN',
+      'SHOPIFY_WEBHOOK_SECRET',
       'safety@prettypiggie.com',
       'support@prettypiggie.com',
       'privacy@prettypiggie.com',
@@ -582,6 +583,71 @@ async function runLiveHttpAndAdversarialGates(baseUrl, checks) {
       healthNoStore,
       configured: healthBody.configured,
       automaticOrderAndShipmentReady: healthBody.automaticOrderAndShipmentReady,
+    }
+  );
+
+  // 7b. Shopify Variant Mapping Register Integrity (52 Eligible Products, Zero Synthetic GIDs)
+  const mappingJson = JSON.parse(
+    fs.readFileSync(
+      path.join(rootDir, 'src/data/shopifyVariantMappingRegister.json'),
+      'utf8'
+    )
+  );
+  const hasSyntheticVariantGid = mappingJson.mappings.some((m) =>
+    String(m.shopifyVariantGid || '').startsWith('gid://shopify/ProductVariant/PP-')
+  );
+  recordCheck(
+    checks,
+    'SHOPIFY_MAPPING_REGISTER_52_PRODUCTS_NO_SYNTHETIC_GIDS',
+    mappingJson.summary?.eligibleProductsCount === 52 &&
+      mappingJson.summary?.syntheticGidsPermitted === false &&
+      !hasSyntheticVariantGid,
+    {
+      eligibleProductsCount: mappingJson.summary?.eligibleProductsCount,
+      eligibleShadeVariantsCount: mappingJson.summary?.eligibleShadeVariantsCount,
+      hasSyntheticVariantGid,
+    }
+  );
+
+  // 7c. Shopify Webhook Fail-Closed HMAC Guard & Order Status Lookup Hardening
+  const forgedWebhookRes = await fetch(`${baseUrl}/api/webhooks/shopify`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-shopify-topic': 'orders/paid',
+      'x-shopify-webhook-id': 'audit-forged-1',
+      'x-shopify-hmac-sha256': 'Zm9yZ2VkLXNpZ25hdHVyZQ==',
+    },
+    body: JSON.stringify({ id: 999999, order_number: 1001 }),
+  });
+  const webhookNoStore = (
+    forgedWebhookRes.headers.get('cache-control') || ''
+  ).includes('no-store');
+
+  const badOrderLookupRes = await fetch(
+    `${baseUrl}/api/orders/status?orderNumber=bad!&email=not-an-email`
+  );
+  const missingOrderLookupRes = await fetch(
+    `${baseUrl}/api/orders/status?orderNumber=PP-999999&email=qa@example.com`
+  );
+  const orderStatusNoStore = (
+    missingOrderLookupRes.headers.get('cache-control') || ''
+  ).includes('no-store');
+
+  recordCheck(
+    checks,
+    'SHOPIFY_WEBHOOK_FAIL_CLOSED_AND_ORDER_STATUS_HARDENED',
+    (forgedWebhookRes.status === 401 || forgedWebhookRes.status === 503) &&
+      webhookNoStore &&
+      badOrderLookupRes.status === 400 &&
+      missingOrderLookupRes.status === 404 &&
+      orderStatusNoStore,
+    {
+      forgedWebhookStatus: forgedWebhookRes.status,
+      webhookNoStore,
+      badOrderLookupStatus: badOrderLookupRes.status,
+      missingOrderLookupStatus: missingOrderLookupRes.status,
+      orderStatusNoStore,
     }
   );
 

@@ -1,7 +1,7 @@
 import variantMapRaw from '@/lib/shopifyVariantMap.json';
 import { CartItem } from '@/types/boutique';
 
-const SHOPIFY_API_VERSION = '2024-10';
+const SHOPIFY_API_VERSION = '2026-10';
 const UPSTREAM_TIMEOUT_MS = 8000;
 const CATALOG_CACHE_TTL_MS = 5 * 60 * 1000;
 const SAFE_HOSTNAME_REGEX = /^[a-z0-9][a-z0-9.-]*\.[a-z]{2,}$/i;
@@ -108,6 +108,10 @@ interface CachedShopifyIndex {
 }
 
 let cachedIndex: CachedShopifyIndex | null = null;
+
+export function invalidateShopifyVariantCache(): void {
+  cachedIndex = null;
+}
 
 const PRODUCTS_VARIANTS_QUERY = `
   query FetchShopifyVariants($cursor: String) {

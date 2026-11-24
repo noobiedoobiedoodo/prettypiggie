@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import Link from 'next/link';
 
 export default function GlobalError({
   error,
@@ -36,12 +37,12 @@ export default function GlobalError({
           >
             Reload Boutique
           </button>
-          <a
+          <Link
             href="/?mode=2d"
             className="rounded-full border border-piggie-200 bg-piggie-50 px-5 py-2.5 text-xs font-bold text-piggie-900 hover:bg-piggie-100"
           >
             Open 2D Catalog
-          </a>
+          </Link>
         </div>
       </div>
     </main>

@@ -83,45 +83,49 @@ export function PrettyPiggieBoutiqueApp() {
 
   // Detect device capabilities, handle viewport changes, and support TikTok/IG Ad Deep-Linking (?product=, ?zone=, ?mode=)
   useEffect(() => {
-    const profile = detectDeviceCapability();
-    setCapability(profile);
-    if (profile.recommendFallback2D) {
-      setIs2DMode(true);
-    }
-
-    try {
-      const params = new URLSearchParams(window.location.search);
-      const modeParam = params.get('mode');
-      if (modeParam === '2d') {
+    let cancelled = false;
+    queueMicrotask(() => {
+      if (cancelled) return;
+      const profile = detectDeviceCapability();
+      setCapability(profile);
+      if (profile.recommendFallback2D) {
         setIs2DMode(true);
-      } else if (modeParam === '3d' && profile.supportsWebGL) {
-        setIs2DMode(false);
       }
 
-      const zoneParam = params.get('zone') as BoutiqueZoneId | null;
-      if (
-        zoneParam &&
-        BOUTIQUE_ZONES.some((z) => z.id === zoneParam)
-      ) {
-        setActiveZone(zoneParam);
-      }
-
-      const productParam = params.get('product');
-      if (productParam) {
-        const matched = PRETTYPIGGIE_PRODUCTS.find(
-          (p) =>
-            p.handle === productParam.toLowerCase() ||
-            p.id === productParam.toLowerCase()
-        );
-        if (matched) {
-          setSelectedProduct(matched);
-          setSelectedShade(matched.shades[0]);
-          setActiveZone(matched.zoneId);
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const modeParam = params.get('mode');
+        if (modeParam === '2d') {
+          setIs2DMode(true);
+        } else if (modeParam === '3d' && profile.supportsWebGL) {
+          setIs2DMode(false);
         }
+
+        const zoneParam = params.get('zone') as BoutiqueZoneId | null;
+        if (
+          zoneParam &&
+          BOUTIQUE_ZONES.some((z) => z.id === zoneParam)
+        ) {
+          setActiveZone(zoneParam);
+        }
+
+        const productParam = params.get('product');
+        if (productParam) {
+          const matched = PRETTYPIGGIE_PRODUCTS.find(
+            (p) =>
+              p.handle === productParam.toLowerCase() ||
+              p.id === productParam.toLowerCase()
+          );
+          if (matched) {
+            setSelectedProduct(matched);
+            setSelectedShade(matched.shades[0]);
+            setActiveZone(matched.zoneId);
+          }
+        }
+      } catch {
+        // Ignore URL parsing errors
       }
-    } catch {
-      // Ignore URL parsing errors
-    }
+    });
 
     const handleResize = () => {
       const updated = detectDeviceCapability();
@@ -129,30 +133,40 @@ export function PrettyPiggieBoutiqueApp() {
     };
 
     window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    return () => {
+      cancelled = true;
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   // Load and sanitize saved cart from localStorage (evicts any legacy confidential fields, UNVERIFIED, or OOS products)
   useEffect(() => {
-    try {
-      const saved = window.localStorage.getItem(CART_STORAGE_KEY);
-      if (saved) {
-        const parsed = JSON.parse(saved) as unknown;
-        const { items: sanitized, evictedCount } =
-          sanitizePersistedCart(parsed);
-        setCartItems(sanitized);
-        if (evictedCount > 0) {
-          window.localStorage.setItem(
-            CART_STORAGE_KEY,
-            JSON.stringify(sanitized)
-          );
+    let cancelled = false;
+    queueMicrotask(() => {
+      if (cancelled) return;
+      try {
+        const saved = window.localStorage.getItem(CART_STORAGE_KEY);
+        if (saved) {
+          const parsed = JSON.parse(saved) as unknown;
+          const { items: sanitized, evictedCount } =
+            sanitizePersistedCart(parsed);
+          setCartItems(sanitized);
+          if (evictedCount > 0) {
+            window.localStorage.setItem(
+              CART_STORAGE_KEY,
+              JSON.stringify(sanitized)
+            );
+          }
         }
+      } catch {
+        // Ignore storage access errors
+      } finally {
+        isCartHydratedRef.current = true;
       }
-    } catch {
-      // Ignore storage access errors
-    } finally {
-      isCartHydratedRef.current = true;
-    }
+    });
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Persist cart changes only after initial hydration
