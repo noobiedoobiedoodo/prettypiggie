@@ -1,172 +1,134 @@
-# PrettyPiggie.com — Consolidated Final Evidence Package & Release Certificate (`remediation/v1.0.0-rc2`)
+# PrettyPiggie.com — Consolidated Master Production Delivery Package & Release Certificate (`remediation/v1.0.0-rc2`)
 
 > [!CAUTION]
-> **Release Decision: `NO-GO` — Controlled Remediation & Staging Verification Phase Active**  
-> **General Availability is NOT approved.** Public commercial launch, real customer order acceptance, and commercial launch announcements remain prohibited until all external supplier documentation, qualified regulatory review, live Shopify commerce & U.S.-only Admin enforcement, Vercel staging deployment, physical-device QA, and explicit Business Owner authorization are completed and evidenced.
+> **Release Decision: `NO-GO` — Controlled Remediation Continues**  
+> **General Availability is NOT approved.** Public commercial launch, real customer order acceptance, and automated-shipping announcements remain prohibited until all external Blanka Support confirmations, live Shopify store/variant/shipping/tax setup, real end-to-end paid order & shipment proof, supplier documentation & qualified regulatory sign-off, Vercel staging deployment, physical-device QA, and explicit Business Owner authorization are completed and evidenced.
 
 ---
 
 ## 1. Final Git Branch, Commit Lineage & Baseline Preservation
 
-| Git Reference / Artifact | Exact Identifier / SHA | Verification Status |
+| Reference | Exact Identifier / SHA | Status |
 |---|---|---|
 | **GitHub Repository** | https://github.com/noobiedoobiedoodo/prettypiggie.git | **Synced** |
 | **Frozen Rollback Baseline (`main` / Tag `v1.0.0-rc1`)** | `18592fc7190cd840b4589f6cfce4840fdf41bc83` *(Archived Build ID: `8iwZOJS3uDI5rLgSQuRKs`)* | **Preserved & Untouched** |
 | **Active Remediation Branch** | `remediation/v1.0.0-rc2` | **Active** |
-| **Prior RC2 Core Remediation Commit** | `eb380e109cb37c131d92f274e9bd0babd87eb3d0` *(52/4/54 reconciliation, server-side checkout locks, MoCRA/U.S.-only fixes)* | **Preserved on Branch** |
-| **Prior RC2 Verification Docs Commit** | `41cc752de8b089e7fe61be906be2db812a310566` | **Preserved on Branch** |
-| **Latest RC2 Code & Register Commit (Evidence Classification)** | `4a4ff88f00ea2b9c20eed2d6f96d2ee3a8aab612` *(Distinguishes supplier-listing transcriptions vs. manufacturer-certified docs; adds audit ledger fields)* | **Preserved on Branch** |
-| **Latest RC2 Production Hardening Commit** | `28fe54dc4f7c779aef038d7b0ae68054a6745fa1` *(Real numeric Shopify variant ID + live availability resolver, `/api/shopify/health`, CASL consent forwarding, express pay cleanup, Next.js `14.2.35`, HTTP security headers, API timeouts & rate limiting, `error.tsx`/`not-found.tsx`/`robots.ts`/`sitemap.ts`, ESLint)* | **Preserved on Branch** |
-| **Latest RC2 Adversarial Security & CI Audit Commit** | `4a19acd18a78078ed0a6f61eea7df60c3fa0aa2d` *(Version-controlled `scripts/release-audit.mjs` + `npm run audit:release` + `.github/workflows/release-audit.yml`, CSP, `poweredByHeader: false`, zero client Shopify token bundling, CSRF/Origin 403, 415/413/400 DoS caps, open-redirect & prototype-pollution guards, price-drift detection)* | **Built & Verified (`13/13` PASS)** |
-| **Branch HEAD SHA (Includes This Consolidated Package)** | Recorded immediately after commit/push via `git rev-parse HEAD` *(verify exact HEAD on `origin/remediation/v1.0.0-rc2` before deploying to Vercel)* | **Deploy Target** |
-| **Local Production Build (`next build`)** | `PASS` — Next.js `14.2.35`, Build ID `u0mb5ksTLqT2kVoT0V0A0` (`npm run typecheck`: `0` errors; `npm run lint`: `0` warnings; `npm run audit:release`: `13/13` PASS; live browser CSP check: `0` violations) | **PASS (Local)** |
+| **RC2 Next.js 16.4.6 + Shopify 2026-10 + Order Lifecycle Commit** | `0e9b302f3d4179e2586a718617e1fe48d04b4f9a` | **Built & Verified (`15/15` PASS)** |
+| **Final Branch HEAD SHA** | Recorded immediately via `git rev-parse HEAD` after committing this report *(deploy exact `origin/remediation/v1.0.0-rc2` HEAD to Vercel)* | **Staging Deploy Target** |
+| **Production Build Result (`npm run build`)** | **PASS** — Next.js **`16.4.6`** (Turbopack), Build ID **`VuyReC9_cNlnFdJAo-TNw`** (`npm run typecheck`: `0` errors; `npm run lint`: `0` errors/warnings; `npm audit`: **`0` vulnerabilities**) | **PASS (Local)** |
 
 ---
 
-## 2. Vercel Staging URL, Deployment ID & Smoke-Test Suite
+## 2. Next.js Security Migration Decision (Section 10)
 
-- **Current Status:** **`PENDING EXTERNAL DEPLOYMENT`** (`vercel` CLI is not installed/authenticated in this local workspace; import `noobiedoobiedoodo/prettypiggie` in Vercel Dashboard and deploy branch `remediation/v1.0.0-rc2` HEAD — do not deploy a different branch or uncommitted working tree).
-
-| Staging Field | Recorded Value | Status |
-|---|---|---|
-| **Staging URL** | `PENDING` | **NOT DEPLOYED** |
-| **Vercel Deployment ID** | `PENDING` | **NOT DEPLOYED** |
-| **Deployed Commit SHA** | `PENDING` *(Must match `origin/remediation/v1.0.0-rc2` HEAD)* | **NOT DEPLOYED** |
-| **Vercel Build Result** | `PENDING` | **NOT DEPLOYED** |
-| **Environment Configuration** | `PENDING` *(Configure `NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN` & `NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN`; keep any private Admin API keys strictly server-only without `NEXT_PUBLIC_`)* | **PENDING** |
-| **Staging Smoke-Test Suite** | `PENDING` *(Verify `GET /`, `GET /api/blanka/products` `52/4/54` + `0` certified docs, `GET /api/product-image/luminizing-powder/primary`, `POST /api/checkout` `422` lock & `403` CA rejection, direct URLs `/?product=lipstick` & `/?product=dual-tip-eye-definer-pen`, and DevTools `localStorage` eviction)* | **PENDING** |
+- **Selected Patched Baseline:** **`next@16.4.6` + `react@19.3.1` + `@react-three/fiber@9.8.2` + `@react-three/drei@10.7.9` + `postcss@8.5.33` + `eslint@9`** (detailed assessment in [NEXTJS_SECURITY_MIGRATION_ASSESSMENT.md](file:///c:/Users/ssabe/Downloads/prettypiggie/NEXTJS_SECURITY_MIGRATION_ASSESSMENT.md)).
+- **Security Rationale:** Both `next@14.2.35` and `next@15.5.29` fell inside the 2026 Critical CVE range (`next <= 16.3.0-preview.10`) and vulnerable `postcss <= 8.5.22`. Upgrading cleanly to `next@16.4.6` + `postcss@8.5.33` reduced **`npm audit --omit=dev` and `npm audit` to `0 vulnerabilities` across all 446 packages**.
+- **Runtime Regression Proof (`http://localhost:3002`, host-verified):** Fixed async `context.params` in the image proxy and fixed a React 19 / Drei v10 `<Html>` portal unmount race in [VirtualBoutiqueEnvironment3D.tsx](file:///c:/Users/ssabe/Downloads/prettypiggie/src/components/three/VirtualBoutiqueEnvironment3D.tsx). Live browser regression confirmed **`0` console errors**, **`0` CSP violations**, and **`0` failed requests** across all 6 3D zones, the 3D Product Presentation Stage, product image proxy (`HTTP 200 image/webp`), checkout preview, purchase lock, and 2D fallback.
 
 ---
 
-## 3. Product Register Reconciliation & Two-Tier Ingredient Evidence Classification
+## 3. Final Release Audit Results (Section 11)
 
-All five product surfaces ([MANUFACTURER_DOCUMENTATION_REGISTER.md](file:///c:/Users/ssabe/Downloads/prettypiggie/MANUFACTURER_DOCUMENTATION_REGISTER.md), [manufacturerDocumentationRegister.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/manufacturerDocumentationRegister.json), [blankaCatalog.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/blankaCatalog.json), `GET /api/blanka/products`, and the storefront UI) match exactly and explicitly separate **supplier-listing transcriptions** from **authoritative manufacturer-certified documentation**:
-
-| Reconciled Availability State | Product Count | Ingredient Evidence Tier | Authoritative Manufacturer-Certified Docs On File | Stock Status | Storefront Checkout State |
-|---|---:|---|---:|---|---|
-| **Verified & In Stock (`VERIFIED_IN_STOCK`)** | **52** | `SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION` | **0 / 52** *(Pending)* | In Stock | **Eligible** *(subject to all external GA gates)* |
-| **Verified & Out of Stock (`VERIFIED_OUT_OF_STOCK`)** | **4** | `SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION` | **0 / 4** *(Pending)* | Out of Stock | **Purchase Disabled (Sold Out)** |
-| **Unverified & Purchase-Locked (`UNVERIFIED_PURCHASE_LOCKED`)** | **54** | `INCOMPLETE_OR_MISSING_LISTING` (`45` truncated + `9` missing) | **0 / 54** *(Required)* | `52` In Stock / `2` Out of Stock* | **Programmatically Purchase-Locked** |
-| **Total Catalog** | **110** | **`56` Complete Supplier-Listing Transcriptions / `54` Incomplete** | **`0 / 110` Manufacturer-Certified** | **`104` In Stock / `6` Out of Stock** | **`52` Eligible / `58` Non-Purchasable** |
-
-> **Mandatory Evidence Distinction:** Complete ingredient lists transcribed verbatim from Blanka supplier catalog pages (`56` products: `52` in stock + `4` out of stock) are classified strictly as **`SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION`** and are **NOT** represented as manufacturer-certified evidence.  
-> *Note:* Two of the 54 locked products (`PP-SS-05-06-BWSH` **All-In-One Body Wash** and `PP-LB-01-04-YP-EP05` **Eye & Lip Primer**) are also out of stock and remain strictly under `UNVERIFIED_PURCHASE_LOCKED`.
-
-**The 4 Complete-Listing-but-Out-of-Stock Products (`VERIFIED_OUT_OF_STOCK`):**
-
-| # | SKU | Handle | Product Title | Retail Price | Evidence Tier | Manufacturer Certified? |
-|---|---|---|---|---:|---|---|
-| 1 | `PP-MB-01-04-ED-EDT01` | `dual-tip-eye-definer-pen` | **Dual Tip Eye Definer Pen** | \$25.40 | `SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION` | No *(Pending)* |
-| 2 | `PP-GF-03-02-HAS` | `hyaluronic-acid-serum` | **Hyaluronic Acid Serum** | \$35.00 | `SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION` | No *(Pending)* |
-| 3 | `PP-EZ-01-02-BLR` | `lash-rejuvenator` | **Lash Rejuvenator** | \$33.30 | `SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION` | No *(Pending)* |
-| 4 | `PP-FE-03-01-VLB-VLB1` | `vegan-lip-balm` | **Vegan Lip Balm** | \$16.60 | `SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION` | No *(Pending)* |
+- **Version-Controlled Gate:** `npm run audit:release` ([scripts/release-audit.mjs](file:///c:/Users/ssabe/Downloads/prettypiggie/scripts/release-audit.mjs)) & GitHub Actions CI ([.github/workflows/release-audit.yml](file:///c:/Users/ssabe/Downloads/prettypiggie/.github/workflows/release-audit.yml)) — also runnable against Vercel staging via `node scripts/release-audit.mjs --url <STAGING_URL>`.
+- **Local Result (`Build ID: VuyReC9_cNlnFdJAo-TNw`):** **`15 / 15` CHECKS PASSED (`allChecksPassed: true`)**, verifying:
+  - `52 / 4 / 54 = 110` cross-file reconciliation & two-tier INCI evidence classification (`56` supplier-listing transcriptions vs. `0/110` manufacturer-certified docs)
+  - `0` leaks across 17 compiled `.next/static/` JS chunks (confidential pricing/URLs, `SHOPIFY_ADMIN_ACCESS_TOKEN`, `SHOPIFY_STOREFRONT_ACCESS_TOKEN`, `SHOPIFY_WEBHOOK_SECRET`, placeholders, unverified claims, synthetic `gid://shopify/ProductVariant/PP-` GIDs)
+  - `Content-Security-Policy`, `HSTS`, `nosniff`, `SAMEORIGIN`, `Referrer-Policy`, `Permissions-Policy`, and `X-Powered-By: null`
+  - `54 / 54` unverified + `4 / 4` OOS + mixed cart smuggling rejected `HTTP 422`; non-U.S. (`CA`/`GB`/`MX`) rejected `HTTP 403`; CSRF/Origin mismatch `403`; non-JSON `415`; `> 32 KB` payload `413`; `> 25` lines `400`; prototype pollution safely blocked; image proxy `constructor`/`__proto__`/`toString`/traversal `404` & bad variant `400`; empirical `HTTP 429` rate limiting (`Retry-After: 60`)
+  - Fail-closed Shopify webhook receiver (`HTTP 503` without secret / `HTTP 401` on forged HMAC; isolated live HMAC test verified `orders/paid` -> `SUPPLIER_SUBMISSION_PENDING` without marking shipped, duplicate `X-Shopify-Webhook-Id` deduped, and `fulfillments/update` -> `TRACKING_AVAILABLE`)
 
 ---
 
-## 4. Supplier Documentation Status (`P0-REG-01`)
+## 4. Shopify Product & Variant Mapping Register (Section 4)
 
-- **Current Status:** **`HOLD / EXTERNAL DOCUMENTATION PENDING`**
-- **54 Unverified Locked Products:** Remain locked across all 6 surfaces (3D showroom, 2D catalog, product sheets, direct URLs, `localStorage` cart restoration, and server-side `POST /api/checkout` returning `HTTP 422` for all `54/54` locked SKUs + all `4/4` OOS SKUs + mixed-cart smuggling). No product may be unlocked without authoritative manufacturer evidence and human review.
-- **56 Complete Supplier-Listing Products:** Untruncated ingredient lists transcribed from supplier pages are displayed transparently as supplier-listing transcriptions (`0/110` manufacturer-certified PIF/INCI sheets logged to date).
-- **Marketing Claims Policy:** All unverified **Vegan**, **Paraben-Free**, and **Cruelty-Free** storefront claims remain suppressed (`0` occurrences in `.next/static/` bundle scan).
-- **Evidence Intake Ledger Ready:** [MANUFACTURER_DOCUMENTATION_REGISTER.md](file:///c:/Users/ssabe/Downloads/prettypiggie/MANUFACTURER_DOCUMENTATION_REGISTER.md) and [manufacturerDocumentationRegister.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/manufacturerDocumentationRegister.json) include per-SKU audit fields for **`Document Source`**, **`Date Received`**, **`SKU`**, and **`Reviewer`** ready to record official manufacturer documents as received.
+- **Mapping Register:** [SHOPIFY_VARIANT_MAPPING_REGISTER.md](file:///c:/Users/ssabe/Downloads/prettypiggie/SHOPIFY_VARIANT_MAPPING_REGISTER.md) & [shopifyVariantMappingRegister.json](file:///c:/Users/ssabe/Downloads/prettypiggie/src/data/shopifyVariantMappingRegister.json)
+- **Sync Tooling:** `npm run shopify:sync` ([scripts/sync-shopify-catalog.mjs](file:///c:/Users/ssabe/Downloads/prettypiggie/scripts/sync-shopify-catalog.mjs)) targeting Shopify Storefront API **`2026-10`**.
+- **Current Counts:** `52` eligible products (`85` shade variants); `0` verified numeric Shopify Variant GIDs synced yet (**`PENDING LIVE SHOPIFY CREDENTIALS & BLANKA APP PUBLISH`**); `0` synthetic SKU GIDs permitted; checkout resolver fails closed (`HTTP 422 SHOPIFY_VARIANT_UNMAPPED`) until numeric GIDs verify.
 
 ---
 
-## 5. Regulatory Review Status (`P0-REG-01` & `P0-CAN-01`)
+## 5. Live Inventory, Price Synchronization & 14-State Order Lifecycle (Sections 5 & 9)
 
-- **Current Status:** **`PENDING QUALIFIED HUMAN REGULATORY REVIEW`** *(Automated checks and AI-generated audit reports are **not** legal or regulatory approval.)*
-- **MoCRA Responsible Person (FD&C Act § 609(a), 21 U.S.C. § 364e):**
-  - Storefront & register copy accurately reflects statutory law: cosmetic labels must bear a **domestic address, domestic phone number, OR electronic contact information** through which the Responsible Person can receive adverse-event reports.
-  - All placeholder contact emails (`safety@`, `support@`, `privacy@`) have been removed (`0` occurrences in compiled `.next/static/` bundles).
-  - **Pending Owner Confirmation:** (1) Who legally qualifies as Responsible Person per product, (2) whose name appears on the physical product label, (3) chosen compliant contact method, and (4) active adverse-event monitoring workflow.
-- **U.S. Cosmetics & Label Review:** Qualified review of U.S. FDA/MoCRA cosmetic claims, INCI nomenclature, color additives, warning labels, and physical product packaging remains **`PENDING`**.
-- **Canadian Market Controls ([CANADIAN_REGULATORY_REVIEW.md](file:///c:/Users/ssabe/Downloads/prettypiggie/CANADIAN_REGULATORY_REVIEW.md)):** Storefront discloses U.S.-Only initial launch scope, renders bilingual EN/FR warnings on all 110 sheets, includes PIPEDA disclosures + unchecked-by-default CASL consent, and documents the 10-day post-first-sale Health Canada CNF workflow (*Cosmetic Regulations* s. 30). Canadian shipping remains disabled pending full Canadian compliance and Shopify Admin zone enforcement.
-
----
-
-## 6. Shopify Configuration, U.S.-Only Enforcement & Transaction Evidence (`P0-COM-01`)
-
-- **Current Status:** **`BLOCKED / PENDING LIVE SHOPIFY CREDENTIALS & ADMIN CONFIGURATION`**
-- **Verified Local Engineering & Security Controls (`Build ID: L3XDn5dr4GZTqVJ_fExHw`, Next.js `14.2.35`):**
-  - **Real Numeric Shopify Variant Resolver ([shopifyVariantResolver.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/lib/shopifyVariantResolver.ts)):** Synthetic SKU-string GIDs removed (`0` hits for `gid://shopify/ProductVariant/PP-` in compiled bundles). When live Shopify credentials are supplied, `POST /api/checkout` dynamically resolves real numeric `gid://shopify/ProductVariant/<numeric>` IDs (supporting exact SKU, stripped Blanka SKU, and handle+shade matching), verifies live `availableForSale` (`HTTP 409` if OOS), and rejects unmapped SKUs (`HTTP 422`). `/api/shopify/health` verifies mapping readiness across all 52 eligible SKUs.
-  - `POST /api/checkout` exhaustive live `next start` test: **54/54** `UNVERIFIED_PURCHASE_LOCKED` SKUs rejected `HTTP 422`; **4/4** `VERIFIED_OUT_OF_STOCK` SKUs rejected `HTTP 422`; mixed smuggling rejected `HTTP 422`; `shippingCountry: "CA"` rejected `HTTP 403`; CASL marketing opt-in without email rejected `HTTP 400` and with email recorded with UTC timestamp (`HTTP 200`); tampered client price (`\$0.01`) overridden to canonical server price (`\$33.50 + \$7.00 = \$40.50 USD`).
-  - HTTP Security Headers (`HSTS`, `nosniff`, `SAMEORIGIN`, `Referrer-Policy`, `Permissions-Policy`), per-IP checkout rate limiter, `8s` upstream fetch timeouts, pre-GA `robots.txt` (`Disallow: /`), eligible-only `sitemap.xml`, `error.tsx`, `not-found.tsx`, WebGL listener cleanup, and post-checkout cart-completion check (`GET /api/checkout?cartId=...`) all empirically verified.
-  - `sanitizePersistedCart` verified against poisoned 3-item `localStorage` payload: evicted `2/2` locked/OOS items, stripped legacy confidential fields (`wholesaleCost`, `profitPerUnit`, `blankaUrl`), and reset tampered price to `\$33.50`.
-  - Compiled `.next/static/` bundle scan (`22` JS files): `0` occurrences of `wholesaleCost`, `profitPerUnit`, `marginPercent`, `blankaUrl`, `73904-BLNK-`, `images.blankabrand.com`, `SHOPIFY_ADMIN_ACCESS_TOKEN`, `gid://shopify/ProductVariant/PP-`, placeholder emails, `"100% Cruelty-Free"`, or `"Complete Manufacturer INCI Specification On File"`.
-  - Sandbox preview mode returns `isSimulatedPreview: true` and renders unmistakable UI warning (`Simulated Sandbox Preview • Not a Live Order`).
-- **Pending Live Shopify Evidence Required Before GA:**
-  - [ ] Connect actual production Shopify store credentials (keep any private Admin API tokens strictly server-side).
-  - [ ] Verify all **52** `VERIFIED_IN_STOCK` product & shade variant GID mappings, live prices, inventory quantities, shipping rates, and U.S. taxes.
-  - [ ] **U.S.-Only Shipping Proof:** Export/screenshot Shopify Admin → Settings → Shipping and delivery showing **United States only** (Canada & Rest of World disabled).
-  - [ ] **Canadian Checkout Rejection Proof:** Test a Canadian destination address in live hosted Shopify Checkout AND test changing a U.S. shipping address to Canada mid-checkout; confirm no shipping rate is offered and checkout cannot complete.
-  - [ ] **Live Transaction, Cancellation & Refund Proof:** Complete a genuine low-value order; record Order #, Payment Capture ID, Shopify Admin visibility, Cancellation confirmation, and Refund ID.
+- **Implemented Architecture:**
+  - Verified HMAC-SHA256 webhook receiver: [route.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/app/api/webhooks/shopify/route.ts) (`POST /api/webhooks/shopify`) handling `orders/paid`, `orders/cancelled`, `refunds/create`, `fulfillments/create`, `fulfillments/update`, `products/update`, and `inventory_levels/update`.
+  - 14-State Order Lifecycle & Operational Exception Model: [orderLifecycle.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/types/orderLifecycle.ts) & [orderLifecycleStore.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/lib/orderLifecycleStore.ts) (idempotent via `X-Shopify-Webhook-Id`, out-of-order timestamp guard, never marks shipped on customer payment alone).
+  - Returning-customer order status lookup: [route.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/app/api/orders/status/route.ts) (`GET /api/orders/status`).
+  - Live price-drift & variant-mapping diagnostic: `GET /api/shopify/health` ([route.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/app/api/shopify/health/route.ts)).
+- **Production Persistence Note:** Before enabling public GA traffic across serverless Vercel instances, back [orderLifecycleStore.ts](file:///c:/Users/ssabe/Downloads/prettypiggie/src/lib/orderLifecycleStore.ts) with durable storage (Vercel Postgres / KV) so webhook idempotency keys and order states survive cold starts.
+- **Live Verification Status:** **`PENDING LIVE SHOPIFY STORE & WEBHOOK REGISTRATION`**
 
 ---
 
-## 7. Physical-Device QA Results (`P1-MOB-01`)
+## 6. Shopify Shipping & Tax Configuration (Section 7)
 
-- **Current Status:** **`PENDING VERCEL STAGING URL`** *(Local desktop/mobile headless verification passed on `http://localhost:3000` with `0` console errors; real hardware testing cannot execute until staging is live.)*
-
-| Physical Device / Browser | OS / App Version | 3D Experience | 2D Fallback | Deep Links | Shade Select | Purchase Locks | Sticky Bag | Cart & Checkout | Return Nav | Screenshots | Status |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| **Physical iPhone — Safari** | `PENDING` | — | — | — | — | — | — | — | — | `PENDING` | **NOT VERIFIED** |
-| **Physical Android — Chrome** | `PENDING` | — | — | — | — | — | — | — | — | `PENDING` | **NOT VERIFIED** |
-| **TikTok In-App Browser** | `PENDING` | — | — | — | — | — | — | — | — | `PENDING` | **NOT VERIFIED** |
-| **Instagram In-App Browser** | `PENDING` | — | — | — | — | — | — | — | — | `PENDING` | **NOT VERIFIED** |
+- **Status:** **`NOT VERIFIED / PENDING LIVE SHOPIFY ADMIN CONFIG & CHECKOUT TEST`**
+- **Required Before GA:** Audit Blanka's actual single-item and multi-item U.S. shipping charges against the \$7 flat / Free \$65+ rule; configure Shopify Admin → Shipping and delivery to permit **United States ONLY** (Canada & Rest of World disabled); prove a Canadian address AND a mid-checkout U.S.-to-Canada address change cannot obtain a shipping rate or complete Shopify Hosted Checkout.
 
 ---
 
-## 8. Outstanding Defects & Blockers by Severity
+## 7. Blanka Integration, Support Confirmation, Supplier Payment & End-to-End Fulfillment Evidence (Sections 2, 3, 8 & 13)
 
-| ID | Severity | Domain | Description | Current Status | Required Closure Evidence |
-|---|---|---|---|---|---|
-| **`BLK-SUP-01`** | **P0 (Blocker)** | Supplier Documentation | Authoritative manufacturer INCI/PIF sheets missing for `54` locked products (`0/110` manufacturer-certified docs logged; `56` are supplier-listing transcriptions only); signed vegan/paraben-free/cruelty-free CoAs pending. | **OPEN (External)** | Signed manufacturer INCI/PIF sheets & CoAs logged with Document Source, Date Received, SKU, and Reviewer. |
-| **`BLK-REG-01`** | **P0 (Blocker)** | Regulatory Review | Owner confirmation of MoCRA Responsible Person, label name, and monitored adverse-event contact method pending; qualified U.S. cosmetic regulatory/label review pending. | **OPEN (External)** | Owner confirmation + qualified regulatory counsel written sign-off. |
-| **`BLK-COM-01`** | **P0 (Blocker)** | Live Commerce | Live Shopify production store not connected; 52-SKU variant/price/tax mapping, live low-value order, cancellation, and refund unverified. | **OPEN (External)** | Live Shopify credentials + verified mapping table + Order # / Capture / Refund receipts. |
-| **`BLK-US-01`** | **P0 (Blocker)** | U.S.-Only Enforcement | Shopify Admin U.S.-only shipping zone restriction and live hosted-checkout Canadian destination & mid-checkout address-change rejection not yet proven. | **OPEN (External)** | Shopify Admin Shipping settings screenshot + live checkout Canada rejection screenshots. |
-| **`BLK-DEP-01`** | **P1 (Blocker)** | Staging Deployment | Exact `remediation/v1.0.0-rc2` HEAD not yet deployed to Vercel staging URL. | **OPEN (External)** | Staging URL, Deployment ID, deployed SHA, env config, and smoke-test log. |
-| **`BLK-QA-01`** | **P1 (Blocker)** | Physical-Device QA | Physical iPhone Safari, Android Chrome, TikTok in-app, and Instagram in-app end-to-end tests pending staging URL. | **OPEN (External)** | Completed 4-device matrix with OS/browser versions and device screenshots. |
-| **`BLK-DEP-CVE`** | **P0 (Security Advisory)** | Framework Dependency CVE (`npm audit --omit=dev`) | `next@14.2.35` (`<=16.3.0-preview.10`) & bundled `postcss <=8.5.22` report 2026 Critical/High advisories (`GHSA-p293-qw3h-jr36`, RSC DoS/cache-poisoning, image optimizer RCE — partially mitigated by `images.unoptimized: true` and Linux/Vercel hosting, not Windows). Fix requires breaking major upgrade to `next@16.4.6` + React 19 + `@react-three/fiber@9`. | **OPEN (Owner Migration Decision Required)** | Schedule controlled major upgrade (`next@16.4.6` + R3F v9) before public GA, or document formal security risk acceptance for Vercel-hosted staging only. |
-| **`ENG-DEFECTS`** | **None (`0` Open App Defects)** | Local Engineering Build & CI Audit Gate | `0` open TypeScript, ESLint, bundle-leak, CSP, CSRF, DoS, open-redirect, prototype-pollution, rate-limit, reconciliation, or checkout-lock defects on commit `4a19acd18a78078ed0a6f61eea7df60c3fa0aa2d` (`npm run audit:release`: `13/13` PASS; GitHub Actions CI enabled). | **CLOSED (Local + CI Automated)** | Run `node scripts/release-audit.mjs --url <STAGING_URL>` & `/api/shopify/health` once `BLK-DEP-01` and `BLK-COM-01` are live. |
+- **Integration Runbook & Ready-to-Send Support Email (`hello@blankabrand.com`):** [BLANKA_SHOPIFY_INTEGRATION_RUNBOOK.md](file:///c:/Users/ssabe/Downloads/prettypiggie/BLANKA_SHOPIFY_INTEGRATION_RUNBOOK.md)
+- **Blanka Written Confirmation Status:** **`PENDING`** *(Automatic supplier payment is NOT assumed to equal unattended production/fulfillment until Blanka Support confirms in writing.)*
+- **Automatic Supplier Payment Evidence:** **`PENDING`**
+- **Actual 11-Stage Paid Order, Production, Shipment, Tracking Sync & Customer Email Evidence:** **`PENDING`** *(Tracked in [BLANKA_SHOPIFY_INTEGRATION_RUNBOOK.md](file:///c:/Users/ssabe/Downloads/prettypiggie/BLANKA_SHOPIFY_INTEGRATION_RUNBOOK.md#L103-L130); sandbox previews do NOT satisfy this gate.)*
 
 ---
 
-## 9. Rollback Instructions
+## 8. Vercel Staging & Physical Mobile-Device Verification (Section 12)
 
-If any staging defect or regression requires immediate rollback to the frozen `v1.0.0-rc1` baseline:
-
-1. **Git Rollback (Preserve History — Recommended):**
-   ```bash
-   git fetch origin --tags
-   git checkout -b rollback/v1.0.0-rc1 v1.0.0-rc1
-   # Verifies exact frozen baseline SHA: 18592fc7190cd840b4589f6cfce4840fdf41bc83
-   git rev-parse HEAD
-   ```
-2. **Archived Baseline Artifacts Verification:**
-   - Frozen Build ID: [BUILD_ID.txt](file:///c:/Users/ssabe/Downloads/prettypiggie/release-archive/v1.0.0-rc1/BUILD_ID.txt) (`8iwZOJS3uDI5rLgSQuRKs`)
-   - Frozen Audit Snapshot: [audit_results.json](file:///c:/Users/ssabe/Downloads/prettypiggie/release-archive/v1.0.0-rc1/audit_results.json)
-   - Frozen Catalog Snapshot: [blankaCatalog.v1.0.0-rc1.snapshot.json](file:///c:/Users/ssabe/Downloads/prettypiggie/release-archive/v1.0.0-rc1/blankaCatalog.v1.0.0-rc1.snapshot.json)
-3. **Vercel Instant Rollback (Once Deployed):**
-   - In Vercel Dashboard → Project → **Deployments**, select the previous known-good deployment and click **Instant Rollback** (or redeploy tag `v1.0.0-rc1` / commit `18592fc7190cd840b4589f6cfce4840fdf41bc83`).
-   - Do **not** force-push or delete tag `v1.0.0-rc1` or branch `main`.
+- **Staging Deployment Status:** **`PENDING EXTERNAL VERCEL IMPORT`** (`Staging URL`: `PENDING`, `Deployment ID`: `PENDING`, `Deployed SHA`: must match exact `origin/remediation/v1.0.0-rc2` HEAD).
+- **Physical-Device Matrix (`PENDING STAGING URL`):** Physical iPhone Safari, Physical Android Chrome, TikTok in-app browser, and Instagram in-app browser remain **`NOT VERIFIED`**.
 
 ---
 
-## 10. Six-Domain Release Certificate (Status: `NO-GO`)
+## 9. Supplier Documentation & Regulatory Review Status (Section 14)
 
-> [!IMPORTANT]
-> **Governance Disclaimer:** Automated engineering tests and AI-generated audit reports are **not substitutes** for authoritative manufacturer documentation, qualified regulatory review, live Shopify transaction proof, physical-device QA, or Business Owner authorization.
+- **Product Register Reconciliation (`52 / 4 / 54 = 110`):**
+  - `52` `VERIFIED_IN_STOCK` (`SUPPLIER_LISTING_COMPLETE_TRANSCRIPTION` — `0/52` manufacturer-certified docs logged)
+  - `4` `VERIFIED_OUT_OF_STOCK` (`PP-MB-01-04-ED-EDT01`, `PP-GF-03-02-HAS`, `PP-EZ-01-02-BLR`, `PP-FE-03-01-VLB-VLB1` — `0/4` manufacturer-certified docs logged)
+  - `54` `UNVERIFIED_PURCHASE_LOCKED` (`45` truncated + `9` missing — locked across all 6 surfaces; zero unlocked)
+- **Supplier Documentation Ledger:** [MANUFACTURER_DOCUMENTATION_REGISTER.md](file:///c:/Users/ssabe/Downloads/prettypiggie/MANUFACTURER_DOCUMENTATION_REGISTER.md) (per-SKU `Document Source` / `Date Received` / `SKU` / `Reviewer` ready; vegan/paraben-free/cruelty-free claims suppressed).
+- **Regulatory Review:** **`PENDING QUALIFIED REGULATORY REVIEW & OWNER MOCRA CONFIRMATION`** *(Engineering checks are NOT legal approval.)*
+
+---
+
+## 10. Reconciled Outstanding Blockers (Zero Open Local Engineering Defects)
+
+*All prior code defects (`P0-COM-01` synthetic GIDs, `P1-COM-03` express pay buttons, `P1-COM-04` CASL forwarding, `P1-SEC-01` / `BLK-DEP-CVE` Next.js 14/PostCSS CVEs, `P1-OPS-01` timeouts/rate-limit, `P2-OPS-02` error/404/robots/sitemap/ESLint, `P2-UX-01` post-checkout cart reset, and React 19 Drei `<Html>` unmount race) are **CLOSED & VERIFIED**.*
+
+| ID | Severity | Domain | Open Requirement |
+|---|---|---|---|
+| **`BLK-BLK-01`** | **P0** | Blanka Automation | Written confirmation from `hello@blankabrand.com` on unattended Shopify fulfillment, pay-as-you-go vs warehouse inventory, and payment failure handling. |
+| **`BLK-COM-01`** | **P0** | Live Shopify & Mapping | Connect production Shopify store (`SHOPIFY_STORE_DOMAIN`, `SHOPIFY_STOREFRONT_ACCESS_TOKEN`, `SHOPIFY_WEBHOOK_SECRET`), publish 52 eligible products via Blanka App, run `npm run shopify:sync`, verify `52/52` numeric GIDs & `0` price drift. |
+| **`BLK-US-01`** | **P0** | U.S.-Only Shipping & Taxes | Audit Blanka shipping costs, configure U.S.-only shipping zones in Shopify Admin, and prove Canadian address + mid-checkout address change rejection in Shopify Hosted Checkout. |
+| **`BLK-E2E-01`** | **P0** | Decisive E2E Fulfillment | Complete genuine paid low-value order progressing through Shopify payment → Blanka receipt → Blanka supplier payment → production → shipment → tracking sync → customer notification, plus failure-condition tests. |
+| **`BLK-PERSIST-01`** | **P1** | Serverless Webhook Persistence | Back `orderLifecycleStore.ts` with durable KV/Postgres storage before enabling live public GA traffic across serverless instances. |
+| **`BLK-SUP-01`** | **P0** | Supplier Documentation | Authoritative manufacturer INCI/PIF sheets & claim CoAs (logged with Document Source, Date Received, SKU, Reviewer). |
+| **`BLK-REG-01`** | **P0** | Regulatory Review | Owner MoCRA Responsible Person + monitored adverse-event contact confirmation & qualified U.S. cosmetic regulatory review. |
+| **`BLK-DEP-01` / `BLK-QA-01`** | **P1** | Staging & Physical Devices | Deploy exact `remediation/v1.0.0-rc2` HEAD to Vercel staging, run remote `release-audit.mjs --url <STAGING_URL>`, and complete physical iPhone Safari, Android Chrome, TikTok & Instagram QA. |
+
+---
+
+## 11. Rollback Instructions
+
+```bash
+# Roll back to frozen v1.0.0-rc1 baseline (Build ID 8iwZOJS3uDI5rLgSQuRKs)
+git fetch origin --tags
+git checkout -b rollback/v1.0.0-rc1 v1.0.0-rc1
+git rev-parse HEAD # 18592fc7190cd840b4589f6cfce4840fdf41bc83
+```
+On Vercel, use **Deployments → Instant Rollback** to revert immediately to the previous verified deployment without altering `main` or tag `v1.0.0-rc1`.
+
+---
+
+## 12. Six-Domain Release Certificate (Status: `NO-GO`)
 
 | # | Approval Domain | Responsible Signatory | Current Status | Date |
 |---|---|---|---|---|
-| **1** | **Engineering verification** | Lead Software Engineer (`Antigravity AI`) | **PASS (Local RC2 Build `L3XDn5dr4GZTqVJ_fExHw`) / PENDING (Vercel Staging)** | 2026-11-21 |
-| **2** | **Supplier documentation verification** | Supplier Liaison / Brand Owner *(Human Evidence Required)* | **HOLD (`0/110` Manufacturer-Certified Docs; `54` Locked; `56` Listing Transcriptions)** | `PENDING` |
-| **3** | **Regulatory review** | Qualified Cosmetics Regulatory Counsel *(Human Review Required)* | **PENDING QUALIFIED REVIEW & OWNER MOCRA CONFIRMATION** | `PENDING` |
-| **4** | **Live commerce verification** | Commerce Lead / Store Owner | **BLOCKED (Pending Live Shopify Store, U.S.-Only Admin Proof & Order/Refund Test)** | `PENDING` |
-| **5** | **Physical-device verification** | Mobile QA Lead | **PENDING VERCEL STAGING URL** | `PENDING` |
-| **6** | **Business-owner authorization** | Business Owner (`Stephan — Pretty Piggie Makeup`) | **NOT GRANTED (`NO-GO`)** | `PENDING` |
-
-- **Engineering Verifier:** `Antigravity AI Engineering Lead` (Date: `2026-11-20`)
-- **Owner Authorization:** `NO-GO — PENDING CLOSURE OF DOMAINS 1 (STAGING), 2, 3, 4 & 5`
-- **Business Owner Signature:** `__________________________ (Stephan — Pretty Piggie Makeup)`  **Date:** `__________________________`
+| **1** | **Engineering & Framework Security Verification** | Lead Software Engineer (`Antigravity AI`) | **PASS (Local Next.js `16.4.6`, `0` CVEs, `15/15` Audit, `0` 3D/2D Console Errors) / PENDING (Vercel Staging & Durable Webhook Store)** | 2026-11-23 |
+| **2** | **Supplier Documentation Verification** | Supplier Liaison / Brand Owner | **HOLD (`0/110` Manufacturer-Certified Docs; `54` Locked; `56` Listing Transcriptions)** | `PENDING` |
+| **3** | **Regulatory Review** | Qualified Cosmetics Regulatory Counsel | **PENDING QUALIFIED REVIEW & OWNER MOCRA CONFIRMATION** | `PENDING` |
+| **4** | **Live Commerce & Blanka Fulfillment Verification** | Commerce Lead / Store Owner | **BLOCKED (Pending Blanka Written Reply, Live Shopify Store, U.S.-Only Admin Proof & Genuine 11-Stage Paid Order)** | `PENDING` |
+| **5** | **Physical-Device Verification** | Mobile QA Lead | **PENDING VERCEL STAGING URL** | `PENDING` |
+| **6** | **Business-Owner Authorization** | Business Owner (`Stephan — Pretty Piggie Makeup`) | **NOT GRANTED (`NO-GO`)** | `PENDING` |
