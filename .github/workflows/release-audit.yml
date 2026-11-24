@@ -1,0 +1,45 @@
+name: PrettyPiggie Release & Security Audit Gate
+
+on:
+  push:
+    branches:
+      - main
+      - 'remediation/**'
+  pull_request:
+    branches:
+      - main
+      - 'remediation/**'
+
+jobs:
+  release-audit:
+    name: Typecheck, Lint, Build & Adversarial Security Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: TypeScript type check
+        run: npm run typecheck
+
+      - name: ESLint check
+        run: npm run lint
+
+      - name: Production Next.js build
+        run: npm run build
+
+      - name: Run adversarial release & security audit gate
+        run: npm run audit:release
+
+      - name: Check production dependency advisories (non-blocking audit visibility)
+        continue-on-error: true
+        run: npm audit --omit=dev

@@ -4,6 +4,8 @@ import { CartItem } from '@/types/boutique';
 const SHOPIFY_API_VERSION = '2024-10';
 const UPSTREAM_TIMEOUT_MS = 8000;
 const CATALOG_CACHE_TTL_MS = 5 * 60 * 1000;
+const SAFE_HOSTNAME_REGEX = /^[a-z0-9][a-z0-9.-]*\.[a-z]{2,}$/i;
+const IPV4_LITERAL_REGEX = /^\d{1,3}(\.\d{1,3}){3}$/;
 
 export const NUMERIC_SHOPIFY_VARIANT_GID_REGEX =
   /^gid:\/\/shopify\/ProductVariant\/\d+$/;
@@ -16,21 +18,39 @@ export interface ServerShopifyConfig {
   configured: boolean;
 }
 
+function isSafeShopifyHostname(hostname: string): boolean {
+  const lower = hostname.trim().toLowerCase();
+  if (!lower || !SAFE_HOSTNAME_REGEX.test(lower)) return false;
+  if (IPV4_LITERAL_REGEX.test(lower)) return false;
+  if (
+    lower === 'localhost' ||
+    lower.endsWith('.local') ||
+    lower.endsWith('.internal') ||
+    lower.includes('your-store')
+  ) {
+    return false;
+  }
+  return true;
+}
+
 export function getServerShopifyConfig(): ServerShopifyConfig {
   const rawDomain =
     process.env.SHOPIFY_STORE_DOMAIN ||
     process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN ||
     '';
-  const domain = rawDomain.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
-  const storefrontToken =
+  const domain = rawDomain
+    .trim()
+    .replace(/^https?:\/\//i, '')
+    .replace(/\/.*$/, '');
+  const storefrontToken = (
     process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN ||
     process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN ||
-    '';
+    ''
+  ).trim();
 
   const configured = Boolean(
-    domain &&
-      storefrontToken &&
-      !domain.includes('your-store') &&
+    isSafeShopifyHostname(domain) &&
+      storefrontToken.length >= 10 &&
       !storefrontToken.includes('your-storefront')
   );
 
@@ -41,6 +61,32 @@ export function isNumericShopifyVariantGid(value: unknown): value is string {
   return (
     typeof value === 'string' && NUMERIC_SHOPIFY_VARIANT_GID_REGEX.test(value)
   );
+}
+
+/**
+ * Validates that a Shopify checkoutUrl uses HTTPS and points only to the
+ * configured Shopify domain or official Shopify/Shop Pay checkout domains.
+ */
+export function isSafeShopifyCheckoutUrl(
+  checkoutUrl: unknown,
+  configuredDomain: string
+): checkoutUrl is string {
+  if (typeof checkoutUrl !== 'string' || !checkoutUrl.trim()) return false;
+  try {
+    const parsed = new URL(checkoutUrl);
+    if (parsed.protocol !== 'https:') return false;
+    const host = parsed.hostname.toLowerCase();
+    const expected = configuredDomain.toLowerCase();
+    return (
+      host === expected ||
+      host.endsWith('.myshopify.com') ||
+      host === 'checkout.shopify.com' ||
+      host === 'shop.app' ||
+      host.endsWith('.shop.app')
+    );
+  } catch {
+    return false;
+  }
 }
 
 export interface LiveShopifyVariantRecord {
@@ -96,6 +142,19 @@ function normalizeKey(value: string): string {
 
 function stripPrettyPiggiePrefix(sku: string): string {
   return sku.trim().toUpperCase().replace(/^PP-/, '');
+}
+
+function getExplicitOverrideGid(sku: string): string | undefined {
+  const candidates = [sku, sku.toUpperCase(), stripPrettyPiggiePrefix(sku)];
+  for (const key of candidates) {
+    if (Object.prototype.hasOwnProperty.call(EXPLICIT_VARIANT_OVERRIDES, key)) {
+      const val = EXPLICIT_VARIANT_OVERRIDES[key];
+      if (isNumericShopifyVariantGid(val)) {
+        return val;
+      }
+    }
+  }
+  return undefined;
 }
 
 export async function fetchShopifyLiveVariantIndex(
@@ -217,20 +276,40 @@ export interface ResolvedVariantLine {
   item: CartItem;
   merchandiseId: string;
   availableForSale: boolean;
+  liveShopifyPrice?: number;
   resolutionSource: 'override-map' | 'shopify-sku' | 'shopify-handle-shade';
+}
+
+export interface PriceDriftItem {
+  sku: string;
+  handle: string;
+  title: string;
+  catalogPrice: number;
+  liveShopifyPrice: number;
 }
 
 export interface VariantResolutionResult {
   ok: boolean;
   resolvedLines: ResolvedVariantLine[];
-  unmappedItems: Array<{ sku: string; handle: string; title: string; shadeName: string }>;
-  outOfStockItems: Array<{ sku: string; handle: string; title: string; shadeName: string }>;
+  unmappedItems: Array<{
+    sku: string;
+    handle: string;
+    title: string;
+    shadeName: string;
+  }>;
+  outOfStockItems: Array<{
+    sku: string;
+    handle: string;
+    title: string;
+    shadeName: string;
+  }>;
+  priceDriftItems: PriceDriftItem[];
 }
 
 /**
  * Resolves verified cart items to REAL numeric Shopify ProductVariant GIDs
- * (e.g. gid://shopify/ProductVariant/44123456789012) and checks live Shopify availability.
- * Never fabricates SKU-based GIDs.
+ * (e.g. gid://shopify/ProductVariant/44123456789012), checks live availability,
+ * and surfaces any catalog-vs-Shopify retail price drift.
  */
 export async function resolveLiveShopifyVariants(
   items: CartItem[],
@@ -241,6 +320,7 @@ export async function resolveLiveShopifyVariants(
   const resolvedLines: ResolvedVariantLine[] = [];
   const unmappedItems: VariantResolutionResult['unmappedItems'] = [];
   const outOfStockItems: VariantResolutionResult['outOfStockItems'] = [];
+  const priceDriftItems: PriceDriftItem[] = [];
 
   for (const item of items) {
     const skuKey = normalizeKey(item.sku);
@@ -248,13 +328,9 @@ export async function resolveLiveShopifyVariants(
     const handleKey = normalizeKey(item.productHandle);
     const shadeKey = `${handleKey}::${normalizeKey(item.shadeName)}`;
 
-    // 1. Check explicit override map (must be a real numeric Shopify Variant GID)
-    const overrideGid =
-      EXPLICIT_VARIANT_OVERRIDES[item.sku] ||
-      EXPLICIT_VARIANT_OVERRIDES[item.sku.toUpperCase()] ||
-      EXPLICIT_VARIANT_OVERRIDES[stripPrettyPiggiePrefix(item.sku)];
-
-    if (isNumericShopifyVariantGid(overrideGid)) {
+    // 1. Check explicit override map (own-property guarded + numeric GID validated)
+    const overrideGid = getExplicitOverrideGid(item.sku);
+    if (overrideGid) {
       resolvedLines.push({
         item,
         merchandiseId: overrideGid,
@@ -264,7 +340,7 @@ export async function resolveLiveShopifyVariants(
       continue;
     }
 
-    // 2. Match against live Shopify Storefront variant index (by SKU, stripped PP- SKU, or handle + shade)
+    // 2. Match against live Shopify Storefront variant index
     const bySkuMatch =
       index?.bySku.get(skuKey) ?? index?.bySku.get(strippedSkuKey);
     const byHandleShadeMatch =
@@ -282,6 +358,19 @@ export async function resolveLiveShopifyVariants(
       continue;
     }
 
+    if (
+      matched.priceAmount > 0 &&
+      Math.abs(matched.priceAmount - item.price) > 0.01
+    ) {
+      priceDriftItems.push({
+        sku: item.sku,
+        handle: item.productHandle,
+        title: item.title,
+        catalogPrice: item.price,
+        liveShopifyPrice: matched.priceAmount,
+      });
+    }
+
     if (!matched.availableForSale) {
       outOfStockItems.push({
         sku: item.sku,
@@ -296,6 +385,7 @@ export async function resolveLiveShopifyVariants(
       item,
       merchandiseId: matched.id,
       availableForSale: matched.availableForSale,
+      liveShopifyPrice: matched.priceAmount || undefined,
       resolutionSource: bySkuMatch ? 'shopify-sku' : 'shopify-handle-shade',
     });
   }
@@ -305,6 +395,7 @@ export async function resolveLiveShopifyVariants(
     resolvedLines,
     unmappedItems,
     outOfStockItems,
+    priceDriftItems,
   };
 }
 
@@ -317,10 +408,6 @@ const CART_STATUS_QUERY = `
   }
 `;
 
-/**
- * Checks whether a Shopify Storefront cart still exists (open) or was completed/consumed
- * so returning shoppers have their localStorage bag cleared after paying on Shopify Checkout.
- */
 export async function checkShopifyCartCompleted(
   cartId: string,
   config: ServerShopifyConfig
@@ -352,7 +439,6 @@ export async function checkShopifyCartCompleted(
       data?: { cart?: { id: string; totalQuantity: number } | null };
     };
 
-    // In Shopify Storefront API, once checkout is completed/paid, cart(id) returns null
     const completed = json.data?.cart === null;
     return { completed, checkedLive: true };
   } catch {

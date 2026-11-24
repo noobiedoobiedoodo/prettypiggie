@@ -75,6 +75,19 @@ export function ShoppingBagDrawer({
       setIsCheckingOut(false);
 
       if (session.mode === 'shopify-live' && !session.isSimulatedPreview) {
+        let isSafeHttpsRedirect = false;
+        try {
+          const parsedRedirect = new URL(session.checkoutUrl);
+          isSafeHttpsRedirect = parsedRedirect.protocol === 'https:';
+        } catch {
+          isSafeHttpsRedirect = false;
+        }
+        if (!isSafeHttpsRedirect) {
+          setCheckoutError(
+            'Checkout redirect failed security validation. Please contact support.'
+          );
+          return;
+        }
         try {
           window.sessionStorage.setItem(
             PENDING_SHOPIFY_CART_STORAGE_KEY,

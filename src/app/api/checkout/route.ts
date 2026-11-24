@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
 import { CATALOG_RECONCILIATION } from '@/data/boutiqueData';
 import { validateCartForCheckout } from '@/lib/purchaseGuard';
-import { checkCheckoutRateLimit } from '@/lib/rateLimit';
+import { checkApiRateLimit } from '@/lib/rateLimit';
 import {
   checkShopifyCartCompleted,
   getServerShopifyConfig,
+  isSafeShopifyCheckoutUrl,
   resolveLiveShopifyVariants,
 } from '@/lib/shopifyVariantResolver';
 
@@ -12,7 +13,15 @@ const FREE_SHIPPING_THRESHOLD = 65;
 const STANDARD_US_SHIPPING_USD = 7;
 const SHOPIFY_API_VERSION = '2024-10';
 const UPSTREAM_TIMEOUT_MS = 8000;
+const MAX_BODY_BYTES = 32 * 1024; // 32 KB ceiling
+const MAX_CART_LINES = 25;
 const BASIC_EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const SAFE_CART_ID_REGEX = /^gid:\/\/shopify\/Cart\/[A-Za-z0-9?=&_/-]{6,220}$/;
+
+const NO_STORE_HEADERS = {
+  'Cache-Control': 'no-store, max-age=0',
+  Pragma: 'no-cache',
+};
 
 const CART_CREATE_MUTATION = `
   mutation CartCreate($input: CartInput!) {
@@ -40,20 +49,78 @@ const CART_CREATE_MUTATION = `
   }
 `;
 
+function jsonNoStore(
+  body: unknown,
+  init: { status?: number; headers?: Record<string, string> } = {}
+) {
+  return NextResponse.json(body, {
+    status: init.status ?? 200,
+    headers: {
+      ...NO_STORE_HEADERS,
+      ...(init.headers || {}),
+    },
+  });
+}
+
+function isSameOriginOrAllowed(request: Request): boolean {
+  const originHeader = request.headers.get('origin');
+  if (!originHeader) return true; // Non-browser / server-to-server requests without Origin
+
+  try {
+    const originHost = new URL(originHeader).host.toLowerCase();
+    const requestHost = (
+      request.headers.get('x-forwarded-host') ||
+      request.headers.get('host') ||
+      ''
+    )
+      .split(',')[0]
+      .trim()
+      .toLowerCase();
+
+    if (requestHost && originHost === requestHost) return true;
+    const originHostname = new URL(originHeader).hostname.toLowerCase();
+    if (
+      originHostname === 'prettypiggie.com' ||
+      originHostname === 'www.prettypiggie.com' ||
+      originHostname.endsWith('.vercel.app')
+    ) {
+      return true;
+    }
+    return false;
+  } catch {
+    return false;
+  }
+}
+
 export async function GET(request: Request) {
+  const rate = checkApiRateLimit(request, 'checkout-get', 60);
+  if (!rate.allowed) {
+    return jsonNoStore(
+      { error: 'Too many cart status checks.', code: 'RATE_LIMIT_EXCEEDED' },
+      { status: 429, headers: { 'Retry-After': String(rate.retryAfterSeconds) } }
+    );
+  }
+
   const { searchParams } = new URL(request.url);
-  const cartId = searchParams.get('cartId') || '';
+  const cartId = (searchParams.get('cartId') || '').trim();
   const shopify = getServerShopifyConfig();
 
   if (!cartId) {
-    return NextResponse.json(
+    return jsonNoStore(
       { error: 'Missing cartId parameter.', code: 'MISSING_CART_ID' },
       { status: 400 }
     );
   }
 
+  if (!SAFE_CART_ID_REGEX.test(cartId)) {
+    return jsonNoStore(
+      { error: 'Invalid Shopify Cart ID format.', code: 'INVALID_CART_ID' },
+      { status: 400 }
+    );
+  }
+
   const status = await checkShopifyCartCompleted(cartId, shopify);
-  return NextResponse.json({
+  return jsonNoStore({
     cartId,
     completed: status.completed,
     checkedLive: status.checkedLive,
@@ -61,10 +128,10 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  // 0. Per-IP rate limiting against checkout/cart creation abuse
-  const rate = checkCheckoutRateLimit(request);
+  // 0a. Per-IP rate limiting against checkout/cart creation abuse
+  const rate = checkApiRateLimit(request, 'checkout-post', 30);
   if (!rate.allowed) {
-    return NextResponse.json(
+    return jsonNoStore(
       {
         error: 'Too many checkout requests. Please wait a moment and try again.',
         code: 'RATE_LIMIT_EXCEEDED',
@@ -76,14 +143,79 @@ export async function POST(request: Request) {
     );
   }
 
+  // 0b. Cross-Origin CSRF / Origin verification for browser POST requests
+  if (!isSameOriginOrAllowed(request)) {
+    return jsonNoStore(
+      {
+        error: 'Cross-origin checkout requests are not permitted.',
+        code: 'ORIGIN_MISMATCH',
+      },
+      { status: 403 }
+    );
+  }
+
+  // 0c. Enforce JSON Content-Type
+  const contentType = (request.headers.get('content-type') || '').toLowerCase();
+  if (!contentType.includes('application/json')) {
+    return jsonNoStore(
+      {
+        error: 'Content-Type must be application/json.',
+        code: 'UNSUPPORTED_MEDIA_TYPE',
+      },
+      { status: 415 }
+    );
+  }
+
+  // 0d. Enforce raw body size ceiling (32 KB) to prevent memory/CPU DoS
+  const declaredLen = Number(request.headers.get('content-length') || 0);
+  if (declaredLen > MAX_BODY_BYTES) {
+    return jsonNoStore(
+      {
+        error: 'Checkout payload exceeds maximum allowed size.',
+        code: 'PAYLOAD_TOO_LARGE',
+      },
+      { status: 413 }
+    );
+  }
+
   let body: Record<string, unknown>;
   try {
-    body = (await request.json()) as Record<string, unknown>;
+    const rawText = await request.text();
+    if (Buffer.byteLength(rawText, 'utf8') > MAX_BODY_BYTES) {
+      return jsonNoStore(
+        {
+          error: 'Checkout payload exceeds maximum allowed size.',
+          code: 'PAYLOAD_TOO_LARGE',
+        },
+        { status: 413 }
+      );
+    }
+    const parsed = JSON.parse(rawText) as unknown;
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+      return jsonNoStore(
+        {
+          error: 'Checkout payload must be a JSON object.',
+          code: 'INVALID_JSON',
+        },
+        { status: 400 }
+      );
+    }
+    body = parsed as Record<string, unknown>;
   } catch {
-    return NextResponse.json(
+    return jsonNoStore(
       {
         error: 'Invalid JSON request payload.',
         code: 'INVALID_JSON',
+      },
+      { status: 400 }
+    );
+  }
+
+  if (Array.isArray(body.items) && body.items.length > MAX_CART_LINES) {
+    return jsonNoStore(
+      {
+        error: `A single checkout is limited to ${MAX_CART_LINES} distinct items.`,
+        code: 'CART_LIMIT_EXCEEDED',
       },
       { status: 400 }
     );
@@ -96,7 +228,7 @@ export async function POST(request: Request) {
       : 'US';
 
   if (shippingCountry !== 'US') {
-    return NextResponse.json(
+    return jsonNoStore(
       {
         error:
           'PrettyPiggie.com initial launch shipping is restricted to the United States (50 States & D.C.). Canadian and international shipping are disabled.',
@@ -114,8 +246,11 @@ export async function POST(request: Request) {
       ? body.guestEmail.trim()
       : undefined;
 
-  if (cleanEmail && !BASIC_EMAIL_REGEX.test(cleanEmail)) {
-    return NextResponse.json(
+  if (
+    cleanEmail &&
+    (cleanEmail.length > 254 || !BASIC_EMAIL_REGEX.test(cleanEmail))
+  ) {
+    return jsonNoStore(
       {
         error: 'Please enter a valid email address for order tracking updates.',
         code: 'INVALID_EMAIL',
@@ -126,7 +261,7 @@ export async function POST(request: Request) {
 
   const marketingOptIn = body.marketingOptIn === true;
   if (marketingOptIn && !cleanEmail) {
-    return NextResponse.json(
+    return jsonNoStore(
       {
         error:
           'Please enter your email address above to record optional marketing consent.',
@@ -141,7 +276,7 @@ export async function POST(request: Request) {
   const validation = validateCartForCheckout(body.items);
 
   if (validation.blockedItems.length > 0) {
-    return NextResponse.json(
+    return jsonNoStore(
       {
         error:
           'Checkout blocked: one or more submitted products are UNVERIFIED (purchase-locked), out of stock, or invalid.',
@@ -154,7 +289,7 @@ export async function POST(request: Request) {
   }
 
   if (validation.verifiedItems.length === 0) {
-    return NextResponse.json(
+    return jsonNoStore(
       {
         error: 'Your shopping bag is empty.',
         code: 'EMPTY_CART',
@@ -187,7 +322,7 @@ export async function POST(request: Request) {
       );
 
       if (resolution.unmappedItems.length > 0) {
-        return NextResponse.json(
+        return jsonNoStore(
           {
             error:
               'One or more eligible products are not yet synced to a live Shopify variant ID. Push products via the Blanka Shopify App and check /api/shopify/health.',
@@ -199,7 +334,7 @@ export async function POST(request: Request) {
       }
 
       if (resolution.outOfStockItems.length > 0) {
-        return NextResponse.json(
+        return jsonNoStore(
           {
             error:
               'One or more items just sold out in live Shopify inventory. Please remove out-of-stock items to continue.',
@@ -278,7 +413,20 @@ export async function POST(request: Request) {
 
         const createdCart = json.data?.cartCreate?.cart;
         if (createdCart?.checkoutUrl) {
-          return NextResponse.json({
+          if (
+            !isSafeShopifyCheckoutUrl(createdCart.checkoutUrl, shopify.domain)
+          ) {
+            return jsonNoStore(
+              {
+                error:
+                  'Upstream checkout URL failed host safety validation and was blocked.',
+                code: 'INVALID_CHECKOUT_URL',
+              },
+              { status: 502 }
+            );
+          }
+
+          return jsonNoStore({
             mode: 'shopify-live',
             isSimulatedPreview: false,
             checkoutUrl: createdCart.checkoutUrl,
@@ -292,7 +440,7 @@ export async function POST(request: Request) {
         }
 
         if (json.data?.cartCreate?.userErrors?.length) {
-          return NextResponse.json(
+          return jsonNoStore(
             {
               error: 'Shopify Storefront rejected checkout creation.',
               code: 'SHOPIFY_CART_USER_ERROR',
@@ -303,7 +451,7 @@ export async function POST(request: Request) {
         }
       }
 
-      return NextResponse.json(
+      return jsonNoStore(
         {
           error: 'Shopify Storefront returned an unexpected upstream status.',
           code: 'SHOPIFY_UPSTREAM_STATUS',
@@ -312,7 +460,7 @@ export async function POST(request: Request) {
         { status: 502 }
       );
     } catch {
-      return NextResponse.json(
+      return jsonNoStore(
         {
           error: 'Unable to reach live Shopify Storefront API within timeout.',
           code: 'SHOPIFY_UPSTREAM_TIMEOUT_OR_ERROR',
@@ -323,7 +471,7 @@ export async function POST(request: Request) {
   }
 
   // 5. Sandbox Preview Mode (Explicitly marked simulated — NEVER represented as a live order or payment capture)
-  return NextResponse.json({
+  return jsonNoStore({
     mode: 'shopify-preview',
     isSimulatedPreview: true,
     checkoutUrl: `#sandbox-preview-${orderReference}`,

@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "audit:release": "node scripts/release-audit.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.117.3",

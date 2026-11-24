@@ -7,19 +7,16 @@ const SHOPIFY_DOMAIN = RAW_SHOPIFY_DOMAIN.replace(/^https?:\/\//, '').replace(
   /\/.*$/,
   ''
 );
-const SHOPIFY_STOREFRONT_TOKEN =
-  process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN || '';
 
 export const PENDING_SHOPIFY_CART_STORAGE_KEY =
   'prettypiggie_pending_shopify_cart_id';
 
+/**
+ * Client-safe indicator only (Shopify Storefront tokens are read strictly server-side
+ * in /api/checkout and never bundled into client JavaScript).
+ */
 export function isShopifyConfigured(): boolean {
-  return Boolean(
-    SHOPIFY_DOMAIN &&
-      SHOPIFY_STOREFRONT_TOKEN &&
-      !SHOPIFY_DOMAIN.includes('your-store') &&
-      !SHOPIFY_STOREFRONT_TOKEN.includes('your-storefront')
-  );
+  return Boolean(SHOPIFY_DOMAIN && !SHOPIFY_DOMAIN.includes('your-store'));
 }
 
 export class PurchaseLockError extends Error {
