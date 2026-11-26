@@ -819,6 +819,13 @@ export function LuxuryFallback2D({
             </div>
 
             <div className="flex flex-wrap items-center gap-3 font-semibold text-piggie-800">
+              <a
+                href="/makeover-studio"
+                className="py-1 font-bold text-piggie-700 hover:text-piggie-950 hover:underline"
+              >
+                💗 Makeover Studio: What&apos;s Your Pretty Piggie?
+              </a>
+              <span>•</span>
               <button
                 type="button"
                 onClick={() => onOpenLegal('shipping')}

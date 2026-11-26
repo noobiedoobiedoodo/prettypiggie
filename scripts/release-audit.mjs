@@ -201,6 +201,8 @@ async function runStaticAndBundleGates(checks) {
       'SHOPIFY_ADMIN_ACCESS_TOKEN',
       'SHOPIFY_STOREFRONT_ACCESS_TOKEN',
       'SHOPIFY_WEBHOOK_SECRET',
+      'GEMINI_API_KEY',
+      'OPENAI_API_KEY',
       'safety@prettypiggie.com',
       'support@prettypiggie.com',
       'privacy@prettypiggie.com',
@@ -648,6 +650,101 @@ async function runLiveHttpAndAdversarialGates(baseUrl, checks) {
       badOrderLookupStatus: badOrderLookupRes.status,
       missingOrderLookupStatus: missingOrderLookupRes.status,
       orderStatusNoStore,
+    }
+  );
+
+  // 7d. Pretty Piggie Makeover Studio — privacy gates, validation, CSRF & credential confidentiality
+  const makeoverHealthRes = await fetch(`${baseUrl}/api/makeover/health`);
+  const makeoverHealthText = await makeoverHealthRes.text();
+  const makeoverHealth = JSON.parse(makeoverHealthText);
+  const makeoverHealthNoStore = (
+    makeoverHealthRes.headers.get('cache-control') || ''
+  ).includes('no-store');
+  const makeoverCredentialLeak =
+    /AIza[0-9A-Za-z_-]{20,}|sk-[A-Za-z0-9_-]{20,}/.test(makeoverHealthText);
+
+  const fakePng = Buffer.alloc(2048, 7);
+  Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]).copy(fakePng, 0);
+  const buildMakeoverForm = (overrides = {}, photoBytes = fakePng) => {
+    const form = new FormData();
+    form.append('photo', new Blob([photoBytes], { type: 'image/png' }), 'p.png');
+    form.append('personalityId', 'glam-piggie');
+    form.append('consentAccepted', 'true');
+    form.append('ageConfirmed', 'true');
+    for (const [k, v] of Object.entries(overrides)) {
+      if (v === null) form.delete(k);
+      else form.set(k, v);
+    }
+    return form;
+  };
+  const postMakeover = (form, headers = {}) =>
+    fetch(`${baseUrl}/api/makeover/transform`, {
+      method: 'POST',
+      headers,
+      body: form,
+    });
+
+  const mkNoConsent = await postMakeover(buildMakeoverForm({ consentAccepted: null }));
+  const mkNoConsentBody = await mkNoConsent.json();
+  const mkNoAge = await postMakeover(buildMakeoverForm({ ageConfirmed: null }));
+  const mkNoAgeBody = await mkNoAge.json();
+  const mkBadStyle = await postMakeover(buildMakeoverForm({ personalityId: 'evil-piggie' }));
+  const mkBadStyleBody = await mkBadStyle.json();
+  const mkNotImage = await postMakeover(
+    buildMakeoverForm({}, Buffer.alloc(2048, 65))
+  );
+  const mkNotImageBody = await mkNotImage.json();
+  const mkJson = await fetch(`${baseUrl}/api/makeover/transform`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: '{}',
+  });
+  const mkCsrf = await postMakeover(buildMakeoverForm(), {
+    Origin: 'https://evil-attacker.example',
+  });
+  const mkValid = await postMakeover(buildMakeoverForm());
+  const mkValidBody = await mkValid.json();
+  const mkValidNoStore = (mkValid.headers.get('cache-control') || '').includes(
+    'no-store'
+  );
+
+  recordCheck(
+    checks,
+    'MAKEOVER_STUDIO_PRIVACY_GATES_VALIDATION_AND_FAIL_CLOSED',
+    makeoverHealthRes.status === 200 &&
+      makeoverHealthNoStore &&
+      makeoverHealth.serverCredentialsExposed === false &&
+      makeoverHealth.personalitiesCount === 5 &&
+      makeoverHealth.masterReferenceReady === true &&
+      makeoverHealth.retentionPolicy === 'ZERO_RETENTION_EPHEMERAL' &&
+      !makeoverCredentialLeak &&
+      mkNoConsent.status === 400 &&
+      mkNoConsentBody.code === 'CONSENT_REQUIRED' &&
+      mkNoAge.status === 400 &&
+      mkNoAgeBody.code === 'AGE_CONFIRMATION_REQUIRED' &&
+      mkBadStyle.status === 400 &&
+      mkBadStyleBody.code === 'INVALID_PERSONALITY' &&
+      mkNotImage.status === 415 &&
+      mkNotImageBody.code === 'UNSUPPORTED_IMAGE_TYPE' &&
+      mkJson.status === 415 &&
+      mkCsrf.status === 403 &&
+      mkValidNoStore &&
+      (makeoverHealth.configured
+        ? true
+        : mkValid.status === 503 &&
+          mkValidBody.code === 'AI_PROVIDER_NOT_CONFIGURED' &&
+          mkValidBody.privacyReceipt?.retained === false),
+    {
+      healthStatus: makeoverHealthRes.status,
+      configured: makeoverHealth.configured,
+      masterReferenceReady: makeoverHealth.masterReferenceReady,
+      noConsentStatus: mkNoConsent.status,
+      noAgeStatus: mkNoAge.status,
+      badStyleStatus: mkBadStyle.status,
+      notImageStatus: mkNotImage.status,
+      jsonStatus: mkJson.status,
+      csrfStatus: mkCsrf.status,
+      validStatus: mkValid.status,
     }
   );
 

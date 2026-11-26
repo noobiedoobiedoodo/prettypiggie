@@ -26,7 +26,8 @@ function isLoopback(ip: string): boolean {
 export function checkApiRateLimit(
   request: Request,
   scope = 'checkout-post',
-  publicMaxRequests = 30
+  publicMaxRequests = 30,
+  windowMs = WINDOW_MS
 ): {
   allowed: boolean;
   retryAfterSeconds: number;
@@ -45,7 +46,7 @@ export function checkApiRateLimit(
 
   const existing = buckets.get(key);
   if (!existing || existing.resetAt <= now) {
-    buckets.set(key, { count: 1, resetAt: now + WINDOW_MS });
+    buckets.set(key, { count: 1, resetAt: now + windowMs });
     return {
       allowed: true,
       retryAfterSeconds: 0,
