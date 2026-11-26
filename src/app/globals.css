@@ -6,11 +6,21 @@
   --piggie-blush: #f7c6d4;
   --piggie-rosegold: #e5a999;
   --piggie-obsidian: #260b15;
+  --header-safe-top: max(0.5rem, env(safe-area-inset-top));
+  --header-offset: calc(var(--header-safe-top) + 50px);
 }
 
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+[role='button'],
+select,
+summary {
+  touch-action: manipulation;
 }
 
 html,
@@ -43,6 +53,11 @@ body {
 }
 
 /* Subtle luxury blush scrollbar for vertical sheets and drawers */
+.piggie-scrollbar {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
 .piggie-scrollbar::-webkit-scrollbar {
   width: 5px;
   height: 5px;

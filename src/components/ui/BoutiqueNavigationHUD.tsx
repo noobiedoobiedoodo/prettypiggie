@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   BadgeCheck,
   Box,
@@ -80,9 +80,40 @@ export function BoutiqueNavigationHUD({
   onToggle2DMode,
 }: BoutiqueNavigationHUDProps) {
   const [isCatalogOpen, setIsCatalogOpen] = useState(false);
-  const [isPlacardCollapsed, setIsPlacardCollapsed] = useState(false);
+  const [isMobileTrayExpanded, setIsMobileTrayExpanded] = useState(false);
+  const [show3DHint, setShow3DHint] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const zonePillRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  // Auto-center active department pill inside the scrollable mobile bottom dock
+  useEffect(() => {
+    const el = zonePillRefs.current[activeZone];
+    if (el) {
+      el.scrollIntoView({
+        inline: 'center',
+        behavior: capability.prefersReducedMotion ? 'auto' : 'smooth',
+        block: 'nearest',
+      });
+    }
+  }, [activeZone, capability.prefersReducedMotion]);
+
+  // One-time 3.2s gesture hint for cold mobile 3D visitors (never shown if reduced-motion)
+  useEffect(() => {
+    if (is2DMode || selectedProduct || capability.prefersReducedMotion) return;
+    let timer: ReturnType<typeof setTimeout> | null = null;
+    try {
+      if (window.sessionStorage.getItem('pp_3d_hint_seen') === '1') return;
+      window.sessionStorage.setItem('pp_3d_hint_seen', '1');
+      queueMicrotask(() => setShow3DHint(true));
+      timer = setTimeout(() => setShow3DHint(false), 3200);
+    } catch {
+      // Ignore storage restrictions
+    }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, [is2DMode, selectedProduct, capability.prefersReducedMotion]);
 
   useEffect(() => {
     if (!isCatalogOpen) return;
@@ -178,26 +209,32 @@ export function BoutiqueNavigationHUD({
   return (
     <>
       {/* ==================================================================
-          1. PERSISTENT TOP FLOATING LUXURY HEADER
+          1. PERSISTENT TOP FLOATING LUXURY HEADER (Zero-Overflow 375px + 44px Apple HIG)
          ================================================================== */}
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-40 flex items-center justify-between px-3 pt-[max(0.75rem,env(safe-area-inset-top))] md:px-6 md:pt-4">
+      <header
+        className={`pointer-events-none fixed inset-x-0 top-0 z-40 flex items-center justify-between gap-1.5 px-3 pb-1.5 pt-[var(--header-safe-top)] md:px-6 md:pb-0 md:pt-4 ${
+          is2DMode
+            ? 'border-b border-piggie-200/75 bg-piggie-50/95 backdrop-blur-xl md:border-0 md:bg-transparent md:backdrop-blur-none'
+            : ''
+        }`}
+      >
         {/* Brand Crest & Active Zone Breadcrumb */}
-        <div className="pointer-events-auto flex items-center gap-2">
+        <div className="pointer-events-auto flex min-w-0 items-center gap-2">
           <button
             type="button"
             onClick={() => onSelectZone('rotunda')}
-            className="flex items-center gap-2 rounded-full border border-white/85 bg-white/95 py-1 pl-1.5 pr-3 text-left shadow-pill-float backdrop-blur-md transition hover:bg-white active:scale-95 md:gap-2.5 md:py-1.5 md:pl-2 md:pr-4"
+            className="flex h-11 shrink-0 items-center gap-2 rounded-full border border-white/85 bg-white/95 py-1 pl-1.5 pr-3 text-left shadow-pill-float backdrop-blur-md transition hover:bg-white active:scale-95 md:h-12 md:gap-2.5 md:pl-2 md:pr-4"
           >
             <img
               src="/brand/prettypiggie-logo.png"
               alt="Pretty Piggie Makeup Logo"
-              className="h-8 w-8 rounded-full border border-piggie-200 bg-white object-contain p-0.5 shadow-sm md:h-10 md:w-10"
+              className="h-8 w-8 shrink-0 rounded-full border border-piggie-200 bg-white object-contain p-0.5 shadow-sm md:h-9 md:w-9"
             />
-            <div>
-              <span className="block font-serif text-sm font-bold tracking-tight text-piggie-950 md:text-base">
+            <div className="min-w-0">
+              <span className="block whitespace-nowrap font-serif text-[13px] font-bold tracking-tight text-piggie-950 md:text-base">
                 Pretty Piggie
               </span>
-              <span className="hidden text-[9px] font-extrabold uppercase tracking-widest text-piggie-700 sm:block">
+              <span className="hidden whitespace-nowrap text-[9px] font-extrabold uppercase tracking-widest text-piggie-700 sm:block">
                 Makeup Boutique
               </span>
             </div>
@@ -211,16 +248,17 @@ export function BoutiqueNavigationHUD({
         </div>
 
         {/* Right Controls: Full Collection, Policies, 3D/2D Mode Switch & Persistent Bag */}
-        <div className="pointer-events-auto flex items-center gap-1.5 md:gap-2">
-          {/* Full 110-Product Collection Directory Trigger */}
+        <div className="pointer-events-auto flex shrink-0 items-center gap-1.5 md:gap-2">
+          {/* Full 110-Product Collection Directory Trigger (Hidden on mobile 2D since 2D has inline Search/Filter bar) */}
           <button
             type="button"
             onClick={() => setIsCatalogOpen(true)}
             aria-label="Browse all 110 Pretty Piggie Makeup products"
-            className="flex h-10 items-center gap-1.5 rounded-full border border-white/85 bg-white/95 px-3 text-xs font-bold text-piggie-950 shadow-pill-float backdrop-blur-md transition hover:bg-white active:scale-95 md:px-3.5"
+            className={`${
+              is2DMode ? 'hidden sm:flex' : 'flex'
+            } h-11 w-11 items-center justify-center gap-1.5 rounded-full border border-white/85 bg-white/95 px-0 text-xs font-bold text-piggie-950 shadow-pill-float backdrop-blur-md transition hover:bg-white active:scale-95 sm:w-auto sm:px-3.5`}
           >
             <Search className="h-4 w-4 text-piggie-600" />
-            <span className="sm:hidden">Shop</span>
             <span className="hidden sm:inline">
               Shop All ({products.length})
             </span>
@@ -231,24 +269,25 @@ export function BoutiqueNavigationHUD({
             type="button"
             onClick={() => onOpenLegal('shipping')}
             aria-label="Shipping, returns, FDA MoCRA safety, privacy, and accessibility policies"
-            className="hidden h-10 items-center gap-1.5 rounded-full border border-white/85 bg-white/95 px-3 text-xs font-semibold text-piggie-900 shadow-pill-float backdrop-blur-md transition hover:bg-white md:flex"
+            className="hidden h-11 items-center gap-1.5 rounded-full border border-white/85 bg-white/95 px-3.5 text-xs font-semibold text-piggie-900 shadow-pill-float backdrop-blur-md transition hover:bg-white md:flex"
           >
             <ShieldCheck className="h-4 w-4 text-piggie-600" />
             <span>Care &amp; Policies</span>
           </button>
 
-          {/* 3D Showroom / 2D Full Catalog Mode Switch (Always labeled on mobile!) */}
+          {/* 3D Showroom / 2D Full Catalog Mode Switch (Short 1-Line Labels on Mobile!) */}
           {capability.supportsWebGL && (
             <button
               type="button"
               onClick={onToggle2DMode}
               title="Switch between 3D Virtual Showroom and 2D Full 110-Product Boutique"
-              className="flex h-10 items-center gap-1.5 rounded-full border border-white/70 bg-piggie-950/90 px-3 text-xs font-semibold text-white shadow-pill-float backdrop-blur-md transition hover:bg-piggie-900 active:scale-95 md:px-3.5"
+              className="flex h-11 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border border-white/70 bg-piggie-950/95 px-3 text-xs font-bold text-white shadow-pill-float backdrop-blur-md transition hover:bg-piggie-900 active:scale-95 md:px-3.5"
             >
               {is2DMode ? (
                 <>
                   <Box className="h-3.5 w-3.5 text-rosegold" />
-                  <span>3D Store</span>
+                  <span className="sm:hidden">3D</span>
+                  <span className="hidden sm:inline">3D Store</span>
                 </>
               ) : (
                 <>
@@ -265,7 +304,7 @@ export function BoutiqueNavigationHUD({
             type="button"
             onClick={onOpenBag}
             aria-label={`Open shopping bag (${bagCount} items)`}
-            className="relative flex h-10 items-center gap-1.5 rounded-full border border-rosegold/70 bg-gradient-to-r from-piggie-950 to-piggie-800 px-3.5 text-xs font-bold text-white shadow-pill-float transition hover:from-piggie-900 hover:to-piggie-700 active:scale-95 md:gap-2 md:px-4"
+            className="relative flex h-11 shrink-0 items-center gap-1.5 rounded-full border border-rosegold/70 bg-gradient-to-r from-piggie-950 to-piggie-800 px-3 text-xs font-bold text-white shadow-pill-float transition hover:from-piggie-900 hover:to-piggie-700 active:scale-95 md:gap-2 md:px-4"
           >
             <ShoppingBag className="h-4 w-4 text-rosegold-light" />
             <span className="hidden sm:inline">Bag</span>
@@ -277,129 +316,228 @@ export function BoutiqueNavigationHUD({
       </header>
 
       {/* ==================================================================
-          2. COMPACT COLLAPSIBLE ZONE PLACARD & SINGLE-ROW BUYABLE STRIP (3D Mode)
+          2. DESKTOP EDITORIAL ZONE PLACARD (Hidden on Mobile so 3D Canvas Stays >82% Open!)
          ================================================================== */}
       {!selectedProduct && !is2DMode && (
-        <div className="pointer-events-none fixed inset-x-0 top-[62px] z-20 flex flex-col items-start px-3 md:left-6 md:right-auto md:top-20 md:max-w-sm md:px-0">
-          <div className="pointer-events-auto w-full rounded-2xl border border-piggie-200/90 bg-white/92 px-3 py-2.5 text-piggie-950 shadow-xl backdrop-blur-xl md:p-3.5">
-            {/* Compact Top Title Row */}
+        <div className="pointer-events-none fixed left-6 top-20 z-20 hidden max-w-sm flex-col items-start md:flex">
+          <div className="pointer-events-auto w-full rounded-2xl border border-piggie-200/90 bg-white/95 p-3.5 text-piggie-950 shadow-xl backdrop-blur-xl">
             <div className="flex items-center justify-between gap-2">
               <div className="min-w-0 flex-1">
-                <div className="flex items-center gap-1.5">
-                  <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-piggie-100 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-piggie-700">
-                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                    {currentZone.badge}
-                  </span>
-                  <button
-                    type="button"
-                    onClick={() => onOpenLegal('shipping')}
-                    className="shrink-0 text-[10px] font-semibold text-piggie-700 underline hover:text-piggie-950 md:hidden"
-                  >
-                    Policies
-                  </button>
-                </div>
-                <h1 className="mt-0.5 truncate font-serif text-sm font-bold leading-snug text-piggie-950 md:text-lg">
+                <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-piggie-100 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-piggie-700">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                  {currentZone.badge}
+                </span>
+                <h1 className="mt-0.5 truncate font-serif text-lg font-bold leading-snug text-piggie-950">
                   {currentZone.name}
                 </h1>
               </div>
 
-              <div className="flex shrink-0 items-center gap-1.5">
-                <button
-                  type="button"
-                  onClick={() => setIsCatalogOpen(true)}
-                  className="whitespace-nowrap rounded-full bg-piggie-50 px-2.5 py-1 text-[10px] font-bold text-piggie-800 ring-1 ring-piggie-200 transition hover:bg-piggie-100"
-                >
-                  Shop Ready ({CATALOG_RECONCILIATION.verifiedInStock})
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setIsPlacardCollapsed((prev) => !prev)}
-                  aria-label={
-                    isPlacardCollapsed
-                      ? 'Expand boutique guide'
-                      : 'Minimize boutique guide to view 3D room'
-                  }
-                  className="flex h-7 w-7 items-center justify-center rounded-full bg-piggie-100 text-piggie-800 hover:bg-piggie-200 md:hidden"
-                >
-                  {isPlacardCollapsed ? (
-                    <ChevronDown className="h-4 w-4" />
-                  ) : (
-                    <ChevronUp className="h-4 w-4" />
-                  )}
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={() => setIsCatalogOpen(true)}
+                className="shrink-0 whitespace-nowrap rounded-full bg-piggie-50 px-2.5 py-1 text-[10px] font-bold text-piggie-800 ring-1 ring-piggie-200 transition hover:bg-piggie-100"
+              >
+                Shop Ready ({CATALOG_RECONCILIATION.verifiedInStock})
+              </button>
             </div>
 
-            {/* Collapsible Body (Always visible on desktop, 1-tap toggle on mobile) */}
-            {!isPlacardCollapsed && (
-              <>
-                <p className="mt-0.5 truncate text-[11px] font-medium text-piggie-700 md:hidden">
-                  {currentZone.subtitle}
-                </p>
-                <p className="mt-1 hidden text-[11px] leading-relaxed text-piggie-800 md:block">
-                  {currentZone.description}
-                </p>
+            <p className="mt-1 text-[11px] leading-relaxed text-piggie-800">
+              {currentZone.description}
+            </p>
 
-                {/* Single-Row Horizontally Scrollable Verified Buyable Hero Pills */}
-                <div className="relative mt-2">
-                  <div className="flex flex-nowrap items-center gap-1.5 overflow-x-auto pb-0.5 pr-4 no-scrollbar md:flex-wrap md:pr-0">
-                    {zoneHeroProducts.map((prod) => (
-                      <button
-                        key={prod.id}
-                        type="button"
-                        onClick={() => onSelectProduct(prod)}
-                        className="flex shrink-0 items-center gap-1.5 rounded-full border border-piggie-200 bg-piggie-50/90 px-2.5 py-1.5 text-[11px] font-semibold text-piggie-950 shadow-sm transition hover:border-piggie-500 hover:bg-white active:scale-95"
-                      >
-                        <span
-                          className="h-2.5 w-2.5 shrink-0 rounded-full ring-1 ring-black/15"
-                          style={{ backgroundColor: prod.shades[0].hex }}
-                        />
-                        <span className="max-w-[140px] truncate">
-                          {prod.title}
-                        </span>
-                        <span className="font-bold tabular-nums text-piggie-700">
-                          ${prod.price.toFixed(2)}
-                        </span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </>
-            )}
+            {/* Verified Buyable Hero Pills */}
+            <div className="mt-2.5 flex flex-wrap items-center gap-1.5">
+              {zoneHeroProducts.map((prod) => (
+                <button
+                  key={prod.id}
+                  type="button"
+                  onClick={() => onSelectProduct(prod)}
+                  className="flex shrink-0 items-center gap-1.5 rounded-full border border-piggie-200 bg-piggie-50/90 px-2.5 py-1.5 text-[11px] font-semibold text-piggie-950 shadow-sm transition hover:border-piggie-500 hover:bg-white active:scale-95"
+                >
+                  <span
+                    className="h-2.5 w-2.5 shrink-0 rounded-full ring-1 ring-black/15"
+                    style={{ backgroundColor: prod.shades[0].hex }}
+                  />
+                  <span className="max-w-[140px] truncate">{prod.title}</span>
+                  <span className="font-bold tabular-nums text-piggie-700">
+                    ${prod.price.toFixed(2)}
+                  </span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       )}
 
       {/* ==================================================================
-          3. ONE-HANDED THUMB-ZONE BOTTOM BOUTIQUE NAVIGATION DOCK (3D Mode Only — 2D Has Native Sticky Filters)
+          3. UNIFIED MOBILE THUMB-ZONE CONCIERGE TRAY & FLOATING DEPARTMENT DOCK (3D Mode Only)
          ================================================================== */}
       {!selectedProduct && !is2DMode && (
         <nav
           aria-label="Boutique Departments"
-          className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex flex-col items-center px-3 pb-[max(1rem,env(safe-area-inset-bottom))] pt-2 md:pb-6"
+          className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex flex-col items-center gap-2 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-2 md:pb-6"
         >
-          <div className="pointer-events-auto flex max-w-full items-center gap-1.5 rounded-full border border-white/75 bg-piggie-950/95 p-1.5 text-white shadow-2xl backdrop-blur-xl">
+          {/* One-Time 3.2s Cold-Traffic 3D Gesture Micro-Hint */}
+          {show3DHint && !isMobileTrayExpanded && (
+            <div className="animate-toast-pop pointer-events-none rounded-full bg-piggie-950/85 px-3.5 py-1.5 text-[11px] font-semibold text-rosegold-light shadow-lg backdrop-blur-md md:hidden">
+              ← Swipe room or tap any cosmetic →
+            </div>
+          )}
+
+          {/* Mobile Thumb-Zone Quick-Shop Concierge Tray (Collapsed Peek Pill -> Swipeable Verified Hero Cards) */}
+          <div className="pointer-events-auto w-full max-w-md md:hidden">
+            {isMobileTrayExpanded ? (
+              <div className="animate-sheet-up overflow-hidden rounded-2xl border border-white/85 bg-white/95 text-piggie-950 shadow-2xl backdrop-blur-xl">
+                <div className="flex items-center justify-between gap-2 border-b border-piggie-100 px-3 py-2">
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center gap-1.5">
+                      <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-bold text-emerald-800 ring-1 ring-emerald-200">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                        {currentZone.shortName}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => onOpenLegal('shipping')}
+                        className="px-1.5 py-1 text-[11px] font-semibold text-piggie-700 underline hover:text-piggie-950"
+                      >
+                        Policies
+                      </button>
+                    </div>
+                    <h1 className="mt-0.5 truncate font-serif text-sm font-bold text-piggie-950">
+                      {currentZone.name}
+                    </h1>
+                  </div>
+
+                  <div className="flex shrink-0 items-center gap-1.5">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setSelectedCategory('Verified In Stock');
+                        setIsCatalogOpen(true);
+                      }}
+                      className="min-h-[38px] whitespace-nowrap rounded-full bg-piggie-100 px-3 text-[11px] font-bold text-piggie-900 transition active:scale-95"
+                    >
+                      All {CATALOG_RECONCILIATION.verifiedInStock} Ready
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setIsMobileTrayExpanded(false)}
+                      aria-label="Minimize featured products tray to view 3D room"
+                      className="flex h-10 w-10 items-center justify-center rounded-full bg-piggie-50 text-piggie-800 transition hover:bg-piggie-100 active:scale-95"
+                    >
+                      <ChevronDown className="h-4 w-4" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Horizontally Swipeable Pure-Porcelain Verified Hero Thumb Cards */}
+                <div className="flex snap-x snap-mandatory gap-2 overflow-x-auto px-3 py-2.5 no-scrollbar">
+                  {zoneHeroProducts.map((prod) => (
+                    <button
+                      key={prod.id}
+                      type="button"
+                      onClick={() => onSelectProduct(prod)}
+                      className="flex min-h-[68px] w-[216px] shrink-0 snap-start items-center gap-2.5 rounded-xl border border-piggie-100 bg-white p-2 text-left shadow-sm transition hover:border-piggie-300 active:scale-98"
+                    >
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-piggie-100 bg-white p-0.5">
+                        {prod.primaryImage ? (
+                          <img
+                            src={prod.primaryImage}
+                            alt={prod.title}
+                            className="h-full w-full object-contain"
+                          />
+                        ) : (
+                          <span
+                            className="h-8 w-8 rounded-full ring-1 ring-black/15"
+                            style={{ backgroundColor: prod.shades[0].hex }}
+                          />
+                        )}
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <p className="truncate text-xs font-bold text-piggie-950">
+                          {prod.title}
+                        </p>
+                        <div className="mt-0.5 flex items-center gap-1 text-[11px] text-piggie-700">
+                          <span
+                            className="h-2.5 w-2.5 shrink-0 rounded-full ring-1 ring-black/15"
+                            style={{ backgroundColor: prod.shades[0].hex }}
+                          />
+                          <span className="truncate">
+                            {prod.shades.length > 1
+                              ? `${prod.shades.length} Shades`
+                              : prod.shades[0].finish}
+                          </span>
+                        </div>
+                        <div className="mt-0.5 flex items-center justify-between">
+                          <span className="text-xs font-extrabold tabular-nums text-piggie-950">
+                            ${prod.price.toFixed(2)}
+                          </span>
+                          <span className="text-[10px] font-bold text-piggie-600">
+                            Shop 3D →
+                          </span>
+                        </div>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="flex items-center justify-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setIsMobileTrayExpanded(true)}
+                  aria-label={`Open ${currentZone.name} featured products (${zoneHeroProducts.length} ready to shop)`}
+                  className="flex min-h-[44px] items-center gap-2 rounded-full border border-white/85 bg-white/95 px-4 py-2 text-xs font-bold text-piggie-950 shadow-pill-float backdrop-blur-xl transition active:scale-95"
+                >
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
+                  <span className="font-serif text-piggie-950">
+                    {currentZone.shortName}
+                  </span>
+                  <span className="text-piggie-300">•</span>
+                  <span className="text-piggie-700">
+                    Shop {zoneHeroProducts.length} Featured
+                  </span>
+                  <ChevronUp className="h-4 w-4 text-piggie-600" />
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => onOpenLegal('shipping')}
+                  aria-label="Shipping, returns, FDA MoCRA safety, and privacy policies"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-white/85 bg-white/95 text-piggie-800 shadow-pill-float backdrop-blur-xl transition active:scale-95"
+                >
+                  <ShieldCheck className="h-4 w-4 text-piggie-600" />
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* Floating Department Navigation Capsule (44px Prev/Next + Auto-Centered Active Pill) */}
+          <div className="pointer-events-auto flex max-w-full items-center gap-1 rounded-full border border-white/75 bg-piggie-950/95 p-1 text-white shadow-2xl backdrop-blur-xl md:gap-1.5 md:p-1.5">
             {/* Prev Department Button */}
             <button
               type="button"
               onClick={() => onSwipeZone('prev')}
               aria-label="Previous boutique zone"
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white/25 active:scale-95"
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white/25 active:scale-95"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
 
-            {/* Scrollable One-Tap Zone Pills (Guaranteed High-Contrast Active & Inactive States) */}
+            {/* Scrollable One-Tap Zone Pills */}
             <div className="flex items-center gap-1 overflow-x-auto px-1 no-scrollbar">
               {BOUTIQUE_ZONES.map((zone) => {
                 const isActive = activeZone === zone.id;
                 return (
                   <button
                     key={zone.id}
+                    ref={(el) => {
+                      zonePillRefs.current[zone.id] = el;
+                    }}
                     type="button"
                     aria-current={isActive ? 'page' : undefined}
                     onClick={() => onSelectZone(zone.id)}
-                    className={`shrink-0 rounded-full px-3.5 py-2 text-xs font-bold transition-all ${
+                    className={`min-h-[40px] shrink-0 rounded-full px-3.5 py-2 text-xs font-bold transition-all ${
                       isActive
                         ? 'scale-102 bg-white text-piggie-950 shadow-md ring-1 ring-rosegold/70'
                         : 'bg-transparent text-white/90 hover:bg-white/15 hover:text-white'
@@ -416,7 +554,7 @@ export function BoutiqueNavigationHUD({
               type="button"
               onClick={() => onSwipeZone('next')}
               aria-label="Next boutique zone"
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white/25 active:scale-95"
+              className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white/25 active:scale-95"
             >
               <ChevronRight className="h-4 w-4" />
             </button>
@@ -425,7 +563,7 @@ export function BoutiqueNavigationHUD({
       )}
 
       {/* ==================================================================
-          4. FULL 110-PRODUCT BOUTIQUE COLLECTION & SHADE FINDER MODAL
+          4. FULL 110-PRODUCT BOUTIQUE COLLECTION & SHADE FINDER MODAL (Mobile Bottom Sheet)
          ================================================================== */}
       {isCatalogOpen && (
         <div
@@ -435,36 +573,34 @@ export function BoutiqueNavigationHUD({
           onClick={(e) => {
             if (e.target === e.currentTarget) setIsCatalogOpen(false);
           }}
-          className="fixed inset-0 z-50 flex items-start justify-center bg-piggie-950/65 p-3 pt-14 backdrop-blur-sm md:p-6 md:pt-16"
+          className="fixed inset-0 z-50 flex items-end justify-center bg-piggie-950/65 p-0 pt-10 backdrop-blur-sm md:items-start md:p-6 md:pt-16"
         >
-          <div className="animate-sheet-up flex max-h-[85vh] w-full max-w-4xl flex-col overflow-hidden rounded-3xl border border-piggie-100 bg-white text-piggie-950 shadow-2xl">
+          <div className="animate-sheet-up flex max-h-[92dvh] w-full max-w-4xl flex-col overflow-hidden rounded-t-3xl border border-piggie-100 bg-white text-piggie-950 shadow-2xl md:max-h-[85dvh] md:rounded-3xl">
             {/* Modal Header */}
-            <div className="border-b border-piggie-100 bg-gradient-to-r from-piggie-50 via-white to-piggie-50 px-5 py-4">
+            <div className="border-b border-piggie-100 bg-gradient-to-r from-piggie-50 via-white to-piggie-50 px-4 py-3.5 md:px-5 md:py-4">
               <div className="flex items-center justify-between gap-3">
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 items-center gap-3">
                   <img
                     src="/brand/prettypiggie-logo.png"
                     alt="Pretty Piggie Makeup"
-                    className="h-11 w-11 rounded-full border border-piggie-200 bg-white object-contain p-0.5 shadow-sm"
+                    className="h-10 w-10 shrink-0 rounded-full border border-piggie-200 bg-white object-contain p-0.5 shadow-sm md:h-11 md:w-11"
                   />
-                  <div>
-                    <div className="flex flex-wrap items-center gap-2">
+                  <div className="min-w-0">
+                    <div className="flex flex-wrap items-center gap-1.5">
                       <h2
                         id="catalog-modal-title"
-                        className="font-serif text-lg font-bold text-piggie-950 md:text-xl"
+                        className="truncate font-serif text-base font-bold text-piggie-950 md:text-xl"
                       >
-                        Pretty Piggie Makeup Collection ({products.length})
+                        Pretty Piggie Collection ({products.length})
                       </h2>
-                      <span className="inline-flex items-center gap-1 rounded-full bg-piggie-100 px-2.5 py-0.5 text-[10px] font-bold text-piggie-800">
-                        <BadgeCheck className="h-3.5 w-3.5 text-piggie-600" />
-                        {CATALOG_RECONCILIATION.verifiedInStock} Verified In
-                        Stock • {CATALOG_RECONCILIATION.verifiedOutOfStock}{' '}
-                        Verified Out of Stock •{' '}
-                        {CATALOG_RECONCILIATION.unverifiedPurchaseLocked}{' '}
-                        Unverified Locked
+                      <span className="inline-flex items-center gap-1 rounded-full bg-piggie-100 px-2 py-0.5 text-[10px] font-bold text-piggie-800">
+                        <BadgeCheck className="h-3 w-3 text-piggie-600" />
+                        {CATALOG_RECONCILIATION.verifiedInStock} Ready •{' '}
+                        {CATALOG_RECONCILIATION.verifiedOutOfStock} Sold Out •{' '}
+                        {CATALOG_RECONCILIATION.unverifiedPurchaseLocked} Locked
                       </span>
                     </div>
-                    <p className="mt-0.5 text-[11px] text-piggie-700">
+                    <p className="mt-0.5 hidden text-[11px] text-piggie-700 sm:block">
                       Ready-to-ship favorites are featured first. Tap any item
                       to inspect shades on the 360° 3D stage.
                     </p>
@@ -475,7 +611,7 @@ export function BoutiqueNavigationHUD({
                   type="button"
                   onClick={() => setIsCatalogOpen(false)}
                   aria-label="Close product catalog"
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-piggie-100 text-piggie-800 hover:bg-piggie-200"
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-piggie-100 text-piggie-800 transition hover:bg-piggie-200 active:scale-95"
                 >
                   <X className="h-4 w-4" />
                 </button>
@@ -483,14 +619,14 @@ export function BoutiqueNavigationHUD({
 
               {/* Search Input (16px on mobile to prevent iOS Safari auto-zoom) */}
               <div className="mt-3 flex flex-col gap-2.5 sm:flex-row sm:items-center">
-                <div className="flex flex-1 items-center gap-2 rounded-2xl border border-piggie-200 bg-white px-3.5 py-2">
-                  <Search className="h-4 w-4 text-piggie-600" />
+                <div className="flex min-h-[44px] flex-1 items-center gap-2 rounded-2xl border border-piggie-200 bg-white px-3.5 py-2">
+                  <Search className="h-4 w-4 shrink-0 text-piggie-600" />
                   <input
                     type="search"
                     aria-label="Search Pretty Piggie Makeup catalog"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search eyeshadows, bronzers, brushes, serums, or shade names..."
+                    placeholder="Search eyeshadows, bronzers, brushes, serums..."
                     className="w-full bg-transparent text-base text-piggie-950 placeholder:text-piggie-600/70 focus:outline-none sm:text-xs"
                   />
                   {searchQuery && (
@@ -498,7 +634,7 @@ export function BoutiqueNavigationHUD({
                       type="button"
                       onClick={() => setSearchQuery('')}
                       aria-label="Clear search query"
-                      className="text-xs font-bold text-piggie-600 hover:text-piggie-950"
+                      className="px-2 py-1 text-xs font-bold text-piggie-600 hover:text-piggie-950"
                     >
                       Clear
                     </button>
@@ -506,13 +642,13 @@ export function BoutiqueNavigationHUD({
                 </div>
               </div>
 
-              <div className="mt-2.5 flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar">
+              <div className="mt-2.5 flex items-center gap-1.5 overflow-x-auto pb-0.5 no-scrollbar">
                 {CATEGORIES.map((cat) => (
                   <button
                     key={cat}
                     type="button"
                     onClick={() => setSelectedCategory(cat)}
-                    className={`shrink-0 rounded-full px-3 py-1.5 text-[11px] font-bold transition ${
+                    className={`min-h-[38px] shrink-0 rounded-full px-3.5 py-1.5 text-xs font-bold transition ${
                       selectedCategory === cat
                         ? 'bg-piggie-950 text-white shadow-sm'
                         : cat === 'Verified In Stock'
@@ -527,7 +663,7 @@ export function BoutiqueNavigationHUD({
             </div>
 
             {/* Scrollable 110-Product List (Merchandised Buyable-First) */}
-            <div className="piggie-scrollbar flex-1 divide-y divide-piggie-100/80 overflow-y-auto p-3 md:p-4">
+            <div className="piggie-scrollbar flex-1 divide-y divide-piggie-100/80 overflow-y-auto p-3 pb-[max(1.5rem,env(safe-area-inset-bottom))] md:p-4">
               {searchResults.length === 0 ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <p className="font-serif text-lg font-bold text-piggie-950">

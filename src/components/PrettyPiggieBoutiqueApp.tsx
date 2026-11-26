@@ -53,8 +53,19 @@ const BoutiqueCanvas3D = dynamic(
             Entering Pretty Piggie Makeup
           </span>
           <span className="mt-1 text-xs font-medium text-piggie-700">
-            Illuminating 3D Chandelier Rotunda & Makeup Wall...
+            Illuminating 3D Chandelier Rotunda &amp; Makeup Wall...
           </span>
+          <button
+            type="button"
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                window.dispatchEvent(new CustomEvent('pp-instant-2d'));
+              }
+            }}
+            className="mt-4 min-h-[44px] rounded-full border border-piggie-300 bg-white px-4 py-2 text-xs font-bold text-piggie-900 shadow-sm transition hover:bg-piggie-50 active:scale-95"
+          >
+            Or shop 2D Catalogue immediately →
+          </button>
         </div>
       </div>
     ),
@@ -309,6 +320,13 @@ export function PrettyPiggieBoutiqueApp() {
     setIsLegalOpen(true);
   }, []);
 
+  // Cold-traffic 4G escape hatch from 3D loader into instant 2D Catalogue
+  useEffect(() => {
+    const handleInstant2D = () => setIs2DMode(true);
+    window.addEventListener('pp-instant-2d', handleInstant2D);
+    return () => window.removeEventListener('pp-instant-2d', handleInstant2D);
+  }, []);
+
   // Keyboard navigation accessibility
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -364,6 +382,7 @@ export function PrettyPiggieBoutiqueApp() {
         <LuxuryFallback2D
           products={products}
           activeZone={activeZone}
+          bagCount={totalBagCount}
           bagSubtotal={bagSubtotal}
           onSelectZone={handleSelectZone}
           onSelectProduct={handleSelectProduct}

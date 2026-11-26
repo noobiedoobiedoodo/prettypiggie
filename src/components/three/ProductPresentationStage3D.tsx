@@ -10,14 +10,14 @@ import { BrandLogo3D } from './BrandLogo3D';
 interface ProductPresentationStage3DProps {
   product: BoutiqueProduct;
   selectedShade: ProductShade;
-  rotationYOffset: number;
+  rotationYOffsetRef: React.RefObject<number>;
   prefersReducedMotion?: boolean;
 }
 
 export function ProductPresentationStage3D({
   product,
   selectedShade,
-  rotationYOffset,
+  rotationYOffsetRef,
   prefersReducedMotion = false,
 }: ProductPresentationStage3DProps) {
   const floatingLeftSphere = useRef<THREE.Mesh>(null);
@@ -54,7 +54,7 @@ export function ProductPresentationStage3D({
     if (productPivotRef.current) {
       productPivotRef.current.rotation.y = THREE.MathUtils.lerp(
         productPivotRef.current.rotation.y,
-        rotationYOffset,
+        rotationYOffsetRef.current ?? 0,
         0.14
       );
     }

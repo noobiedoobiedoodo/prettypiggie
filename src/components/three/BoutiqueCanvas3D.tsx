@@ -19,32 +19,33 @@ interface CameraControllerProps {
   activeZone: BoutiqueZoneId;
   selectedProduct: BoutiqueProduct | null;
   capability: DeviceCapabilityProfile;
-  panOffsetX: number;
+  panOffsetXRef: React.RefObject<number>;
 }
 
 function BoutiqueCameraController({
   activeZone,
   selectedProduct,
   capability,
-  panOffsetX,
+  panOffsetXRef,
 }: CameraControllerProps) {
   const { camera } = useThree();
   const lookAtTarget = useRef(new THREE.Vector3(0, 2.0, -1.5));
+  const desiredTarget = useRef(new THREE.Vector3(0, 2.0, -1.5));
   const animatedTarget = useRef({ x: 0, y: 2.0, z: -1.5 });
 
   useEffect(() => {
     const perspCam = camera as THREE.PerspectiveCamera;
 
     if (selectedProduct) {
-      // Transition camera to the 3D Product Presentation Stage (Screenshot 220242)
+      // Transition camera to the 3D Product Presentation Stage — raised on mobile to float cleanly above the 52dvh sheet
       const stageCamPos = capability.isMobile
-        ? { x: 0.0, y: 13.75, z: 4.85 }
+        ? { x: 0.0, y: 13.55, z: 5.15 }
         : capability.isTablet
         ? { x: 0.65, y: 13.7, z: 4.4 }
         : { x: 1.05, y: 13.7, z: 4.35 };
 
       const stageTarget = capability.isMobile
-        ? { x: 0.0, y: 12.75, z: 0.0 }
+        ? { x: 0.0, y: 12.15, z: 0.0 }
         : capability.isTablet
         ? { x: 0.55, y: 13.2, z: 0.0 }
         : { x: 0.85, y: 13.25, z: 0.0 };
@@ -120,7 +121,10 @@ function BoutiqueCameraController({
   ]);
 
   useFrame((state) => {
-    const pointerX = capability.isMobile ? panOffsetX : state.pointer.x * 0.35 + panOffsetX;
+    const livePanX = panOffsetXRef.current ?? 0;
+    const pointerX = capability.isMobile
+      ? livePanX
+      : state.pointer.x * 0.35 + livePanX;
     const pointerY = capability.isMobile ? 0 : state.pointer.y * 0.15;
 
     const targetX =
@@ -129,7 +133,8 @@ function BoutiqueCameraController({
       animatedTarget.current.y + (selectedProduct ? 0 : pointerY * 0.45);
     const targetZ = animatedTarget.current.z;
 
-    lookAtTarget.current.lerp(new THREE.Vector3(targetX, targetY, targetZ), 0.1);
+    desiredTarget.current.set(targetX, targetY, targetZ);
+    lookAtTarget.current.lerp(desiredTarget.current, 0.1);
     camera.lookAt(lookAtTarget.current);
   });
 
@@ -161,20 +166,9 @@ export function BoutiqueCanvas3D({
 }: BoutiqueCanvas3DProps) {
   const [dynamicDpr, setDynamicDpr] = useState<number>(capability.dpr[1]);
   const [isTabVisible, setIsTabVisible] = useState<boolean>(true);
-  const [rotationState, setRotationState] = useState<{
-    productId: string | null;
-    y: number;
-  }>({ productId: null, y: 0 });
-  const [panState, setPanState] = useState<{
-    zone: BoutiqueZoneId;
-    x: number;
-  }>({ zone: activeZone, x: 0 });
+  const rotationYRef = useRef<number>(0);
+  const panOffsetXRef = useRef<number>(0);
 
-  const productRotationY =
-    rotationState.productId === (selectedProduct?.id ?? null)
-      ? rotationState.y
-      : 0;
-  const panOffsetX = panState.zone === activeZone ? panState.x : 0;
   const effectiveMaxDpr = Math.max(
     capability.dpr[0],
     Math.min(dynamicDpr, capability.dpr[1])
@@ -188,7 +182,17 @@ export function BoutiqueCanvas3D({
   const contextLostCleanupRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
+    rotationYRef.current = 0;
+  }, [selectedProduct?.id]);
+
+  useEffect(() => {
+    gsap.killTweensOf(panOffsetXRef);
+    panOffsetXRef.current = 0;
+  }, [activeZone]);
+
+  useEffect(() => {
     return () => {
+      gsap.killTweensOf(panOffsetXRef);
       contextLostCleanupRef.current?.();
       contextLostCleanupRef.current = null;
     };
@@ -205,6 +209,17 @@ export function BoutiqueCanvas3D({
   }, []);
 
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    // Do not hijack taps on interactive HTML overlays or iOS back-swipe edge gutters
+    const targetEl = e.target as HTMLElement | null;
+    if (targetEl?.closest?.('button, a, input, select')) return;
+    if (
+      typeof window !== 'undefined' &&
+      (e.clientX < 28 || e.clientX > window.innerWidth - 28)
+    ) {
+      return;
+    }
+
+    gsap.killTweensOf(panOffsetXRef);
     dragStartRef.current = {
       x: e.clientX,
       y: e.clientY,
@@ -217,17 +232,12 @@ export function BoutiqueCanvas3D({
     const deltaX = e.clientX - dragStartRef.current.x;
 
     if (selectedProduct) {
-      // 360-degree touch/mouse rotation of the product on the stage
-      const pid = selectedProduct.id;
-      setRotationState((prev) => ({
-        productId: pid,
-        y: (prev.productId === pid ? prev.y : 0) + deltaX * 0.014,
-      }));
+      // Zero-re-render 60fps 360-degree touch/mouse rotation on the presentation stage
+      rotationYRef.current += deltaX * 0.014;
       dragStartRef.current.x = e.clientX;
     } else {
-      // Gentle horizontal look pan inside the active boutique zone
-      const clampedPan = Math.max(-1.4, Math.min(1.4, -deltaX * 0.0045));
-      setPanState({ zone: activeZone, x: clampedPan });
+      // Zero-re-render gentle horizontal look pan inside the active boutique zone
+      panOffsetXRef.current = Math.max(-1.4, Math.min(1.4, -deltaX * 0.0045));
     }
   };
 
@@ -239,12 +249,19 @@ export function BoutiqueCanvas3D({
 
     // On mobile/tablet, a quick horizontal swipe switches departments
     if (!selectedProduct && Math.abs(totalDeltaX) > 75 && totalDeltaY < 60) {
-      setPanState({ zone: activeZone, x: 0 });
+      panOffsetXRef.current = 0;
       if (totalDeltaX < 0) {
         onSwipeZone('next');
       } else {
         onSwipeZone('prev');
       }
+    } else if (!selectedProduct) {
+      // Smooth luxury spring-back toward center framing
+      gsap.to(panOffsetXRef, {
+        current: 0,
+        duration: capability.prefersReducedMotion ? 0.05 : 0.45,
+        ease: 'power2.out',
+      });
     }
   };
 
@@ -253,12 +270,17 @@ export function BoutiqueCanvas3D({
 
   return (
     <div
-      className="relative h-full w-full touch-pan-y select-none overflow-hidden bg-gradient-to-b from-[#F5C6D6] via-[#E8A9BF] to-[#D48BA5]"
+      className="relative h-full w-full touch-none select-none overflow-hidden bg-gradient-to-b from-[#F5C6D6] via-[#E8A9BF] to-[#D48BA5]"
       onPointerDown={handlePointerDown}
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerCancel={() => {
         dragStartRef.current.active = false;
+        gsap.to(panOffsetXRef, {
+          current: 0,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
       }}
     >
       <Canvas
@@ -347,7 +369,7 @@ export function BoutiqueCanvas3D({
           activeZone={activeZone}
           selectedProduct={selectedProduct}
           capability={capability}
-          panOffsetX={panOffsetX}
+          panOffsetXRef={panOffsetXRef}
         />
 
         {/* Main 3D Virtual Boutique Showroom */}
@@ -360,12 +382,12 @@ export function BoutiqueCanvas3D({
           onSelectProduct={onSelectProduct}
         />
 
-        {/* Dedicated 3D Product Presentation Stage (Screenshot 220242) */}
+        {/* Dedicated 3D Product Presentation Stage */}
         {selectedProduct && activeStageShade && (
           <ProductPresentationStage3D
             product={selectedProduct}
             selectedShade={activeStageShade}
-            rotationYOffset={productRotationY}
+            rotationYOffsetRef={rotationYRef}
             prefersReducedMotion={capability.prefersReducedMotion}
           />
         )}

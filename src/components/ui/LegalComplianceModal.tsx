@@ -45,28 +45,29 @@ export function LegalComplianceModal({
       role="dialog"
       aria-modal="true"
       aria-labelledby="legal-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center bg-piggie-950/65 p-4 backdrop-blur-sm"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+      className="fixed inset-0 z-50 flex items-end justify-center bg-piggie-950/65 p-0 backdrop-blur-sm md:items-center md:p-4"
     >
-      <div className="flex max-h-[86vh] w-full max-w-3xl flex-col overflow-hidden rounded-3xl border border-piggie-100 bg-white text-piggie-950 shadow-2xl">
+      <div className="animate-sheet-up flex max-h-[92dvh] w-full max-w-3xl flex-col overflow-hidden rounded-t-3xl border border-piggie-100 bg-white text-piggie-950 shadow-2xl md:max-h-[86dvh] md:rounded-3xl">
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-piggie-100 bg-gradient-to-r from-piggie-50 via-white to-piggie-50 px-5 py-4">
-          <div className="flex items-center gap-3">
+        <div className="flex items-center justify-between gap-2 border-b border-piggie-100 bg-gradient-to-r from-piggie-50 via-white to-piggie-50 px-4 py-3.5 md:px-5 md:py-4">
+          <div className="flex min-w-0 items-center gap-3">
             <img
               src="/brand/prettypiggie-logo.png"
               alt="Pretty Piggie Makeup"
-              className="h-10 w-10 rounded-full border border-piggie-200 bg-white object-contain p-0.5 shadow-sm"
+              className="h-10 w-10 shrink-0 rounded-full border border-piggie-200 bg-white object-contain p-0.5 shadow-sm"
             />
-            <div>
+            <div className="min-w-0">
               <h2
                 id="legal-modal-title"
-                className="font-serif text-lg font-bold text-piggie-950 md:text-xl"
+                className="truncate font-serif text-base font-bold text-piggie-950 md:text-xl"
               >
-                Pretty Piggie Makeup — Regulatory, Privacy & Customer Care
-                Center
+                Regulatory, Privacy &amp; Customer Care
               </h2>
-              <p className="text-[11px] text-piggie-600">
-                US FDA / MoCRA • Health Canada Cosmetic Regulations • CCPA /
-                PIPEDA / CASL • WCAG 2.1 AA
+              <p className="truncate text-[11px] text-piggie-600">
+                US FDA / MoCRA • Health Canada • CCPA / PIPEDA / CASL • WCAG 2.1 AA
               </p>
             </div>
           </div>
@@ -75,17 +76,17 @@ export function LegalComplianceModal({
             type="button"
             onClick={onClose}
             aria-label="Close legal and customer care policies"
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-piggie-100 text-piggie-800 hover:bg-piggie-200"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-piggie-100 text-piggie-800 transition hover:bg-piggie-200 active:scale-95"
           >
             <X className="h-4 w-4" />
           </button>
         </div>
 
-        {/* Policy Tab Bar */}
+        {/* Policy Tab Bar (Single-Row Scrollable on Mobile, Wrapping on Desktop) */}
         <div
           role="tablist"
           aria-label="Legal and compliance policy sections"
-          className="flex flex-wrap gap-1.5 border-b border-piggie-100 bg-piggie-50/60 px-5 py-2.5"
+          className="flex flex-nowrap gap-1.5 overflow-x-auto border-b border-piggie-100 bg-piggie-50/60 px-4 py-2 no-scrollbar md:flex-wrap md:px-5 md:py-2.5"
         >
           {TABS.map((tab) => {
             const Icon = tab.icon;
@@ -97,7 +98,7 @@ export function LegalComplianceModal({
                 role="tab"
                 aria-selected={isSelected}
                 onClick={() => onSelectTab(tab.id)}
-                className={`flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-bold transition ${
+                className={`flex min-h-[40px] shrink-0 items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-bold transition ${
                   isSelected
                     ? 'bg-piggie-950 text-white shadow-sm'
                     : 'bg-white text-piggie-700 hover:bg-piggie-100'
@@ -111,7 +112,7 @@ export function LegalComplianceModal({
         </div>
 
         {/* Policy Body */}
-        <div className="flex-1 space-y-4 overflow-y-auto px-6 py-5 text-xs leading-relaxed text-piggie-800">
+        <div className="piggie-scrollbar flex-1 space-y-4 overflow-y-auto px-5 py-4 pb-[max(1.5rem,env(safe-area-inset-bottom))] text-xs leading-relaxed text-piggie-800 md:px-6 md:py-5">
           {activeTab === 'shipping' && (
             <div className="space-y-3">
               <h3 className="font-serif text-base font-bold text-piggie-950">

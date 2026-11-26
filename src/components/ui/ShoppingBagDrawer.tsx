@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useRef, useState } from 'react';
 import {
   CheckCircle2,
   Lock,
@@ -64,6 +64,7 @@ export function ShoppingBagDrawer({
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
   const [guestEmail, setGuestEmail] = useState('');
   const [caslMarketingOptIn, setCaslMarketingOptIn] = useState(false);
+  const swipeStartYRef = useRef<number | null>(null);
 
   const subtotal = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -108,6 +109,20 @@ export function ShoppingBagDrawer({
   const handleCloseDrawer = () => {
     setCompletedSession(null);
     onClose();
+  };
+
+  const handleDrawerHeaderTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    swipeStartYRef.current = e.touches[0]?.clientY ?? null;
+  };
+
+  const handleDrawerHeaderTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    const startY = swipeStartYRef.current;
+    swipeStartYRef.current = null;
+    if (startY === null) return;
+    const endY = e.changedTouches[0]?.clientY ?? startY;
+    if (endY - startY > 70) {
+      handleCloseDrawer();
+    }
   };
 
   const handleCheckout = async () => {
@@ -172,47 +187,56 @@ export function ShoppingBagDrawer({
           handleCloseDrawer();
         }
       }}
-      className="fixed inset-0 z-50 flex justify-end bg-piggie-950/55 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-end justify-end bg-piggie-950/55 backdrop-blur-sm md:items-stretch"
     >
-      <div className="animate-drawer-in relative flex h-full w-full max-w-md flex-col justify-between bg-white text-piggie-950 shadow-2xl">
-        {/* Header */}
-        <div className="flex items-center justify-between border-b border-piggie-100 px-5 py-4">
-          <div className="flex items-center gap-2.5">
-            <img
-              src="/brand/prettypiggie-logo.png"
-              alt="Pretty Piggie Makeup"
-              className="h-10 w-10 rounded-full border border-piggie-200 bg-white object-contain p-0.5 shadow-sm"
-            />
-            <div>
-              <h2
-                id="bag-drawer-title"
-                className="font-serif text-lg font-bold text-piggie-950"
-              >
-                Pretty Piggie Makeup Bag
-              </h2>
-              <p className="text-[11px] text-piggie-600">
-                <span className="tabular-nums">{totalQuantity}</span>{' '}
-                {totalQuantity === 1 ? 'luxury item' : 'luxury items'} • Guest
-                Checkout Ready
-              </p>
-            </div>
+      <div className="animate-sheet-up md:animate-drawer-in relative flex h-[92dvh] w-full flex-col justify-between overflow-hidden rounded-t-3xl bg-white text-piggie-950 shadow-2xl overscroll-contain md:h-full md:max-w-md md:rounded-none">
+        {/* Mobile Swipe-Down Drag Handle + Compact Header */}
+        <div
+          onTouchStart={handleDrawerHeaderTouchStart}
+          onTouchEnd={handleDrawerHeaderTouchEnd}
+          className="border-b border-piggie-100"
+        >
+          <div className="flex justify-center pt-2 pb-0.5 md:hidden">
+            <span className="h-1.5 w-11 rounded-full bg-piggie-200" />
           </div>
+          <div className="flex items-center justify-between px-4 py-2.5 md:px-5 md:py-4">
+            <div className="flex items-center gap-2.5">
+              <img
+                src="/brand/prettypiggie-logo.png"
+                alt="Pretty Piggie Makeup"
+                className="h-9 w-9 rounded-full border border-piggie-200 bg-white object-contain p-0.5 shadow-sm md:h-10 md:w-10"
+              />
+              <div>
+                <h2
+                  id="bag-drawer-title"
+                  className="font-serif text-base font-bold text-piggie-950 md:text-lg"
+                >
+                  Pretty Piggie Makeup Bag
+                </h2>
+                <p className="text-[11px] text-piggie-600">
+                  <span className="tabular-nums">{totalQuantity}</span>{' '}
+                  {totalQuantity === 1 ? 'luxury item' : 'luxury items'} • Guest
+                  Checkout Ready
+                </p>
+              </div>
+            </div>
 
-          <button
-            type="button"
-            onClick={handleCloseDrawer}
-            aria-label="Close shopping bag"
-            className="flex h-9 w-9 items-center justify-center rounded-full bg-piggie-50 text-piggie-700 transition hover:bg-piggie-100"
-          >
-            <X className="h-4 w-4" />
-          </button>
+            <button
+              type="button"
+              onClick={handleCloseDrawer}
+              aria-label="Close shopping bag"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-piggie-50 text-piggie-700 transition hover:bg-piggie-100 active:scale-95"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          </div>
         </div>
 
-        {/* Free Shipping Bar */}
-        <div className="border-b border-piggie-100 bg-piggie-50/80 px-5 py-2.5">
+        {/* Compact Free Shipping Bar */}
+        <div className="border-b border-piggie-100 bg-piggie-50/80 px-4 py-2 md:px-5 md:py-2.5">
           <div className="flex items-center justify-between text-xs font-medium text-piggie-800">
             <span className="flex items-center gap-1.5">
-              <Truck className="h-3.5 w-3.5 text-piggie-600" />
+              <Truck className="h-3.5 w-3.5 shrink-0 text-piggie-600" />
               {amountToFreeShipping === 0 && subtotal > 0 ? (
                 <strong className="text-emerald-700">
                   You unlocked Free Express Boutique Shipping!
@@ -241,7 +265,7 @@ export function ShoppingBagDrawer({
               style={{ width: `${shippingProgress}%` }}
             />
           </div>
-          <p className="mt-1.5 text-[10px] font-semibold text-piggie-700">
+          <p className="mt-1 text-[10px] font-semibold text-piggie-700">
             U.S. Domestic Shipping Scope Only (50 States &amp; D.C.) • Canadian
             &amp; International Shipping Disabled
           </p>
@@ -430,9 +454,9 @@ export function ShoppingBagDrawer({
                           onClick={() =>
                             onQuickAddToBag(iconProd, defaultShade)
                           }
-                          className="flex shrink-0 items-center gap-1 rounded-full bg-piggie-950 px-3 py-1.5 text-[11px] font-bold text-white shadow-sm transition hover:bg-piggie-800 active:scale-95"
+                          className="flex min-h-[40px] shrink-0 items-center gap-1 rounded-full bg-piggie-950 px-3.5 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-piggie-800 active:scale-95"
                         >
-                          <Plus className="h-3 w-3" />
+                          <Plus className="h-3.5 w-3.5" />
                           <span>Add</span>
                         </button>
                       </div>
@@ -495,14 +519,14 @@ export function ShoppingBagDrawer({
                       {item.shadeName} • {item.finish}
                     </p>
                     <div className="mt-2 flex items-center gap-2">
-                      <div className="flex items-center rounded-full border border-piggie-200 bg-white px-1 py-0.5">
+                      <div className="flex h-10 items-center rounded-full border border-piggie-200 bg-white px-0.5">
                         <button
                           type="button"
                           onClick={() =>
                             onUpdateQuantity(item.key, item.quantity - 1)
                           }
                           aria-label={`Decrease quantity of ${item.title}`}
-                          className="flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold text-piggie-800 hover:bg-piggie-50"
+                          className="flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold text-piggie-800 hover:bg-piggie-50 active:scale-95"
                         >
                           −
                         </button>
@@ -515,7 +539,7 @@ export function ShoppingBagDrawer({
                             onUpdateQuantity(item.key, item.quantity + 1)
                           }
                           aria-label={`Increase quantity of ${item.title}`}
-                          className="flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold text-piggie-800 hover:bg-piggie-50"
+                          className="flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold text-piggie-800 hover:bg-piggie-50 active:scale-95"
                         >
                           +
                         </button>
@@ -525,9 +549,9 @@ export function ShoppingBagDrawer({
                         type="button"
                         onClick={() => onRemoveItem(item.key)}
                         aria-label={`Remove ${item.title}`}
-                        className="flex h-7 w-7 items-center justify-center rounded-full text-piggie-600 hover:bg-rose-50 hover:text-rose-700"
+                        className="ml-auto flex h-10 w-10 items-center justify-center rounded-full text-piggie-600 transition hover:bg-rose-50 hover:text-rose-700 active:scale-95"
                       >
-                        <Trash2 className="h-3.5 w-3.5" />
+                        <Trash2 className="h-4 w-4" />
                       </button>
                     </div>
                   </div>
@@ -577,7 +601,7 @@ export function ShoppingBagDrawer({
                           onClick={() => onSelectProduct(rec)}
                           className="text-left"
                         >
-                          <div className="relative flex h-16 items-center justify-center rounded-lg bg-piggie-50/60 p-1">
+                          <div className="relative flex h-16 items-center justify-center rounded-lg border border-piggie-100/80 bg-white p-1">
                             {rec.primaryImage ? (
                               <img
                                 src={rec.primaryImage}
@@ -594,6 +618,9 @@ export function ShoppingBagDrawer({
                           <p className="mt-1.5 line-clamp-1 text-[11px] font-bold text-piggie-950">
                             {rec.title}
                           </p>
+                          <p className="mt-0.5 text-xs font-extrabold tabular-nums text-piggie-900">
+                            ${rec.price.toFixed(2)}
+                          </p>
                         </button>
 
                         {unlocksFreeShipping && (
@@ -602,20 +629,15 @@ export function ShoppingBagDrawer({
                           </span>
                         )}
 
-                        <div className="mt-2 flex items-center justify-between gap-1">
-                          <span className="text-xs font-bold tabular-nums text-piggie-950">
-                            ${rec.price.toFixed(2)}
-                          </span>
-                          <button
-                            type="button"
-                            onClick={() => onQuickAddToBag(rec, defaultShade)}
-                            aria-label={`Add ${rec.title} to bag`}
-                            className="inline-flex items-center gap-0.5 rounded-full bg-piggie-950 px-2.5 py-1 text-[10px] font-bold text-white transition hover:bg-piggie-800 active:scale-95"
-                          >
-                            <Plus className="h-2.5 w-2.5" />
-                            <span>Add</span>
-                          </button>
-                        </div>
+                        <button
+                          type="button"
+                          onClick={() => onQuickAddToBag(rec, defaultShade)}
+                          aria-label={`Add ${rec.title} to bag`}
+                          className="mt-2 inline-flex min-h-[38px] w-full items-center justify-center gap-1 rounded-full bg-piggie-950 px-3 py-1.5 text-xs font-bold text-white transition hover:bg-piggie-800 active:scale-95"
+                        >
+                          <Plus className="h-3 w-3" />
+                          <span>Add</span>
+                        </button>
                       </div>
                     );
                   })}
@@ -668,10 +690,25 @@ export function ShoppingBagDrawer({
           </div>
         )}
 
-        {/* Sticky Conversion Checkout Footer */}
+        {/* Sticky Conversion Checkout Footer (Compact Mobile Footprint -> +95px Reclaimed Scroll Space on iPhone SE!) */}
         {!completedSession && items.length > 0 && (
-          <div className="border-t border-piggie-100 bg-white px-5 pt-3.5 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
-            <div className="space-y-1 text-xs">
+          <div className="border-t border-piggie-100 bg-white px-4 pt-2.5 pb-[max(0.85rem,env(safe-area-inset-bottom))] md:px-5 md:pt-3.5">
+            {/* Compact Mobile Totals Summary / Expanded Desktop Totals */}
+            <div className="flex items-baseline justify-between gap-2 text-xs md:hidden">
+              <span className="truncate text-[11px] text-piggie-700 tabular-nums">
+                Sub ${subtotal.toFixed(2)} • Ship{' '}
+                {shippingCost === 0 ? (
+                  <strong className="text-emerald-700">FREE</strong>
+                ) : (
+                  `$${shippingCost.toFixed(2)}`
+                )}
+              </span>
+              <span className="shrink-0 text-sm font-extrabold tabular-nums text-piggie-950">
+                ${total.toFixed(2)} USD
+              </span>
+            </div>
+
+            <div className="hidden space-y-1 text-xs md:block">
               <div className="flex justify-between text-piggie-700">
                 <span>Subtotal</span>
                 <span className="tabular-nums">${subtotal.toFixed(2)}</span>
@@ -692,12 +729,12 @@ export function ShoppingBagDrawer({
               </div>
             </div>
 
-            {/* Primary Shopify Hosted Checkout CTA (Native Apple Pay, Shop Pay & Cards Presented Inside Shopify Checkout) */}
+            {/* Primary Shopify Hosted Checkout CTA (Full 48px Thumb Height) */}
             <button
               type="button"
               disabled={isCheckingOut}
               onClick={handleCheckout}
-              className="btn-luxury-sheen mt-3 flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-piggie-950 via-piggie-800 to-piggie-950 py-3.5 text-sm font-bold text-white shadow-lg transition hover:from-piggie-900 hover:to-piggie-800 active:scale-98 disabled:opacity-60"
+              className="btn-luxury-sheen mt-2.5 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-piggie-950 via-piggie-800 to-piggie-950 py-3 text-sm font-bold text-white shadow-lg transition hover:from-piggie-900 hover:to-piggie-800 active:scale-98 disabled:opacity-60 md:mt-3"
             >
               <Lock className="h-3.5 w-3.5 text-rosegold-light" />
               <span className="tabular-nums">
@@ -707,7 +744,7 @@ export function ShoppingBagDrawer({
               </span>
             </button>
 
-            <div className="mt-2 flex items-center justify-center gap-1.5 text-[9px] font-bold uppercase tracking-wider text-piggie-700">
+            <div className="mt-2 hidden items-center justify-center gap-1.5 text-[9px] font-bold uppercase tracking-wider text-piggie-700 sm:flex">
               <span className="rounded-md border border-piggie-200 bg-piggie-50 px-2 py-0.5">
                 Apple Pay
               </span>
@@ -720,11 +757,11 @@ export function ShoppingBagDrawer({
             </div>
 
             <p className="mt-1.5 text-center text-[10px] font-medium text-piggie-700">
-              Apple Pay, Shop Pay &amp; major cards available inside Shopify
-              Hosted Checkout • Final shipping &amp; tax calculated at checkout
+              Apple Pay, Shop Pay &amp; major cards inside Shopify Hosted
+              Checkout • Final shipping &amp; tax at checkout
             </p>
 
-            <div className="mt-2 flex flex-wrap items-center justify-center gap-2 text-center text-[10px] text-piggie-600">
+            <div className="mt-1 flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 text-center text-[10px] text-piggie-600">
               <span>
                 {isShopifyConfigured()
                   ? 'Secured by Shopify Storefront API'
@@ -734,7 +771,7 @@ export function ShoppingBagDrawer({
               <button
                 type="button"
                 onClick={() => onOpenLegal('shipping')}
-                className="font-semibold underline hover:text-piggie-950"
+                className="py-1 font-semibold underline hover:text-piggie-950"
               >
                 30-Day Returns
               </button>
@@ -742,7 +779,7 @@ export function ShoppingBagDrawer({
               <button
                 type="button"
                 onClick={() => onOpenLegal('terms')}
-                className="font-semibold underline hover:text-piggie-950"
+                className="py-1 font-semibold underline hover:text-piggie-950"
               >
                 Terms
               </button>
@@ -750,7 +787,7 @@ export function ShoppingBagDrawer({
               <button
                 type="button"
                 onClick={() => onOpenLegal('privacy')}
-                className="font-semibold underline hover:text-piggie-950"
+                className="py-1 font-semibold underline hover:text-piggie-950"
               >
                 Privacy
               </button>

@@ -666,29 +666,38 @@ export function VirtualBoutiqueEnvironment3D({
 
             {/* Floating Touch-Friendly Interactive Product Pill Tag (Kept mounted stably for React 19 + Drei v10 portal safety) */}
             {(() => {
+              const isMobileRotundaFocal =
+                product.handle === 'single-pan-eyeshadow' ||
+                product.handle === 'bronzer' ||
+                product.handle === 'foundation-primer';
               const isTagVisible =
                 !selectedProduct &&
                 (activeZone === product.zoneId ||
                   (activeZone === 'rotunda' &&
-                    (product.zoneId === 'collection' ||
-                      product.zoneId === 'beauty-counter' ||
-                      product.handle === 'single-pan-eyeshadow')));
+                    (capability.isMobile
+                      ? isMobileRotundaFocal
+                      : product.zoneId === 'collection' ||
+                        product.zoneId === 'beauty-counter' ||
+                        product.handle === 'single-pan-eyeshadow')));
+              const yOffset =
+                activeZone === 'rotunda'
+                  ? product.zoneId === 'collection'
+                    ? product.handle === 'luminizing-powder'
+                      ? 0.78
+                      : 1.08
+                    : 1.12
+                  : product.zoneId === 'collection'
+                  ? product.handle === 'luminizing-powder'
+                    ? 0.78
+                    : 1.08
+                  : product.zoneId === 'beauty-counter'
+                  ? 0.88
+                  : 1.05;
               return (
                 <Html
-                  position={[
-                    0,
-                    activeZone === 'rotunda'
-                      ? product.zoneId === 'collection'
-                        ? 0.86
-                        : 1.12
-                      : product.zoneId === 'collection' ||
-                        product.zoneId === 'beauty-counter'
-                      ? 0.88
-                      : 1.05,
-                    0,
-                  ]}
+                  position={[0, yOffset, 0]}
                   center
-                  distanceFactor={capability.isMobile ? 6.4 : 7.0}
+                  distanceFactor={capability.isMobile ? 5.6 : 7.0}
                   zIndexRange={[20, 0]}
                   style={{
                     display: isTagVisible ? 'block' : 'none',
@@ -705,10 +714,10 @@ export function VirtualBoutiqueEnvironment3D({
                       onSelectProduct(product);
                     }}
                     aria-label={`Inspect ${product.title}, $${product.price.toFixed(2)}`}
-                    className="group flex flex-col items-center transition-all duration-300 select-none"
+                    className="group flex min-h-[44px] min-w-[44px] flex-col items-center justify-center p-1 transition-all duration-300 select-none"
                   >
                     <div
-                      className={`flex items-center gap-1.5 rounded-full px-3 py-1 backdrop-blur-md border transition-all shadow-lg whitespace-nowrap ${
+                      className={`flex items-center gap-1.5 rounded-full px-2.5 py-1.5 backdrop-blur-md border transition-all shadow-lg whitespace-nowrap sm:px-3 ${
                         isHovered
                           ? 'bg-piggie-950/95 text-white border-rosegold scale-105'
                           : 'bg-white/95 text-piggie-950 border-piggie-200 hover:bg-white'
@@ -718,7 +727,7 @@ export function VirtualBoutiqueEnvironment3D({
                         className="h-2.5 w-2.5 rounded-full ring-1 ring-black/15 shrink-0"
                         style={{ backgroundColor: primaryShade.hex }}
                       />
-                      <span className="text-[11px] font-bold tracking-tight">
+                      <span className="max-w-[96px] truncate text-[11px] font-bold tracking-tight sm:max-w-none">
                         {product.title}
                       </span>
                       <span className="text-[11px] font-extrabold tabular-nums text-piggie-600 group-hover:text-rosegold-light">
