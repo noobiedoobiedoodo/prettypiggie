@@ -672,7 +672,7 @@ export function VirtualBoutiqueEnvironment3D({
                   (activeZone === 'rotunda' &&
                     (product.zoneId === 'collection' ||
                       product.zoneId === 'beauty-counter' ||
-                      product.handle === 'lip-gloss')));
+                      product.handle === 'single-pan-eyeshadow')));
               return (
                 <Html
                   position={[
@@ -721,16 +721,22 @@ export function VirtualBoutiqueEnvironment3D({
                       <span className="text-[11px] font-bold tracking-tight">
                         {product.title}
                       </span>
-                      <span className="text-[11px] font-extrabold text-piggie-600 group-hover:text-rosegold-light">
+                      <span className="text-[11px] font-extrabold tabular-nums text-piggie-600 group-hover:text-rosegold-light">
                         ${product.price.toFixed(2)}
                       </span>
+                      {product.canPurchase && (
+                        <span
+                          className="h-1.5 w-1.5 rounded-full bg-emerald-500 shrink-0"
+                          title="In Stock"
+                        />
+                      )}
                     </div>
                     {/* Shade count micro-badge (shown inside dedicated department view) */}
                     {activeZone !== 'rotunda' && (
                       <span className="mt-1 whitespace-nowrap rounded-full bg-piggie-900/90 px-2.5 py-0.5 text-[10px] font-semibold text-piggie-100 shadow-sm backdrop-blur-sm">
                         {product.shades.length}{' '}
-                        {product.shades.length === 1 ? 'Formula' : 'Shades'} • Tap
-                        to 3D Try
+                        {product.shades.length === 1 ? 'Formula' : 'Shades'} •{' '}
+                        {product.canPurchase ? 'Tap to Shop 3D' : '3D Preview'}
                       </span>
                     )}
                   </button>

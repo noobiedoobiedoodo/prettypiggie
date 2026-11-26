@@ -31,13 +31,52 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
+        serif: [
+          '"Bodoni MT"',
+          'Didot',
+          '"Palatino Linotype"',
+          '"Book Antiqua"',
+          'Georgia',
+          'serif',
+        ],
+        sans: [
+          '"Avenir Next"',
+          '"Segoe UI"',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Roboto',
+          'sans-serif',
+        ],
+      },
+      scale: {
+        98: '0.98',
+        102: '1.02',
+      },
+      keyframes: {
+        'sheet-up': {
+          '0%': { opacity: '0', transform: 'translateY(18px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'drawer-in': {
+          '0%': { opacity: '0', transform: 'translateX(24px)' },
+          '100%': { opacity: '1', transform: 'translateX(0)' },
+        },
+        'toast-pop': {
+          '0%': { opacity: '0', transform: 'translate(-50%, 14px) scale(0.96)' },
+          '100%': { opacity: '1', transform: 'translate(-50%, 0) scale(1)' },
+        },
+      },
+      animation: {
+        'sheet-up': 'sheet-up 260ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
+        'drawer-in': 'drawer-in 240ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
+        'toast-pop': 'toast-pop 240ms cubic-bezier(0.22, 1, 0.36, 1) forwards',
       },
       boxShadow: {
         'rose-glow': '0 0 30px -5px rgba(244, 182, 203, 0.55)',
         'led-strip': '0 0 18px 2px rgba(255, 240, 245, 0.85)',
         'luxury-glass': '0 20px 50px rgba(74, 24, 41, 0.25)',
+        'card-lift': '0 16px 40px -12px rgba(74, 24, 41, 0.16)',
+        'pill-float': '0 8px 24px -6px rgba(38, 11, 21, 0.24)',
       },
     },
   },

@@ -335,6 +335,10 @@ export function PrettyPiggieBoutiqueApp() {
   }, [isLegalOpen, isBagOpen, selectedProduct, handleSwipeZone]);
 
   const totalBagCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+  const bagSubtotal = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
 
   return (
     <main className="relative h-[100dvh] w-screen overflow-hidden bg-piggie-100 select-none">
@@ -360,11 +364,13 @@ export function PrettyPiggieBoutiqueApp() {
         <LuxuryFallback2D
           products={products}
           activeZone={activeZone}
+          bagSubtotal={bagSubtotal}
           onSelectZone={handleSelectZone}
           onSelectProduct={handleSelectProduct}
           onQuickAddToBag={(product, shade) =>
             handleAddToBag(product, shade, 1)
           }
+          onOpenBag={() => setIsBagOpen(true)}
           onSwitchTo3D={() => setIs2DMode(false)}
           onOpenLegal={handleOpenLegal}
           supportsWebGL={capability.supportsWebGL}
@@ -386,10 +392,14 @@ export function PrettyPiggieBoutiqueApp() {
       {/* Product Presentation Sheet (Mobile Bottom Sheet / Desktop Editorial Glass Panel) */}
       {selectedProduct && selectedShade && (
         <ProductPresentationSheet
+          key={selectedProduct.id}
           product={selectedProduct}
           selectedShade={selectedShade}
+          allProducts={products}
           bagCount={totalBagCount}
+          bagSubtotal={bagSubtotal}
           onSelectShade={setSelectedShade}
+          onSelectProduct={handleSelectProduct}
           onAddToBag={handleAddToBag}
           onOpenBag={() => setIsBagOpen(true)}
           onOpenLegal={handleOpenLegal}
@@ -405,9 +415,15 @@ export function PrettyPiggieBoutiqueApp() {
       <ShoppingBagDrawer
         isOpen={isBagOpen}
         items={cartItems}
+        allProducts={products}
         onClose={() => setIsBagOpen(false)}
         onUpdateQuantity={handleUpdateQuantity}
         onRemoveItem={handleRemoveItem}
+        onQuickAddToBag={(product, shade) => handleAddToBag(product, shade, 1)}
+        onSelectProduct={(product) => {
+          setIsBagOpen(false);
+          handleSelectProduct(product);
+        }}
         onClearCart={handleClearCart}
         onOpenLegal={handleOpenLegal}
       />

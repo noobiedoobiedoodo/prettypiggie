@@ -43,10 +43,10 @@ export const BOUTIQUE_ZONES: BoutiqueZone[] = [
     id: 'makeup-wall',
     name: 'The Makeup Wall',
     shortName: 'Makeup Wall',
-    subtitle: 'Lipsticks, Lip Glosses, Liners & Eyeshadow Palettes',
+    subtitle: '7-Shade Eyeshadows, Brow Pencils & Luminous Glitter Dust',
     description:
-      'Floor-to-ceiling rounded blush alcoves outlined in warm glowing LED light strips, housing our signature Lipsticks, High-Shine Lip Glosses, and Couture Eyeshadow Palettes.',
-    badge: 'Lips & Eye Couture',
+      'Floor-to-ceiling rounded blush alcoves outlined in warm glowing LED light strips, showcasing 7-shade Single Pan Eyeshadows, 5-shade Automatic Eyebrow Pencils, and Glitter Dust.',
+    badge: 'Eye Couture Wall',
     referenceImage: '/design-reference/makeup-wall-counter.png',
     accentColor: '#EC8EAE',
     mobileCamera: {
@@ -69,10 +69,10 @@ export const BOUTIQUE_ZONES: BoutiqueZone[] = [
     id: 'beauty-counter',
     name: 'The Beauty Counter',
     shortName: 'Counter',
-    subtitle: 'Foundations, BB Creams, Blush Palettes & Primers',
+    subtitle: '4-Shade Bronzers, Complexion Primers & Finishing Mists',
     description:
-      'Examine featured complexion finishers, 17-shade Silk Foundations, Full Cover Foundations, and Blush Palettes arranged across our dual-LED blush beauty counter.',
-    badge: 'Complexion & Cheek Bar',
+      'Explore velvety 4-shade Bronzer compacts, smoothing Foundation Primer, Finishing Powder, and Oil Control Setting Spray across our dual-LED blush beauty counter.',
+    badge: 'Complexion & Glow Bar',
     referenceImage: '/design-reference/makeup-wall-counter.png',
     accentColor: '#E5A999',
     mobileCamera: {
@@ -95,9 +95,9 @@ export const BOUTIQUE_ZONES: BoutiqueZone[] = [
     id: 'collection',
     name: 'The PrettyPiggie Collection',
     shortName: 'Collection',
-    subtitle: 'Luxury Cream & Matte Lipsticks, Luminizers & Serums',
+    subtitle: 'Luminizing Powder, Niacinamide Serums & Luxury Skincare',
     description:
-      'Our flagship central oval islands trimmed in brushed champagne rose-gold, showcasing Luxury Cream Lipstick, Luminizing Powder, and signature skincare elixirs.',
+      'Our flagship central oval islands trimmed in brushed champagne rose-gold, featuring Luminizing Powder, Niacinamide Vitamin Boost Serum, and signature skincare rituals.',
     badge: 'Luxury Collection',
     referenceImage: '/design-reference/rotunda-chandelier.png',
     accentColor: '#DF648F',
@@ -121,9 +121,9 @@ export const BOUTIQUE_ZONES: BoutiqueZone[] = [
     id: 'bestsellers',
     name: 'The Bestsellers Display',
     shortName: 'Bestsellers',
-    subtitle: 'Matte Lip Stains, Liquid Blushes & Top-Selling Icons',
+    subtitle: 'Glycolic Acid Serum, Eyebrow Gel & Iconic Essentials',
     description:
-      'Our most-loved customer favorites—including 12-shade Matte Lip Stain and 5-shade Liquid Blush—elevated on LED-rimmed blush pedestals.',
+      'Our highest-demand ready-to-ship favorites—including Glycolic Acid Serum, sculpting Eyebrow Gel, and Classic Blender—elevated on LED-rimmed blush pedestals.',
     badge: 'Most-Loved Icons',
     referenceImage: '/design-reference/product-stage-lipstick.png',
     accentColor: '#F5DDC4',
@@ -147,9 +147,9 @@ export const BOUTIQUE_ZONES: BoutiqueZone[] = [
     id: 'discovery-room',
     name: 'The Discovery Room',
     shortName: 'Discovery',
-    subtitle: 'Artistry Brushes, Hydrating Lip Oils & New Arrivals',
+    subtitle: 'Pro Artistry Brushes, Blending Tools & New Arrivals',
     description:
-      'Enter our high-gloss futuristic pink sanctuary featuring Stipple & Blend Brushes, Hydrating Lip Oils, Pro Cheek Palettes, and seasonal drops.',
+      'Enter our high-gloss pink sanctuary featuring Stipple & Blend Brushes, Cheek Fan Brushes, Hydrating Facial Cleanser, and fresh seasonal drops.',
     badge: 'Brushes & New Drops',
     referenceImage: '/design-reference/discovery-room-futuristic.png',
     accentColor: '#F9D5E1',
@@ -171,7 +171,7 @@ export const BOUTIQUE_ZONES: BoutiqueZone[] = [
   },
 ];
 
-// 11 Hero 3D Showroom Floor Placements mapped to exact 3D shelf/counter/podium coordinates
+// 11 Hero 3D Showroom Floor Placements — 100% VERIFIED_IN_STOCK prestige beauty heroes
 const SHOWROOM_HERO_PLACEMENTS: Record<
   string,
   {
@@ -181,71 +181,71 @@ const SHOWROOM_HERO_PLACEMENTS: Record<
     badge: string;
   }
 > = {
-  lipstick: {
+  'automatic-eyebrow-pencil': {
     zoneId: 'makeup-wall',
     position3D: [-2.6, 2.55, -6.68],
-    modelType: 'lipstick',
-    badge: '14 Shades • Preview',
+    modelType: 'lipgloss',
+    badge: '5 Shades • In Stock',
   },
-  'lip-gloss': {
+  'single-pan-eyeshadow': {
     zoneId: 'makeup-wall',
     position3D: [0.0, 2.55, -6.68],
-    modelType: 'lipgloss',
-    badge: '15 Shades • Preview',
+    modelType: 'palette',
+    badge: '7 Shades • In Stock',
   },
-  'eyeshadow-palette': {
+  'glitter-dust': {
     zoneId: 'makeup-wall',
     position3D: [2.6, 2.55, -6.56],
-    modelType: 'palette',
-    badge: '5 Palettes • Preview',
+    modelType: 'compact',
+    badge: '4 Shades • In Stock',
   },
-  foundation: {
+  'foundation-primer': {
     zoneId: 'beauty-counter',
     position3D: [-1.4, 1.38, -3.5],
     modelType: 'foundation',
-    badge: '17 Shades • Preview',
+    badge: 'Complexion Prep',
   },
-  'blush-palette': {
+  bronzer: {
     zoneId: 'beauty-counter',
     position3D: [1.4, 1.38, -3.5],
     modelType: 'compact',
-    badge: '3 Palettes • Preview',
+    badge: '4 Shades • Sculpt',
   },
-  'luxury-cream-lipstick': {
+  'niacinamide-vitamin-boost-serum': {
     zoneId: 'collection',
     position3D: [-1.45, 1.32, 1.2],
-    modelType: 'lipstick',
-    badge: 'Luxury Preview',
+    modelType: 'foundation',
+    badge: 'Signature Elixir',
   },
   'luminizing-powder': {
     zoneId: 'collection',
     position3D: [1.45, 1.32, 2.2],
     modelType: 'compact',
-    badge: 'Verified • Signature Glow',
+    badge: '2 Shades • Glow',
   },
-  'matte-lip-stain': {
+  'eyebrow-gel': {
     zoneId: 'bestsellers',
     position3D: [-5.8, 1.55, -0.9],
     modelType: 'lipgloss',
-    badge: '12 Shades • Preview',
+    badge: 'Bestseller',
   },
-  'liquid-blush': {
+  'glycolic-acid-serum': {
     zoneId: 'bestsellers',
     position3D: [-5.8, 1.55, 1.3],
     modelType: 'foundation',
-    badge: '5 Shades • Preview',
+    badge: 'Bestseller',
   },
   'stipple-blend-foundation-brush': {
     zoneId: 'discovery-room',
     position3D: [5.8, 1.48, -0.9],
     modelType: 'brushset',
-    badge: 'Verified • Artistry Brush',
+    badge: 'Artistry Brush',
   },
-  'pro-cheek-palette': {
+  'hydrating-facial-cleanser': {
     zoneId: 'discovery-room',
     position3D: [5.8, 1.48, 1.3],
-    modelType: 'palette',
-    badge: '3-in-1 Preview',
+    modelType: 'foundation',
+    badge: 'New Drop',
   },
 };
 
@@ -725,3 +725,180 @@ export const CATALOG_RECONCILIATION: CatalogReconciliationSummary = {
     (p) => p.manufacturerCertifiedDocOnFile
   ).length,
 };
+
+const MENS_GROOMING_HANDLES = new Set([
+  'beard-butter',
+  'beard-oil',
+  'foaming-beard-wash',
+  'hemp-infused-beard-growth-oil',
+  'men-s-face-moisturizer',
+  'men-s-shampoo',
+  'men-s-under-eye-cream',
+]);
+
+const CATEGORY_MERCH_PRIORITY: Record<BoutiqueProduct['category'], number> = {
+  'Eye Couture': 1,
+  'Blush & Glow': 2,
+  Complexion: 3,
+  Lipstick: 4,
+  'Lip Gloss': 5,
+  'Artistry Brushes': 6,
+  'Skincare & Body': 7,
+};
+
+function getMerchandisingScore(product: BoutiqueProduct): number {
+  let score = 0;
+  // 1. Strict availability tiering: Buyable (52) -> Verified OOS (4) -> Preview Locked (54)
+  if (product.availabilityState === 'VERIFIED_IN_STOCK') score += 10000;
+  else if (product.availabilityState === 'VERIFIED_OUT_OF_STOCK') score += 5000;
+
+  // 2. Hero showroom items & multi-shade color cosmetics surface first
+  if (product.isShowroomFloorHero) score += 900;
+  if (product.shades.length > 1) score += 450 + Math.min(product.shades.length, 15) * 15;
+  if (product.isBestseller) score += 260;
+  if (product.isNewArrival) score += 180;
+
+  // 3. Keep luxury color makeup & tools ahead of specialty grooming while keeping all items discoverable
+  score += (8 - (CATEGORY_MERCH_PRIORITY[product.category] ?? 7)) * 40;
+  if (MENS_GROOMING_HANDLES.has(product.handle)) score -= 600;
+
+  return score;
+}
+
+/** Deterministic luxury merchandising sort: 52 buyable heroes first, then 4 OOS, then 54 preview-locked */
+export function sortProductsForMerchandising(
+  items: BoutiqueProduct[]
+): BoutiqueProduct[] {
+  return [...items].sort((a, b) => {
+    const diff = getMerchandisingScore(b) - getMerchandisingScore(a);
+    if (diff !== 0) return diff;
+    return a.title.localeCompare(b.title);
+  });
+}
+
+const ROUTINE_PAIRING_HANDLES: Record<string, string[]> = {
+  'Eye Couture': [
+    'mini-crease-brush',
+    'packing-eye-brush',
+    'angled-liner-brush',
+    'eyebrow-gel',
+    'precision-tweezers',
+  ],
+  'Blush & Glow': [
+    'cheek-fan-brush',
+    'classic-blender',
+    'setting-spray',
+    'bronzer',
+    'luminizing-powder',
+  ],
+  Complexion: [
+    'classic-blender',
+    'stipple-blend-foundation-brush',
+    'setting-spray',
+    'finishing-powder',
+    'mattifying-face-primer',
+  ],
+  'Artistry Brushes': [
+    'luminizing-powder',
+    'bronzer',
+    'single-pan-eyeshadow',
+    'classic-blender',
+    'foundation-primer',
+  ],
+  'Skincare & Body': [
+    'natural-konjac-sponge',
+    'makeup-remover-solution',
+    'hydrating-facial-cleanser',
+    'hydration-serum',
+    'niacinamide-vitamin-boost-serum',
+  ],
+};
+
+/**
+ * Compliance-locked cross-sell engine for the Shopping Bag Drawer.
+ * Strictly recommends ONLY VERIFIED_IN_STOCK (canPurchase) items not already in cart,
+ * optimized to pair by routine and close the gap to $65 Free Express Shipping.
+ */
+export function getBagCrossSells(
+  allProducts: BoutiqueProduct[],
+  cartItems: Array<{ productId: string; category: string; productHandle: string }>,
+  amountToFreeShipping: number,
+  limit = 3
+): BoutiqueProduct[] {
+  const inCartIds = new Set(cartItems.map((i) => i.productId));
+  const cartHasMens = cartItems.some((i) =>
+    MENS_GROOMING_HANDLES.has(i.productHandle)
+  );
+  const preferredHandles = new Set<string>();
+  for (const item of cartItems) {
+    for (const h of ROUTINE_PAIRING_HANDLES[item.category] ?? []) {
+      preferredHandles.add(h);
+    }
+  }
+
+  const eligible = allProducts.filter(
+    (p) =>
+      p.availabilityState === 'VERIFIED_IN_STOCK' &&
+      p.canPurchase &&
+      p.manufacturerVerified &&
+      p.inStock &&
+      !inCartIds.has(p.id) &&
+      (cartHasMens || !MENS_GROOMING_HANDLES.has(p.handle))
+  );
+
+  return eligible
+    .sort((a, b) => {
+      const score = (p: BoutiqueProduct) => {
+        let s = 0;
+        if (preferredHandles.has(p.handle)) s += 500;
+        if (p.isShowroomFloorHero) s += 160;
+        if (p.isBestseller) s += 140;
+        if (amountToFreeShipping > 0) {
+          // Strongly prioritize 1-item free-shipping threshold closers
+          if (
+            p.price >= amountToFreeShipping &&
+            p.price <= amountToFreeShipping + 22
+          ) {
+            s += 420;
+          } else if (p.price >= amountToFreeShipping) {
+            s += 180;
+          } else if (p.price <= 28) {
+            s += 120;
+          }
+        } else if (p.price <= 35) {
+          s += 100;
+        }
+        return s;
+      };
+      const diff = score(b) - score(a);
+      return diff !== 0 ? diff : a.price - b.price;
+    })
+    .slice(0, limit);
+}
+
+/** Compliance-locked ready-to-ship alternatives for locked or out-of-stock product sheets */
+export function getReadyToShipAlternatives(
+  allProducts: BoutiqueProduct[],
+  currentProduct: BoutiqueProduct,
+  limit = 2
+): BoutiqueProduct[] {
+  const eligible = sortProductsForMerchandising(
+    allProducts.filter(
+      (p) =>
+        p.id !== currentProduct.id &&
+        p.availabilityState === 'VERIFIED_IN_STOCK' &&
+        p.canPurchase &&
+        p.manufacturerVerified &&
+        p.inStock &&
+        !MENS_GROOMING_HANDLES.has(p.handle)
+    )
+  );
+  const sameCategory = eligible.filter(
+    (p) => p.category === currentProduct.category
+  );
+  const combined = [
+    ...sameCategory,
+    ...eligible.filter((p) => p.category !== currentProduct.category),
+  ];
+  return combined.slice(0, limit);
+}
