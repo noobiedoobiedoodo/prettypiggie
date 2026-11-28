@@ -11,6 +11,7 @@ const eslintConfig = [
       'out/**',
       'release-archive/**',
       'scripts/**',
+      'public/pretty-piggie/wasm/**',
     ],
   },
   {

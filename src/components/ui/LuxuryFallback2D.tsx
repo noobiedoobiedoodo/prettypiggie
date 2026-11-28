@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import Link from 'next/link';
 import {
   ArrowRight,
   ArrowUpDown,
@@ -470,6 +471,12 @@ export function LuxuryFallback2D({
                     Enter 3D Showroom →
                   </button>
                 )}
+                <Link
+                  href="/pretty-piggie"
+                  className="rounded-full bg-white px-2.5 py-0.5 text-[10px] font-extrabold text-piggie-950 shadow-sm transition hover:bg-piggie-100"
+                >
+                  🐷 Create My Piggie →
+                </Link>
               </div>
 
               {/* Mobile Compact Title + 3D Pill on One Line */}
@@ -819,12 +826,19 @@ export function LuxuryFallback2D({
             </div>
 
             <div className="flex flex-wrap items-center gap-3 font-semibold text-piggie-800">
-              <a
+              <Link
+                href="/pretty-piggie"
+                className="py-1 font-bold text-piggie-700 hover:text-piggie-950 hover:underline"
+              >
+                🐷 Create My Pretty Piggie (Instant 3D)
+              </Link>
+              <span>•</span>
+              <Link
                 href="/makeover-studio"
                 className="py-1 font-bold text-piggie-700 hover:text-piggie-950 hover:underline"
               >
-                💗 Makeover Studio: What&apos;s Your Pretty Piggie?
-              </a>
+                💗 AI Cartoon Studio
+              </Link>
               <span>•</span>
               <button
                 type="button"

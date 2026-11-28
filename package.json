@@ -10,9 +10,11 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "audit:release": "node scripts/release-audit.mjs",
+    "piggie:sync-wasm": "node scripts/sync-mediapipe-assets.mjs",
     "shopify:sync": "node scripts/sync-shopify-catalog.mjs"
   },
   "dependencies": {
+    "@mediapipe/tasks-vision": "1.2.3",
     "@react-three/drei": "^10.7.9",
     "@react-three/fiber": "^9.8.2",
     "clsx": "^2.1.1",

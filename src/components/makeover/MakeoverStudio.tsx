@@ -352,9 +352,15 @@ export function MakeoverStudio() {
             className="h-9 w-9 shrink-0 rounded-full border border-piggie-200 bg-white object-contain p-0.5"
           />
           <span className="truncate font-serif text-sm font-bold">
-            Makeover Studio
+            AI Cartoon Studio
           </span>
         </div>
+        <Link
+          href="/pretty-piggie"
+          className="flex min-h-[44px] shrink-0 items-center gap-1 rounded-full bg-piggie-950 px-3 text-[11px] font-bold text-white shadow-sm transition active:scale-95"
+        >
+          <span>Instant 3D Piggie →</span>
+        </Link>
       </header>
 
       <main className="mx-auto max-w-xl px-4 pb-[max(2.5rem,env(safe-area-inset-bottom))] pt-4">

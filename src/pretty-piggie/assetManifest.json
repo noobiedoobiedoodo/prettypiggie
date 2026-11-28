@@ -1,0 +1,31 @@
+{
+  "mediapipePackage": "@mediapipe/tasks-vision",
+  "mediapipeVersion": "1.2.3",
+  "license": "Apache-2.0",
+  "wasmBasePath": "/pretty-piggie/wasm",
+  "faceLandmarkerModelPath": "/pretty-piggie/models/face_landmarker.task",
+  "generatedAtUtc": "2026-11-26T03:09:54.486Z",
+  "assets": [
+    {
+      "publicPath": "/pretty-piggie/wasm/vision_wasm_internal.js",
+      "diskPath": "public/pretty-piggie/wasm/vision_wasm_internal.js",
+      "expectedMime": "application/javascript",
+      "bytes": 336624,
+      "sha256": "2aa5fd3fdd3d8208cd7587df0bb19fb6925c4ea16a76dd025aedc1f64d6a6309"
+    },
+    {
+      "publicPath": "/pretty-piggie/wasm/vision_wasm_internal.wasm",
+      "diskPath": "public/pretty-piggie/wasm/vision_wasm_internal.wasm",
+      "expectedMime": "application/wasm",
+      "bytes": 14665716,
+      "sha256": "225bc06c0f51a9cf31fea0e9e0b0243e9e01fb5ef332cc1a7fa6656dbdfdaabf"
+    },
+    {
+      "publicPath": "/pretty-piggie/models/face_landmarker.task",
+      "diskPath": "public/pretty-piggie/models/face_landmarker.task",
+      "expectedMime": "application/octet-stream",
+      "bytes": 3758596,
+      "sha256": "64184e229b263107bc2b804c6625db1341ff2bb731874b0bcc2fe6544e0bc9ff"
+    }
+  ]
+}

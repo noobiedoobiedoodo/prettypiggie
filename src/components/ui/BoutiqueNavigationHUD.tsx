@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import Link from 'next/link';
 import {
   BadgeCheck,
   Box,
@@ -599,6 +600,13 @@ export function BoutiqueNavigationHUD({
                         {CATALOG_RECONCILIATION.verifiedOutOfStock} Sold Out •{' '}
                         {CATALOG_RECONCILIATION.unverifiedPurchaseLocked} Locked
                       </span>
+                      <Link
+                        href="/pretty-piggie"
+                        onClick={() => setIsCatalogOpen(false)}
+                        className="inline-flex items-center gap-1 rounded-full bg-piggie-950 px-2.5 py-0.5 text-[10px] font-bold text-white hover:bg-piggie-800"
+                      >
+                        🐷 Create My Piggie →
+                      </Link>
                     </div>
                     <p className="mt-0.5 hidden text-[11px] text-piggie-700 sm:block">
                       Ready-to-ship favorites are featured first. Tap any item

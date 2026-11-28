@@ -15,10 +15,13 @@
  *      SEO/Shopify health probes against a deployed Vercel staging URL.
  */
 
+import crypto from 'node:crypto';
 import fs from 'node:fs';
+import Module from 'node:module';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import ts from 'typescript';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
@@ -57,6 +60,64 @@ async function waitForServer(url, timeoutMs = 25000) {
 
 function recordCheck(results, id, passed, detail) {
   results.push({ id, passed: Boolean(passed), detail });
+}
+
+const tsModuleCache = new Map();
+function loadTsModule(relFilePath) {
+  const absPath = path.resolve(rootDir, relFilePath);
+  if (tsModuleCache.has(absPath)) return tsModuleCache.get(absPath);
+
+  const source = fs.readFileSync(absPath, 'utf8');
+  const transpiled = ts.transpileModule(source, {
+    fileName: absPath,
+    compilerOptions: {
+      module: ts.ModuleKind.CommonJS,
+      target: ts.ScriptTarget.ES2022,
+      jsx: ts.JsxEmit.ReactJSX,
+      esModuleInterop: true,
+      resolveJsonModule: true,
+    },
+  });
+
+  const mod = new Module(absPath);
+  mod.filename = absPath;
+  mod.paths = Module._nodeModulePaths(path.dirname(absPath));
+  const customRequire = (specifier) => {
+    if (specifier.startsWith('@/')) {
+      const mapped = path.join('src', specifier.slice(2));
+      if (fs.existsSync(path.join(rootDir, `${mapped}.ts`))) {
+        return loadTsModule(`${mapped}.ts`);
+      }
+      if (fs.existsSync(path.join(rootDir, `${mapped}.json`))) {
+        return JSON.parse(
+          fs.readFileSync(path.join(rootDir, `${mapped}.json`), 'utf8')
+        );
+      }
+    }
+    if (specifier.startsWith('.')) {
+      const candidateBase = path.resolve(path.dirname(absPath), specifier);
+      if (fs.existsSync(`${candidateBase}.ts`)) {
+        return loadTsModule(path.relative(rootDir, `${candidateBase}.ts`));
+      }
+      if (fs.existsSync(candidateBase) && candidateBase.endsWith('.json')) {
+        return JSON.parse(fs.readFileSync(candidateBase, 'utf8'));
+      }
+    }
+    return mod.require(specifier);
+  };
+
+  const fn = new Function(
+    'exports',
+    'require',
+    'module',
+    '__filename',
+    '__dirname',
+    transpiled.outputText
+  );
+  tsModuleCache.set(absPath, mod.exports);
+  fn(mod.exports, customRequire, mod, absPath, path.dirname(absPath));
+  tsModuleCache.set(absPath, mod.exports);
+  return mod.exports;
 }
 
 async function runStaticAndBundleGates(checks) {
@@ -776,6 +837,497 @@ async function runLiveHttpAndAdversarialGates(baseUrl, checks) {
       { rateLimited429, retryAfterHeader }
     );
   }
+
+  // ==========================================================================
+  // VIRAL CHARACTER ENGINE HARDENING GATES (CHECKS #17 - #25)
+  // ==========================================================================
+
+  // Check #17: /pretty-piggie & /makeover-studio Dual-Mode Coexistence
+  const piggiePageRes = await fetch(`${baseUrl}/pretty-piggie`);
+  const piggiePageHtml = await piggiePageRes.text();
+  const makeoverPageRes = await fetch(`${baseUrl}/makeover-studio`);
+  recordCheck(
+    checks,
+    'PRETTY_PIGGIE_ROUTE_AND_DUAL_MODE_COEXISTENCE',
+    piggiePageRes.status === 200 &&
+      piggiePageHtml.includes('Pretty Piggie') &&
+      makeoverPageRes.status === 200,
+    {
+      piggieStatus: piggiePageRes.status,
+      makeoverStatus: makeoverPageRes.status,
+    }
+  );
+
+  // Check #18: Self-Hosted MediaPipe WASM/Model SHA-256 Hashes & Live HTTP MIME Types
+  const assetManifest = JSON.parse(
+    fs.readFileSync(
+      path.join(rootDir, 'src/pretty-piggie/assetManifest.json'),
+      'utf8'
+    )
+  );
+  let hashMatches = 0;
+  for (const asset of assetManifest.assets || []) {
+    const absAsset = path.join(rootDir, asset.diskPath);
+    if (fs.existsSync(absAsset)) {
+      const buf = fs.readFileSync(absAsset);
+      const digest = crypto.createHash('sha256').update(buf).digest('hex');
+      if (digest === asset.sha256 && buf.length === asset.bytes) {
+        hashMatches += 1;
+      }
+    }
+  }
+  const wasmHttpRes = await fetch(
+    `${baseUrl}/pretty-piggie/wasm/vision_wasm_internal.wasm`
+  );
+  const wasmCt = (wasmHttpRes.headers.get('content-type') || '').toLowerCase();
+  await wasmHttpRes.arrayBuffer();
+  const modelHttpRes = await fetch(
+    `${baseUrl}/pretty-piggie/models/face_landmarker.task`
+  );
+  const modelBytes = (await modelHttpRes.arrayBuffer()).byteLength;
+
+  recordCheck(
+    checks,
+    'MEDIAPIPE_SELF_HOSTED_WASM_SHA256_AND_MIME',
+    assetManifest.assets?.length === 3 &&
+      hashMatches === 3 &&
+      wasmHttpRes.status === 200 &&
+      wasmCt.includes('application/wasm') &&
+      modelHttpRes.status === 200 &&
+      modelBytes === assetManifest.assets[2].bytes,
+    {
+      hashMatches,
+      wasmStatus: wasmHttpRes.status,
+      wasmContentType: wasmCt,
+      modelStatus: modelHttpRes.status,
+      modelBytes,
+    }
+  );
+
+  // Check #19: Disjoint Camera Permissions-Policy Isolation (Zero Duplicate/Intersecting Header Conflict)
+  const rootPerms = (homeRes.headers.get('permissions-policy') || '').trim();
+  const piggiePerms = (
+    piggiePageRes.headers.get('permissions-policy') || ''
+  ).trim();
+  const makeoverPerms = (
+    makeoverPageRes.headers.get('permissions-policy') || ''
+  ).trim();
+  const checkoutGetRes = await fetch(`${baseUrl}/api/shopify/health`);
+  const apiPerms = (
+    checkoutGetRes.headers.get('permissions-policy') || ''
+  ).trim();
+
+  recordCheck(
+    checks,
+    'PERMISSIONS_POLICY_DISJOINT_CAMERA_HEADERS',
+    rootPerms.includes('camera=()') &&
+      !rootPerms.includes('camera=(self)') &&
+      apiPerms.includes('camera=()') &&
+      !apiPerms.includes('camera=(self)') &&
+      piggiePerms.includes('camera=(self)') &&
+      !piggiePerms.includes('camera=()') &&
+      piggiePerms.includes('microphone=()') &&
+      makeoverPerms.includes('camera=(self)') &&
+      !makeoverPerms.includes('camera=()'),
+    {
+      rootPerms,
+      piggiePerms,
+      makeoverPerms,
+    }
+  );
+
+  // Check #20: Deterministic Face-to-Piggie Mapper, Distinct Portraits & Outlier Clamping
+  const landmarkMod = loadTsModule(
+    'src/pretty-piggie/tracking/FaceLandmarkProcessor.ts'
+  );
+  const mapperMod = loadTsModule(
+    'src/pretty-piggie/character/CharacterMapper.ts'
+  );
+
+  const makeSyntheticFace = (opts) => {
+    const pts = Array.from({ length: 478 }, () => ({ x: 0.5, y: 0.5, z: 0 }));
+    pts[10] = { x: 0.5, y: 0.2 }; // forehead
+    pts[152] = { x: 0.5, y: 0.8 }; // chin
+    pts[234] = { x: 0.5 - opts.cheekHalfW, y: 0.5 }; // left cheek
+    pts[454] = { x: 0.5 + opts.cheekHalfW, y: 0.5 }; // right cheek
+    pts[50] = { x: 0.5 - opts.midCheekHalfW, y: 0.52 };
+    pts[280] = { x: 0.5 + opts.midCheekHalfW, y: 0.52 };
+    pts[172] = { x: 0.5 - opts.jawHalfW, y: 0.68 };
+    pts[397] = { x: 0.5 + opts.jawHalfW, y: 0.68 };
+    pts[33] = { x: 0.5 - opts.eyeOuterX, y: 0.43 };
+    pts[133] = { x: 0.5 - opts.eyeInnerX, y: 0.44 };
+    pts[159] = { x: 0.5 - (opts.eyeOuterX + opts.eyeInnerX) * 0.5, y: 0.43 - opts.eyeOpen };
+    pts[145] = { x: 0.5 - (opts.eyeOuterX + opts.eyeInnerX) * 0.5, y: 0.43 + opts.eyeOpen };
+    pts[362] = { x: 0.5 + opts.eyeInnerX, y: 0.44 };
+    pts[263] = { x: 0.5 + opts.eyeOuterX, y: 0.43 };
+    pts[386] = { x: 0.5 + (opts.eyeOuterX + opts.eyeInnerX) * 0.5, y: 0.43 - opts.eyeOpen };
+    pts[374] = { x: 0.5 + (opts.eyeOuterX + opts.eyeInnerX) * 0.5, y: 0.43 + opts.eyeOpen };
+    pts[105] = { x: 0.5 - opts.eyeOuterX * 0.75, y: 0.43 - opts.browClear };
+    pts[70] = { x: 0.5 - opts.eyeInnerX, y: 0.44 - opts.browClear * 0.75 };
+    pts[334] = { x: 0.5 + opts.eyeOuterX * 0.75, y: 0.43 - opts.browClear };
+    pts[300] = { x: 0.5 + opts.eyeInnerX, y: 0.44 - opts.browClear * 0.75 };
+    pts[6] = { x: 0.5, y: 0.44 };
+    pts[4] = { x: 0.5, y: 0.54 };
+    pts[98] = { x: 0.5 - opts.noseHalfW, y: 0.55 };
+    pts[327] = { x: 0.5 + opts.noseHalfW, y: 0.55 };
+    pts[61] = { x: 0.5 - 0.1, y: 0.64 - opts.smileLift };
+    pts[291] = { x: 0.5 + 0.1, y: 0.64 - opts.smileLift };
+    pts[13] = { x: 0.5, y: 0.64 };
+    pts[14] = { x: 0.5, y: 0.66 };
+    return pts;
+  };
+
+  const faceWideSmile = makeSyntheticFace({
+    cheekHalfW: 0.28,
+    midCheekHalfW: 0.22,
+    jawHalfW: 0.24,
+    eyeOuterX: 0.19,
+    eyeInnerX: 0.085,
+    eyeOpen: 0.026,
+    browClear: 0.075,
+    noseHalfW: 0.085,
+    smileLift: 0.025,
+  });
+  const faceNarrowCalm = makeSyntheticFace({
+    cheekHalfW: 0.21,
+    midCheekHalfW: 0.13,
+    jawHalfW: 0.14,
+    eyeOuterX: 0.12,
+    eyeInnerX: 0.05,
+    eyeOpen: 0.012,
+    browClear: 0.042,
+    noseHalfW: 0.05,
+    smileLift: -0.012,
+  });
+  const faceAdversarial = Array.from({ length: 478 }, (_, idx) => ({
+    x: idx % 3 === 0 ? NaN : idx % 2 === 0 ? 9999 : -9999,
+    y: idx % 5 === 0 ? Infinity : -500,
+    z: -Infinity,
+  }));
+
+  const extA1 = landmarkMod.extractFacialFeatures({ allFaceLandmarks: [faceWideSmile] });
+  const extA2 = landmarkMod.extractFacialFeatures({ allFaceLandmarks: [faceWideSmile] });
+  const extB = landmarkMod.extractFacialFeatures({ allFaceLandmarks: [faceNarrowCalm] });
+  const extAdv = landmarkMod.extractFacialFeatures({ allFaceLandmarks: [faceAdversarial] });
+
+  const charA1 = mapperMod.transformFaceToPiggie(extA1, 'glam-piggie');
+  const charA2 = mapperMod.transformFaceToPiggie(extA2, 'glam-piggie');
+  const charB = mapperMod.transformFaceToPiggie(extB, 'glam-piggie');
+  const charAdv = mapperMod.transformFaceToPiggie(extAdv, 'royal-piggie');
+
+  const isDeterministic = JSON.stringify(charA1) === JSON.stringify(charA2);
+  const areDistinct =
+    charA1.proportions.eyeSpacing !== charB.proportions.eyeSpacing &&
+    charA1.proportions.faceWidth > charB.proportions.faceWidth &&
+    charA1.proportions.smileCurve > charB.proportions.smileCurve;
+  const advProps = Object.entries(charAdv.proportions);
+  const advAllClamped = advProps.every(([k, v]) => {
+    if (typeof v !== 'number' || !Number.isFinite(v)) return false;
+    if (k === 'smileCurve') return v >= 0 && v <= 1;
+    if (k === 'headYaw') return v >= -0.35 && v <= 0.35;
+    if (k === 'headPitch') return v >= -0.25 && v <= 0.25;
+    return v >= -1 && v <= 1;
+  });
+
+  recordCheck(
+    checks,
+    'DETERMINISTIC_FACE_MAPPER_CLAMPING_AND_DISTINCTNESS',
+    isDeterministic && areDistinct && advAllClamped,
+    {
+      isDeterministic,
+      areDistinct,
+      advAllClamped,
+      faceAFaceWidth: charA1.proportions.faceWidth,
+      faceBFaceWidth: charB.proportions.faceWidth,
+    }
+  );
+
+  // Check #21: Explicit MediaPipe -> ARKit-52 Blendshape Mapping & Clamping
+  const morphMod = loadTsModule('src/pretty-piggie/character/MorphController.ts');
+  const mappedBlend = morphMod.mapMediaPipeToARKitBlendshapes([
+    { categoryName: '_neutral', score: 0.99 },
+    { categoryName: 'mouthSmileLeft', score: 0.84 },
+    { categoryName: 'mouthSmileRight', score: 1.75 }, // clamps to 1
+    { categoryName: 'eyeBlinkLeft', score: -0.5 }, // clamps to 0
+    { categoryName: 'jawOpen', score: NaN }, // safely ignored -> 0
+    { categoryName: 'nonExistentShape', score: 0.9 },
+  ]);
+  const arkitKeys = Object.keys(mappedBlend);
+  const rigPose = morphMod.deriveRigExpressionPose(
+    mappedBlend,
+    charA1.proportions
+  );
+
+  recordCheck(
+    checks,
+    'ARKIT_52_BLENDSHAPE_EXPLICIT_MAPPING_INTEGRITY',
+    morphMod.ARKIT_52_BLENDSHAPE_NAMES.length === 52 &&
+      arkitKeys.length === 52 &&
+      !('_neutral' in mappedBlend) &&
+      mappedBlend.mouthSmileLeft === 0.84 &&
+      mappedBlend.mouthSmileRight === 1 &&
+      mappedBlend.eyeBlinkLeft === 0 &&
+      mappedBlend.jawOpen === 0 &&
+      Object.values(rigPose).every((v) => typeof v === 'number' && Number.isFinite(v)),
+    {
+      channelCount: arkitKeys.length,
+      smileLeft: mappedBlend.mouthSmileLeft,
+      smileRightClamped: mappedBlend.mouthSmileRight,
+    }
+  );
+
+  // Check #22: Versioned CRC32-Checked Share Token Round-Trip & Tamper Rejection
+  const paramsMod = loadTsModule(
+    'src/pretty-piggie/character/CharacterParameters.ts'
+  );
+  const customConfig = {
+    version: 1,
+    proportions: {
+      eyeSpacing: 0.34,
+      eyeScale: -0.22,
+      eyeTilt: 0.18,
+      faceWidth: -0.15,
+      faceLength: 0.25,
+      cheekFullness: 0.42,
+      jawWidth: -0.28,
+      browHeight: 0.19,
+      browArch: 0.31,
+      snoutScale: -0.12,
+      smileCurve: 0.78,
+      headYaw: 0.12,
+      headPitch: -0.08,
+    },
+    collectionId: 'fashion-piggie',
+    skinToneId: 'rich-amber',
+    hairstyleId: 'space-buns',
+    hairColorId: 'cotton-candy',
+    eyeColorId: 'emerald-mist',
+    accessoryId: 'royal-crown',
+    lipShadeIndex: 2,
+  };
+  const validToken = paramsMod.encodePiggieShareToken(customConfig);
+  const decodedValid = paramsMod.decodePiggieShareToken(validToken);
+
+  // Flip 1 character in payload to test CRC32 tamper detection
+  const flipChar = validToken[10] === 'A' ? 'B' : 'A';
+  const tamperedToken =
+    validToken.slice(0, 10) + flipChar + validToken.slice(11);
+  const decodedTampered = paramsMod.decodePiggieShareToken(tamperedToken);
+
+  // Mutate version byte (byte[2] = 99) to test version rejection
+  const rawTokenBuf = Buffer.from(
+    validToken.replace(/-/g, '+').replace(/_/g, '/'),
+    'base64'
+  );
+  rawTokenBuf[2] = 99;
+  const wrongVerToken = rawTokenBuf
+    .toString('base64')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/g, '');
+  const decodedWrongVer = paramsMod.decodePiggieShareToken(wrongVerToken);
+  const decodedTruncated = paramsMod.decodePiggieShareToken(
+    validToken.slice(0, 12)
+  );
+
+  recordCheck(
+    checks,
+    'SHARE_TOKEN_VERSIONED_CRC32_INTEGRITY_AND_ROUNDTRIP',
+    decodedValid.valid === true &&
+      JSON.stringify(decodedValid.params) === JSON.stringify(customConfig) &&
+      decodedTampered.valid === false &&
+      decodedTampered.reason === 'CHECKSUM_MISMATCH' &&
+      decodedWrongVer.valid === false &&
+      decodedWrongVer.reason === 'UNSUPPORTED_VERSION' &&
+      decodedTruncated.valid === false &&
+      decodedTruncated.reason === 'MALFORMED_TOKEN',
+    {
+      tokenLength: validToken.length,
+      roundTripExact:
+        decodedValid.valid &&
+        JSON.stringify(decodedValid.params) === JSON.stringify(customConfig),
+      tamperReason: decodedTampered.valid ? null : decodedTampered.reason,
+      wrongVersionReason: decodedWrongVer.valid ? null : decodedWrongVer.reason,
+    }
+  );
+
+  // Check #23: Strict Closed-Schema Analytics & Layered Abuse Control
+  const validEventPayload = {
+    event: 'piggie_experience_opened',
+    sessionId: 'pp_auditqa9921',
+    timestampMs: Date.now(),
+    deviceTier: 'high',
+    isMobile: true,
+    props: { collectionId: 'glam-piggie', renderer: 'webgl' },
+  };
+  const evOkRes = await fetch(`${baseUrl}/api/events`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(validEventPayload),
+  });
+  const evSetCookie = evOkRes.headers.get('set-cookie') || '';
+  const evNoStore = (evOkRes.headers.get('cache-control') || '').includes(
+    'no-store'
+  );
+
+  const evUnknownRoot = await fetch(`${baseUrl}/api/events`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ...validEventPayload, extraField: 123 }),
+  });
+  const evFreeformProp = await fetch(`${baseUrl}/api/events`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      ...validEventPayload,
+      props: { userNote: 'freeform string' },
+    }),
+  });
+  const evLandmarkInject = await fetch(`${baseUrl}/api/events`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      ...validEventPayload,
+      props: { landmarks: [0.42, 0.51] },
+    }),
+  });
+  const evWrongCt = await fetch(`${baseUrl}/api/events`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain' },
+    body: '{}',
+  });
+  const evOversize = await fetch(`${baseUrl}/api/events`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      ...validEventPayload,
+      pad: 'X'.repeat(3000),
+    }),
+  });
+  const evCsrf = await fetch(`${baseUrl}/api/events`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Origin: 'https://evil-attacker.example',
+    },
+    body: JSON.stringify(validEventPayload),
+  });
+
+  let eventsRateLimited429 = isRemoteMode; // Skip flood on remote WAF
+  if (!isRemoteMode) {
+    for (let i = 0; i < 65; i += 1) {
+      const r = await fetch(`${baseUrl}/api/events`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-forwarded-for': '203.0.113.88',
+        },
+        body: JSON.stringify(validEventPayload),
+      });
+      if (r.status === 429) {
+        eventsRateLimited429 = true;
+        break;
+      }
+    }
+  }
+
+  recordCheck(
+    checks,
+    'STRICT_CLOSED_SCHEMA_ANALYTICS_AND_LAYERED_ABUSE_GUARD',
+    evOkRes.status === 200 &&
+      evNoStore &&
+      evSetCookie.includes('HttpOnly') &&
+      evUnknownRoot.status === 400 &&
+      evFreeformProp.status === 400 &&
+      evLandmarkInject.status === 400 &&
+      evWrongCt.status === 415 &&
+      evOversize.status === 413 &&
+      evCsrf.status === 403 &&
+      eventsRateLimited429,
+    {
+      validStatus: evOkRes.status,
+      hasSignedHttpOnlyCookie: evSetCookie.includes('HttpOnly'),
+      unknownRootStatus: evUnknownRoot.status,
+      freeformPropStatus: evFreeformProp.status,
+      landmarkInjectStatus: evLandmarkInject.status,
+      wrongCtStatus: evWrongCt.status,
+      oversizeStatus: evOversize.status,
+      csrfStatus: evCsrf.status,
+      eventsRateLimited429,
+    }
+  );
+
+  // Check #24: Zero External AI or Third-Party CDN Calls in Local Character Engine
+  const engineFiles = [
+    ...walkDir(path.join(rootDir, 'src/pretty-piggie')),
+    ...walkDir(path.join(rootDir, 'src/components/pretty-piggie')),
+    path.join(rootDir, 'src/app/pretty-piggie/page.tsx'),
+  ].filter((f) => fs.existsSync(f));
+
+  const forbiddenEngineTokens = [
+    'generativelanguage.googleapis.com',
+    'api.openai.com',
+    'cdn.jsdelivr.net',
+    'unpkg.com',
+    'storage.googleapis.com',
+    'GEMINI_API_KEY',
+    'OPENAI_API_KEY',
+    '/api/makeover/transform',
+  ];
+  let engineViolations = 0;
+  for (const file of engineFiles) {
+    const text = fs.readFileSync(file, 'utf8');
+    for (const tok of forbiddenEngineTokens) {
+      if (text.includes(tok)) engineViolations += 1;
+    }
+  }
+  recordCheck(
+    checks,
+    'ZERO_EXTERNAL_AI_OR_CDN_CALLS_IN_PIGGIE_ENGINE',
+    engineFiles.length >= 12 && engineViolations === 0,
+    { scannedEngineFiles: engineFiles.length, engineViolations }
+  );
+
+  // Check #25: 5 Makeup Collections, Accessories & Strictly VERIFIED_IN_STOCK Product Pairings
+  const presetsMod = loadTsModule('src/pretty-piggie/makeup/MakeupPresets.ts');
+  const catalogRaw = JSON.parse(
+    fs.readFileSync(path.join(rootDir, 'src/data/blankaCatalog.json'), 'utf8')
+  );
+  const bySlug = new Map(catalogRaw.map((c) => [c.slug, c]));
+  const presetEntries = Object.values(presetsMod.MAKEUP_COLLECTION_PRESETS);
+  let allPairingsVerifiedInStock = true;
+  for (const p of presetEntries) {
+    if (!Array.isArray(p.lipShades) || p.lipShades.length !== 4) {
+      allPairingsVerifiedInStock = false;
+    }
+    for (const handle of p.eligibleProductHandles || []) {
+      const item = bySlug.get(handle);
+      if (
+        !item ||
+        item.availabilityState !== 'VERIFIED_IN_STOCK' ||
+        item.canPurchase !== true
+      ) {
+        allPairingsVerifiedInStock = false;
+      }
+    }
+  }
+
+  recordCheck(
+    checks,
+    'MAKEUP_COLLECTIONS_ACCESSORIES_AND_ELIGIBLE_PAIRINGS',
+    presetEntries.length === 5 &&
+      paramsMod.PIGGIE_HAIRSTYLE_OPTIONS.length === 6 &&
+      paramsMod.PIGGIE_ACCESSORY_OPTIONS.length === 6 &&
+      paramsMod.PIGGIE_SKIN_TONES.length === 8 &&
+      allPairingsVerifiedInStock,
+    {
+      collectionsCount: presetEntries.length,
+      hairstylesCount: paramsMod.PIGGIE_HAIRSTYLE_OPTIONS.length,
+      accessoriesCount: paramsMod.PIGGIE_ACCESSORY_OPTIONS.length,
+      skinTonesCount: paramsMod.PIGGIE_SKIN_TONES.length,
+      allPairingsVerifiedInStock,
+    }
+  );
 }
 
 async function main() {
